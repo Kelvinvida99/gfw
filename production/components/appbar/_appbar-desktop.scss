@@ -1,0 +1,35 @@
+.appbar-fullcont-desktop{
+
+	//border: 1px solid blue;
+
+		height: 40px;
+		//border-bottom: 1px solid $c-divider;
+
+
+	& .primary{
+		
+		top:0px;
+		opacity: 1;
+		height: 38px;
+		padding-left: 8px;
+		padding-right: 16px;
+		background-color: $c-surface;
+		
+
+		& > h1 {  margin-top: 4px; }
+		& > div { 
+				height: 32px;
+				min-width: 32px;
+				margin-left: 4px;
+			& > svg{ fill: $c-b;  }
+			//@include interaction($c-surface);//click/interactions
+			@include interaction-surface;
+		}
+
+			border-bottom: 1px solid transparent;
+
+
+
+	}
+
+}

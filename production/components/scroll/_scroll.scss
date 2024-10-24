@@ -1,0 +1,46 @@
+
+
+
+
+scrollbar {
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    margin-right: 100px;
+    cursor: pointer;
+
+    border: 0.1px solid rgba($c-pl, 0.08);
+    //@include respond (table) { height: 4px; width: 4px; }
+    @include respond (table) { 
+        width: 4px;
+      }
+}
+
+
+::-webkit-scrollbar {
+	position: absolute;
+    width: 12px;
+    height: 16px;
+    margin-right: 100px;
+    cursor: pointer;
+
+    //@include respond (table) { height: 4px; width: 4px; }
+    @include respond (table) { 
+        width: 4px;
+      }
+
+}
+
+
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+    background: rgba($c-b, 0.16); 
+    transform: translateX(-100px);
+}
+
+

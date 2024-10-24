@@ -1,0 +1,104 @@
+
+
+
+.pie{
+	position: relative;
+	margin-top: 34px;
+	width:  100%;
+	border-top: 1px solid rgba($c_b, 0.12);
+	//border: 1px solid green;/************************/
+
+	& svg{
+		position: relative;
+		height: 100%;
+		height: 250px;
+		width: 100%;
+		padding: 8px;
+		//border: 1px solid green;/************************/
+	}
+
+& [class^="pie-"] {
+			position: relative;
+			transform-origin: left top !important; 
+			transform-origin: 50% 50% !important; 
+			visibility: hidden;
+			transform: rotate(0deg);
+			opacity: 0;
+		  	-webkit-transition:  transform 1.5s, opacity 2.5s; 
+		  	transition:  transform 1.5s, opacity 2.5s; 
+	}
+
+	& line{
+		transform-origin: left top !important; 
+		transform-origin: 50% 50% !important; 
+		stroke:$c_w;
+		stroke-width:0.3;
+		visibility: hidden;
+	  	-webkit-transition:  all 1.5s;  
+	  	transition:  all 1.5s;  
+	}/*line*/
+
+	& .header{
+		width: calc(100% - 32px);
+		height: 48px;
+		margin: 16px;
+
+		border-bottom: 1px solid rgba($c_b, 0.12);
+		//border: 1px solid yellow;
+
+
+		& .cont{
+			position: relative;
+			width: 25%;
+			height: 100%;
+			float: left;
+			opacity: 0;
+		  	-webkit-transition:  opacity 1.5s;  
+	  		transition:  opacity 1.5s;  		
+
+		    display: flex;
+			align-items: center;
+			justify-content:center;
+		    flex-direction: column; 
+
+			& span{
+				position: relative;
+				width: calc(100% - 16px);
+				max-width: 64px;
+				height: 16px;
+				padding-left:  8px;
+				padding-right: 8px;				
+				margin-bottom: 4px;
+				flex-shrink: 0;
+				float: left;
+				background-color: $c_g;
+			}
+
+			& label{
+				display: block;
+				overflow: hidden;
+				padding-left:  4px;
+				padding-right: 4px;
+				width: 100%;
+
+			    font-size: 14px; 
+			    font-weight: 400;  
+			    color: #5F6368;
+			    color: rgba($c_b, 0.54);
+			    text-align: center;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-wrap:none;
+
+				//border: 1px solid blue;/**********************/
+			}/*label*/
+
+
+			//border: 1px solid blue;/************************/
+		}/*cont*/
+
+	}/*header*/
+
+
+}/*pieChart*/
+

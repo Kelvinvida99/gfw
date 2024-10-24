@@ -1,0 +1,20 @@
+.snack-long{
+
+	padding-right: 16px;
+	padding-bottom: 56px;
+	
+	& label{
+
+	}
+	
+	& > div{
+		right: 8px;
+		top: auto;
+		bottom:8px;
+		padding: 4px;
+		transform: translateY(0%);
+	}
+
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}

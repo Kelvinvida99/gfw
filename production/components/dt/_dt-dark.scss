@@ -1,0 +1,237 @@
+
+
+@mixin dt-dark{
+
+	
+	.dt { /*data table*/
+		//border: 1px solid red;
+		& > table{
+
+/////////////rows color
+			& tr{				
+				background-color:$d-e1;
+
+				&:nth-child(odd){
+					background-color:$d-e12;
+				}
+			}
+
+
+/////////////td styles
+			& td {
+				& label{ 
+					font-weight: 300;
+					color: $c-w; 
+					opacity: 1;
+				}
+				& span { 
+					font-weight: 300;
+					color: $c-w; 
+					opacity: 0.72;
+				}
+				@include interaction-dark-surface;
+			}
+
+
+/////////////header TH
+			& th{ //show arrow
+				color:$c-w;
+				background-color: $d-surface;
+				border-top: none;
+				border-bottom: 4px solid  $d-surface;
+
+				&::before{
+					opacity: 0;	
+					transform: scale(0) rotate(0deg);
+					background:   url(svg/down-white.svg) no-repeat;
+				    background-size: 100% 100%;
+				    background-position: center;						
+				}
+
+				&:hover{
+					&::before{
+						opacity: 0.54;	
+						transform: scale(1) rotate(0deg);						
+					}
+				}
+			}
+
+
+//////Table header status
+			& tr .selected{ //TH header selected
+				opacity: 1 ;
+				border-bottom: 4px solid $c-pl;
+
+				&::before{
+					opacity: 0.87 ;  
+					transform: scale(1) rotate(0deg) ;
+				}
+
+				&:hover{
+					&::before{
+					opacity: 0.87 ;  
+					transform: scale(1) rotate(0deg) ;
+					}
+				}			
+			}
+
+			& tr .reverse{ //TH header selected
+				opacity: 1 ;
+				border-bottom: 4px solid $c-pl;
+
+				&::before{
+					opacity: 0.87 ;  
+					transform: scale(1) rotate(180deg) ;
+				}
+
+				&:hover{
+					&::before{
+					opacity: 0.87 ;  
+					transform: scale(1) rotate(180deg) ;
+					}
+				}			
+			}/*reverse*/
+
+/////////////TR CHECKED	
+			& .checked{ //TH header selected
+				
+					& td {
+						background-color: $c-pl;
+						@include interaction-dark-color;
+						& label{ 
+							color: $c-b; 
+							opacity: 1;
+						}
+						& span { 
+							color: $c-b; 
+							opacity: 1;
+						}
+					}
+			}/*checked*/
+
+		}/*table*/
+
+
+		&  > .footer{
+			@include interaction-dark-surface;
+			background-color: $d-surface;
+
+			& label{ 
+				@include font(button, $c-pl); 
+				opacity: 0.87;
+			}
+			& svg{
+				fill: $c-w;
+				opacity: 0;
+			}
+		}/*footer*/
+
+& > .header{
+	& > .more, & > .filter{
+		@include interaction-dark-surface;
+	}
+}/*footer*/	
+
+	}/*dt*/
+
+
+
+		
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin dt-dark{
+// 	.dt {
+
+// 		& > table {
+
+// 			& th:not(:first-child)  { //Checkbox
+// 					color:  $c-w;
+// 					opacity: 0.54;
+// 					&::before{	
+// 						background:  url(check.svg) no-repeat;
+// 					    background-size: 100% 100%;
+// 					    background-position: center;						
+// 						opacity: 0.67;
+// 					}	
+// 					&::selection { background-color: transparent; }
+// 			}  
+			
+// 			& th:last-child{ //Checkbox
+// 					&::before{	
+						
+// 					}	
+// 			}  
+
+// 			& tr{
+// 				&:nth-child(odd){ //ligray backgroud alternated
+// 				 	background-color:lighten($d-e1, 2%);
+// 				}
+// 				&:not(:nth-child(1)):hover{//not select th
+// 					background-color:lighten($d-e1, 4%);
+// 				}				
+// 				&:not(:last-child){//no line on the last row
+// 					border-bottom: none;
+// 				}
+// 			}	
+
+// 			& td {
+// 				color:white;
+// 			}
+// 		}
+
+
+// 	}/*dt*/
+
+
+
+// 	.dt { //NIMATIONS
+// 		& > table{
+
+// 			& .selected{ //TH header se`lected
+// 				background-color:darken($c-b, 90%);
+// 				opacity: 1; 
+
+// 				&::before{
+// 					opacity: 1; 
+// 					opacity: 0.54 ;  
+// 					transform: scale(1) rotate(0deg) ; 
+// 				}
+
+
+
+// 			}
+
+// 			& .reverse{ //TH header reverse
+// 				background-color:darken($c-b, 90%);
+// 				opacity: 1; 
+// 				&::before{
+// 					opacity: 1;   
+// 					transform: scale(1) rotate(180deg) ;   
+// 				}
+// 				&::before{
+// 					opacity: 1; 
+// 					transform: scale(1) rotate(180deg) ; 
+// 				}				
+// 			}
+// 		}
+// 	}
+
+
+// }

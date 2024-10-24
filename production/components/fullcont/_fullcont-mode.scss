@@ -1,0 +1,56 @@
+
+//we use this for only view mode on the form
+
+
+// .mode-view{
+// 	& .textfield          { pointer-events: none; background: none; }
+// }	
+
+.mode-edit{
+
+	& > .fab-to-edit     { display: none;      }
+	& > .fab-to-update   { display: absolute;  }
+	& > .fab-to-add      { display: none;      }
+	& .fab-to-readOnly   {transform: scale(0)     }
+	& .showOnEdit         { display: inline-block;         }
+	& .hideOnEdit        { display: none; }
+	
+	//for elements input that can't be edited
+	//as username
+	& .disable-mode-edit {
+		@include selectNo(); 
+		opacity: 0.54;
+	}
+
+	
+}
+
+.mode-add{
+
+	& > .fab-to-edit     { display: none;     }
+	& > .fab-to-update   { display: none;     }
+	& > .fab-to-add      { display: absolute; }
+	& > .appbar .primary  .fileTab { display: none;     }
+	& .fab-to-readOnly   {transform: scale(0)     }
+	& .hideOnAdd         { display: none;         }
+	& .showOnAdd         { display: inline-block;         }
+
+
+}
+
+.mode-readOnly{
+	
+	& > .fab-to-edit     { display: none;             }
+	& .fab-to-readOnly   { transform: scale(1);       }
+    & .showOnAdd         { display: none;             }
+}
+
+.mode-noFile{
+	& > .appbar .primary  .fileTab { display: none;     }
+}
+
+//elements no visible on view mode
+.mode-view{
+	& .hideOnView { display: none; }
+	& .showOnView  { display: inline-block; }
+}	

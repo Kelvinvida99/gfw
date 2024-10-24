@@ -1,0 +1,57 @@
+.darkTheme{
+
+	@include body-dark;
+	@include appbar-dark;
+
+///////////////////////////////////////
+	
+	@include leftnav-dark;
+	@include fullcont-dark;
+	@include button-dark;
+	@include fab-dark;
+	//@include bottomnav-dark;
+	@include drawer-dark;
+	@include card-dark;
+	@include backdrop-dark;
+
+	//@include bar-dark;
+	@include scroll-dark;
+
+	//@include dashboar_status-dark;
+	@include confirmation-dark2;
+
+	@include range-dark;
+
+
+	@include snack-dark;
+	@include dialog-dark;
+	@include menu-dark;
+	@include banner-dark;
+	
+	@include textfield-dark;
+	@include selector-dark;
+	
+	@include stepper-dark;
+
+///////////////////////////////////////
+
+
+	//@include bodyBar-dark;
+
+
+	@include tab-dark;
+	@include divider-dark;
+	//@include sideSheet-dark;
+
+
+
+
+
+	@include dt-dark;
+	@include dt-header-dark;
+	@include dt-checkbox-dark;
+	@include dt-more-dark;
+	@include dt-simple-dark;
+	@include dt-loading-dark;
+
+}

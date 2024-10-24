@@ -1,0 +1,9 @@
+
+.button-large{ 
+
+	@include respond(phone) {
+		max-width: calc(100% - 16px); 
+		@include align-center();
+	}
+
+}

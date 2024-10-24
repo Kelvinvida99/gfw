@@ -1,0 +1,26 @@
+.fullcont-notification{
+
+	position: absolute;
+	display: inline-block;
+
+	width: calc(100% - 16px);
+	max-width: 900px;
+	min-height: 56px;
+	max-height: 120px;
+
+	bottom: 16px;//56+56+(56/2)
+	left: 0px; //256-(56/2)
+	background: $c-surface;
+	overflow-y:scroll;
+	overflow-x:hidden;
+
+	left: 50%;
+	transform:translateX(-50%);
+	@include transition(0.300s, stan)
+
+	//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+
+
+}
+

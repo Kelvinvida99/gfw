@@ -1,0 +1,60 @@
+@mixin font-init ($size, $width, $color, $space){
+	color: 			#{$color};
+	font-size:  	#{$size};
+	font-weight:  	#{$width};
+	letter-spacing: #{$space};
+	//@include noZtransform;
+}
+
+
+@mixin textOverflow{
+
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	text-wrap:none;	
+	overflow: hidden;
+}
+
+
+
+@mixin font($category, $color) {
+
+	@if $category == 34 {
+		@include font-init (34px, 500, $color, 0.15px);
+	}
+
+	@if $category == h6 {
+		@include font-init (20px, 500, $color, 0.15px);
+	}
+
+	@if $category == subtitle1 {
+		@include font-init (16px, normal, $color, 0.15px);
+	}
+
+	@if $category == subtitle2 {
+		@include font-init (14px, 500, $color, 0.1px);
+	}
+
+	@if $category == body1 {
+		@include font-init (16px, normal, $color, 0.5px);
+	}
+
+	@if $category == body2 {
+		@include font-init (14px, normal, $color, 0.25px);
+	}
+
+	@if $category == button {
+		@include font-init (14px, 500, $color, 1.25px);
+		text-transform: uppercase;
+	}
+
+	@if $category == caption {
+		@include font-init (12px, normal, $color, 0.4px);
+	}
+
+	@if $category == overline {
+		@include font-init (10px, normal, $color, 1.5px);
+		text-transform: uppercase;
+	}
+}
+

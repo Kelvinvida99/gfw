@@ -1,0 +1,23 @@
+
+<IfModule mod_headers.c>
+    # WEEK
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+
+    # WEEK
+    <FilesMatch "\.(swf)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+
+    # WEEK
+    <FilesMatch "\.(svg)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+
+    <FilesMatch "\.(woff2)$">
+        Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+
+
+</IfModule>

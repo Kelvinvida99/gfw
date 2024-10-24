@@ -1,0 +1,35 @@
+{
+	"name":              "Gosive app",
+	"short_name":        "GOSIVE", 
+	"start_url":         "https://demo.gosive.com/gosiveFW/public", 
+	"display":           "standalone",
+	"background_color":  "#1249c7",
+	"theme_color":       "#1249c7",
+	"oriental":          "portrait-primary",
+	"description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
+
+
+	"icons": [
+		{"src": "./css/img/icons-devices/gosive-logo-72.png", 
+		 "type":    "image/png", "sizes":   "72x72","purpose": "any maskable" },
+
+		{"src": "./css/img/icons-devices/gosive-logo-96.png", 
+		 "type":    "image/png", "sizes":   "96x96","purpose": "any maskable" },		 
+
+		{"src": "./css/img/icons-devices/gosive-logo-128.png", 
+		 "type":    "image/png", "sizes":   "128x128","purpose": "any maskable" },		
+		
+		{"src": "./css/img/icons-devices/gosive-logo-152.png", 
+		 "type":    "image/png", "sizes":   "152x152","purpose": "any maskable" },		
+
+		{"src": "./css/img/icons-devices/gosive-logo-192.png", 
+		 "type":    "image/png", "sizes":   "192x192","purpose": "any maskable" },		
+
+		{"src": "./css/img/icons-devices/gosive-logo-384.png", 
+		 "type":    "image/png", "sizes":   "384x384","purpose": "any maskable" },		
+
+		{"src": "./css/img/icons-devices/gosive-logo-512.png", 
+		 "type":    "image/png", "sizes":   "512x512","purpose": "any maskable" }	
+
+	]
+}

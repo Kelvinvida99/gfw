@@ -1,0 +1,26 @@
+
+.scrim-show{
+	animation: scrim-show  0.300s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+
+}
+
+@keyframes scrim-show{
+
+	from{ top: 100vh;        }
+	to  { top: 0vh;         }
+}
+
+.scrim-hide{
+	animation: scrim-hide  0.250s;
+	animation-fill-mode: both;
+	@include animationT(acce);
+}
+
+
+@keyframes scrim-hide{
+
+	from{ top: 0vh;    }
+	to  { top: 100vh;   }
+}

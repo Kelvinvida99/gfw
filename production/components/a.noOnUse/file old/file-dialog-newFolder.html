@@ -1,0 +1,43 @@
+<div class="dialog " id="file-newFolder-dialog">
+  
+    <label class="title">New Fodler</label>
+    <label class="des">Type folder name below </label>
+
+
+
+    <div class="textfield textfield-filled  textfield-autocomplete" >
+
+      <input  class= 'elem' type="text"   value="" 
+             data-detail='{"key":   [ {"dest":"textfield", "act":"typing"  },{"dest":"file", "act":"newFolder"  }] }' >
+
+        <div class="indicador"></div>
+
+        <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+          <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+        </div>
+
+        <div class="label">File Name</div> 
+        <div class="helper" >Required</div>
+        <div class="counter">Name</div> 
+        <div class="selector"></div>
+    </div>
+
+
+
+
+
+
+
+      <div class="button primary" data-detail="{
+                                          &quot;click&quot;: [ {&quot;dest&quot;:&quot;ripple&quot; }, {&quot;dest&quot;:&quot;dialog&quot;, &quot;act&quot;:&quot;hide&quot;},
+                                       {&quot;dest&quot;:&quot;file&quot;, &quot;act&quot;:&quot;newFolder&quot;} ]}">
+         <label>Save</label>        
+      </div>
+
+  
+      <div class="button secondary  button-plain" data-detail="{
+                                       &quot;click&quot;: [ {&quot;dest&quot;:&quot;ripple&quot; }, {&quot;dest&quot;:&quot;file&quot;, &quot;act&quot;:&quot;hideNewFolder&quot;} ]}">
+           <label>Cancel</label>        
+      </div>
+</div>
+

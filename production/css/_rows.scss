@@ -1,0 +1,102 @@
+
+@mixin row($gutter) {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	
+
+	//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+	@include clearfix;	 
+	@include back-visivility
+
+	& > div{
+		position: relative;
+		float: left;
+
+		border: 0.1px solid transparent;
+	  // border: 0.1px solid $c-divider;
+		//background: lightblue;
+
+	    &:not(:last-child){
+		    margin-right: $gutter;
+		}
+	}
+
+	& > .c100 { width: 100%;     												   }
+	& > .c75  { width: calc( 3 * ((100% - 3 * #{$gutter}) / 4) + 2 * #{$gutter} ); }
+	& > .c66  { width: calc( 2 * ((100% - 2 * #{$gutter}) / 3) + #{$gutter}  );    }
+	& > .c50  { width: calc(      (100% - #{$gutter}) / 2);                        }
+	& > .c33  { width: calc(      (100% - 2 * #{$gutter}) / 3);                    }
+	& > .c25  { width: calc(      (100% - 3 * #{$gutter}) / 4);                    }
+	& > .c20  { width: calc(      (100% - 4 * #{$gutter}) / 5);                    }
+
+	& > .c16  { width: calc(      (100% - 5 * #{$gutter}) / 6);                    }
+	& > .c14  { width: calc(      (100% - 6 * #{$gutter}) / 7);                    }
+}
+
+.row{
+	@include row(16px);
+	
+	@include respond(table) {
+		@include row (8px);
+	}
+
+	@include respond(phone) {
+		@include row (4px);
+	}
+}
+
+
+
+@mixin cg-to($break, $width) {
+	@include respond($break) {
+		width: #{$width} !important;	
+		
+		@if($width == 0%){ //0% → hide the element
+			display: none !important;
+		} 
+	}
+
+}
+
+
+//cg100p
+.cg{//colum go to
+	&100{//cg100
+		&m { @include cg-to(mini, 100%)        }		
+		&p { @include cg-to(phone, 100%)		}
+		&t { @include cg-to(table, 100%)       }		
+		&tl{ @include cg-to(table-land, 100%)  }
+		&d { @include cg-to(desktop, 100%)     }
+	}
+	&50{//cg50
+		&m { @include cg-to(mini, 50%)        }		
+		&p { @include cg-to(phone, 50%)		}
+		&t { @include cg-to(table, 50%)       }		
+		&tl{ @include cg-to(table-land, 50%)  }
+		&d { @include cg-to(desktop, 50%)     }
+	}
+	&75{//cg75
+		&m { @include cg-to(mini, 75%)        }		
+		&p { @include cg-to(phone, 75%)		}
+		&t { @include cg-to(table, 75%)       }		
+		&tl{ @include cg-to(table-land, 75%)  }
+		&d { @include cg-to(desktop, 75%)     }
+	}
+	&25{//cg25
+		&m { @include cg-to(mini, 25%)        }		
+		&p { @include cg-to(phone, 25%)		}
+		&t { @include cg-to(table, 25%)       }		
+		&tl{ @include cg-to(table-land, 25%)  }
+		&d { @include cg-to(desktop, 25%)     }
+	}
+	&0{ //cg0p
+			&m { @include cg-to(mini, 0%)        }		
+			&p { @include cg-to(phone, 0%)		}
+			&t { @include cg-to(table, 0%)       }		
+			&tl{ @include cg-to(table-land, 0%)  }
+			&d { @include cg-to(desktop, 0%)     }		
+	}
+}
+

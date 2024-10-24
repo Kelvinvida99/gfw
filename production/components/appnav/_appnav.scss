@@ -1,0 +1,158 @@
+
+.appnav{
+	position: fixed;
+	//display: none;
+	// //THISIS ONLY PHONE ################
+	// display: inline-block;
+	bottom:0px;
+	left: 0px;
+	width: 100%;
+	height: 56px;
+	z-index: 10;
+
+	background-color: $c-w;
+	border-top: 1px solid $c-divider;
+
+
+	//box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2);
+	// border: 5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+	& > .indicator{
+		position: absolute;
+		display: inline-block;
+		width: 72px;
+		height: 54px;
+		top: -8px;
+		left:0px;
+
+		//background: red;
+		z-index: 11;
+		@include transition(.150s, emph);
+		@include selectNo();
+		//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		& > .circle{
+			position: absolute;
+			content: '';
+			top: 0px;
+			left: 8px;
+
+			width: 56px;
+			height: 56px;
+			background: $c-p;	
+			border-radius: 50%;
+			@include bs-4;
+
+			//opacity: 0.24;
+			//border: 4px solid $c-surface;
+			//opacity: 0.72;
+
+			background: linear-gradient(90deg, #0072FF, #0CA9E8);	
+		    background-size: 400% 400%;
+
+		    -webkit-animation: animationRotationLocal 10s ease infinite;
+		    -moz-animation: animationRotationLocal 10s ease infinite;
+		     animation: animationRotationLocal 10s ease infinite;
+
+		}
+	}
+
+	& > div{
+		position: relative;
+		float: left;
+		height: 56px;
+		width: 72px;
+		//overflow: hidden;
+		//border: 0.1px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+		//& .ripple { background-color: $c-p; }
+		//border: 0.1px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		
+		& svg{
+			position: relative;
+			display: inline-block;
+			top: 8px;
+			height: 24px;
+			width: 24px;
+			display: block;
+			opacity: 0.99;
+			fill: $c-pd;
+			z-index: 13;
+
+			@include align-center();
+			@include selectNo;
+			@include transition(.250s, emph);
+			//border: 0.1px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+		}	
+
+		
+
+
+
+
+		& label{
+			position: relative;
+			display: inline-block;
+
+			top: 12px;
+			left:0px;
+			height: 16px;
+			width: 100%;
+			text-align: center;
+			
+			@include font(caption, $c-b);
+			@include align-center();
+			@include transition(0.350s, stan);
+			@include selectNo;	
+			font-weight: 500;	
+
+			color: $c-pd;
+			//opacity: 0.64;
+
+
+			//border: 0.1px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+
+
+	}
+
+
+}
+
+
+@keyframes animationRotationLocal{
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+}
+
+
+
+
+			// &::after{
+			// 	position: absolute;
+			// 	content: '';
+			// 	top: 24px;
+			// 	left: -20px;
+
+			// 	width: 20px;
+			// 	height: 20px;
+			// 	background: $c-error;	
+			// 	border-top-right-radius: 20px;
+			// 	//border-radius: 50%;
+			// 	opacity: 0.72;				
+			// }
+
+			// &::before{
+			// 	position: absolute;
+			// 	content: '';
+			// 	top: 24px;
+			// 	right: 0px;
+
+			// 	width: 20px;
+			// 	height: 20px;
+			// 	background: $c-error;	
+			// 	//border-radius: 50%;
+			// 	opacity: 0.72;				
+			// }

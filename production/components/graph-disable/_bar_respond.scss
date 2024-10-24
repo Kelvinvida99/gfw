@@ -1,0 +1,65 @@
+.bar{
+
+	@include respond (phone) {
+
+		& .barBody{
+			padding-left: 18px;
+		& .unit{
+
+			& .rectangle{
+				width: calc(100% - 8px);				
+				margin-left: 4px;
+				margin-right: 4px;				
+			}/*rectangle*/	
+			& .legend{
+
+				display: block;
+				padding-left: 0px;
+				padding-right: 0px;
+			    font-size: 14px; 
+			}/*legend*/	
+
+		}/*unit*/	
+
+		& .line {
+			& label{
+					left: 2px !important;
+					width: auto;
+					transform: rotate(90deg);	
+					//border: 0.1px solid green;/************************/
+				}/*label*/
+			}/*line*/			
+		}
+
+	}/*phone*/
+
+
+	@include respond (mini) {
+
+		& .barBody{
+
+		& .unit{
+
+			& .rectangle{
+				width: calc(100% - 4px);				
+				margin-left: 2px;
+				margin-right: 2px;				
+			}/*rectangle*/	
+			& .legend{
+
+				display: block;
+				padding-left: 0px;
+				padding-right: 0px;
+			    font-size: 12px; 
+				//border: 0.1px solid red;/************************/
+			}/*legend*/	
+
+		}/*unit*/
+		}/*barBody*/
+	}/*phone*/
+
+
+}/*dashboard_bar*/
+
+
+

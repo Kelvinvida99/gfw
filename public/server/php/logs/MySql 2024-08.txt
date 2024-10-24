@@ -1,0 +1,17 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-08-04 15:24:pm rodin@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SORT BY item.name 
+                GROUP BY purchase_vs_item.purchaseId
+
+...' at line 125, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-08-04 15:25:pm rodin@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SORT BY item.name ASC 
+                GROUP BY purchase_vs_item.purchaseId ...' at line 125, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-08-04 15:25:pm rodin@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SORT BY item.name ASC 
+
+
+        ) AS purchaseVSsoldItem ON purchaseVSsold...' at line 126, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-08-05 09:12:am ypena@,  Unknown column 'item.name' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, sale
+2024-08-05 09:12:am ypena@,  Unknown column 'item.name' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, sale
+2024-08-09 00:02:am miguel@,  Unknown column 'sale.packing_slip_last_printed' in 'field list', executeSelect.php@9, MySql->SELECT@1054, sale
+2024-08-28 12:42:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY 
+        overdue_age' at line 52, executeSelect.php@9, MySql->SELECT@1064, customer

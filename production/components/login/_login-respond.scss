@@ -1,0 +1,32 @@
+
+
+
+
+#login{
+	@include respond (table) { 
+
+      	
+		& .contRight  { 
+			width: 100%;
+			padding-left: 8px;
+			
+	      	& .cont  { 
+	      		visibility: visible;
+	      		height: 200px;
+
+	           	& .illus  { 
+	           		margin-top: 0px;
+					height: 150px;
+					width:  150px;
+					//border: 5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+				}
+
+	        }
+		}
+
+		& .contLeft  { 
+			display: none;
+		}
+
+     }/*phone*/     
+}

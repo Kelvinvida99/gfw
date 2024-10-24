@@ -1,0 +1,55 @@
+
+.snack-show{
+	
+	@include respond (phone) {
+		animation: snack-show-phone  0.250s;
+		animation-fill-mode: both;
+		@include animationT(emph);
+	}
+
+}
+
+
+@keyframes snack-show-phone{
+
+	from{
+		bottom: -200px; 
+		opacity: 0; 
+		transform: scale(0.85);
+	}
+	to{
+		bottom: 64px; //56+28+161 
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.snack-hide{
+
+	@include respond (phone) {
+		animation: snack-hide-phone  0.300s;
+		animation-fill-mode: both;
+		animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+	}
+
+}
+
+
+
+@keyframes snack-hide-phone{
+
+	from{
+		bottom: 64px; 
+		opacity: 1;
+		transform: scale(1);
+	}
+	to{
+		bottom: -200px; 
+		opacity: 0; 
+		transform: scale(0.85);
+	}
+
+
+}
+

@@ -1,0 +1,44 @@
+
+
+.file {
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 16px);
+
+	max-width: 900px;
+	margin-top: 8px;
+	overflow: hidden;
+	// border-radius: 4px;
+	// border-radius: 4px;
+	//padding: 8px;	
+	//margin-top: 48px;	
+	//margin-bottom: 16px;
+
+		@include clearfix;	
+
+
+	
+	left: 50%;
+	transform: translateX(-50%);
+	//border: 0.5px solid $c-divider; /*---------------------------------------------*/
+
+
+	//border: 0.5px solid blue; /*---------------------------------------------*/
+
+	
+
+}/*files*/
+
+.filePage{
+	& > .file-regularFiles{ display: inline-block; }
+	& > .file-deletedFiles{ display: none; }
+
+}
+
+
+.filePage-view-trash{
+	& > .file-regularFiles{ display: none; }
+	& > .file-deletedFiles{ display:  inline-block; }
+
+}
+

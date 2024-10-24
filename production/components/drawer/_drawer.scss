@@ -1,0 +1,93 @@
+
+.drawer{
+	position: fixed;
+	display: inline-block;
+	top: 0px;
+	left: -256px;
+	//left:0; //orange keepVisible
+	
+	width: 256px;
+	height: 100vh;
+	z-index: 100;
+	background-color: $c-w;
+	overflow-y: scroll;
+	
+	
+	//border: 5px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	
+	&::-webkit-scrollbar {
+	  display: none;
+	}
+	& > .title{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		padding-left: 8px;
+
+		@include font(h6, $c-b);
+		@include selectNo;
+
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+	}
+	& > .des{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		padding-left: 8px;
+		opacity: 0.54;
+
+		@include font(body2, $c-b);
+		@include selectNo;
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+	}
+
+	& > .elem{
+		position: relative;
+		display: inline-block;
+		padding-left: 16px;
+		padding-right: 16px;
+		min-height: 48px;
+
+		width: calc(75% - 0px);
+		//margin-left: 8px;
+
+		text-decoration: none ;
+
+		@include interaction-white;//click/interactions
+		@include leftFlex;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		& label{
+			opacity: 0.87;
+			margin-left: 16px;
+
+			@include font(subtitle2, $c-b)
+			@include selectNo;
+		
+			//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		& svg{
+			height: 24px;
+			width: 24px;
+			opacity: 0.54;
+			fill: $c_b;
+			
+			@include selectNo;
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+		&-last{
+			position: absolute; 
+			bottom: 24px;
+		}
+
+	}
+	//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+	
+}
+
+

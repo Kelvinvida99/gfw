@@ -1,0 +1,29 @@
+.cont-active{
+
+	background: $c-p !important;
+
+	& svg {
+		fill: $c-w !important;
+	}
+
+	& label {
+		color: $c-w  !important;
+	}
+
+}
+
+
+
+.menubar{
+
+	& > .icon-blue   { & svg{ fill: darken($cg-blue,   20%); } }/*cont*/
+	& > .icon-purple { & svg{ fill: darken($cg-purple, 20%); } }/*cont*/
+	& > .icon-green  { & svg{ fill: darken($cg-green,  20%); } }/*cont*/
+	& > .icon-yellow { & svg{ fill: darken($cg-yellow, 40%); } }/*cont*/
+	& > .icon-orange { & svg{ fill: darken($cg-orange, 20%); } }/*cont*/
+	& > .icon-red    { & svg{ fill: darken($cg-red,    40%); } }/*cont*/
+	& > .icon-gray   { & svg{ fill: darken($cg-gray,   20%); } }/*cont*/
+
+}
+
+

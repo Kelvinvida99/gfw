@@ -1,0 +1,53 @@
+.menu{
+	position: fixed;
+	display: inline-block;
+	min-width: 112px;
+	border-radius: 4px;
+
+	background-color: $c-w;
+	transform: scale(0);
+	opacity: 0;
+	transform-origin: top right;
+	overflow: hidden;
+
+	@include bs-8;
+	z-index: 210;
+
+	& > div {
+		position: relative;
+		display: block;
+
+		height: 48px;
+		padding-left:  16px;
+		padding-right: 16px;
+
+		@include leftFlex;
+		@include interaction-white;
+		@include transition(.150s, emph);
+	 	&:active  {transform:scale(0.90); }
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+		& label{
+			margin-right: 8px;
+	
+			@include font(body2, $c-b);
+			@include selectNo;
+		
+			//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		& svg{
+			flex-shrink: 0;
+			height: 24px;
+			width: 24px;
+			opacity: 0.54;
+			margin-right: 16px;
+			fill: $c_b;
+			
+			@include selectNo;
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+	}
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+}

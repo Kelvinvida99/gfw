@@ -1,0 +1,32 @@
+
+
+
+
+.file-full-show{
+  animation: fullcont-show  0.300s;
+  animation-fill-mode: both;
+  @include animationT(emph);
+
+}
+
+@keyframes file-full-show{
+
+  from{ top: 100vh; }
+  to  { top: 0vh;   }
+}
+
+.file-full-hide{
+  animation: file-full-hide  0.250s;
+  animation-fill-mode: both;
+  @include animationT(acce);
+}
+
+
+@keyframes file-full-hide{
+
+  from{ top: 0vh;   }
+  to  { top: 100vh; }
+
+
+}
+

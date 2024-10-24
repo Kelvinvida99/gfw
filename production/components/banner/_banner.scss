@@ -1,0 +1,76 @@
+//< 100 Characters
+//short bottoms
+//page-anime → work with this
+
+
+.banner {
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 0px); 
+	min-height: 72px;
+	left: 0px;
+	padding: 8px;
+	z-index: 40;
+	background-color: $c-w;
+
+	transform: scaleY(0);
+	opacity: 0;
+	transform-origin: top left;
+	overflow: hidden;
+	
+	//display: none;
+	//border: 2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+
+
+	& > .icon{
+		position: relative;
+		float: left;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin-top: 2px;
+		border-radius: 50%;
+		margin-right: 16px;
+		margin-right: 24px;
+
+		background-color: $c-p;
+		@include centerFlex;
+		@include selectNo;
+		//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+
+		& svg{
+			height: 24px;
+			width: 24px;
+			fill: $c-w;
+			@include selectNo;
+			
+			
+			//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+		}		
+	}
+	&  > .des{
+		position: relative;
+		float: left;
+		display: inline-block;
+		width: calc(100% - 82px - 324px);
+		min-width: 384px;
+		min-height: 48px;
+		overflow:hidden;
+
+
+		@include font(subtitle1, $c-b);
+		//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+	}
+
+	& > .btn{
+		position: relative;
+		float: right;
+		display: inline-block;
+		width: 324px;
+		margin-right: 16px;
+		height: 64px;
+
+	}
+
+}		

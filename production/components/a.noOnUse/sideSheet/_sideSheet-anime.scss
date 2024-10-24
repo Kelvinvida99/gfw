@@ -1,0 +1,12 @@
+.sideSheet{
+		@include transition(.200s, dece);
+}
+
+.sideSheet-show{
+	//@include bs-1;
+	right: 0px;
+}
+
+.sideSheet-hide{
+	right: calc(-1 *(100% - 56px));
+}

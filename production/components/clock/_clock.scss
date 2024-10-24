@@ -1,0 +1,8 @@
+.clock{ 
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+      @include font-init (40px, 500, $c-b, 1.50px);
+
+}

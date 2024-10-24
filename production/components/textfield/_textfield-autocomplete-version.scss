@@ -1,0 +1,248 @@
+
+
+
+.textfield-autocomplete-one{
+	& > .chip-cont{
+		min-height: 1px;
+		top: -34px;
+		//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+		& > .chip{ 
+
+			&  > label{
+				max-width: calc(100% - 28px);
+			}
+		}
+	}
+	//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+}
+
+.textfield-autocomplete-disabled{
+	& > .elem{
+		@include selectNo;
+		&::placeholder {  opacity: 0.0; }
+	}
+
+	& > .chip-cont{
+		 @include selectNo;
+		 opacity: 0.76;
+
+		& > .chip{ 
+			@include selectNo;
+			opacity: 0.76;
+		}
+	}
+	//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+}
+
+
+.textfield-autocomplete-desk{
+	height: 36px !important;
+	& > .elem{
+		height: 36px;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	& > .label {
+		top: 2px !important;
+		opacity: 1 !important;
+		@include font(overlinelLower, $c-b);
+		text-transform: uppercase !important;
+		font-size: 10px !important;
+		letter-spacing: 0.5px !important;
+		//font-weight: 300 !important;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	& > .chip-cont{
+		min-height: 16px;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+		& > .chip{ 
+			height: 16px;
+
+			&  > label{
+				left: 4px;
+				top: 2px;
+				@include font(caption, $c-b);
+				//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+			}
+
+			& > span{
+				width: 16px;
+				height: 16px;
+				top: 0px;
+				right: 2px;
+				background-size: 16px 16px;
+
+				//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+			}/*remove*/
+		}/*time-task*/
+	}
+}
+
+.textfield-autocomplete-deskOne{
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	height: 36px;
+	//margin: 0px;
+	overflow: hidden;
+
+
+	& > .elem{
+		height: 36px;
+		//margin: 0px;
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	& > .label {
+		top: 1px !important;
+		left: 4px !important;
+		opacity: 0.54;
+		
+		@include font(overlinelLower, $c-b);
+		font-size: 10px !important;
+		letter-spacing: 0.5px !important;
+		font-weight: 500 !important;
+		//border: 0.2px solid purple;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	& > .chip-cont{
+		min-height: 1px;
+		top: -22px;
+		//margin: 0px;
+		width: calc(100% - 42px);
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+		& > .chip{ 
+			height: 18px;
+			//margin: 0px;
+			left: 0px;
+			width: calc(100% - 0px);
+
+			&  > label{
+				left: 0px;
+				top: 2px;
+				//margin: 0px;
+				@include font(caption, $c-b);
+				max-width: calc(100% - 28px) !important;
+				//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+			}
+
+			& > span{
+				width: 16px;
+				height: 16px;
+				top: 0px;
+				right: 2px;
+				//margin: 0px;
+				background-size: 16px 16px;
+			}/*remove*/
+		}/*time-task*/
+	}
+
+	& > .add{
+		position: absolute;
+		height: 32px;
+		width: 32px;
+
+		right: 4px;
+		top: 2px;
+		//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+	}
+
+
+}
+
+
+
+.textfield-autocomplete-mini{
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	height: 24px;
+	overflow: hidden;
+
+
+	& > .elem{
+		height: 24px;
+		//padding-bottom: 16px !important;
+		padding: 0px;
+		padding-top: 4px;
+		border-bottom: none;
+		&::placeholder {
+			color: $c-b          !important; ;
+			font-size: 12px       !important; ;
+			font-weight: 400      !important; ;
+			letter-spacing: 0.5px !important; ;		
+			margin-bottom: 16px;	
+			letter-spacing: 0.5px !important; ;
+		}	
+		
+
+	}
+
+
+
+	& > .chip-cont{
+		min-height: 1px;
+		top: -24px;
+		//margin: 0px;
+		min-width: 48px;
+		width: calc(100% - 0px);
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+		& > .chip{ 
+			height: 18px;
+			left: -2px;
+			width: calc(100% - 8px);
+
+			&  > label{
+				left: 0px;
+				top: 2px;
+				@include font(caption, $c-b);
+				max-width: calc(100% - 28px) !important;
+				//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+			}
+
+			& > span{
+				width: 16px;
+				height: 16px;
+				top: 0px;
+				right: 2px;
+				background-size: 16px 16px;
+			}/*remove*/
+		}/*time-task*/
+	}/*chip-cont*/
+
+
+	& > .add{
+		position: absolute;
+		height: 32px;
+		width: 32px;
+
+		right: 4px;
+		top: -4px;
+		//border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

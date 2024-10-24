@@ -1,0 +1,23 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-03-14 21:52:pm amdry@,  Unknown column 'otherexpense.accounts_bank_id' in 'field list', executeSelect.php@9, MySql->SELECT@1054, otherexpense
+2024-03-14 21:52:pm amdry@,  Unknown column 'otherexpense.accounts_bank_id' in 'field list', executeSelect.php@9, MySql->SELECT@1054, otherexpense
+2024-03-16 09:24:am ypena@,  Unknown column 'due_status' in 'group statement', executeSelect.php@9, MySql->SELECT@1054, customer
+2024-03-17 21:18:pm ypena@,  Unknown column 'i.total_amount' in 'field list', executeSelect.php@9, MySql->SELECT@1054, customer
+2024-03-25 21:31:pm amdry@,  Unknown column 'sentpayment.reference_number' in 'field list', executeSelect.php@9, MySql->SELECT@1054, sentpayment
+2024-03-25 21:31:pm amdry@,  Unknown column 'sentpayment.reference_number' in 'field list', executeSelect.php@9, MySql->SELECT@1054, sentpayment
+2024-03-30 14:36:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = ''' at line 1, executeUpdate.php@9, MySql->UPDATE@1064, sale
+2024-03-30 15:32:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'delete SET deleted = '1' WHERE id IN ()' at line 1, executeDelete.php@9, MySql->DELETE@1064, delete
+2024-03-30 16:06:pm ypena@,  Unknown column 'receivepayment.code' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-03-30 16:06:pm ypena@,  Unknown column 'receivepayment.code' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-03-30 16:07:pm ypena@,  Unknown column 'receivepayment.code' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-03-30 16:11:pm ypena@,  Unknown column 'receivepayment.code' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-03-30 16:13:pm ypena@,  Unknown column 'payment_vs_po_or_services.purchase_id' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-03-30 16:14:pm ypena@,  Unknown column 'payment_vs_sale.sentpaymentId' in 'on clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-03-30 16:56:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = ''' at line 1, executeUpdate.php@9, MySql->UPDATE@1064, purchase
+2024-03-30 17:32:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = ''' at line 1, executeUpdate.php@9, MySql->UPDATE@1064, purchase
+2024-03-30 17:35:pm ypena@,  Unknown column 'code' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, purchase
+2024-03-30 17:35:pm ypena@,  Unknown column 'code' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, purchase
+2024-03-30 17:35:pm ypena@,  Unknown column 'investment' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, purchase
+2024-03-30 17:36:pm ypena@,  Unknown column 'payments_status' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, purchase
+2024-03-31 14:44:pm marco@,  Unknown column 'code' in 'field list', executeSelect.php@9, MySql->SELECT@1054, item

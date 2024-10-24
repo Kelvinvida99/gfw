@@ -1,0 +1,32 @@
+
+
+.dt{
+	& .filterCont{
+		transform: scaleY(0);
+		transform-origin: top;
+		width: calc(100% - 16px);
+		margin-left: 8px;
+		//border-bottom: 0.1px solid $c-divider;               //←←←←←←←←←←←←←←←←←←←←
+		@include transition(.150s, emph)
+		
+
+	}
+
+}
+
+.dt-filtering {
+	& .filterCont{
+		background-color:$c-w;
+		transform: scaleY(1);
+		@include transition(.150s, emph)
+	}
+
+	& .filter{
+		
+		& svg{ 
+			opacity: 1 !important;
+			fill: $c-p !important;
+		}
+	}
+	//border: 1px solid red;
+}

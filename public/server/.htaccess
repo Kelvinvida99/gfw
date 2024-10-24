@@ -1,0 +1,10 @@
+# Block directory listing
+Options -Indexes
+
+# Allow access to specific file types from internal code or scripts
+SetEnvIf Referer "^https://beestock.gosive.com/" internal_referer
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf|doc|docx|xls|xlsx)$">
+    Order deny,allow
+    Deny from all
+    Allow from env=internal_referer
+</FilesMatch>

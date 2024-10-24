@@ -1,0 +1,49 @@
+
+
+
+@mixin stepper-dark {
+	& .stepper{
+		background-color: $d-e12;
+		
+		& label{
+			@include font(button, $c-w);
+			@include selectNo;
+			//border: 0.2px solid green;            //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		& .btn-next{
+			right: 0px;
+			& label{ color: $d-e12; opacity: 0.36; }
+			& svg  { color: $d-e12; opacity: 0.36; }	
+		}
+
+		& .btn-back{
+			left: 0px;
+			& label{ color: $c-w; opacity: 0.36; }
+			& svg  { color: $c-w; opacity: 0.36; }	
+			@include interaction-dark-12;	
+		}
+
+	}
+
+	& .stepper-nextOn{
+			& .btn-next{
+				background-color:$c-p;
+				& label{ color: $c-w !important; opacity: 1;}
+				& svg  { fill:  $c-w !important; opacity: 1;}			
+			}
+	}/*stepper*/
+
+
+	& .stepper-backOn{
+
+			& .btn-back{
+				background-color: $d-e12;
+				@include interaction-dark-12;
+
+				& label{ color: $c-pl !important;  opacity: 1; }
+				& svg  { fill: $c-pl  !important;  opacity: 1; }			
+			}
+	}/*stepper*/
+
+}/*stepper-bothOn*/

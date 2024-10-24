@@ -1,0 +1,78 @@
+.appbar-main{
+	position: fixed;
+	display: inline-block;
+	
+	width: calc(100% - 0px);
+	left: 0px;
+
+	height: 48px;
+	top: 0px;
+	z-index: 10;     
+	overflow: hidden;  
+	background-color: $cpd; 
+
+	padding-right: 72px;
+	@include back-visivility;
+	//opacity: 0.36;
+    //border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←	
+
+
+			
+			& > h1{
+				position: relative;
+				display: inline-block;
+				left: 8px;
+				top: 12px;
+
+				margin-right: auto; //need it
+
+				@include font(h6, $c-w); //font
+				@include selectNo;
+				@include back-visivility;
+
+				letter-spacing: 1.5px;
+	
+				
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;     //... at the end of input
+
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+			}	
+
+
+			& > div {
+				position: relative;
+				float: right;
+				height: 48px;
+				min-width: 48px;
+				padding: 4px;	
+				padding-left: 8px;
+				padding-right: 8px;
+				// cursor: pointer;
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←	
+				
+				@include centerFlexColum;
+				@include back-visivility;
+				@include interaction-color;
+				//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←	
+
+				& svg{
+					height: 24px;
+					width:  24px;
+					fill: $c-w;
+					opacity: 0.99;
+					@include selectNo;
+					@include back-visivility;
+					//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+				}
+			}/*div*/
+
+			& > .divLeft{
+				float: left;
+
+			}
+
+
+}
+

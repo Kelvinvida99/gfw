@@ -1,0 +1,59 @@
+
+
+.page-show{
+	animation: page-show  0.150s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+
+}
+
+@keyframes page-show{
+
+	from{
+		transform: scale(0.85);
+		opacity: 0;
+		top: 120vh;
+	}
+	to{
+		transform: scale(1);
+		opacity: 1;
+		top: 56px;
+	}
+}
+
+.page-hide{
+	animation: page-hide  0.100s;
+	animation-fill-mode: both;
+	@include animationT(acce);
+}
+
+
+@keyframes page-hide{
+
+	from{
+		top: 30vh;
+		opacity: 1;
+		transform: scale(1) translate(-50%, -30%);
+	}
+	to{
+		top: 130vh;
+		opacity: 0; 
+		transform: scale(0.85) translate(-50%, -30%);
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

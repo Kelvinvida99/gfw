@@ -1,0 +1,48 @@
+
+.dt-loading {
+	color: transparent !important;
+
+	& > table > tbody {
+		& tr {
+
+				animation-name: dt-gradient;
+				animation-duration: 7s ;
+				animation-iteration-count: infinite;
+				animation-direction: revese;
+				@include animationT(emph);
+				background: linear-gradient(-45deg, lighten($c-p, 50%), $c-w);
+				background-size: 400% 400%;
+
+			&:nth-child(odd){ //ligray backgroud alternated :nth-child(odd)
+				//opacity: 0.36;
+				animation-name: dt-gradient;
+				animation-duration: 4s ;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				@include animationT(emph);
+				background: linear-gradient(-45deg, lighten($c-p, 50%), $c-w, lighten($c-p, 45%), $c-w);
+				background-size: 400% 400%;
+			}
+
+			& > td, & > th { // hide all elements only left tr
+				transform: scale(0);
+			}
+
+
+		}
+
+	}
+		
+		
+}
+
+@keyframes dt-gradient{
+    0%{
+        background-position: -5000px 0;
+    }
+    100%{
+        background-position: 5000px 0
+    }
+}
+
+

@@ -1,0 +1,136 @@
+.multivalue{
+	position: relative;
+	display: inline-block;
+	//height: 72px;
+	width: calc(100% - 0px);
+
+	// border-top-right-radius: 4px;
+	// border-top-left-radius: 4px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	border-bottom: 4px solid $c-surface;
+	margin-bottom: 16px;
+
+	//background: #F9F9F9;
+	//border: 0.2px solid gray;               //←←←←←←←←←←←←←←←←←←←← 
+	
+	
+	& .lineCont{
+
+		& > .line{
+
+			position: relative;
+			display: inline-block;
+			width: calc(100% - 0px);
+			//border-bottom: 0.5px solid gray;
+			//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+
+			& > .remove{
+
+				position: absolute;
+				display: inline-block;
+				
+				left: 0px;
+				top: 0px;
+				height: 56px;
+				width: 24px;
+				background:   url(svg/delete-o-r.svg) no-repeat;
+			    background-size: 100% 100%;
+			    background-position: center;
+			    cursor: pointer;
+			    z-index: 10;
+			    opacity: 0.56;
+				//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+
+			& > .contA{
+
+			position: relative;
+			display: inline-block;
+			//height: 72px;
+			width: calc(100% - 120px);		
+			float: left;
+			min-height: 48px;
+
+			//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+
+			& > .contB{
+
+			position: relative;
+			display: inline-block;
+			width: 120px;		
+			float: left;
+			min-height: 48px;
+
+			//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+			& .textfield-multivalue{
+				& > .elem{
+					padding-left: 24px  !important;
+				}
+				& > .label {
+					left: 24px;
+				}
+
+				//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+		}/*line*/
+
+
+	}/*lineCont*/
+}/*timeValue*/
+
+
+
+.multivalue-caution{
+	
+	& .lineCont{
+		& > .line{
+			& > .contA, & > .contB {
+				& .textfield > .indicador{
+					background-color: $c-caution;
+					transform: scaleX(1);
+				}
+			}
+
+		}/*line*/
+
+
+	}/*lineCont*/
+}/*timeValue*/
+
+
+
+
+.button-multivalue{ 
+	
+	position: relative;
+	display: inline-block;
+
+	float: right;
+	padding-left: 4px  !important; 
+	padding-right: 4px !important;
+	padding-top: 4px   !important;
+
+	margin-left: 2px !important;
+	margin-top: -20px !important;
+	margin-bottom: -8px !important; 
+	height: 24px !important;
+	width: 120px;
+
+	& svg{
+		height: 16px;
+		width: 16px;
+		margin-right: 4px;
+		//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+	}
+	z-index: 2;
+
+
+
+}

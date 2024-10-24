@@ -1,0 +1,9 @@
+{    
+        "authentication":{"val":"ok"},
+        "authorization":{"val":"ok"},
+        "error":{"val":"ok"},
+        "data":[{"id":"492","username":"yeison","name":"Aid1","last_name":"UNO","active":"true","privilege":"user","language":"en","__password":"UserHasPassword1!","avatar":"server\/storage\/gokudb\/entities\/nurses\/492\/avatar\/lowlowlowCompression\/avatar.jpg","__oldPassword":"UserHasPassword1!"}],
+        "availableRowsWithFilters":"0",
+        "multiTables":[],
+        "file":[]
+    } Php.

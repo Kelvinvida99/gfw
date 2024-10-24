@@ -1,0 +1,50 @@
+@mixin dt-loading-dark{
+
+
+
+.dt-loading {
+	color: transparent !important;
+	& > .header{
+		animation-name: dt-gradient;
+		animation-duration: 7s ;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		@include animationT(emph);
+		background: linear-gradient(-45deg, lighten($c-b, 10%), $c-b, lighten($c-b, 25%), $c-b);
+		background-size: 400% 400%;	
+
+	
+	}
+
+	& > table {
+		& tr{
+
+				animation-name: dt-gradient;
+				animation-duration: 3s ;
+				animation-iteration-count: infinite;
+				animation-direction: revese;
+				@include animationT(emph);
+				background: linear-gradient(-45deg, lighten($c-b, 10%), $c-b, lighten($c-b, 25%), $c-b);
+				background-size: 400% 400%;
+
+			&:nth-child(odd){ //ligray backgroud alternated :nth-child(odd)
+				//opacity: 0.36;
+				animation-name: dt-gradient;
+				animation-duration: 2s ;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				@include animationT(emph);
+				background: linear-gradient(-45deg, lighten($c-b, 10%), $c-b, lighten($c-b, 25%), $c-b);
+				background-size: 400% 400%;
+			}
+
+
+
+		}
+	}
+		
+		
+}
+
+
+}

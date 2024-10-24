@@ -1,0 +1,6 @@
+.bodyBar{
+	@include respond (table) {
+		display: none;
+	}
+
+}

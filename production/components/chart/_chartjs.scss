@@ -1,0 +1,73 @@
+.chartjs{ 
+      position: relative;
+      display: inline-block;
+      width: 100% !important;
+      //border:1px solid red;
+
+}
+
+
+
+.chartjs-canvas-200square{ 
+      position: relative;
+      display: inline-block;
+
+      max-width: 200px;
+      max-height: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      //border:1px solid red;
+
+}
+
+
+.chart-title{
+
+      position: relative;
+      display: inline-block;
+      width: calc(100% - 16px);
+      max-width: 900px;
+      left: 50%;
+
+      margin-top: 8px;
+      margin-bottom: 2px;
+      transform:translateX(-50%);
+
+      @include font(subtitle2, $c-pd);
+      opacity: 0.36;
+      //border: 0.1px solid red;            //←←←←←←←←←←←←←←←←←←←←     
+
+      &-top{
+            margin-top: 52px;
+            margin-bottom: 8px;
+           // border: 0.1px solid blue;            //←←←←←←←←←←←←←←←←←←←← 
+      }
+    //  border: 0.1px solid blue;            //←←←←←←←←←←←←←←←←←←←← 
+
+
+//border: 0.1px solid red;            //←←←←←←←←←←←←←←←←←←←←      
+}
+
+
+.card-chart {
+      position: relative;
+      display: inline-block;
+
+      width: calc(100% - 16px);
+      max-width: 900px;
+      padding: 8px;
+
+      margin:auto;
+
+      background-color: $c-w;
+      left: 50%;
+      transform:translateX(-50%);
+     
+      @include clearfix;      
+      @include transition(0.300s, stan);
+      border: 0.5px solid $c-divider;
+      
+      //pointer-events: none;
+      //border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}

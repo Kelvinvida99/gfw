@@ -1,0 +1,22 @@
+@mixin banner-dark{
+	.banner{
+		 background-color: $d-e6;
+
+		& > .icon{
+			background-color: transparent;
+			//opacity: 0.87;
+			& svg{
+				fill: $c-pl;
+			}		
+		}
+
+		&  > .des{
+			color:$c-w;
+			opacity: 0.99;
+
+		}
+
+
+
+	}
+}

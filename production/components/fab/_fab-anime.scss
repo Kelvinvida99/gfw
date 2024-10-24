@@ -1,0 +1,31 @@
+
+
+.fab{
+
+
+	&:hover{
+		@include bs-8;
+		opacity: 0.99;
+	}
+	&:active{
+		@include bs-6;
+		opacity: 0.99;
+	}
+
+}
+
+
+
+
+.fab-s > div{
+
+
+	&:hover{
+		@include bs-8;
+	}
+	&:active{
+		@include bs-6;
+	}
+
+}
+

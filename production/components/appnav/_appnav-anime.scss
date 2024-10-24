@@ -1,0 +1,19 @@
+.appnav{
+
+	& .select{
+			& svg{
+				//top: -8px;
+				opacity: 1;
+				fill: $c-w;
+			}
+
+			& label{
+				opacity: 0;
+				fill: $c-p;
+				//font-weight: 500;
+			}
+
+
+	}
+
+}

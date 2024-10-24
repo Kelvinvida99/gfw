@@ -1,0 +1,81 @@
+
+
+
+
+.appnav-green{
+
+	background-color: $c-s;
+
+	& > .indicator{
+		& > .circle{
+			background: $c-w;	
+		}
+	}
+
+	& > div{
+
+		& svg{
+			color: $c-w;
+		}	
+
+		& label{
+			@include font(caption, $c-w);
+		}
+	}
+
+
+	& .select{
+			& svg{
+				//top: -8px;
+				opacity: 1;
+				color: $c-b;
+			}
+
+			& label{
+				opacity: 0;
+				color: $c-b;
+				//font-weight: 500;
+			}
+	}
+
+}
+
+
+
+.appnav-blue{
+
+	background-color: $c-p;
+
+	& > .indicator{
+		& > .circle{
+			background: $c-w;	
+		}
+	}
+
+	& > div{
+
+		& svg{
+			color: $c-w;
+		}	
+
+		& label{
+			@include font(caption, $c-w);
+		}
+	}
+
+
+	& .select{
+			& svg{
+				//top: -8px;
+				opacity: 1;
+				color: $c-b;
+			}
+
+			& label{
+				opacity: 0;
+				color: $c-b;
+				//font-weight: 500;
+			}
+	}
+
+}

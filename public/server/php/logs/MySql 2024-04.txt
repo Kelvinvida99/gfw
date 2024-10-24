@@ -1,0 +1,13 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-04-09 21:52:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP sale.id LIMIT 0, 10' at line 43, executeSelect.php@9, MySql->SELECT@1064, sale
+2024-04-09 21:53:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sale.id 
+        ORDER BY sale.date_edited DESC  LIMIT 0, 10' at line 42, executeSelect.php@9, MySql->SELECT@1064, sale
+2024-04-13 09:43:am miguel@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-13 09:43:am miguel@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-13 09:46:am miguel@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-13 09:46:am miguel@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-16 12:42:pm amdry@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-16 12:43:pm amdry@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-16 12:43:pm amdry@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale
+2024-04-16 12:44:pm amdry@,  Unknown column 'total' in 'field list', executeUpdate.php@9, MySql->UPDATE@1054, sale

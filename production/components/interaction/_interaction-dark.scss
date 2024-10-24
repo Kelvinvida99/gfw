@@ -1,0 +1,110 @@
+
+
+
+// @mixin interaction-dark($color){
+// 	cursor: pointer;
+// 	overflow: hidden;
+
+// 	@if($color == $d-e12) { //color - Surface
+// 		&:hover   {background-color:  darken($d-e12, 6%); }
+// 		&:focus, 
+// 		&:active  {background-color:  darken($d-e12, 20%); }
+// 	    & .ripple {background-color: $c-w; }
+// 	}
+
+// 	@if($color == $d-p) { //color - dark primary
+// 		&:hover   {background-color:  darken($d-p, 8%); }
+// 		&:focus, 
+// 		&:active  {background-color:  darken($d-p, 16%); }
+// 	    & .ripple {background-color: $c-w; }
+// 	}
+
+
+
+
+// 	@include respond (table) { //remove hover on mobile
+// 			&:hover { background-color: $color; }
+// 	}
+
+// }
+
+
+@mixin interaction-dark-12{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+	
+
+	&:hover   {background-color: darken($d-e12, 8%) !important;  }
+	&:focus   {background-color: darken($d-e12, 8%)}
+    &:active  {background-color: darken($d-e12, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $d-e12}
+		&:focus   {background-color: $d-e12}
+	    &:active  {background-color: $d-e12}
+	}
+
+	& .ripple { background-color: $c-w; }
+}
+
+@mixin interaction-dark-surface{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+	
+
+	&:hover   {background-color: lighten($d-surface, 24%) !important;  }
+	&:focus   {background-color: darken($d-surface, 8%)}
+    &:active  {background-color: darken($d-surface, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $d-surface}
+		&:focus   {background-color: $d-surface}
+	    &:active  {background-color: $d-surface}
+	}
+
+	& .ripple { background-color: $c-w; }
+}
+
+
+@mixin interaction-dark-color{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+	
+
+	&:hover   {background-color: lighten($c-pl, 24%) !important;  }
+	&:focus   {background-color: darken($c-pl, 8%)}
+    &:active  {background-color: darken($c-pl, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-pl}
+		&:focus   {background-color: $c-pl}
+	    &:active  {background-color: $c-pl}
+	}
+
+	& .ripple { background-color: $c-w; }
+}
+
+
+
+
+
+// //All this should be delete after apply a general mixin
+
+// //color-percent
+// @mixin interaction-dark-init($color, $color-p, $color-ripple, $ripple-p){
+
+// 	&:hover   {background-color: lighten($color, $color-p)}
+// 	&:focus   {background-color: $color; }
+//     &:active  {background-color: $color; }
+    
+// 	& .ripple {
+// 		background-color: lighten($color-ripple, $ripple-p);
+// 	}
+// }
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+.banner {
+
+	@include respond(phone) {
+
+		&  > .des{
+			width: calc(100% - 82px );
+			min-width: auto;
+
+		}
+
+		&  > .btn{
+			width: calc(100% - 0px );
+			min-width: auto;
+			margin-right: 0px;
+
+		}
+
+	}
+
+}	

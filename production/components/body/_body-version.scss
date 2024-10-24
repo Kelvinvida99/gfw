@@ -1,0 +1,76 @@
+
+
+.body-mobile{
+	top: 56px !important;
+	left: 0px !important;
+	//height: calc(100vh - 56px ) !important;
+	width: calc(100vw - 0px);
+	padding: 0px;
+	margin-left: 0px;
+
+	border:  1px solid $c-surface;               //←←←←←←←←←←←←←←←←←←←←
+
+	& .dt{
+		& > .header{
+			width: 100%;
+			left: 0px;
+			& >.title{
+				left: 0px;
+				//border:  1px solid $c-error;               //←←←←←←←←←←←←←←←←←←←←
+			}
+		}
+	}
+}
+
+
+.body-tv{
+	top: 0px !important;
+	left: 0px !important;
+	width: calc(100vw - 0px);
+	height: 100vh;
+
+	// padding-top: 60px;
+	// padding-bottom: 60px;	
+	// padding-left: 92px;
+	// padding-right: 92px;
+
+	padding-top: 8px;
+	padding-bottom: 8px;	
+	padding-left: 92px;
+	padding-right: 8px;
+
+	margin-left: 0px;
+	background: $c-b;
+
+	//border:  0.5px solid $c-error;               //←←←←←←←←←←←←←←←←←←←←
+
+	& .dt{
+		& > .header{
+			& >.title{
+				left: 0px;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+//sideSheet and body interaction
+// .body-sideSheet{
+// 	width: calc(100vw - 596px );
+// 	margin-right: 340px;
+
+// }
+
+// .body-bodyBar{
+// 	padding-right: 54px;
+// }
+
+// .body-banner{
+// 	//padding-top: 48px;
+
+// }
+

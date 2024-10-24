@@ -1,0 +1,183 @@
+.dt {
+
+	//border: 0.1px solid blue;               //←←←←←←←←←←←←←←←←←←←
+	& > .header{
+
+		position: relative;
+		display: inline-block;
+
+		top: 0px;
+		
+		width: calc(100% - 0px);
+		left:0px;
+		height: 56px;
+		padding: 2px;
+		//margin-top: 8px;
+
+		z-index: 3;
+		//background: $c-surface-l;
+		@include back-visivility();
+
+		border-bottom: 0.1px solid $c-divider;   //←←←←←←←←←←←←←←←←←←←←
+	//border: 0.1px solid blue;               //←←←←←←←←←←←←←←←←←←←
+
+		& > div{
+			display: inline-block;		
+			height: 42px;
+			float: right;
+			//border: 0.1px solid black;           //←←←←←←←←←←←←←←←←←←←←
+
+		}
+
+		& >.title{
+			position: absolute;
+			left: 0px;
+			margin-top: 12px;
+			left: 16px;
+			//padding-right: 16px;
+			@include font(h6, $c-pd); 
+			@include selectNo;
+			@include back-visivility;
+				//font-weight: 700;
+				letter-spacing: 1.5px;
+				//opacity: 0.54;
+			//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←
+		}
+
+		& > div:nth-child(2){
+			position: relative;
+			display: inline-block;
+			width: calc(100% - 296px); 
+			margin-right: 144px;
+			overflow: hidden;
+			height: 54px;
+			//background-color: $c-surface;
+
+			//border: 0.1px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+			& input{
+				position: relative;
+				display: block;
+				float: left;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+
+				padding-left: 48px;
+				padding-top: 0px;
+				padding-right: 50px;
+
+
+				@include font(subtitle2, $c-b); 
+				font-weight: 700;
+
+				outline-width: 0; //remove hightliter
+				caret-color: $c-p; //blinking pointer
+				border: none;		
+				text-overflow: ellipsis;     //... at the end of input
+				//border: 0.1px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+				&::placeholder {
+					// position: absolute;
+					display: inline-block;
+					@include font(subtitle2, $c-pd);
+					opacity: 0.24;
+					font-weight: 500;
+
+				}
+				&:empty{
+					
+				}
+
+			}
+
+			& > .icon{
+				position: absolute;
+				top: 0px;
+				height: 42px;
+				width: 42px;	
+				background-color: none;
+				
+				@include centerFlex;
+
+				& svg{
+					position: absolute;
+					height: 24px;
+					width: 24px;
+					fill: $c-b;
+					opacity: 0.54;
+					@include selectNo;
+					
+					//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+				}
+				
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+			}
+
+			& > .search{
+				left:0px;
+				margin-top: 6px;
+				@include carterNo();
+				&:hover{
+					cursor: pointer;
+
+				}
+				//@include selectNo;
+
+			}
+			& > .trailing{
+				right: 0px;
+				margin-top:6px;
+				opacity: 0;
+				transform: scale(0) rotate(-360deg) ;			
+				cursor: pointer;
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+			}
+		}
+
+		& > .more, & > .filter, & > .other3  {
+				position: absolute;
+				right:0px;
+				float: right;
+				margin-top: 8px;
+				width: 42px;	
+				//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+				
+				@include centerFlex;
+
+				@include interaction-surface;
+
+				& svg{
+					position: absolute;
+					height: 24px;
+					width: 24px;
+					fill: $c-b;
+					opacity: 0.54;
+					@include selectNo;
+					//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+				}	
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←		
+		}
+
+		& > .filter{
+			right: 48px;
+		}
+
+		& > .other3{
+			right: 96px;
+		}
+
+		& + .sub-header{
+			display: block;
+			width: 100%;
+			display: none;
+		}
+
+	}/*header*/
+
+
+	
+}
+
+
+

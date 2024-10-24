@@ -1,0 +1,28 @@
+
+.dt-mobile {
+
+	& > table {
+		& tr {
+			height: 48px;
+		}/*td*/
+
+		& td {
+			& label{ 
+				top: 8px;
+			}
+
+			& span{ 
+				top: 26px;
+			}
+
+			&   .avatarOnTD{
+				top:8px !important;
+			}
+		}
+
+	}/*table*/
+		
+}
+
+
+

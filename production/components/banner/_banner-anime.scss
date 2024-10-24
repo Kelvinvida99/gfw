@@ -1,0 +1,39 @@
+.banner-show{
+	animation: banner-show  0.300s;
+	animation-fill-mode: both;
+	@include animationT(stan);
+}
+
+
+@keyframes banner-show{
+
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+
+.banner-hide{
+	animation: banner-hide  0.300s;
+	animation-fill-mode: both;
+	@include animationT(stan);
+}
+
+
+@keyframes banner-hide{
+
+	from {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+	to {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+}
+

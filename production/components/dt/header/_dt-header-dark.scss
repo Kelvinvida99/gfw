@@ -1,0 +1,52 @@
+@mixin dt-header-dark{
+	.dt {
+		& > .header{
+
+			& >.title{
+				color: $c-w;
+			}
+
+			& > div:nth-child(2){
+				& input{
+					background-color: transparent;
+					color: $c-w;
+					caret-color: $c-w; //blinking pointer
+					
+					&:focus{
+						//background-color:darken($d-e1, 24%);
+						& ~ .search{
+							& svg{
+								opacity: 1;
+								fill: $c-w;
+							}
+						}
+					}
+
+				}
+
+				& > .icon{
+					& svg{
+						fill: $c-w;
+					}				
+				}
+
+				& > .search{}
+				& > .trailing{}
+			}
+
+			& > .more, & > .filter{
+					
+				//@include interaction-dark(plain);
+				& svg{
+					fill: $c-w;
+				}	
+			}
+
+			& > .filter{}
+
+		}
+
+
+
+	}
+}

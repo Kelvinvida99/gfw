@@ -1,0 +1,51 @@
+@mixin leftnav-dark{
+
+	//border: 5px solid red !important;
+
+	.leftnav{
+		background-color: $d-e12 ;
+		border-right: none;		
+
+
+		& div{
+			@include interaction-dark-12;
+
+			& label{
+				color: $c-p;
+				opacity: 0.72;
+			}
+
+			& svg{
+				fill: $c-p;
+				opacity: 0.6;
+			}
+			
+		}/**/
+
+		& > .des{
+			color: $c-w;
+		}
+
+		& .select{
+			//background-color: $d-p;
+			@include interaction-dark-12;
+
+			& svg{
+				fill: $c-pl;
+				opacity: 0.99;
+			}		
+			& label{
+				color: $c-pl;
+				opacity: 0.99;
+				font-weight: 500;
+			}	
+
+			&::before{ background: $c-pl; }	
+
+		}
+
+
+	}
+
+	
+}

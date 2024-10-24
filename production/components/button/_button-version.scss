@@ -1,0 +1,158 @@
+.button-flat{
+
+	background-color: transparent;
+	box-shadow: 0px 0px 0px 0px;
+	
+	&:hover{
+		box-shadow: 0px 0px 0px 0px;
+	}
+
+	& label{ color:$c-p; }
+	& svg  { fill: $c-p; }
+
+	@include interaction-surface;//click/interactions
+	@include centerFlex;
+}
+
+.button-plain{ //flat-gray
+
+	background-color: transparent;
+	box-shadow: 0px 0px 0px 0px;
+	
+	&:hover{
+		box-shadow: 0px 0px 0px 0px;
+	}
+
+	& label{ color: $c-g; }
+	& svg  { fill: $c-g;  }
+
+	@include interaction-surface;
+	@include centerFlex;
+
+}
+
+
+.button-white{ //flat-gray
+
+	background-color: $c-w;
+	box-shadow: 0px 0px 0px 0px;
+	
+	&:hover{
+		box-shadow: 0px 0px 0px 0px;
+	}
+
+	& label{ color: $c-p; }
+	& svg  { fill: $c-p; }
+
+	@include interaction-surface;
+	@include centerFlex;
+
+}
+
+
+
+.button-large{ 
+	
+	width: calc(100% - 16px); 
+	margin-top: 16px;
+	float: none;
+	left:50%;
+	
+	transform: scale(1) translateX(-50%);
+	&:active  { transform:scale(0.95) translateX(-50%); }
+
+}
+
+
+.button-link{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	min-height: 24px;
+	margin-top: 8px;
+
+	// border: 1px solid lightgray;
+
+	
+	& label:nth-child(1){
+		position: relative;
+		width: 100%;
+		display: inline-block;
+		@include font(caption, $c-p);
+		cursor: pointer;
+		font-weight: 500;
+		//border: 1px solid blue;
+	}
+
+	& label:nth-child(2){
+		position: relative;
+		width: 100%;
+		display: inline-block;
+		//margin-left: 8px;
+		@include font(caption, $c-fg);
+		//border: 1px solid red;
+	}
+
+
+
+
+}
+
+// .button-link{
+
+// 	position: relative;
+// 	display: block;
+// 	background-color: transparent;
+// 	box-shadow: 0px 0px 0px 0px;
+// 	float: left;
+
+// 	padding: 4px ;
+// 	margin-left: 4px;
+// 	margin-top: 4px;
+// 	margin-bottom: 4px;
+
+// 	min-height: 24px;
+
+// 	&:hover{
+// 		box-shadow: 0px 0px 0px 0px;
+// 	}
+
+// 	& label{ 
+// 		@include font(body2, $c-p);
+// 		font-weight: 500;
+// 		text-transform: none;
+
+// 	}
+// 	& svg  { fill: $c-p; }
+
+// 	@include interaction-surface;//click/interactions
+// 	@include centerFlex;
+// }
+
+
+
+
+// .button-side{ 
+// 	position: fixed;
+// 	display: inline-block;
+// 	height: 36px;
+// 	left: 0px;
+// 	bottom: 0px;
+// 	width: auto; 
+// 	//z-index: 41;
+// 	//border-radius: 0px 25px 25px 0px;
+// 	background: $c-g;
+// 	box-shadow: none;
+// 	& svg  { width: 16px; }
+// 	& label{ @include font(overline, $c-w) }
+// 	@include interaction-black;
+// 	 &:active  { transform:scale(1); }
+
+
+// 	//border: 1px solid red;
+
+// 	//@include align-center;
+
+
+
+// }

@@ -1,0 +1,51 @@
+
+.textfield-autocomplete {
+
+	overflow: visible;
+	//border: 1px solid blue;/***************************/
+
+	& > .elem {
+		margin-bottom: 0px;
+
+	}
+
+   & > .label {
+	   top: 8px;
+	   @include font(caption, $c-b);
+	   //border: 1px solid blue;/***************************/
+   }	
+
+
+   & > .add{
+	   position: absolute;
+	   height: 48px;
+	   width: 48px;
+
+	   right: 8px;
+	   top: 2px;
+	   cursor: pointer;
+	   opacity: 0.54;
+	   @include centerFlex;
+
+		   & svg{
+			   height: 24px;
+			   width: 24px;
+			   display: block;
+			   fill: $c-p;
+			   @include selectNo;
+			   //border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+		   }
+	   &:active{
+		   transform: scale(0.9);
+	   }
+
+	   &:hover{ opacity: 0.99;  }
+
+	   //border: 1px solid $c-p;/***************************/
+   }
+
+   
+}
+
+
+

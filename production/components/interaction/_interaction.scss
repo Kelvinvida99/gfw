@@ -1,0 +1,209 @@
+
+
+@mixin selectNo{
+	user-select: none;
+	pointer-events: none;
+}
+
+
+
+@mixin interaction-color{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($c-p, 4%)}
+	&:focus   {background-color: darken($c-p, 8%)}
+    &:active  {background-color: darken($c-p, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-p}
+		&:focus   {background-color: $c-p}
+	    &:active  {background-color: $c-p}
+	}
+
+	& .ripple { background-color: $c-w; }
+
+}
+
+@mixin interaction-colord{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: lighten($c-pd, 12%)}
+	&:focus   {background-color: lighten($c-pd, 24%)}
+    &:active  {background-color: lighten($c-pd, 24%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-pd}
+		&:focus   {background-color: $c-pd}
+	    &:active  {background-color: $c-pd}
+	}
+
+	& .ripple { background-color: $c-w; }
+
+}
+
+@mixin interaction-color-s{ //elem witch color secondary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($c-s, 4%)}
+	&:focus   {background-color: darken($c-s, 8%)}
+    &:active  {background-color: darken($c-s, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-s}
+		&:focus   {background-color: $c-s}
+	    &:active  {background-color: $c-s}
+	}
+
+	& .ripple { background-color: $c-w; }
+}
+
+
+
+@mixin interaction-white{//elem witch color whitee
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($c-w, 4%)}
+	&:focus   {background-color: darken($c-w, 4%)}
+    &:active  {background-color: darken($c-w, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-w}
+		&:focus   {background-color: $c-w}
+	    &:active  {background-color: $c-w}
+	}
+
+	& .ripple { background-color: $c-pl; }
+
+}
+
+
+@mixin interaction-surface {
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($c-surface, 4%)}
+	&:focus   {background-color: darken($c-surface, 8%)}
+    &:active  {background-color: darken($c-surface, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-surface; }
+		&:focus   {background-color: $c-surface; }
+	    &:active  {background-color: $c-surface; }
+
+	    
+	}
+
+	& .ripple { background-color: $c-w; }
+
+}
+
+@mixin interaction-black {
+	cursor: pointer;
+	overflow: hidden;
+	//border: 1px solid red !important;
+
+	&:hover   {background-color: lighten($c-b, 24%)}
+	&:focus   {background-color: lighten($c-b, 36%)}
+    &:active  {background-color: lighten($c-b, 36%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-b}
+		&:focus   {background-color: $c-b}
+	    &:active  {background-color: $c-b}
+	}
+
+	& .ripple { background-color: $c-w; }
+
+}
+
+@mixin interaction-primary-light{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($c-pl, 4%)}
+	&:focus   {background-color: darken($c-pl, 8%)}
+    &:active  {background-color: darken($c-pl, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $c-pl}
+		&:focus   {background-color: $c-pl}
+	    &:active  {background-color: $c-pl}
+	}
+
+	& .ripple { background-color: $c-w; }
+}
+
+@mixin interaction-cs-yellowl{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($cs-yellowl, 4%)}
+	&:focus   {background-color: darken($cs-yellowl, 8%)}
+    &:active  {background-color: darken($cs-yellowl, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $cs-yellowl}
+		&:focus   {background-color: $cs-yellowl}
+	    &:active  {background-color: $cs-yellowl}
+	}
+
+	& .ripple { background-color: $c-pl; }
+}
+
+@mixin interaction-cs-pink{ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($cs-pink, 4%)}
+	&:focus   {background-color: darken($cs-pink, 8%)}
+    &:active  {background-color: darken($cs-pink, 8%)}
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $cs-pink}
+		&:focus   {background-color: $cs-pink}
+	    &:active  {background-color: $cs-pink}
+	}
+
+	& .ripple { background-color: $c-pl; }
+}
+
+@mixin interaction-color-ramdon($color){ //elem witch color primary
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover   {background-color: darken($color, 4%) !important; }
+	&:focus   {background-color: darken($color, 8%) !important; }
+    &:active  {background-color: darken($color, 8%) !important; }
+
+	@include respond (table) { //remove hover on mobile
+		&:hover   {background-color: $color !important;}
+		&:focus   {background-color: $color !important;}
+	    &:active  {background-color: $color !important;}
+	}
+
+	& .ripple { background-color: $c-w !important;; }
+}
+
+/*
+
+TEXT THE INTERACTIONS
+
+.square-color{
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background: $c-b;
+	border: 1px solid black;
+	@include interaction-black;
+
+
+
+}
+
+<div class="square-color" data-detail='{"click": [  {"dest":"ripple" } ] }' ></div>
+*/

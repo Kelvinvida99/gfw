@@ -1,0 +1,9 @@
+@mixin fullcont-dark {
+
+	.fullcont{
+		background-color: $d-surface;
+		border-left : 1px solid $c-w;
+		border-right: 1px solid $c-w;
+
+	}
+}

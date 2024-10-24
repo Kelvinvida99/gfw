@@ -1,0 +1,3 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-07-23 22:49:pm miguel@,  Unknown column 'sale.sale_date_td' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, sale

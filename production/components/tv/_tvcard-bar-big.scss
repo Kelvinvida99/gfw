@@ -1,0 +1,114 @@
+
+.tvcard-bar-big{
+	position: relative;
+	display: block;
+	width:  100%;
+	//height: 42px;
+	//margin-bottom: 8px;
+	padding-top:34px;
+	//border: 0.5px solid $c-error;/************************/
+
+	& > .cont{
+		position: relative;
+		display: inline-block;
+
+		width: 100%;
+		height: 32px;
+		background-color:lighten($c-divider, 10%); 
+		//border-radius: 4px;
+		//border: 1px solid red;/**********************/
+
+			& > .line{
+				position: absolute;
+				display: inline-block;
+				top:0px;
+				left: 0px;
+				height: 42px;
+				width: 0%;
+
+				//border-radius: 4px;
+				background-color: rgba($cg-blue, 0.7); 
+				border-color: $cg-blue;
+				border-width: 2px;
+  				border: solid;
+
+  				transition: width;
+  				@include transition(0.450s, stan)
+
+
+  				//@include animationT(emph);
+
+				//@include bs-1;
+				//border: 1px solid red;/**********************/
+			}/*label*/
+
+		//border: 1px solid red;/**********************/
+	}/*label*/
+
+	& > .num{
+			position: absolute;
+			display: inline-block;
+			bottom: 42px;
+			right: 0px;
+			opacity: 0.54;
+			//background: $c-w;
+
+			@include font(h5, $c-w); 
+			//border: 1px solid green;/**********************/	
+	}
+
+      & .title   { 
+			position: absolute;
+			display: inline-block;
+			top: 0px;
+			left: 0px;
+			margin-top: 10px;
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;     //... at the end of input
+				
+	        @include font(subtitle1, $c-w); 
+	        @include selectNo;
+	        opacity: 0.54;
+
+      		//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+	& > .des2{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			top: 0px;
+			right: 0px;
+			background: $c-w;
+
+			@include font(subtitle1, $c-b); 
+			text-align: center;
+			border: 1px solid green;/**********************/	
+	}
+
+}
+
+
+
+
+.tvcard-bar-big-cpa{ & > .cont{ & > .line{  background-color: rgba($cpa, 0.7);     border-color: $cpa;  } } }
+.tvcard-bar-big-cpb{ & > .cont{ & > .line{  background-color: rgba($cpb, 0.7);     border-color: $cpb;  } } }
+.tvcard-bar-big-cpc{ & > .cont{ & > .line{  background-color: rgba($cpc, 0.7);     border-color: $cpc;  } } }
+.tvcard-bar-big-cpd{ & > .cont{ & > .line{  background-color: rgba($cpd, 0.7);     border-color: $cpd;  } } }
+.tvcard-bar-big-cpe{ & > .cont{ & > .line{  background-color: rgba($cpe, 0.7);     border-color: $cpe;  } } }
+
+
+
+.tvcard-bar-big-blue   { & > .cont{ & > .line{  background-color: rgba($cg-blue, 0.7);     border-color: $cg-blue;    } } }
+.tvcard-bar-big-purple { & > .cont{ & > .line{  background-color: rgba($cg-purple, 0.7);     border-color: $cg-purple;    } } }
+.tvcard-bar-big-green  { & > .cont{ & > .line{  background-color: rgba($cg-green, 0.7);     border-color: $cg-green;    } } }
+.tvcard-bar-big-yellow { & > .cont{ & > .line{  background-color: rgba($cg-yellow, 0.7);     border-color: $cg-yellow;    } } }
+.tvcard-bar-big-orange { & > .cont{ & > .line{  background-color: rgba($cg-orange, 0.7);     border-color: $cg-orange;    } } }
+.tvcard-bar-big-red    { & > .cont{ & > .line{  background-color: rgba($cg-red, 0.7);     border-color: $cg-red;    } } }
+.tvcard-bar-big-orange { & > .cont{ & > .line{  background-color: rgba($cg-orange, 0.7);     border-color: $cg-orange;    } } }
+
+
+

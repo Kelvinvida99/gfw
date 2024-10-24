@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html></html>
+<body><h1>VEGETA</h1></body>
+
+<script>
+  
+  const ws =  new WebSocket("ws://localhost:8002")
+  //const ws =  new WebSocket("wss://echo.websocket.org")
+  const user =  {
+    id: '1',
+    name: 'vegeta',
+    company:'zummtire',
+    device:'desktop',
+    right: 'user',
+    time:  new Date('2021-07-04T00:02:09.415Z')
+    
+    // avatar: './css/img/pic/pikolo.png',
+    // initials: 'MO',
+    // bg: '#0A9D',
+    // wsPort: '8001',
+    // timeZone: 'America/New_York'
+  }
+
+
+  ws.onopen = function(ev){
+
+    console.log('WS opened>')
+
+    ws.send( JSON.stringify(  { act: "join", data: user } ) )
+  }
+
+  ws.onmessage = function(ev){ 
+
+
+    console.log( 'ev.data', ev )
+
+  	const message = JSON.parse(ev.data)
+
+		switch (message.act){
+	    	 case 'updateUser':  updateUser(message);        break;
+          case 'command':     location.reload();        break;
+		}
+
+
+  }/*onmessage*/ 
+
+  ws.onclose = function(){ console.log( 'WEBSOCKET CLOSET' ) }
+
+
+function updateUser(message){ console.log(message)
+
+}
+
+
+</script>
+
+
+
+

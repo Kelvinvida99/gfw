@@ -1,0 +1,130 @@
+
+
+
+
+.signature-show{
+	animation: signature-show  0.250s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+
+}
+
+
+@keyframes signature-show{
+
+	from{
+		top: 100vh;
+	}
+	to{
+		top: 0vh;
+	}
+}
+
+.signature-hide{
+	animation: signature-hide  0.100s;
+	animation-fill-mode: both;
+	@include animationT(acce);
+}
+
+
+@keyframes signature-hide{
+
+	from{
+		top: 0vh;
+	}
+
+	to{
+		top: 100vh;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .fullCont-show{
+
+// 	animation: fullCont-show  0.250s;
+
+// 	animation-fill-mode: both;
+// 	animation-delay: .150s;
+// 	animation-direction: alternate;
+
+
+// 	@include bs-6;	
+// 	@include animationT(stand);
+// 	@include transition(0.250s, stan);
+
+
+// }
+
+
+// @keyframes fullCont-show{
+
+
+// 	from{ top: 100vh; }
+// 	to  { top: 0vh;   }
+
+// }
+
+
+// .fullCont-hide{
+// 	animation: fullCont-hide  3.250s;
+
+// 	animation-fill-mode: both;
+// 	animation-direction: alternate;
+
+
+// 	@include bs-2;	
+// 	@include animationT(stand);
+// 	@include transition(0.250s, stan);
+// }
+
+
+// @keyframes fullCont-hide{
+
+// 	to {
+// 		top: 0vh;
+// 	}
+
+// 	to{
+// 		top: 100vh;
+// 	}	
+
+// }
+

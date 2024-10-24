@@ -1,0 +1,141 @@
+     
+
+
+
+
+.monitor{
+
+
+   & .bar {
+
+       & .blue  {   & > div {  & > svg {fill: darken($cs-blue, 16%);   opacity: 1} }  } 
+       & .green {   & > div {  & > svg {fill: darken($cs-green, 16%);  opacity: 1} }  } 
+       & .purple{   & > div {  & > svg {fill: darken($cs-purple, 16%); opacity: 1} }  } 
+
+
+
+    }/*bar*/
+
+   & .body {
+        & .unit{
+               background-color: transparent;
+              &:hover   {background-color:transparent;}
+              &:focus   {background-color: transparent;}
+              &:active  {background-color: transparent;}
+              @include respond (table) { //remove hover on mobile
+                 &:hover   {background-color: transparent;}
+                 &:focus   {background-color: transparent;}
+                 &:active  {background-color: transparent;}
+              }        
+        }
+
+
+    }/*bar*/
+
+
+    & .select{ //border buttom
+          &::before{
+            transform: scaleX(1);
+          } 
+
+        &:hover{
+          &::before{
+            opacity: 1;
+          } 
+        }
+    }
+
+
+    & .unit-200, {        
+        & > label {
+            width: 200px;
+        }/*labell*/
+        //border: 1px solid red;
+    }
+    & .unit-100, {        
+        & > label {
+            width: 100px;
+        }/*labell*/
+        //border: 1px solid red;
+    }
+
+    & .unit-active { 
+           //border: 1px solid red;
+        & .icon svg {
+            fill: $cs-green;
+            opacity: 1;
+            transform: scale(1.1);
+        }/*labell*/
+        // & .lastUpdateDetail{
+        //     color: $cs-green;
+        //     opacity: 1;
+        // }
+    }
+
+
+    & .unit-icon{
+            padding-left: 0px;
+            padding-right: 0px;            
+
+            & > svg   {fill: $c-p; opacity: 1} 
+    }
+
+     & .unit-click{
+        cursor: pointer;
+
+          &:hover   {background-color: darken($c-w, 4%)}
+          &:focus   {background-color: darken($c-w, 4%)}
+          &:active  {background-color: darken($c-w, 8%)}
+          
+          @include respond (table) { //remove hover on mobile
+             &:hover   {background-color: $c-w}
+             &:focus   {background-color: $c-w}
+             &:active  {background-color: $c-w}
+          }
+        //border: 1px solid red;
+
+
+      &:hover{
+         &::before{
+            transform: scaleX(1);
+            opacity: 0.54;
+          } 
+      }
+
+      &:active{
+         &::before{
+            transform: scaleX(1);
+            opacity: 0.87;
+          } 
+      }
+
+    }   
+
+}/*monitor*/
+
+
+
+
+/*
+
+
+            &-green  {background-color: $cs-green;  }
+            &-blue   {background-color: $cs-blue;   }
+            &-purple {background-color: $cs-purple; }
+            &-red    {background-color: $cs-red;    }
+
+
+       background-color: $c-w;
+
+
+*/
+
+
+
+
+
+
+
+
+
+

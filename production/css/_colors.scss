@@ -1,0 +1,108 @@
+
+
+///https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+//darken($color, $amount)
+//lighten($color, $amount)
+$c-p:  #0280EE;
+//$c-p:  #6200ee;
+
+
+$c-pd: #071c4d;
+$c-pd2:  #013B6E;
+
+$c-pdScrim: #00114F;
+$c-pl:  #cde7fe;
+$c-pl2: #cde7fe;
+
+$c-s:   #21783f;
+$c-sd:  #034D07;
+$c-sl:  #c6f9c7;
+
+$c-w:  #ffffff;   
+$c-w2:  #FAFAFA; 
+$c-b:  #000;   
+
+$c-gl:         #E5E5E5;
+$c-surface:    #E6E6E6;
+//$c-surface2: #CCD2DB;  /*color → backgrouds*/ 
+$c-surface2:   #c7c7c7;  /*color → backgrouds*/ 
+$c-surface-l:  #F1F3F4;  /*color → backgrouds*/ 
+$c-surface-dark:    #A3A3A3;
+
+
+$c-g:  #9DA7B1;
+$c-gd: #6D6D6D;
+$c-gl: #F6F5F5;
+$c-divider: #0000001e;
+
+///Darks variations
+$cd-surface:  #0E0E0E;
+$cd-card: #292929;
+
+///Primary variations
+$cpa:  #013B6E;
+$cpb:  #4AA3F0;
+$cpc:  #0280EE;
+$cpd:  #0078d4;
+$cpe:  #0264BA;
+
+
+
+///Action colors
+$c-good:    #4BB04F;
+$c-caution: #FD9726;
+$c-error:   #B00020;
+$c-error-b: #FF002E;
+
+
+///Colors Status → Cs 
+$cs-blue:    #26a0fc;
+$cs-blue-d:  #2D84FF;
+$cs-purple:  #6565DD;
+$cs-green:   #48DC6B;
+$cs-yellow:  #FFD200;
+$cs-yellowl: #FFF4BD;
+$cs-pink:    #ffa8f0;
+$cs-orange:  #FFA500;
+$cs-red: 	 #D52855;
+$cs-lg: 	 #B7C2CC;
+$cs-black:   #000;
+
+$cs-blue:    #26A0FC;
+$cs-purple:  #8973d6;
+$cs-green:   #26e7a6;
+$cs-greend:  #1b998b;
+$cs-yellow:  #FFD200;
+$cs-yellowl: #FFF4BD;
+$cs-orange:  #f86624;
+$cs-red: 	 #ED241A;
+$cs-redd:	 #B00020;
+$cs-lg: 	 #B7C2CC;
+$cs-g: 	     #546e7a;
+$cs-brown:   #8d5b4c;
+
+//color for graphs
+$cg-blue:    #36A2EB;
+$cg-purple:  #9966FF;
+$cg-green:   #4BC0C0;
+$cg-yellow:  #FFCD56;
+$cg-orange:  #FF9F40;
+$cg-red: 	 #FF6384;
+$cg-gray: 	 #C9CBCF;
+
+/*
+
+
+*/
+
+
+//fonts color, should be delete, after replace font file
+$c-fg:   #5F6368;  
+$c-fb:   #202124;
+
+
+//font
+$c-f-lg:  #00000099;  //blackbg
+
+
+

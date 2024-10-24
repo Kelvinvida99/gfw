@@ -1,0 +1,1261 @@
+xx
+
+Integrado con los cambios de Andry de drag and drop sin efectos, identacion y comentarios server side, 
+View Avatar de Yeison.
+Sockeft IO integrado sin probar.
+
+
+---------------------------------------------------
+24/10/2023 Marco Molina 
+Corrigiendo el como se almacena el user-preference en el local storage del navegador 
+para que lo guarde cada vez que inicia sesion.
+
+archivos: 
+setting.js
+user-preference.js
+
+---------------------------------------------------
+25/10/2023 Marco Molina 
+se dividio en dos el archivo click-obj.js: click-components.js y click-components-entity.js
+para identificar los componentes normales con los de las entidades, a su ves el llamado de
+estos archivos se ajusto en el archivo click.js
+
+archivos:
+click.js
+click-components.js
+click-components-entity.js
+
+---------------------------------------------------
+25/10/2023 Marco Molina 
+Se realizaron varios ajustes a la aplicacion de monitor para el funcionamiento del web socket
+junto a este ya que aveces cuando un usuario entraba no salia que estaba en linea.
+Tambien el identificador de las filas de los elementos utilizaban el nombre de la compañia
+con lo cual se hizo que este nombre se le removieran los caracteres especiales para utilizarlos
+como ID en los elementos.
+
+archivos:
+monitor-activity.js
+monitor-companies.js
+monitor-generator.js
+monitor-menu.js
+socket-server-handler.js
+socket-server-activity.js
+start-app.js
+
+---------------------------------------------------
+25/10/2023 Marco Molina 
+Se realizo ajuste al archivo file.js para que cuando se oprima back al mostar la vista de las 
+imagenes este realize el control correspondiente con la URL
+
+archivos:
+file.js
+
+
+---------------------------------------------------
+29/10/2023 Marco Molina 
+Se realizo ajuste a la funcion update ya que esta debia enviar un tipo de datos diferente 
+a las funciones dentro de esta, se cambiaron las variables y se corrigio. 
+
+Tambien la funcion convertResultToDT, en sus parametros tenia la propiedad
+avatar:     result.avatar, y debia ser aidAvatar:     result.avatar,
+
+archivos:
+services-fullcont-handler.js
+
+
+En la funcion getUpdateFromDesktop se ajustaron los nombre de los parametros ya que 
+no se recibian correctamente en la entidad de servicios, por ejemplo:
+   //end       : detail.row[0].N_start_date, manera anterior
+    end       : detail.row[0].N_end_date, manera funcional
+    //start     : detail.row[0].N_start_time,
+    start     : detail.row[0].N_start_date,
+
+archivos:
+services-web-socket.js
+
+En la funcion updateIsOnSch se le ajusto condicion ya que antes se recibia un objeto y deberia
+de ser un arreglo.
+Este es el codigo anterior: 
+//if(detail.row.id === clock.clock_id){
+El codigo actual:
+if(detail.row[0].id === clock.clock_id){
+
+archivo:
+clock-web-socket.js
+
+La funcion rowContHtml estaba con un parametro con el nombre equivocado. Ejemplo del codigo:
+<div class="avatarOnTD" style="background-image: url('${clockActive.avatar}');" ></div>
+
+y la solucion fue:
+<div class="avatarOnTD" style="background-image: url('${clockActive.aidAvatar}');" ></div>
+
+archivo:
+services-dt-update.js
+
+----------------------------------------------------------------------
+03/11/2023 Andry Bracho
+
+Se agrego la funcion "drop" al boton upload files que aparece en la pestaña files cuando aun
+no hay ningun archivo.
+
+archvio:
+file-request.js
+
+Se corrigio el tiempo de esperar al momento de subir archivos de gran tamaño, ya que cuando esto se realizaba
+desaparecia la animacion de carga pero no se mostraban los archivos hasta que se recargaba la pagina.
+
+
+---------------------------------------------------
+23/11/2023 Marco Molina 
+Se agrego funcion para ocultar elementos de la entidad si el ussuario tiene privilegios readonl pero
+si el usuario es admin no ocultara nada.
+
+Archivo:
+page.js
+
+
+Se agrego codigo para utilizar la funcion de ocultar los elementos de la pagina
+Este es el codigo agregado:    page.hide_page_element(detail); en cada uno de ellos en la funcion 
+HTMLselect
+
+Archivos:
+user-page.js
+nurses-page.js
+services-page.js
+patients-page.js
+
+
+Se comento el setTimeout de la funcion registerLogin ya que este impedia que se actualizara correctamente
+el tipo de dispositivo del usuario en el localstorage
+
+Archivos:
+setting.js
+
+---------------------------------------------------
+24/11/2023 Marco Molina
+Se Agrego funcionalidad para que cuando en la entidad user, se este creando un usuario y este sea del 
+tipo admin no se muestren los privilegios pero si se cambia a tipo user muestre los privilegios.
+
+Esta fue la funcion creada en el archivo users-fullcont.js
+
+//Para acultar el multitable de los permisos solo cuando el usuario es admin, es un usuario normal pues debe mostrarse
+function hideShowPrivilege(data) {
+
+      let users_form_users_vs_permissions  = document.getElementById('users_form_users_vs_permissions')//elemento select
+    
+      if (data.type == 'admin') {
+            users_form_users_vs_permissions.closest('.multitable').classList.add('dn');
+      }else{
+            users_form_users_vs_permissions.closest('.multitable').classList.remove('dn');
+      }
+}
+
+
+Archivos:
+users-fullcont.js
+users-fullcont.html
+users.js
+
+---------------------------------------------------
+10/01/2023 Marco Molina
+A la entidad investor, provider y shipper se le realizaron varios ajustes en los cuales fueron:
+-Se organizaron las columnas del datatable y los inputs en el fullcont
+-Se cambio de nombre el campo ID por el de CODE en el fullcont, aqui tambien se ajusto para que 
+este input sea solo readonly ya que se llena luego de crear un registro.
+-Se creo archivo investorAfterInsert, providerAfterInsert y shipperAfterInsert
+para que luego de insertar el investor, provider y shipper respectivamente se 
+guarde el CODE que le toca a este registro.
+-En los archivos fullcont-form de cada entidad (investor, provider y shipper) se ajusto se elimino el
+campo id y se coloco el campo CODE
+
+Archivos:
+investor-fullcont.html
+investorAfterInsert.php
+investor-dt-handler.js
+investor-page.html
+investor-fullcont-form.js
+provider-fullcont.html
+providerAfterInsert.php
+provider-page.html
+provider-dt-handler.js
+provider-fullcont-form.js
+shipper-fullcont.html
+shipperAfterInsert.php
+shipper-dt-handler.js
+shipper-page.html
+shipper-fullcont-form.js
+
+Para la entidad de sale se realizaron ajuste en el layout de los inputs, tambien se agrego
+multitable y los input que son codigo se le coloco un autocomplete
+
+Archivos:
+sale-fullcont.js
+sale.php
+sale-dt-handler.js
+sale-page.html
+
+---------------------------------------------------
+16/01/2023 Marco Molina
+Se realizo ajuste a la entidad provider, se cambiaron los campos en la base de datos y de acuerdo
+a estos se ajustaron los siguientes archivos
+
+Archivos:
+provider-page.html
+provider-fullcont.html
+provider-fullcont-form.js
+provider-menu.js
+provider-dt-handler.js
+---------------------------------------------------
+24/01/2024 Marco Molina
+Se subieron archivos para la creacion de la entidad investor-deposit
+
+Archivos:
+investordeposit-backdrop.js
+investordeposit-banner.js
+investordeposit-confirmation.js
+investordeposit-dialog.js
+investordeposit-dt-handler.js
+investordeposit-dt.js
+investordeposit-fullcont-form.js
+investordeposit-fullcont-multitable-generator.js
+investordeposit-fullcont-multitable.js
+investordeposit-fullcont.html
+investordeposit-fullcont.js
+investordeposit-menu.js
+investordeposit-page.html
+investordeposit-page.js
+investordeposit-snack.js
+investordeposit.js
+investordeposit.php
+investordepositAfterInsert.php
+
+Se agrego la entidad de investor-deposit a los archivos de click y key
+
+Archivos:
+click-components-entity.js
+click-right-obj.js 
+staff-leftnav.js
+key-obj.js
+
+Se ajusto el select para los autocomplete de la entidad investor.php, ya que este en el campo
+displayText tenia el campo id y debe de ser el name
+
+archivo:
+investor.php
+
+
+Se ajusto css para cambiar de color el boton de agregar y el 
+menu de filtros del datatable. Tambien al as entidades de investor y provider en su fullcont
+se agrego el campo code
+
+Archivos:
+investor-page.html
+provider-page.html
+investor-fullcont.html
+investor-fullcont-form.js
+provider-fullcont.html
+provider-fullcont-form.js
+
+---------------------------------------------------
+26/01/2024 Marco Molina
+La entidad de sale se realizo por completo es decir se creo de nuevo debido a que 
+esta tenia cambio grandes en el excel de trabajo. 
+
+Archivos:
+sale.php
+saleAfterInsert.php
+sale.js
+sale-dt.js
+sale-dt-handler.js
+sale-fullcont.html
+sale-fullcont.js
+sale-fullcont-form.js
+sale-fullcont-handler.js
+sale-fullcont-multitable.js
+sale-fullcont-multitable-generator.js
+sale-menu.js
+sale-page.html
+sale-page.js
+sale-snack.js
+
+Se agrego mensaje de inventario insuficiente para la entidad sale en el archivo de los snack
+
+Archivo:
+snack-default.js
+
+
+Se agrego la entidad sale al archivo key-obj.js
+
+Archivo:
+key-obj.js
+
+---------------------------------------------------
+27/01/2024 Marco Molina
+Se creo la entidad receivepayment, se subieron todos los archivos correpondientes a esta. Tambien
+se crearon las tablas en la base de datos
+
+Archivo:
+receivepayment-backdrop.js
+receivepayment-banner.js
+receivepayment-confirmation.js
+receivepayment-dialog.js
+receivepayment-dt-handler.js
+receivepayment-dt.js
+receivepayment-fullcont-form.js
+receivepayment-fullcont-multitable-generator.js
+receivepayment-fullcont-multitable.js
+receivepayment-fullcont.html
+receivepayment-fullcont.js
+receivepayment-menu.js
+receivepayment-page.html
+receivepayment-page.js
+receivepayment-snack.js
+receivepayment.js
+receivepayment.php
+receivepaymentAfterInsert.php
+
+
+Se agrego la entidad receivepayment a los siguientes archivos js para que el uso de los componentes
+click, leftmenu, click-right, key
+
+archivos:
+key-obj.js
+click-right-obj.js
+click-components-entity.js
+staff-leftnav.js
+
+Se formateo la fecha del data table de la entidad investordeposit para que se muestre mes dia año.
+agrego un callback en la funcion prepareAdd del archivo fullcont-entity
+ya que este esto es necesario por si se requiere hacer algo cuando el fullcont se muestre
+
+Archivos:
+investordeposit.php
+investordeposit-dt-handler.js
+fullcont-entity.js
+
+
+---------------------------------------------------
+01/02/2024 Marco Molina
+
+Se creo entidad llamada other expense, se crearon los archivos correspondientes
+
+Archivos:
+otherexpense-backdrop.js
+otherexpense-banner.js
+otherexpense-confirmation.js
+otherexpense-dialog.js
+otherexpense-dt-handler.js
+otherexpense-dt.js
+otherexpense-fullcont-form.js
+otherexpense-fullcont-multitable-generator.js
+otherexpense-fullcont-multitable.js
+otherexpense-fullcont.html
+otherexpense-fullcont.js
+otherexpense-menu.js
+otherexpense-page.html
+otherexpense-page.js
+otherexpense-snack.js
+otherexpense.js
+otherexpense.php
+otherexpenseAfterInsert.php
+accounts_catg_expense.php
+
+Se agrego la entidad other expense a los siguientes archivos js para que el uso de los componentes
+click, leftmenu, click-right, key
+
+archivos:
+key-obj.js
+click-right-obj.js
+click-components-entity.js
+staff-leftnav.js
+
+Se ajusto sale.php ya que antes tenia un group by y se removio. Tambien se modificaron los evento
+cuando el usuario escriba en los input de qty, unit price y total, para que estos cambien de forma 
+dinamica, antes se tenia que si escribian en cualquiera se modifiquen todos, ahora es en especifico.
+
+archivos:
+sale-fullcont-handler.js
+sale.php
+
+
+---------------------------------------------------
+02/02/2024 Marco Molina
+se realizaron los siguientes cambios a la entidad
+-name-es obligatorio
+-ocultar el campo code cuando se hace insert
+-dejar code(25%) y Name(75%) en una sola linea
+-tax id (25%) y contact(75%)
+-Agregar los otros campos de direccion(city, state, zip code)
+
+con lo cual afectaron los siguientes archivos y la tabla en el servidor:
+investor-fullcont-form.js
+investor-fullcont.js
+investor.php
+
+Tambien se agrego funcion nueva para realizar un evento que cuando se active un check este 
+ponga los campos de usuario y password requeridos.
+
+function set_required(htmlFc, value) {
+
+  htmlFc.form.forEach((element, index) => {
+
+    if (element.name == "username") {
+      element.required = value;
+      htmlFc.formCopy[index].required=value;
+    }
+
+    if (element.name == "__password") {
+      element.required = value;
+      htmlFc.formCopy[index].required=value;
+
+    }
+
+
+  });
+
+Archivo:
+investor-fullcont.html
+investor-fullcont-handler
+
+---------------------------------------------------
+02/02/2024 Marco Molina
+
+Se creo entidad llamada sent payment, se crearon los archivos correspondientes
+
+Archivos:
+sentpayment-backdrop.js
+sentpayment-banner.js
+sentpayment-confirmation.js
+sentpayment-dialog.js
+sentpayment-dt-handler.js
+sentpayment-dt.js
+sentpayment-fullcont-form.js
+sentpayment-fullcont-multitable-generator.js
+sentpayment-fullcont-multitable.js
+sentpayment-fullcont.html
+sentpayment-fullcont.js
+sentpayment-menu.js
+sentpayment-page.html
+sentpayment-page.js
+sentpayment-snack.js
+sentpayment.js
+sentpayment.php
+sentpaymentAfterInsert.php
+
+
+Se agrego la entidad sent payment a los siguientes archivos js para que el uso de los componentes
+click, leftmenu, click-right, key
+
+archivos:
+key-obj.js
+click-right-obj.js
+click-components-entity.js
+staff-leftnav.js
+
+
+---------------------------------------------------
+07/02/2024 Marco Molina
+
+se ajusto el layout de la entidad investor deposit y se ajustaron los campo
+status y type, se creo php para filtrar los account del tipo  assset
+
+
+investordeposit-fullcont.html
+investordeposit-fullcont-form.js
+accounts_type_asset.php
+
+se cambio el nombre del archivo de accounts_catg_expense.php a accounts_type_expense.php
+y se cambio en la entidad que lo usaba en que es la de otherexpense
+
+otherexpense-fullcont.html
+accounts_type_expense.php
+
+
+
+---------------------------------------------------
+09/02/2024 Marco Molina
+
+Se agregaron campo relevantes al datatable de sale. los campos de state en el fullcont se
+colocaron para que sea un multiselect. Se agregaron otros campos al fullcont.
+Se ajusto autocomplete de los item para que muestre  cantDisponible - nombre - 
+unidad - po - Date - Cost
+
+archivos:
+sale-dt-handler.js
+sale-fullcont-form.js
+sale-page.html
+sale.php
+
+
+Se agrego funcion en la entidad sale para que cuando se seleccione el customer este venga con
+los datos de bill, ship y email. Tambien para que no permita grabar la venta si la cantidad
+de articulo excede la existencia, al modificar y crear.
+
+sale-fullcont-handler.js
+sale-fullcont.js
+customer.php
+provider.php
+
+---------------------------------------------------
+16/02/2024 Marco Molina
+Se realizaron varios ajuste a la entidad received ya que faltaban validaciones 
+de los valores que el usuario va a proporcionar, como lo es no poner montos 
+negativos, que el total del recibo sea igual a la suma de las facturas a pagar,
+entre otros.
+
+Archivos:
+
+receivepayment-fullcont.js
+receivepayment-fullcont-handler.js
+receivepayment-fullcont.html
+getAllInvoice.php
+snack-default.js
+receivepayment-dt-handler.js
+accounts_type_bank.php
+receivepayment.php
+
+Se creo funcion para los mulittable para insertar datos que no existan en la base de
+datos, es decir, apartir de un select 
+
+Archivo:
+multitable.js
+multitable-handler.js
+
+se agrego funcionalidad para el envio de correo a la entidad sale cuando se 
+crea factura y actualiza
+
+Archivos:
+sale-fullcont.html
+sale-fullcont-handler.js
+sendEmail.php
+sale-fullcont.js
+sale-fullcont-multitable-generator.js
+
+
+
+---------------------------------------------------
+15/03/2024 Marco Molina
+
+Se realizaron varios cambios a la entidad sale:
+-OCULTAR EL CAMPO CODE CUANDO SE HACE INBSERT
+-no dejar guardar los cambios si la cantidads de un articulo sobrepasa la disponible, poner la linea de sales_vs_item en rojo, y el tab item rojo (ya hay clase pa eso), FUNCIONA, PERO EL INPUT NO SE POINER ROJO, CREO K ES POR LAS CLASES NUEVAS DE MIGUEL
+-SI EL SELLING PRICE UNIT ES MENOR AL PRECIO K TRAJO EL AUTOCOMPLTE, PONER EL INPUT DE UNIT PRICE EN ROJO Y ANTES DE GUARDAR EL SALE, PONER UN POPUP DE NOTIFICATION DCIENDOLE K EL RPECIO  DE VENTA ES MENOR AL PLANEADO, K SI DEDESEA CONTINUAR
+-GENERAR FACTURA EN pdf Y ABRIR PRINT MENU EN EL BROWSER
+-PDF LIBRERIA Y DOCUMENTACION: https://app.nuclino.com/Gosive/Gosive-FW/Basic-Invoice-ca2abbc5-aff6-422a-9b69-0a9836c5a164
+-agregar los campos sale_statement and sale_footer automaticos de la tabla en base de datos "company", serias dos text areas k pueden estar al final del full container, esta infromacion debe de estar en settings, no creo k sea necesario hacer una consulta al servidor para eso
+-Add this to the data table, los header tienen subtitulos
+-Add another colum with the status, estos iconos deben ser los mismos que en purchase
+-Permitir imprimir el pack slip desde la tabla, agregarlo al menu, agregarlo al fullcont los punticos
+-add the update and print
+-Move the time to the entity page
+
+archivos:
+sale-fullcont.js
+sale-fullcont-handler.js
+sale-fullcont.html
+sale-dialog.js
+sale-pdf-basic.js
+sale-page.html
+query-sale.php
+sale.php
+sale-menu.js
+sale-dt-update.js
+
+
+---------------------------------------------------
+22/03/2024 Marco Molina
+
+Se realizaron varios cambios a sale:
+--Dias que faltan para el pago que vence
+--03/16/2014 March 16, 2024 > js/date-time/date-date
+--mt, subelo debajo del primar card
+--si el campo payment_status != 'paid' && due_date <= current_date, poner rojo
+--sale_vs_item debajo de las direcciones
+--no permitir editar o borrar si se ha recibido un pago de una venta
+-- Se hicieron otros cambios como el color de los botones, se agrego titulos para
+el multitable
+
+archivos:
+sale.php
+sale-dt-update.js
+sale-dt-handler.js
+sale-page.html
+sale-fullcont.js
+sale-fullcont-handler.js
+sale-dt.js
+sale-menu.js
+salepayment.php
+sale-fullcont.html
+
+Se agrego nuevo mensaje para los snacks
+
+Archivos:
+production\components\snack\snack-default.js
+
+Se creo nueva entidad para la compañia para los datos generales y algunas configuraciones.
+Se agrego al click componente entity y al admin menu
+
+archivo:
+admin-page.html
+company.js
+company-fullcont.js
+company-fullcont.html
+company-fullcont-form.js
+
+Se agregaron cambios a nivel de diseño tales como:
+-Verifica que todos los fullcont el appbar tenga la clase appbar-blue para que todo sean azules
+-Vamos a elimnar todos los cards con un 100%, lo vamos a replazar por cards con un 50%
+-Add the multitable title
+-Refresh the buttons on the fullcont
+-add the calss textfield-multiselect to all the multiselect
+-cuando se abre el full container para hacer un insert. dice "customer edition", cambiar a "New Customer", 
+lo mismo para las otras entidades. (listo)
+
+Archivos:
+provider-fullcont.html
+investor-fullcont.html
+investordeposit-fullcont.html
+otherexpense-fullcont.html
+receivepayment-fullcont.html
+areas-fullcont.html
+item_unit-fullcont.html
+item-fullcont.html
+
+Se realizaron algunos cambio en los page de las entidades para que el leftmenu quede marcado si se
+oprime los mini menus de cada entidad
+
+Archivos:
+accounts-page.html
+customer-page.html
+provider-page.html
+receivepayment-page.html
+otherexpense-page.html
+item_unit-page.html
+investordeposit-page.html
+investor-page.html
+item-page.html
+areas-page.html
+
+Se Agrego importacion del archivo leftnav.js al archivo page.js 
+
+Archivo:
+production\components\page\page.js
+
+A la entidad de purchase se agrego que cuando se seleccione un item se haga focus al campo siguiente que es el
+selling unit
+
+archivos:
+purchase-fullcont-handler.js
+purchase-fullcont.js
+purchase-fullcont-multitable-generator.js
+
+
+
+---------------------------------------------------
+25/03/2024 Marco Molina
+
+Se realizaron varios cambios a sale:
+-Cuando no dejar eliminar un sale si tiene payment
+-agregar campo shipping_date, delivered_date y shipping_status->multiselect(preparing, shipped, delivered)
+-CAMBIAR CAMPO email_message from input to textarea
+-en el mensaje de advertencia cuando el selling price es meno al unit price mostrar cuales articulos tienen este percance
+
+Archivos:
+sale-fullcont-handler.js
+sale-fullcont.js
+agregar campos a sale de delivered_date y shipping_status al servidor
+sale-fullcont-form.js
+sale-fullcont.html
+sale.php
+salepayment.php
+sale-dialog.js
+
+
+---------------------------------------------------
+31/03/2024 Marco Molina
+
+Se realizaron cambios en la entidad de item:
+agregar avatar
+agregar code(IT),  shelf_life#,  temprature -> multiselect(Room temperature, Refrigeration, Freezing)
+
+
+archivos:
+item.php
+item-fullcont.html
+item-fullcont-form.js
+item-dt-handler.js
+item-page.html
+
+
+Tambien se agrego item en el archivo de file-print-handler para que pueda manejar
+lo que es el avatar:
+file-print-handler.js
+
+Se ajusto condicion en click.js:
+//return true to cancel click process
+function cancel(detail){
+
+    if(detail       === null || detail       === undefined || detail       === "" ) { return true }
+    if(detail.click === null || detail.click === undefined || detail.click === "" ) { return true }
+
+    return false
+}
+
+se agrego que si detail es igual a blanco asi mismo como su propiedad click
+
+archivos:
+
+click.js
+
+
+se subieron varios cambios menos a estos archivos:
+purchase_vs_item.php
+receivepayment-fullcont-multitable-generator.js
+receivepayment-fullcont.html
+sale-fullcont.html
+company-fullcont.html
+investor-fullcont.html
+investordeposit-fullcont.html
+item_unit-fullcont.html
+otherexpense-fullcont.html
+provider-fullcont.html
+users-fullcont.html
+
+---------------------------------------------------
+31/03/2024 Andry Bracho
+
+Se realizaron cambios en la entidad sentpayment:
+
+cambios en el dt y fullcont, ordenamineto de ambos aspectos
+ademas de listar los purchases, se agrego la opcion de listar los expenses
+
+archivos a subir, entidad complete, incluyendo querys
+
+
+---------------------------------------------------
+05/04/2024 Marco Molina
+
+Se Creo entidad para mostrar detalles del inventario
+
+Archivos:
+inventory-backdrop.js
+inventory-banner.js
+inventory-confirmation.js
+inventory-dialog.js
+inventory-dt-handler.js
+inventory-dt-update.js
+inventory-dt.js
+inventory-menu.js
+inventory-page.html
+inventory-page.js
+inventory-report-account-payable-all.js
+inventory-report-account-payable.js
+inventory-report.js
+inventory-snack.js
+inventory.js
+
+Tambien se realizo un cambio en el diseño de la entidad provider entre otros
+pequeños detalles
+
+---------------------------------------------------
+08/04/2024 Andry Bracho
+
+Se realizaron cambios en el orden de fc de la entidad: purchase, sendpayment 
+Se corrigio el total selling price
+Se agrego un campo total expenses al tab entity parecido al grand total price
+Se cambio el texto accounts a accounting
+Se ordeno el dt de la entidad: customer, provider
+Se coloco como principal en el leftnav a inventory por item
+
+
+---------------------------------------------------
+08/04/2024 Marco Molina
+Se realizaron ajuste al fullcont y dt de sale y tambien se removio todo lo que
+tiene que ver con la generacion con PDF
+
+Archivos:
+sale-page.html
+sale-fullcont.html
+sale-dt-handler.js
+sale-dt-update.js
+sale-fullcont.js
+sale-dt.js
+sale-menu.js
+
+Tambien se realizaron ajuste a la entidad inventory como agregar avatar a los item
+entre otros
+
+Archivos:
+inventory.php
+inventory-dt-handler.js
+
+
+
+---------------------------------------------------
+10/04/2024 Marco Molina
+
+Se realizaron estos cambios a provider:
+-revisar provider ya que no genera del reporte HTML
+-poner account payable report en lso 3 puntitos del data table
+-quitar report de la parte dereceha de la paginma
+-el reporte account payble agregue un periodo/columna nueva, se llama current
+
+archivos:
+provider-report-account-payable.js
+provider-page.html
+production\components\report\report-page.html
+provider-report-account-payable-all.js
+
+
+Se realizo reoganizacion del dt de la entidad de recivepayment
+archivos:
+receivepayment-page.html
+receivepayment.php
+receivepayment-dt-handler.js
+
+
+---------------------------------------------------
+13/04/2024 Marco Molina
+
+En la entidad de item en el full cont se coloco el code en un label
+
+Archivos:
+production\applications\staff\desktop\entity\item\item-fullcont.html
+
+
+Se realizaron estos cambios a la entidad company:
+-se agregaron campos de alert_shelf_life y default_shelf_life
+
+Archivos:
+production\applications\staff\desktop\entity\company\company-fullcont.html
+production\applications\staff\desktop\entity\company\company-fullcont-form.js
+
+
+Se realizaron cambios a sale:
+-LA impresion del sale no funca en PDF ni sale nada. HACERLO EN BACK END
+-el el data table, la columna total items, es un entero, no lleva decimales, ese mismo valos sale indefinido cuando se hace un update
+-Error updating, and saving :(
+-No deben haber null on the dt, 
+-No deben de salir valores por defecto en el mt como 0.00, debe estar vacio para que el usuario no tenga que borrarlo
+-El dt no se esta actualizando al hacer un update
+
+Archivos:
+production\applications\staff\desktop\entity\sale\sale-fullcont-form.js
+production\applications\staff\desktop\entity\sale\sale-dt-handler.js
+public\server\php\queries\report\sale\pdf-invoice.php
+production\components\snack\snack-default.js
+
+
+
+
+---------------------------------------------------
+18/04/2024 Marco Molina
+
+Se realizo este cambio a purchase:
+
+Poner una opcion que se llama print label
+
+Archivos:
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+production\applications\staff\desktop\entity\purchase\purchase-menu.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.js
+public\server\php\queries\report\purchase\pdf-label.php
+public\server\php\queries\report\purchase\query-label.php
+
+
+
+---------------------------------------------------
+19/04/2024 Marco Molina
+Se agrego dialogo para la impresion de los label en purchase
+
+archivos: 
+public\server\php\queries\report\purchase\query-purchase.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+production\applications\staff\desktop\entity\purchase\purchase-dialog.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.js
+public\server\php\queries\report\purchase\pdf-label.php
+public\server\php\queries\report\purchase\query-purchase.php
+public\server\php\queries\report\purchase\query-label.php
+
+
+---------------------------------------------------
+24/04/2024 Marco Molina
+
+se realizaron los siguiente cambios para sale:
+-El mt de sales no se esta bloqueando
+-Load more noesta funcionando correctamente en el mt
+-Cambia el texto del diagolo, Dale enter despues del punto
+The selling price on the items below is lower than expected. Do you still want to continue?
+-Agrega una tabla dentro donde estan los items y agegale,
+-Agrega el delivery date al AC de item
+-los input de number agregar una clase nueva y colocarle algunas propiedades
+
+archivos:
+production\applications\staff\desktop\entity\sale\sale-fullcont-restriction.js
+public\server\php\queries\sale.php
+production\applications\staff\desktop\entity\sale\sale-dt-handler.js
+public\server\php\queries\purchase_vs_item.php
+production\applications\staff\desktop\entity\sale\sale-dialog.js
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+
+
+---------------------------------------------------
+26/04/2024 Andry Bracho
+
+se creo la entidad transaction (front y back-end)
+se agrego la tabla transaction a la db
+
+
+---------------------------------------------------
+26/04/2024 Marco Molina
+Se realizaron el siguiente cambio:
+
+--Agrega la opcion, save and print, pra cuando se esta agregando
+
+archivos:
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+production\applications\staff\desktop\entity\sale\sale-dialog.js
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+production\applications\staff\desktop\entity\sale\sale-fullcont-form.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+
+---------------------------------------------------
+29/04/2024 Andry Bracho
+Se realizaron el siguiente cambio:
+
+Se crearon las entidades (Employees Payments y Equity Deposit)
+Se creo el fc y dt respectivo para cada entidad
+Se creo el query para cada entidad
+Se modifico el fc de la entidad user, que ahora se llama employees
+Se agregaron campos que no existian en la entidad employees (code, payroll, salary)
+Se modifico el archivo users.php para llamar los nuevos campos y otros que eran requeridos
+Se creo el archivo usersAfterInsert.php para manejar la creacion del campo code
+
+---------------------------------------------------
+05/05/2024 Marco Molina
+Se realizaron el siguiente cambio:
+Tracking del email
+
+archivos:
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+public\server\php\send-emails\sendEmail.php
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+
+---------------------------------------------------
+05/05/2024 Marco Molina
+Se completo el diseno de tab de cambios de la entidad de sale
+
+archivos:
+public\server\php\queries\sale.php
+production\applications\staff\desktop\entity\sale\sale-dt-handler.js
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+
+Se agrego el campo de grace_period a la entidad company 
+production\applications\staff\desktop\entity\company\company-fullcont.html
+production\applications\staff\desktop\entity\company\company-fullcont-form.js
+public\server\php\queries\company.php
+public\server\php\sql\update.php
+
+se agrego este campo a los setting y la session del usuario, luego se agrego en purchase
+-Grace Period - cuando lo tengas listo de settings, suma esta fecha a la actual, 
+y llena el due day(el campo no esta en la base de datos ni en setting)
+
+archivos:
+public\server\php\sql\settings.php
+public\server\php\auth\user.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.js
+
+
+
+---------------------------------------------------
+11/05/2024 Marco Molina
+Se completo el tracking email de sale y se ajusto condicion el componete de file
+
+archivos:
+production\components\file\file-server-entityAvatarUpload.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+
+
+---------------------------------------------------
+15/05/2024 Marco Molina
+se agreggo el campo cogs al mt de item en purchase y se coloco por defecto 1
+en el diag de la impresion de los label, se corrigio que la entidad de customer no actualizaba
+
+archivos:
+public\server\php\queries\purchase.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-multitable.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+public\server\php\sql\update.php
+
+Se agrego campo credit_hold a la entidad customer y se agrego condicion al autocomplete de estos
+
+---------------------------------------------------
+06/06/2024 Marco Molina
+Se creo label 4x2 para purchase
+
+Archivos:
+public\server\php\queries\report\purchase\pdf-label_4x2.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+
+---------------------------------------------------
+12/06/2024 Andry Bracho
+Se modifico el codigo linea 273-300
+Se corrigio el "error dowlanding data"
+
+Archivos:
+production\applications\staff\desktop\entity\purchase\purchase-dt-handler.js
+
+---------------------------------------------------
+19/06/2024  Marco Molina
+
+Marco: Default shipping status en Sale: preparing.
+Marco: Default shipping status en Sale: preparing.
+Marco: El PDF de los purchases, el nombre del vendor colapsa, chekiar y ajustar. Ver foto.
+Marco: Default shipping status en Purchases: delivered.
+Marco: en purchase Y SALE, colocar el provider/customer en un row 100%
+no permitir editar/borrar cuentas predeterminadas (no permitir si id es menor de 100)
+CUANDO SE ESTE RECEIVIENDO O MASNDANDO UN PAGO, SI LA CANTIDAD K SE DIGITA ES IGUAL AL DUE AMOUNT DE UNO DE LOS ROWS, PONER AUTOMATICO. AL IGUAL K SI ES IGUAL ALA SUMA DE TODOS LSO DU AMOUNT
+CUANDO SE MANDA O RECEIBE UN PAGO, EN EL MULTI-TABLE, NO PERMITIR Q EL SENT AMOUNT sea mayor k el due amount, dar error y no permitir guardar
+cuando purchase tiene un pago, dar notifica cion de k no se peude editar. Actualmente no permito la edicion por backend, pero tambien deberia d notificarse k no se va editar si tiene pago en front end
+
+archivos:
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+production\components\snack\snack-default.js
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont-handler.js
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont.js
+public\server\php\sql\getAllPurchase.php
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont-handler.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont-multitable-generator.js
+public\server\php\sql\purchasepayment.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.js
+public\server\php\queries\report\purchase\pdf-invoice.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.html
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+
+
+---------------------------------------------------
+25/06/2024  Andry Bracho
+
+Andry:En sent and recieve payemnts, en las facturas pendientes, agregar un checkbox en una primera columna, cuando el usuario le de checked, automaticamente sumar las cantidades y llenar los inputs. 
+Andry:El input de arriba que es igual al total y la cantidad a pagar en ese row debe se llenarse automatico que seria igual al due amount.
+Andry:Verificar entidad transaccion ya que esta dando error por el campo ambiguo
+
+
+archivos:
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont-handler.js
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont.html
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont.js
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont-handler.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont.html
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont-multitable-generator.js
+public\server\php\queries\transaction.php
+
+
+
+
+---------------------------------------------------
+25/06/2024  Marco Molina
+Marcos: Hablar con Yeison: Cuando se vaya editar un PO, en en el multitable items, si ya se han vendido mas de la cantidad k se esta poniendo, no permitir edicion, y dar mensaje al usuario con un dialogo diciendolo. Ejemplo: Hay un purchase que teine k se compraron 100xApples, y de ese purchase se han vendido 80xApples. Luego, el usuario se mete a editar ese purchase, y quiere cambiar la cantidad de Apple k se compraron, si la cantidad es igual o mayor a la vendiad actualemnte, permitir, de lo contrario, abrir dialogo dando detalles y no permitir la edicion. La cantidad actual vendidad de un producto esta en: purchase_vs_item.sold_qty, todo esto se peude manejar con restrinciones a nivel de backend y front end.
+Poner Purchase reference number on account payable report, al.lado del PO#. 
+Put PO reference # on purchase data table too.
+
+archivos:
+public\server\php\queries\purchase.php
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.js
+public\server\php\queries\report\purchase\purchase-report-one.php
+production\applications\staff\desktop\entity\purchase\purchase-report-one.js
+production\applications\staff\desktop\entity\purchase\purchase-dt-handler.js
+production\applications\staff\desktop\entity\purchase\purchase-page.html
+
+
+---------------------------------------------------
+01/07/2024  Marco Molina
+
+se agrego notificacion en el tab de file para sale y purchase si tienen archivos
+
+archivos:
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js.
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.html
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-handler.js
+
+---------------------------------------------------
+03/07/2024  Andry Bracho
+
+ordenamiento de archivos y codigo entidad: purchase
+
+---------------------------------------------------
+12/07/2024  Andry Bracho
+
+se modifico la proporcion del mt purchase_vs_items de la entidad purchase (45% - 55%)
+se modifico el fc de la entidad customer (checkbox credit hold)
+se agrego al purchase report la columna profit para cada item y se modifico el titulo avaliable->avail
+
+production\components\multitable\_multitable-version.scss
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.html
+production\applications\staff\desktop\entity\customer\customer-fullcont.html
+production\applications\staff\desktop\entity\purchase\purchase-report-one.js
+
+---------------------------------------------------
+14/07/2024  Marco Molina
+
+Buscar una funcion de php, que genere colores pasteles, de forma random, 
+Dos campos avatarColor/AvatarLetter
+se ajusto label de purchase
+
+public\server\php\queries\report\purchase\pdf-label.php
+public\server\php\queries\report\purchase\query-invoice.php
+public\server\php\sqlFunctions\specialFunctions.php
+public\server\php\sql\insert.php
+public\server\php\queries\customerAfterInsert.php
+
+---------------------------------------------------
+18/07/2024  Andry Bracho
+
+Error de edicion grafico, sent & received payments, cuando se le da a editar  
+las facturas pagadas no salen con el checked-box chequiado.
+
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont-hanlder.js
+production\applications\staff\desktop\entity\sentpayment\sentpayment-fullcont.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont-hanlder.js
+production\applications\staff\desktop\entity\receivepayment\receivepayment-fullcont.js
+
+---------------------------------------------------
+19/07/2024  Marco Molina
+
+se ajustaron los campos del multitable de sale, y se agregaron las ganancias al lado del costo en el campo de cost del MT
+
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+production\applications\staff\desktop\entity\sale\sale-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+public\server\php\queries\sale.php
+
+---------------------------------------------------
+21/07/2024  Andry Bracho
+
+Error de flujo, cuando se esta haciendo un sale, si quedaban 5 apples del PU0002, y ya se puso un row con esa cantidad en ese mismo sale, 
+si se le da a agregar otro row, se puede poner el mismo articulo con 5 mas, NO PERMITIR ya que serian 10 y solo quedan 5.
+
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+production\applications\staff\desktop\entity\sale\sale-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+production\applications\staff\desktop\entity\sale\sale-fullcont.js
+production\applications\staff\desktop\entity\sale\sale-snack.js
+
+---------------------------------------------------
+22/07/2024  Andry Bracho
+
+Error grafico en sales y purchase, en los multitables de item, el item name se corta mucho y no se ve completo.
+En purchase report, en purchased item table, agregar una columna que diga el profit en porciento y cantidad.
+
+production\applications\staff\desktop\entity\sale\sale-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\purchase\purchase-fullcont-multitable-generator.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+production\applications\staff\desktop\entity\purchase\purchase-fullcont.html
+production\applications\staff\desktop\entity\purchase\purchase-report-one.js
+
+---------------------------------------------------
+23/07/2024   Marco Molina
+cuando purchase tiene un pago, dar notificacion de que no es editable desde q el fullcontainer se abre, asi el usuario no pierde tiempo editando.
+Cuando se esta haciendo un sale, ellos quieren ver la ganancia total del ticket cuando se le de al toogle button. Poner cantidad al lado del toogle button.
+
+production\applications\staff\desktop\entity\sale\sale-fullcont-handler.js
+production\applications\staff\desktop\entity\sale\sale-fullcont.html
+public\server\php\queries\sale.php
+production\applications\staff\desktop\entity\sale\sale-fullcont-form.js
+
+---------------------------------------------------
+23/07/2024  Andry Bracho
+
+Ellos quieren ver el Purchase Date & Sale Date en los data tables de purchase y sale respectivamente,
+que sean mas grande que el Due date. Osea, poner la fecha de la entidad arriba del due date en el data table.
+
+production\applications\staff\desktop\entity\sale\sale-dt-handler.js
+production\applications\staff\desktop\entity\purchase\purchase-dt-handler.js
+production\applications\staff\desktop\entity\sale\sale-page.html
+production\applications\staff\desktop\entity\purchase\purchase-page.html
+
+
+---------------------------------------------------
+30/07/2024   Marco Molina
+
+se agraron a los web socket las entidades de payment employees y equity deposit
+se corrigieron algunos errores en sus autocomplete 
+
+production\components\dt\dt-web-socket.js
+production\components\dt\dt-web-socket-handler.js
+production\components\fullcont\fullcont-web-socket.js
+production\applications\staff\desktop\entity\employesspayment\employesspayment-fullcont.js
+production\applications\staff\desktop\entity\employesspayment\employesspayment-fullcont.html
+production\applications\staff\desktop\entity\equitydeposit\equitydeposit-fullcont.js
+
+---------------------------------------------------
+08/08/2024   Andry Bracho
+
+Se agrego el envio del reporte al customer hacia su email
+
+production\applications\staff\desktop\entity\customer\customer-snack.js
+production\applications\staff\desktop\entity\customer\customer-menu.js
+production\applications\staff\desktop\entity\customer\customer-report-account-receivable.js
+public\server\php\queries\report\customer\pdf-report.php
+public\server\php\queries\report\customer\report-account-receivable-one.php
+
+---------------------------------------------------
+14/08/2024   Andry Bracho
+
+Cliente no aparece luego de un pago parcial
+El problema,se encontraba especificamente esta en la linea donde se calcula el due_amount,
+se hizo una subconsulta dentro del left join de payment_vs_sale, para solucionar el problema
+
+public\server\php\sql\getAllInvoice.php
+
+
+---------------------------------------------------
+20/08/2024  Marco Molina
+se agrego dashboard al dar click al titulo de beestock
+
+production\js\click-components-entity.js
+production\applications\staff\desktop\appbar.html
+production\applications\staff\desktop\staff-page-map.js
+production\applications\staff\desktop\entity\dashboard\dashboard-db.js
+production\applications\staff\desktop\entity\dashboard\dashboard-page-chart-handler.js
+production\applications\staff\desktop\entity\dashboard\dashboard-page-chart.js
+production\applications\staff\desktop\entity\dashboard\dashboard-page-handler.js
+production\applications\staff\desktop\entity\dashboard\dashboard-page-right.js
+production\applications\staff\desktop\entity\dashboard\dashboard-page.html
+production\applications\staff\desktop\entity\dashboard\dashboard-page.js
+production\applications\staff\desktop\entity\dashboard\dashboard-snack.js
+production\applications\staff\desktop\entity\dashboard\dashboard.js
+production\js\change-obj.js
+public\server\php\sql\selectDashboard.php
+public\server\php\queries\dashboard.php
+
+
+---------------------------------------------------
+30/08/2024  Marco Molina
+Period por defecto y la fecha que se esta mostrando
+Verificar se le puede poner el numero arriba o en la leyenda
+Gastos (rojo), Income (green) y ganancias (azul)
+quitale el best selling imtes, ponlo en el dashboard center, remuevele el tope, el margen entre el grafico y el grafico
+Mueve el grafico a la pagina de reportes, y a esa pagina agregale dos tabas arriba uno que diga dashboard, reportes, 
+
+production\applications\staff\desktop\entity\dashboard\dashboard-page-chart.js
+production\components\chart\chart-color.js
+production\applications\staff\desktop\entity\dashboard\dashboard-page.html
+production\components\chart\chartjs-bar.js
+production\components\report\report-page.html
+production\applications\staff\desktop\appbar.html
+production\applications\staff\desktop\entity\dashboard\dashboard-page-chart-handler.js

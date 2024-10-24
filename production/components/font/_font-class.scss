@@ -1,0 +1,179 @@
+//On usage
+// <div class='font-card-title'></div>
+.font-page-title{ //14px normal
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 16px);
+	margin-top: 14px;
+	margin-left: 67px;
+
+
+	@include font(h6, $c-b); 
+	@include selectNo;
+	@include back-visivility;
+	letter-spacing: 1.5px;
+	
+}
+
+
+.font-72{ //14px normal
+	position: relative;
+	display: block;	
+	@include font-init (72px, 500, $c-fb, 0.4px);
+}
+
+.font-card-title{ //14px normal
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 16px);
+	margin-top: 8px;
+	//margin-bottom: 4px;
+	max-width: 900px;
+
+	left: 50%;
+	transform:translateX(-50%);
+	@include font(subtitle1, $c-b);
+	//border:2px solid red;
+}
+
+.font-card-des{ //14px normal
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 16px);
+	margin-top: 2px;
+	margin-bottom: 2px;
+	//margin-bottom: 4px;
+	max-width: 900px;
+	opacity: 0.54;
+
+	left: 50%;
+	transform:translateX(-50%);
+	@include font(body2, $c-b);
+}
+
+
+
+
+
+//text-transform: uppercase;
+
+.font-onboard-title{ //16px
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 16px;
+	margin-bottom: 4px;
+	@include font(h6, $c-fb);
+}
+
+.font-onboard-des{ //16px
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 16px;
+	margin-bottom: 4px;
+	@include font(subtitle1, $c-fb);
+	opacity: 0.54;
+}
+
+
+.font-title-big{ //16px
+	display: block;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-bottom: 4px;
+	@include font-init (24px, 500, $c-fb, 1.50px);
+}
+
+.font-title{ //16px
+	display: block;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-bottom: 4px;
+	@include font-init (16px, 500, $c-fb, 1.50px);
+}
+
+.font-des{ //14px normal
+	position: relative;
+	display: block;
+	margin-left: 8px;
+	@include font(body2, $c-fb);
+}
+
+.font-des-red{ //14px normal
+	display: block;
+	@include font(body2, $c-error);
+}
+
+.font-h6{ //16px
+	display: block;
+	@include font(h6, $c-fb);
+}
+
+.font-subtitle1{ //16px
+	display: block;
+	@include font(subtitle1, $c-fb);
+}
+
+.font-subtitle2{ //14px bold
+	display: block;
+	@include font(subtitle2, $c-fb);
+}
+
+.font-body1{ //16px 
+	display: block;
+	@include font(body1, $c-fb);
+}
+
+
+//@include font-init (14px, normal, $color, 0.25px);
+.font-body2{ //14px normal
+	display: block;
+	@include font(body2, $c-fb);
+}
+
+.font-body2-b{ //14px normal
+	display: block;
+	width: 100%;
+
+	color:          $c-fb;
+	font-size:      14px;
+	font-weight:  	500;
+	letter-spacing: 0.25px;
+	
+}
+
+.font-body2-red{ //14px normal
+	display: block;
+	width: 100%;
+
+	color:          $c-error;
+	font-size:      14px;
+	font-weight:  	500;
+	letter-spacing: 0.25px;
+	
+}
+
+.font-button{
+	display: block;
+	@include font(button, $c-fb);
+}
+.font-caption{
+	display: block;
+	@include font(caption, $c-fb);
+}
+
+.font-caption-red{
+	display: block;
+	@include font(caption, $c-error);
+}
+
+.font-overline{
+	display: block;
+	@include font(overline, $c-fb);
+}
+
+
+.font-red{
+	color: $c-error;
+}

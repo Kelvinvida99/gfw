@@ -1,0 +1,155 @@
+
+
+.textfield-filled{ //Filled aniamtion
+	& > .label {
+			top: 8px;
+			@include font(caption, $c-b);
+			//border: 5px solid red;
+	}
+
+	& > .trailing{
+		top: 12px;
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+
+		&:active{
+			& svg{
+				opacity: 0.99;
+			}
+		}
+
+		&:hover{
+			& svg{
+				opacity: 0.67;
+			}
+		}
+	}
+}/**/
+
+.textfield-select{ //Filled aniamtion
+
+	cursor: pointer;
+	& > .trailing{
+		@include selectNo;
+		top: 12px;
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+	}
+}
+
+
+.textfield-error{
+
+	//border:1px solid red;
+	//background-color:lighten($c-error, 60%);
+
+
+
+
+	& > .label {
+		color: $c-error !important;
+	}
+
+	& > .elem {
+		caret-color: $c-error !important; //blinking pointer
+		border: 1px solid $c-error;
+
+		& + .indicador{
+			background-color: $c-error !important;
+			transform: scaleX(1);
+		}
+
+		&:focus{
+			& ~ .label {
+			color: $c-error !important;
+			}		
+		}
+	}
+
+
+	& > .trailing {
+		& svg { 
+			fill: $c-error !important; 
+			opacity: 1;
+			//@include a-shake;
+		}
+	}
+
+	& > .helper {
+		color: $c-error !important;
+		//@include a-shake;
+	}	
+}
+
+
+.textfield-completed{
+
+	& > .label {
+		color: $c-good;
+	}
+
+	& > .elem {
+		caret-color: $c-good; //blinking pointer
+
+		& + .indicador{
+			background-color: $c-good;
+			transform: scaleX(1);
+		}
+
+		&:focus{
+			& ~ .label {
+			color: $c-good;
+			}		
+		}
+	}
+
+	& > .trailing {
+		& svg { 
+			fill: $c-good; 
+			opacity: 1;
+			//@include a-shake;
+		}
+	}
+
+	& > .helper {
+		color: $c-good;
+		//@include a-shake;
+	}	
+}/**/
+
+.textfield-caution{
+
+	& > .label {
+		//color: $c-caution;
+	}
+
+	& > .elem {
+		caret-color: $c-caution; //blinking pointer
+
+		& + .indicador{
+			background-color: $c-caution;
+			transform: scaleX(1);
+		}
+
+		&:focus{
+			& ~ .label {
+			color: $c-b;
+			}		
+		}
+	}
+
+	& > .trailing {
+		& svg { 
+			fill: $c-caution; 
+			opacity: 1;
+			//@include a-shake;
+		}
+	}
+
+	& > .helper {
+		//color: $c-caution;
+		//@include a-shake;
+	}	
+}
+
+

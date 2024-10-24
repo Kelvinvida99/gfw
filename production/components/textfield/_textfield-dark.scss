@@ -1,0 +1,185 @@
+@mixin textfield-dark{
+
+	.textfield{
+
+
+		& > .elem {
+			color: $c-w;
+			background-color:  rgba(0, 0, 0, 0.04);
+			caret-color: $c-pl; //blinking pointer
+			border-bottom: 1px solid lighten($c-b, 54%);
+
+			&:hover{
+				background-color: rgba(0, 0, 0, 0.24);
+			}
+			&:focus{
+				background-color: rgba(0, 0, 0, 0.36);
+			}		
+			& + .indicador{
+				background-color: $c-pl;
+				transform: scaleX(0);
+			}
+			&:focus{
+				& + .indicador{
+					transform: scaleX(1);
+				}	
+				& ~ .label {
+					@include font(caption, $c-pl);
+					opacity: 0.87;
+
+				}					
+			}
+
+		}
+
+
+
+		& > .label {
+			color:$c-w;
+			opacity: 0.87;
+		}
+
+
+		& > .helper {
+			color:$c-w;
+			opacity: 0.87;
+		}
+
+
+		& > .counter {
+			color:$c-w;
+			opacity: 0.87;
+		}		
+
+		& > .trailing{
+				& svg{
+					fill: $c-w;
+					opacity: 0.87;
+				}
+		}
+
+	}
+
+	.textfield-filled{ 
+		& > .label {
+			opacity: 0.54;
+		}
+	}
+
+
+	.textfield-error{
+
+		& > .label {
+			color: $d-error;
+			opacity: 1;
+		}
+
+		& > .elem {
+			caret-color: $d-error; //blinking pointer
+
+			& + .indicador{
+				background-color: $d-error;
+				transform: scaleX(1);
+			}
+
+			&:focus{
+				& ~ .label {
+				color: $d-error;
+				opacity: 1;
+				}		
+			}
+		}
+
+		& > .trailing {
+			& svg { 
+				fill: $d-error; 
+				opacity: 1;
+				//@include a-shake;
+			}
+		}
+
+		& > .helper {
+			color: $d-error;
+			opacity: 1;
+			//@include a-shake;
+		}	
+	}/*error*/
+
+	.textfield-completed{
+
+		& > .label {
+			color: $c-good;
+			opacity: 1;
+		}
+
+		& > .elem {
+			caret-color: $c-good; //blinking pointer
+
+			& + .indicador{
+				background-color: $c-good;
+				transform: scaleX(1);
+			}
+
+			&:focus{
+				& ~ .label {
+				color: $c-good;
+				}		
+			}
+		}
+
+		& > .trailing {
+			& svg { 
+				fill: $c-good; 
+				opacity: 1;
+				//@include a-shake;
+			}
+		}
+
+		& > .helper {
+			color: $c-good;
+			opacity: 1;
+			//@include a-shake;
+		}	
+	}/*complete*/
+
+
+	.textfield-caution{
+
+		& > .label {
+			color: $c-caution;
+			opacity: 1;
+		}
+
+		& > .elem {
+			caret-color: $c-caution; //blinking pointer
+
+			& + .indicador{
+				background-color: $c-caution;
+				transform: scaleX(1);
+			}
+
+			&:focus{
+				& ~ .label {
+				color: $c-caution;
+				}		
+			}
+		}
+
+		& > .trailing {
+			& svg { 
+				fill: $c-caution; 
+				opacity: 1;
+				//@include a-shake;
+			}
+		}
+
+		& > .helper {
+			color: $c-caution;
+			opacity: 1;
+			//@include a-shake;
+		}	
+
+	}/*caution*/
+
+
+}

@@ -1,0 +1,6 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-10-02 11:14:am rodin@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), 2) AS CHAR CHARACTER SET utf8mb4)),
+                                    '...' at line 91, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-10-02 11:14:am rodin@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), 2) AS CHAR CHARACTER SET utf8mb4)),
+                                    '...' at line 91, executeSelect.php@9, MySql->SELECT@1064, purchase

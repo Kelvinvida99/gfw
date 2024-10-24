@@ -1,0 +1,89 @@
+
+
+/*
+THIS FILE WAS CREATE TO HANDLE THE HIDE COLUMS
+MORE DETAILED FOR HANDLE THE RESPONSIVE, 
+WE AREN'T USING THIS ANY MORE
+
+*/
+
+@mixin dt-hide ($break, $col) {
+
+	@include respond($break) {
+		td:nth-child(#{$col}), & th:nth-child(#{$col}){				
+			display: none;
+		}	 
+	}
+}
+
+//h(hide)(colNum)(device)
+//dt-h2p → dt-hide-Col2-Phone
+
+.dt-h{
+	&2{
+		&m { @include dt-hide(mini, 2)        }		
+		&p { @include dt-hide(phone, 2)		}
+		&t { @include dt-hide(table, 2)       }		
+		&tl{ @include dt-hide(table-land, 2)  }
+		&d { @include dt-hide(desktop, 2)     }
+	} 
+
+	&3{
+		&m { @include dt-hide(mini, 3)        }		
+		&p { @include dt-hide(phone, 3)		}
+		&t { @include dt-hide(table, 3)       }		
+		&tl{ @include dt-hide(table-land, 3)  }
+		&d { @include dt-hide(desktop, 3)     }
+	} 
+
+	&4{
+		&m { @include dt-hide(mini, 4)        }		
+		&p { @include dt-hide(phone, 4)		}
+		&t { @include dt-hide(table, 4)       }		
+		&tl{ @include dt-hide(table-land, 4)  }
+		&d { @include dt-hide(desktop, 4)     }
+	} 
+	&5{
+		&m { @include dt-hide(mini, 5)        }		
+		&p { @include dt-hide(phone, 5)		}
+		&t { @include dt-hide(table, 5)       }		
+		&tl{ @include dt-hide(table-land, 5)  }
+		&d { @include dt-hide(desktop, 5)     }
+	} 
+
+	&6{
+		&m { @include dt-hide(mini, 6)        }		
+		&p { @include dt-hide(phone, 6)		}
+		&t { @include dt-hide(table, 6)       }		
+		&tl{ @include dt-hide(table-land, 6)  }
+		&d { @include dt-hide(desktop, 6)     }
+	} 	
+
+	&7{
+		&m { @include dt-hide(mini, 7)        }		
+		&p { @include dt-hide(phone, 7)		}
+		&t { @include dt-hide(table, 7)       }		
+		&tl{ @include dt-hide(table-land, 7)  }
+		&d { @include dt-hide(desktop, 7)     }
+	} 
+
+
+	&7{
+		&m { @include dt-hide(mini, 7)        }		
+		&p { @include dt-hide(phone, 7)		}
+		&t { @include dt-hide(table, 7)       }		
+		&tl{ @include dt-hide(table-land, 7)  }
+		&d { @include dt-hide(desktop, 7)     }
+	} 
+
+	&8{
+		&m { @include dt-hide(mini, 8)        }		
+		&p { @include dt-hide(phone, 8)		}
+		&t { @include dt-hide(table, 8)       }		
+		&tl{ @include dt-hide(table-land, 8)  }
+		&d { @include dt-hide(desktop, 8)     }
+	} 
+
+}
+
+

@@ -1,0 +1,32 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-05-03 12:30:pm amdry@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM sentpayment 
+        INNER JOIN provider on provider.id = sentpayment.p...' at line 14, executeSelect.php@9, MySql->SELECT@1064, sentpayment
+2024-05-04 07:40:am amdry@,  Duplicate column name 'remaining_days', executeSelect.php@9, MySql->SELECT@1060, inventory
+2024-05-04 07:40:am amdry@,  Duplicate column name 'remaining_days', executeSelect.php@9, MySql->SELECT@1060, inventory
+2024-05-04 07:41:am amdry@,  Duplicate column name 'remaining_days', executeSelect.php@9, MySql->SELECT@1060, inventory
+2024-05-04 07:42:am amdry@,  Duplicate column name 'remaining_days', executeSelect.php@9, MySql->SELECT@1060, inventory
+2024-05-13 14:41:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AS CHAR CHARACTER SET utf8mb4)) ELSE 0 END) AS current,
+                SU...' at line 4, executeSelect.php@9, MySql->SELECT@1064, provider
+2024-05-13 14:41:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AS CHAR CHARACTER SET utf8mb4)) ELSE 0 END) AS current,
+                SU...' at line 4, executeSelect.php@9, MySql->SELECT@1064, provider
+2024-05-13 14:46:pm ypena@,  FUNCTION beestock.FOMART does not exist, executeSelect.php@9, MySql->SELECT@1305, provider
+2024-05-13 22:03:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'current_date,
+            CONCAT('$', FORMAT(SUM(purchase.general_total_pric...' at line 5, executeSelect.php@9, MySql->SELECT@1064, provider
+2024-05-13 22:52:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 22:55:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 22:57:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 22:59:pm ypena@,  Unknown column 'inventory.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:00:pm ypena@,  Unknown column 'inventory.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:00:pm ypena@,  Unknown column 'inventory.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:02:pm ypena@,  Unknown column 'inventory.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:02:pm ypena@,  Unknown column 'inventory.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:04:pm ypena@,  Unknown column 'inventory.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:07:pm ypena@,  Unknown column 'inventory.item_code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:07:pm ypena@,  Unknown column 'inventory.item_code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:07:pm ypena@,  Unknown column 'inventory.item_code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:09:pm ypena@,  Unknown column 'inventory.item_code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-13 23:10:pm ypena@,  Unknown column 'inventory.po_code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-05-14 08:31:am ypena@,  Unknown column 'company.name' in 'field list', executeSelect.php@9, MySql->SELECT@1054, provider
+2024-05-14 08:33:am ypena@,  Unknown column 'company.name' in 'field list', executeSelect.php@9, MySql->SELECT@1054, provider
+2024-05-14 08:34:am ypena@,  Unknown column 'compamy.id' in 'on clause', executeSelect.php@9, MySql->SELECT@1054, provider

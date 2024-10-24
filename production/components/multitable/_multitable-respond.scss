@@ -1,0 +1,13 @@
+.multitable {
+
+
+	@include respond(table) {
+		width: calc(100% - 4px) !important;
+		//border: 1px solid blue;
+
+	}
+
+}
+
+
+

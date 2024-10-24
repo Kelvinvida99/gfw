@@ -1,0 +1,368 @@
+
+@import "components/font/font-install"; //font installation
+
+@import "css/colors";
+@import "css/colors_dark";
+
+@import "css/organization";
+@import "css/select";
+
+// @import "css/font";
+// @import "css/font-dark";
+
+@import "css/graphics";
+@import "css/boxShadown";
+@import "css/animation";
+
+@import "components/font/font";
+@import "components/font/font-class"; 
+@import "components/font/font-icon"; 
+
+@import "components/font/font-dark"; 
+
+@import "css/layout"; 
+@import "css/respond"; 
+@import "css/rows"; 
+
+@import "components/interaction/interaction";
+@import "components/interaction/interaction-dark";
+
+@import "components/ripple/ripple";
+@import "components/ripple/ripple-anime";
+
+@import "components/body/body";
+@import "components/body/body-version";
+@import "components/body/body-respond";
+@import "components/body/body-anime";
+@import "components/body/body-dark";
+
+
+@import "components/appbar/appbar";
+@import "components/appbar/appbar-version";
+@import "components/appbar/appbar-anime";
+@import "components/appbar/appbar-response";
+@import "components/appbar/appbar-desktop";
+@import "components/appbar/appbar-main";
+
+@import "components/appbar/appbar-dark";
+
+@import "components/avatar/avatar";
+@import "components/avatar/avatar-version";
+@import "components/avatar/avatar-anime";
+
+@import "components/login/login";
+@import "components/login/login-anime";
+@import "components/login/login-respond";
+
+
+@import "components/dt/dt"; 
+
+	@import "components/dt/header/dt-header";
+	@import "components/dt/header/dt-header-respond";
+	@import "components/dt/header/dt-header-version";
+
+	@import "components/dt/header/dt-header-anime";
+	@import "components/dt/header/dt-header-dark";
+
+	@import "components/dt/option/dt-more";
+	@import "components/dt/option/dt-more-dark";
+
+	@import "components/dt/option/dt-checkbox";
+	@import "components/dt/option/dt-checkbox-anime";
+	@import "components/dt/option/dt-checkbox-dark";
+
+	@import "components/dt/version/dt-mobile";
+	@import "components/dt/version/dt-simple";
+	@import "components/dt/version/dt-simple-dark";
+	@import "components/dt/version/dt-loading";
+	@import "components/dt/version/dt-td";
+	@import "components/dt/version/dt-td-color";	
+	@import "components/dt/version/dt-td-color-icon";	
+
+	@import "components/dt/version/dt-noCheck";
+
+	@import "components/dt/version/dt-filtering";
+
+	@import "components/dt/footer/dt-footer";
+	@import "components/dt/footer/dt-footer-anime";
+
+
+	@import "components/dt/dt-anime";
+	@import "components/dt/dt-respond";
+	@import "components/dt/dt-dark";
+	@import "components/dt/version/dt-loading-dark";
+	
+	@import "components/dt/version/dt-error";
+	@import "components/dt/version/dt-thead-version";
+
+	
+@import "components/textfield/textfield";
+@import "components/textfield/textfield-desk";
+@import "components/textfield/textfield-mini";
+//@import "components/textfield/test";
+
+
+@import "components/textfield/textfield-components";
+@import "components/textfield/textfield-variation";
+
+
+@import "components/textfield/textfield-autocomplete";
+@import "components/textfield/textfield-autocomplete-selector";
+@import "components/textfield/textfield-autocomplete-chip";
+@import "components/textfield/textfield-autocomplete-version";
+
+// @import "components/textfield/textfield-respond";
+@import "components/textfield/textfield-anime";
+@import "components/textfield/textfield-anime-status";
+@import "components/textfield/textfield-dark";
+
+@import "components/textfield/textfield-multivalue";
+
+@import "components/multitable/multitable";
+@import "components/multitable/multitable-version";
+@import "components/multitable/multitable-respond";
+
+
+
+@import "components/button/button";
+@import "components/button/button-version";
+@import "components/button/button-respond";
+@import "components/button/button-anime";
+@import "components/button/button-dark";
+
+@import "components/selector/checkbox";
+@import "components/selector/checkbox-version";
+
+@import "components/selector/radio";
+@import "components/selector/radio-version";
+
+@import "components/selector/switch";
+@import "components/selector/selector-dark";
+
+@import "components/page/page";
+@import "components/page/page-version";
+@import "components/page/page-respond";
+@import "components/page/page-anime";
+
+@import "components/page/page-title";
+
+
+
+@import "components/tab/tab";
+@import "components/tab/tab-page";
+@import "components/tab/tab-anime";
+@import "components/tab/tab-respond";
+@import "components/tab/tab-dark";
+
+// @import "components/bottomnav/bottomnav";
+// @import "components/bottomnav/bottomnav-anime";
+// @import "components/bottomnav/bottomnav-response";
+// @import "components/bottomnav/bottomnav-version";
+// @import "components/bottomnav/bottomnav-dark";
+
+@import "components/appnav/appnav";
+@import "components/appnav/appnav-anime";
+@import "components/appnav/appnav-version";
+
+
+@import "components/leftnav/leftnav";
+@import "components/leftnav/leftnav-tv";
+@import "components/leftnav/leftnav-anime";
+@import "components/leftnav/leftnav-dark";
+
+// @import "components/tv/tvnav";
+@import "components/tv/tvcard";
+@import "components/tv/tvcard-icon";
+@import "components/tv/tvcard-list";
+@import "components/tv/tvcard-activity";
+
+@import "components/tv/tvcard-bar-big";
+@import "components/tv/tvcard-bar-small";
+
+
+@import "components/change/change";
+
+
+//small pieces
+@import "components/divider/divider";
+@import "components/divider/divider-dark";
+
+
+@import "components/scroll/scroll";
+@import "components/scroll/scroll-dark";
+
+
+@import "components/scrim/scrim";
+@import "components/scrim/scrim-anime";
+@import "components/scrim/scrim-respond";
+//@import "components/scrim/animation-boxes";
+
+@import "components/scrim/scrim-loading";
+
+
+@import "components/loading/loading";
+@import "components/loading/loading-anime";
+
+
+@import "components/card/card";
+@import "components/card/card-top";
+@import "components/card/card-respond";
+@import "components/card/card-dark";
+
+@import  "components/menu/menu";
+@import  "components/menu/menu-version";
+@import  "components/menu/menu-anime";
+@import "components/menu/menu-dark";
+
+@import  "components/menubar/menubar";
+@import  "components/menubar/menubar-version";
+
+
+@import "components/snack/snack";
+@import "components/snack/snack-long";
+@import "components/snack/snack-anime";
+@import "components/snack/snack-anime-phone";
+@import "components/snack/snack-respond";
+@import "components/snack/snack-dark";
+
+@import "components/dialog/dialog";
+@import "components/dialog/dialog-anime";
+@import "components/dialog/dialog-respond";
+@import "components/dialog/dialog-dark";
+
+@import "components/drawer/drawer";
+@import "components/drawer/drawer-header";
+@import "components/drawer/drawer-anime";
+@import "components/drawer/drawer-dark";
+@import "components/drawer/drawer-respond";
+@import "components/drawer/drawer-versions";
+
+@import "components/backdrop/backdrop";
+@import "components/backdrop/backdrop-anime";
+@import "components/backdrop/backdrop-respond";
+@import "components/backdrop/backdrop-dark";
+
+@import "components/confirmation/confirmation";
+@import "components/confirmation/confirmation-anime";
+@import "components/confirmation/confirmation-dark";
+
+
+@import "components/fab/fab";
+@import "components/fab/fab-secondary";
+@import "components/fab/fab-anime";
+@import "components/fab/fab-version";
+
+@import "components/fab/fab-respond";
+@import "components/fab/fab-dark";
+
+@import "components/banner/banner";
+@import "components/banner/banner-anime";
+@import "components/banner/banner-respond";
+@import "components/banner/banner-dark";
+
+@import "components/fullcont/fullcont";
+@import "components/fullcont/fullcont-notification";
+
+@import "components/fullcont/fullcont-respond";
+@import "components/fullcont/fullcont-anime";
+@import "components/fullcont/fullcont-mode-view";
+@import "components/fullcont/fullcont-mode";
+@import "components/fullcont/fullcont-version";
+@import "components/fullcont/fullcont-dark";
+
+@import "components/onboard/onboard";
+@import "components/onboard/onboard-anime";
+
+
+
+@import "components/stepper/stepper";
+@import "components/stepper/stepper-version";
+@import "components/stepper/stepper-dark";
+
+@import "components/file/file";
+@import "components/file/file_header";
+@import "components/file/file_body";
+@import "components/file/file_version";
+@import "components/file/file_cont_version";
+@import "components/file/file_respond";
+
+@import "components/file/file_scrim";
+@import "components/file/file_scrim_anime";
+
+
+@import "components/map/map";
+@import "components/map/map-version";
+@import "components/map/map-howEnable";
+
+@import "components/signature/signature";
+@import "components/signature/signature-line";
+@import "components/signature/signature-version";
+@import "components/signature/signature-anime";
+@import "components/signature/signature-dark";
+
+@import "components/illustration/illustration";
+@import "components/chart/chartjs";
+
+@import "components/report/report-appbar";
+@import "components/report/report-page";
+
+// @import "components/graph/bar";
+// @import "components/graph/bar_legend";
+// @import "components/graph/bar_version";
+// @import "components/graph/bar_respond";
+
+// @import "components/graph/bar-h";
+// @import "components/graph/bar-h-lines";
+
+// @import "components/graph/bar-dark";
+// @import "components/graph/dashboard_status";
+// @import "components/graph/dashboard_status-dark";
+
+// @import "components/graph/dashboard_card";
+// @import "components/graph/dashboard_pie";
+// @import "components/graph/dashboard_sales";
+
+// @import "components/graph/pie-simple";
+
+
+
+@import "components/clock/clock";
+@import "components/range/range";
+@import "components/range/range-dark";
+
+@import "components/monitor/monitor";
+@import "components/monitor/monitor-body";
+@import "components/monitor/monitor-version";
+
+
+// @import "components/chip/chip";
+// @import "components/chip/chip_version";
+
+
+
+
+//////////////////////staff DESKTOP
+// @import "applications/staff/desktop/entity/servicesReport/servicesReport";
+// @import "applications/staff/desktop/entity/servicesReport/servicesReport-fullcont";
+// @import "applications/staff/desktop/entity/services/services";
+
+
+
+//////////////////////NURSE APP
+// @import "applications/nurse/components/clock/clock-title";
+// @import "applications/nurse/components/clock/clock-card";
+// @import "applications/nurse/components/clock/clock-card-24h";
+// @import "applications/nurse/components/clock/clock-card-anime";
+// @import "applications/nurse/components/clock/clock-action";
+// @import "applications/nurse/components/clock/clock-notify";
+// @import "applications/nurse/components/clock/clock-time-task";
+// @import "applications/nurse/components/clock/clock-version";
+
+
+@import "css/class";
+@import "css/darkTheme"; 
+
+
+
+
+

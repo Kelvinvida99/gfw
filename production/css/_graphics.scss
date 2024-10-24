@@ -1,0 +1,58 @@
+/*this add height to the rows, 
+because when all the elements are float, 
+container height goes to 0*/
+@mixin clearfix{
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+        
+    }
+}
+
+//@include back-visivility;
+@mixin back-visivility{
+     -webkit-backface-visibility: hidden;
+	 -webkit-transform: translateZ(0) scale(1.0, 1.0);	
+}
+
+
+//@include transition(0.250s, stan)
+@mixin transition($time, $easy){
+
+	  transition:  all #{$time};
+
+	 @if($easy == stan){
+	 	transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+	 }
+ 	 @if($easy == emph){
+	 	transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	 }    
+	 @if($easy == dece){
+	 	transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	 }
+
+	 @if($easy == acce){
+	 	transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+	 }
+
+}
+
+
+@mixin animationT($type){
+
+	 @if($type == stan){
+	 	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+	 }
+ 	 @if($type == emph){
+	 	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	 }    
+	 @if($type == dece){
+	 	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	 }
+
+	 @if($type == acce){
+	 	animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+	 }
+
+}

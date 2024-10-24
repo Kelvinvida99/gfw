@@ -1,0 +1,90 @@
+.stepper{
+		position: absolute;
+		display: inline-block;
+		width: 100%;
+		height: 56px;
+		bottom:0px;
+		left: 0px;
+		background-color: $c-w;
+		//border-top: 1px solid $c-divider;            //←←←←←←←←←←←←←←←←←←←←
+		z-index: 32;
+		
+		box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.1); 
+
+
+		& div[class^="btn-"]{
+			position: absolute;
+			display: inline-block;
+			height: 56px;
+			padding-left: 16px;
+			padding-right: 16px;
+			cursor: pointer;
+			//width: 96px;
+
+			@include centerFlex;
+			//border: 0.2px solid green;            //←←←←←←←←←←←←←←←←←←←←
+
+			& label{
+				@include font(button, $c-b);
+				@include selectNo;
+				//border: 0.2px solid green;            //←←←←←←←←←←←←←←←←←←←←
+			}
+
+			& svg{
+				height: 16px;
+				width:  16px;
+				fill: $c-b;
+				@include selectNo;
+				//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+			}
+		}
+
+		& .btn-next{
+			right: 0px;
+			& label{ opacity: 0.36; }
+			& svg  { opacity: 0.36; }	
+			@include interaction-white;		
+		}
+
+		& .btn-back{
+			left: 0px;
+			& label{ opacity: 0.36; }
+			& svg  { opacity: 0.36; }	
+			@include interaction-white;		
+		}
+
+		& .counter{
+			position: absolute;
+			display: inline-block;
+			left: 96px;
+			height: 56px;
+			width: calc(100% - 192px);
+			@include centerFlex;
+			& span{
+				width: 12px;
+				height:12px;
+
+				margin: 4px;
+				border-radius: 50%;
+				background-color: $cs-lg;
+				cursor: pointer;
+				//border: 0.5px solid blue;           //←←←←←←←←←←←←←←←←←←←←  
+			}
+			//border: 0.5px solid blue;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+
+}/*stepper*/
+
+
+
+//color the circle, to indicate the page position
+ .stepper-1{ & .counter span:nth-child(1){ background-color: $c-p; } }
+ .stepper-2{ & .counter span:nth-child(2){ background-color: $c-p; } }
+ .stepper-3{ & .counter span:nth-child(3){ background-color: $c-p; } }
+ .stepper-4{ & .counter span:nth-child(4){ background-color: $c-p; } }
+ .stepper-5{ & .counter span:nth-child(5){ background-color: $c-p; } }
+ .stepper-6{ & .counter span:nth-child(6){ background-color: $c-p; } }
+ .stepper-7{ & .counter span:nth-child(7){ background-color: $c-p; } }
+ .stepper-8{ & .counter span:nth-child(8){ background-color: $c-p; } }
+ .stepper-9{ & .counter span:nth-child(9){ background-color: $c-p; } }

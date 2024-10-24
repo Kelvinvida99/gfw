@@ -1,0 +1,88 @@
+.dt {
+
+	& > .header-desktop{
+
+		margin-top: 8px;
+		height: 32px;
+
+		z-index: 3;
+		//background:  $c-surface-l;
+		@include back-visivility();
+		//@include bs-1;
+
+		//border-bottom: 0.1px solid $c-divider;   //←←←←←←←←←←←←←←←←←←←←
+		//border: 0.1px solid blue;               //←←←←←←←←←←←←←←←←←←←
+
+		& > div{
+			height: 32px;
+			width: 32px;
+			//border: 0.1px solid green;           //←←←←←←←←←←←←←←←←←←←←
+
+		}
+
+		& >.title{
+			left: 15px;
+			margin-top: 2px;
+			width: 200px;
+			overflow: hidden;
+			white-space: nowrap;
+			border: none;		
+			text-overflow: ellipsis;     //... at the end of input
+
+			//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←
+		}
+
+		& > div:nth-child(2){
+			width: calc(100% - 348px); 
+			margin-right: 164px;
+			height: 30px;
+			left: 64px;
+			top: -4px;
+			//border: 0.1px solid purple;               //←←←←←←←←←←←←←←←←←←←←
+
+			& input{
+				padding-left: 30px;
+			}
+
+			& > .icon{
+				top: 0px;
+				height: 32px;
+				width: 32px;	
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+			}
+
+			& > .search{
+				margin-top: 0px;
+			}
+
+			& > .trailing{
+				margin-top: 0px;
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+			}
+		}
+
+		& > .more, & > .filter, & > .other3  {
+
+				margin-top: 0px;
+				width: 32px;	
+				//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+				//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←		
+		}
+
+
+
+	}/*header*/
+
+
+	
+}
+
+
+
+
+
+
+
+
+

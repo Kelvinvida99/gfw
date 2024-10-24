@@ -1,0 +1,19 @@
+.bottomnav{
+
+	& .select{
+
+			& label{
+				opacity: 1;
+				opacity: 1;
+				transform:scale(1);
+				color: $c-p;
+				font-weight: 500;
+			}
+
+			& svg{
+				opacity: 1;
+				fill: $c-p;
+			}
+	}
+
+}

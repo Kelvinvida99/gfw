@@ -1,0 +1,137 @@
+
+
+.avatar-online{
+	& .status{
+		background-image:  url('./svg/status/online.svg');
+		background-color: $cs-green;
+		
+		
+		//border: 3px solid red;
+	}
+}
+
+
+.avatar-away{
+	& .status{
+		background-image:  url('./svg/status/away.svg');
+		background-color: $cs-lg;
+	}
+}
+
+ .avatar-busy{
+	& .status{
+		background-image:  url('./svg/status/busy.svg');
+		background-color: $cs-red;
+	}
+}
+
+
+ 
+.avatar-desktop{
+	position: fixed;
+	display: inline-block;
+	right: 16px;
+	top: 4px;
+	height: 38px;
+	width: 38px;
+	border-radius: 50% ;
+	border: 2px solid $c-w; 
+	cursor: pointer;
+	z-index: 13;
+}
+
+
+ 
+.avatar-fixed-tv{
+	position: fixed;
+	display: inline-block;
+	left: 16px;
+	top: 12px;
+	height: 50px;
+	width: 50px;
+	border-radius: 0% ;
+	border: 2px solid $c-w; 
+	// border-bottom-right-radius: 16px;
+	// border-top-left-radius: 16px;
+
+	//@include bs-2;
+
+
+	//border: 3px solid red;
+
+}
+
+
+ 
+.avatar-app{
+	position: fixed;
+	display: inline-block;
+	right: 20px;
+	top: 8px;
+	height: 42px;
+	width:  42px;
+	z-index: 11;
+
+	border-radius: 50% ;
+	// border-bottom-right-radius: 8px;
+	// border-top-left-radius: 8px;	
+
+	border: 2px solid $c-w;
+	
+	& .status{
+		right:auto;
+		left: -12px;
+		border: 2px solid $c-w;               //←←←←←←←←←←←←←←←←←←←←
+	}
+
+	//border: 3px solid red;
+
+}/**/
+
+
+
+.avatar-large{
+	position: relative;
+	display: inline-block;
+	//margin-top: 4px;
+	height: 90px;
+	width: 90px;
+	//margin: 4px;
+
+	float: left;
+	border-radius: 00% !important;
+	
+	@include align-center;
+	//@include  bs-2;
+
+	border: 3px solid $c-w;
+
+
+    &:after{ //lapiz
+	    	content: "";
+	    	position: absolute;
+	    	right: -6px;
+	    	bottom: -6px;
+			width: 32px;
+			height: 32px;
+			border-radius: 50% !important;
+		    background:   url(svg/edit-white.svg) no-repeat;
+		    opacity: 0.76;
+		    background-size: 70% auto;
+		    background-position: center;
+		    background-color: $c-p;
+		    cursor: pointer;
+		    //border: 0.3px solid red;
+
+	    }
+	&:hover{
+	    &:after{ //lapiz
+			    opacity: 0.99;
+
+		}		
+	}
+
+
+
+}
+

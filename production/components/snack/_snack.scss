@@ -1,0 +1,57 @@
+.snack{
+	position: fixed;
+	display: inline-block;
+	width: 344px;
+	
+	left: 136px;
+	bottom: -200px;
+	opacity: 0;
+
+	padding: 16px;
+	padding-right: 92px;
+	border-radius: 6px;
+
+	background-color: $d-surface;
+
+	@include bs-6;
+
+	z-index: 211;
+	//border: 0.2px solid yellow;               //←←←←←←←←←←←←←←←←←←←← 
+	& > label{
+		position: relative;
+		opacity: 0.87;
+		@include font(body2, $c-w)
+		//margin-right: 32px;
+		
+	}
+	
+	& > div{
+		position: absolute;
+		display: inline-block;
+		right: 16px;
+		top: 50%;
+		border-radius: 4px;
+		transform: translateY(-50%), scale(1);
+
+		//@include interaction-dark($d-p);
+		// @include transition(.150s, emph);
+		// &:active  {transform: translateY(-50%), scale(0.90); }		
+		
+			& label	{
+				position: relative;
+				display: inline-block;
+				@include font(button, $c-pl)
+				@include selectNo;
+				margin: 8px;
+				opacity: 1;
+				//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+			}
+		&:hover   {& label {color: $c-w;} }		
+
+
+	}
+
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}

@@ -1,0 +1,22 @@
+@mixin dt-more-dark{
+
+
+	.dt {
+		& > table {
+			& tr{
+				& .more{
+					//@include interaction($d-p);
+						& svg{
+							fill: $c-w;
+						}	
+				&:hover{
+					background-color:transparent;
+				}
+
+				}
+			}	
+		}
+	}/*dt*/
+
+
+}

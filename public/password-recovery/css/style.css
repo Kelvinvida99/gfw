@@ -1,0 +1,32 @@
+ form,
+ .password_success {
+     max-width: 400px;
+     margin: 0 auto;
+     font-size: 25px;
+ }
+
+
+
+ h2 {
+     text-align: center;
+     color: #333;
+     font-size: 25px;
+
+ }
+
+ label {
+     display: block;
+     margin: 10px 0 5px;
+     color: #333;
+ }
+
+ input {
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 15px;
+     box-sizing: border-box;
+     font-size: 25px;
+ }
+
+
+

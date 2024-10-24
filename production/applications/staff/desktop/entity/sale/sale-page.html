@@ -1,0 +1,176 @@
+<div class="page page_main  dn" id="sale-page"  > 
+
+
+    <div class="fab fab-blue"
+        data-detail='{"click": [  {"dest":"ripple" }, {"dest":"sale", "elem":"fullcont", "id":"sale-fullcont",  "act":"prepareAdd"  } ] }' >
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#add'></use></svg>
+    </div>
+
+    <div class="menubar"> </div> <!-- menubar  -->
+
+    <div class="dt" id="sale-dt">
+
+      <div class="header header-desktopx">
+          
+          <label class="title">Sale</label>
+          
+          <div class="searchDiv">
+
+            <input class="searchInput searchArea" type="text"  placeholder="Search"
+                   data-lastValue=""
+                   data-detail   ='{ "key": [{"dest":"dt", "act":"typing" }, 
+                                             {"dest":"sale", "elem":"dt", "act":"searching", "entity":"sale" } ] }' >
+           
+            <div class="icon search" 
+                 data-detail='{"click": [{"dest":"ripple" }, {"dest":"dt", "act":"searching"}  ]}'>
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#search"></use></svg>
+            </div>
+
+            <div class="icon trailing"
+                 data-detail='{"click": [{"dest":"ripple" }, 
+                 {"dest":"dt", "act":"clear"}, 
+                 {"dest":"sale", "elem":"dt", "act":"searching", "entity":"sale" }      ] }' >
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+            </div>   
+
+          </div>
+
+           <div class="filter" title=''
+            data-detail='{
+           "click": [{"dest":"ripple" }, 
+                     {"dest":"dt", "act":"filterShowHide"},
+                     {"dest":"sale", "elem":"dt", "act":"filterShowHide", "entity":"sale" }   ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#filter"></use></svg>
+          </div> 
+
+
+          <div class="more"
+            data-detail='{"click": [{"dest":"ripple"}, 
+            {"dest":"sale", "elem":"dt",  "act":"tableOptions", "id":"tableOptions", "entity":"sale"} ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#more"></use></svg>
+          </div>  
+      
+      </div>
+
+      <div class="filterCont dn "  >
+
+        <div class="row">
+          <div class="c50">
+          
+            <div class="textfield textfield-deskx">
+              <input class='elem' type="text" placeholder="Code" data-field="sale.code" data-lastValue="" data-detail='{
+                                                 "key":   [ {"dest":"textfield", "act":"typing" },
+                                                            {"dest":"sale", "elem":"dt", "act":"filter", "entity":"sale" }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}, 
+                                                  {"dest":"sale", "elem":"dt", "act":"filter", "entity":"sale" }] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+            </div><!-- textfield -->
+          </div>
+
+          <div class="c50">
+            <div class="textfield textfield-deskx">
+              <input class='elem' type="text" placeholder="Customer Name" data-field="customer.name" data-lastValue=""
+                data-detail='{
+                                                 "key":   [ {"dest":"textfield", "act":"typing" },
+                                                            {"dest":"sale", "elem":"dt", "act":"filter", "entity":"sale" }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}, 
+                                                  {"dest":"sale", "elem":"dt", "act":"filter", "entity":"sale" }] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+            </div><!-- textfield -->
+          
+      
+          </div>
+        </div>
+
+      </div>
+
+
+      <table> 
+          <thead>
+            <tr>
+              <th><input type="checkbox" data-detail='{
+                "click": [ {"dest":"dt", "act":"checkboxAll"} ],
+                "clickDouble": [  {"dest":"dt", "act":"checkboxAll"} ]  }' ></th>
+
+              <th data-sortBy="customer.name"
+                  data-detail = '{"click":[{"dest":"ripple" },
+                                        {"dest":"dt", "act":"th"},
+                                        {"dest":"sale", "elem":"dt", "act":"th", "entity": "sale"}  ]}'>
+                                        <label>Customer</label>
+                                        <span>Code</span></th>
+                              
+              <th data-sortBy="sale.grand_total"
+                  data-detail = '{"click":[{"dest":"ripple" },
+                                        {"dest":"dt", "act":"th"},
+                                        {"dest":"sale", "elem":"dt", "act":"th", "entity": "sale"}  ]}'>
+                                        <label>Total Items</label>
+                                        <span>Total Price</span></th>
+                                      
+              <th data-sortBy="sale_date_td"
+                  data-detail = '{"click":[{"dest":"ripple" },
+                                        {"dest":"dt", "act":"th"},
+                                        {"dest":"sale", "elem":"dt", "act":"th", "entity": "sale"}  ]}'>
+                                        <label>Sale Date</label>
+                                        <span>Due Date</span></th>
+
+              <th data-sortBy="sale.shipping_date"
+                  data-detail = '{"click":[{"dest":"ripple" },
+                                        {"dest":"dt", "act":"th"},
+                                        {"dest":"sale", "elem":"dt", "act":"th", "entity": "sale"}  ]}'>
+                                        <label>PackSlip Printed</label></th>
+
+              <th data-sortBy="sale.shipping_date"
+                  data-detail = '{"click":[{"dest":"ripple" },
+                                        {"dest":"dt", "act":"th"},
+                                        {"dest":"sale", "elem":"dt", "act":"th", "entity": "sale"}  ]}'>
+                                        <label>Shipping</label>
+                                        <span>Action</span></th>
+
+              <th data-sortBy="sale.payment_status"
+                  data-detail = '{"click":[{"dest":"ripple" },
+                                        {"dest":"dt", "act":"th"},
+                                        {"dest":"sale", "elem":"dt", "act":"th", "entity": "sale"}  ]}'>
+                                        <label>Payment Status</label>
+                                        <span>Action</span></th>
+
+              
+
+           </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+
+
+
+      <div class="footer footer-disabled footer-loadingX" data-limit="0" 
+          data-detail='{"click":[{"dest":"ripple"},  
+                                 {"dest":"sale", "elem":"dt", "act":"loadMore", "entity":"sale"}]}'>
+        <svg><use xlink:href="../../../../../../public/css/svg.svg#refresh"></use></svg>
+        <label>Load More</label> 
+      </div>
+
+
+
+    </div><!-- dt -->
+</div> 
+
+
+
+
+<div class="page page_main  dn" id="sale-page-right"  > 
+
+
+</div> <!--Page Right-->

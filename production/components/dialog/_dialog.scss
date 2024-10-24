@@ -1,0 +1,48 @@
+.dialog{
+	position: fixed;
+	display: inline-block;
+	min-width: 280px;
+	max-width: 450px;
+	border-radius: 4px;
+
+	left: 50%;
+	//top: 30%;
+	transform: translate(-50%, -30%);
+	transform-origin: center;
+	top: 130vh; //keep hide
+	@include back-visivility;
+
+
+	background-color: $c-w;
+	z-index: 210;
+	padding: 24px;
+
+	@include bs-24; 
+
+	& .title{
+		display: block;
+		//margin-bottom: 16px; 
+		@include font(h6, $c-b);
+		@include back-visivility;
+
+
+	}
+
+	& .des{
+		display: block;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		width: 100%;
+		max-height: 50vh;
+
+		@include font(body1, $c-b);
+		@include back-visivility;
+		overflow: hidden;
+		overflow-y: auto; 
+
+		//opacity: 0.54;
+        //border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	
+}

@@ -1,0 +1,34 @@
+.report-page{
+	position: absolute;
+	display: inline-block;
+	top: 0px;
+	left:0px;
+	background: $c-w;
+	min-height: calc(100% - 00px);
+
+
+
+	//@include bs-6;
+	//border: 1px solid $c-error;               //←←←←←←←←←←←←←←←←←←←←	
+
+}
+
+
+
+.tdClick{
+	@include interaction-white;
+	 color:$c-p !important;
+	 text-align: left;
+	 font-weight: 700;
+	 //background: lightgray;
+
+
+	& > p {
+		user-select: none;
+	}
+
+	// //background: $c-gl;
+
+	border: 1px solid $c-error;               //←←←←←←←←←←←←←←←←←←←←	
+
+}

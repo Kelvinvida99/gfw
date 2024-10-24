@@ -1,0 +1,71 @@
+
+
+.textfield{//Label Animation
+
+	& > .label {
+		@include transition(0.100s, acce); 
+	}
+
+	& > .elem:focus{			
+		& ~ .label {
+			opacity: 1;
+			top: 8px;
+			@include font(caption, $c-p);
+		}
+	}
+
+}
+
+.textfield{ //indicador animation
+	& > .indicador {
+		@include transition(0.250s, emph); 
+		//transform-origin:100% 50%;
+	}
+}
+
+.textfield{ //trailling animation
+	& > .trailing{
+		@include transition(0.250s, emph); 
+		
+		//transform-origin:100% 50%;
+	}
+}
+
+
+.textfield-desk{//Version for computers
+	& > .elem:focus{			
+		& ~ .label {
+			top: 0px;
+			@include font(overline, $c-p);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

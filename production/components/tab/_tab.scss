@@ -1,0 +1,60 @@
+.tab{
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+
+	height: 56px;
+	z-index: 5;
+	background-color: $c-p;
+
+	margin-left: 50%;
+	transform: translateX(-50%);
+	
+
+
+	& div{
+		position: relative;
+		height: 100%;
+		float: left;
+		padding-left: 16px;
+		padding-right: 16px;
+		//border-bottom: 2px solid transparent;
+
+		//@include interaction($c-p);		
+		@include centerFlexColum;
+		//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		& label{
+			opacity: 0.54;
+			margin-left: 8px;
+			overflow:hidden;
+			white-space: nowrap; 
+			text-overflow: ellipsis;
+			text-wrap:none;				
+			@include font(button, $c-w);
+			@include selectNo;
+			//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		& svg{
+			height: 24px;
+			width: 24px;
+			opacity: 0.54;
+			fill: $c_w;
+			@include selectNo;
+			//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+	}
+
+	& .indicator{
+		position: absolute;
+		height: 4px;
+		top:52px;
+		left: 0px;
+		background-color: $c-w;
+	}
+
+
+}

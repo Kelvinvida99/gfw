@@ -1,0 +1,119 @@
+.font-icon{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		//margin: 4px;
+		margin-left: 8px;
+		right: 0px;
+		//background: $c-w;
+
+		@include font(subtitle2, $c-b); 
+		text-align: center;	
+		//border: 1px solid green;/**********************/	
+
+		& span{
+			position: relative;
+			display: inline-block;
+			
+			//border: .5px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+			& span:nth-child(1){
+
+				top: 4px;
+				height: 20px;
+				width: 20px;
+				border-radius: 4px;
+				background: $c-p;
+				//border: 1px solid green;/**********************/	
+
+				& svg {
+					position: absolute;
+					display: inline-block;
+					height: 16px;
+					width: 16px;
+					left:2px;
+					top: 2px;
+					fill: $c-w;
+					//border: .5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+				}	
+
+
+			}
+
+			& span:nth-child(2){
+				color: $c-p;
+				font-weight: 500;
+			}
+		}	
+
+
+		&-link{
+			
+			& span{ 
+				& span:nth-child(1){ 
+					& svg {@include selectNo(); }	
+				}
+
+
+				& span:nth-child(2){ 
+					cursor: pointer;
+					//border: .5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+				}
+
+
+				& span:nth-child(3){ 
+					@include selectNo(); 
+					@include font(body2, $c-b);
+					//font-weight: 300;
+					opacity: 0.54;
+
+				}
+			}	
+
+		}
+}
+
+
+.font-icon-title{ @include font(title, $c-b);  }
+.font-icon-h6{ @include font(h6, $c-b);  }
+.font-icon-h5{ @include font(h5, $c-b);  }
+
+
+
+
+.font-icon-green{ & span{
+		& span:nth-child(1){ background: $cs-greend; }
+		& span:nth-child(2){ color: $cs-greend;      } }	}
+
+.font-icon-red{  & span{
+		& span:nth-child(1){ background: $cs-redd; }
+		& span:nth-child(2){ color: $cs-redd;      } } }
+
+.font-icon-purple{ & span{
+		& span:nth-child(1){ background: $cs-purple; }
+		& span:nth-child(2){ color: $cs-purple;      } } }
+
+.font-icon-orange{ & span{
+		& span:nth-child(1){ background: $cs-orange; }
+		& span:nth-child(2){ color: $cs-orange;      } } }
+
+
+.font-icon-cpa{ & span{
+		& span:nth-child(1){ background: $cpa; }
+		& span:nth-child(2){ color: $cpa;      } } }
+
+.font-icon-cpb{ & span{
+		& span:nth-child(1){ background: $cpb; }
+		& span:nth-child(2){ color: $cpb;      } } }
+
+.font-icon-cpc{ & span{
+		& span:nth-child(1){ background: $cpc; }
+		& span:nth-child(2){ color: $cpc;      } } }
+
+.font-icon-cpd{ & span{
+		& span:nth-child(1){ background: $cpd; }
+		& span:nth-child(2){ color: $cpd;      } } }
+
+.font-icon-cpe{ & span{
+		& span:nth-child(1){ background: $cpe; }
+		& span:nth-child(2){ color: $cpe;      } } }

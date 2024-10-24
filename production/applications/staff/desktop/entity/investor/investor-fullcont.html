@@ -1,0 +1,529 @@
+<div class="fullcont mode-view services-mode-view" id="investor-fullcont"  data-entity="investor">
+
+  <div class="appbar appbar-blue appbar-fullcont" >
+
+      <div class="primary"> 
+
+          <div class="fullcont-close"  id="investor-fullcont-close"
+                                  data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"investor", "elem":"fullcont", "id":"investor-fullcont", "act":"hide" } ] }' >
+              <svg><use xlink:href="../../../../../../public/css/svg.svg#close"></use></svg>
+          </div>
+          
+          <h1 class="mode-view hideOnView mode-edit hideOnEdit mode-add showOnAdd">New - Investor</h1>
+          <h1 class="mode-add hideOnAdd mode-edit hideOnEdit mode-view showOnView">Investor</h1>
+          <h1 class="mode-add hideOnAdd mode-view hideOnView mode-edit showOnEdit">Investor - Edition</h1>
+
+          <div class="select"    data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"fullcont", "id":"investor-fullcont", "act":"pageMov", "pagetoshow":"entity" } ] }' >
+                  <label>Entity</label>
+          </div> 
+
+      
+          <div  class="fileTab"   data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"fullcont", "id":"investor-fullcont", "act":"pageMov", "pagetoshow":"filePage" } ] }' >
+                  <label>File</label>
+          </div> 
+
+          <div  
+                data-detail='{"click": [{"dest":"ripple"}, 
+                {"dest":"investor", "elem":"fullcont",  "act":"fullcontOptions", "id":"fullcontOptions", "entity":"investor"} ] }' >
+              <svg><use xlink:href="../../../../../../public/css/svg.svg#more"></use></svg>
+          </div>
+
+
+      </div> <!-- primary -->
+
+  </div> <!-- appbar -->
+
+
+          
+  <div class="page page-appbar entity " data-detail='{ "page":"entity", "scroll": [ {"dest":"page-fullcont"  }] }'>
+
+         
+          <div class="row">
+            <label class="font-card-title">Investor Info</label>
+
+              <div class="c50">
+                        <div class="card card-min-height">
+      
+                               <div class="avatar avatar-large fileBrowseButton hideOnAdd"
+                                 data-detail='{"click": [ {"dest":"ripple"}, 
+                                                       {"dest":"file", "act":"triggerEntityAvatarUpload", "formId":"investor-fullcont"} ] }'>
+      
+                                 <form      style="display: none;"  method="post" name ='photo' class="fileUploadForm" 
+                                             id='investor_form_file' 
+                                             data-detail='{"submit": [ {"dest":"file", "act":"entityAvatarUpload", "formId":"investor-fullcont"} ] }'
+                                             enctype="multipart/form-data" data-file_type="uploaded_files" >
+                                   <input autocomplete="off" style="display: none;" class="avatarUploadInput" type="file"  name="fileInputElement[]" data-detail='{"change": [ {"dest":"file", "act":"triggerEntityAvatarSubmit", "entity":"investor"} ] }' multiple />
+                                 </form>
+                              </div><!-- avatar -->
+                                           
+      
+                        </div><!-- card -->
+
+              </div>
+
+
+
+              <div class="c50">
+                  <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+                  {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"prepareEdit" } ] }'>
+
+                      <div class="row">
+                          <div class="c25 hideOnAdd">
+                            <div class="textfield textfield-desk textfield-filled mode-edit disable-mode-edit" id="investor_form_code" >
+
+                                <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                        data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' readonly>
+
+
+                                <div class="label"  >Code</div>
+
+                            </div><!-- textfield -->
+                          </div>
+
+                          <div class="c75">
+                              <div class="textfield textfield-desk textfield-error" id="investor_form_name" >
+
+                                  <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                           data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+                                  <div class="indicador"></div>
+
+                                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                    <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                                  </div>
+
+                                  <div class="label"  >Name</div> 
+
+                              </div><!-- textfield -->
+                          </div>
+                      </div>
+
+                      <div class="row">
+                        
+                        <div class="c25">
+                          <div class="textfield textfield-desk textfield-error" id="investor_form_tax_id" >
+
+                              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                      data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+                              <div class="indicador"></div>
+
+                              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                              </div>
+
+                              <div class="label"  >Tax ID     </div> 
+
+                          </div><!-- textfield -->
+                        </div>
+
+                        <div class="c75">
+                          <div class="textfield textfield-desk textfield-error" id="investor_form_contact" >
+
+                              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                       data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+                              <div class="indicador"></div>
+
+                              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                              </div>
+
+                              <div class="label"  >Contact     </div> 
+
+                          </div><!-- textfield -->
+                        </div>
+                      </div>
+                      
+
+
+                  </div> <!-- card -->
+              </div>
+
+          </div>
+
+          <div class="row">
+            <label class="font-card-title">Investor Info</label>
+            
+              <div class="c100">
+
+                <div class="row">
+                  <div class="c50">
+                    <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+                    {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"prepareEdit" } ] }'>
+  
+                        <div class="row">
+                          <div class="c50">
+                            <div class="textfield textfield-desk textfield-error" id="investor_form_address" >
+  
+                                <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                        data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+  
+                                <div class="indicador"></div>
+  
+                                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                  <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                                </div>
+  
+                                <div class="label"  >Address</div> 
+  
+                            </div><!-- textfield -->
+                          </div>
+  
+                          <div class="c50">
+                              <div class="textfield textfield-desk textfield-error" id="investor_form_city" >
+  
+                                  <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                            data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+  
+                                  <div class="indicador"></div>
+  
+                                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                    <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                                  </div>
+  
+                                  <div class="label"  >City</div> 
+  
+                                </div><!-- textfield -->
+                          </div>
+                        </div>
+  
+                        
+                      
+                    </div> <!-- card -->
+                  </div>
+
+
+                  <div class="c50">
+                    <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+                    {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"prepareEdit" } ] }'>
+  
+                      <div class="row">
+                            
+                        <div class="c50">
+                          <div class="textfield textfield-desk textfield-error" id="investor_form_state" >
+
+                              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                        data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+                              <div class="indicador"></div>
+
+                              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                              </div>
+
+                              <div class="label"  >State</div> 
+
+                            </div><!-- textfield -->
+                        </div>
+
+                        <div class="c50">
+                          <div class="textfield textfield-desk textfield-error" id="investor_form_zip" >
+
+                              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                      data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+                              <div class="indicador"></div>
+
+                              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                              </div>
+
+                              <div class="label"  >Zip Code     </div> 
+
+                          </div><!-- textfield -->
+                        </div>
+                      </div>
+                      
+                    </div> <!-- card -->
+                  </div>
+
+                </div>
+                
+                
+
+
+
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="c50">
+                  <div class="card card-click mh-92 " data-detail='{"click": [  {"dest":"ripple" },
+                  {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"prepareEdit" } ] }'>
+
+                      <div class="row">
+                          
+                          <div class="c50"> 
+
+                              <div class="checkbox checkbox-desk" id="investor_form_allow_phone_app"> 
+                                
+                                 <span class="title">App Access</span>
+                                 <input autocomplete="off" type="checkbox"  
+                                        data-detail='{ "click":   [ {"dest":"investor", "elem":"fullcont",  "act":"required_field" }] }'    > 
+                                 <label>Allow</label>
+                              </div><!-- checkbox -->  
+                
+                          </div><!-- c25 -->
+
+                          <div class="c50">
+                              <div class="textfield textfield-desk textfield-error" id="investor_form_username" >
+
+                                  <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                           data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  },
+                                                                     {"dest":"investor", "elem":"fullcont", "act":"checkUsername"  }] }' >
+
+                                  <div class="indicador"></div>
+
+                                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                    <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                                  </div>
+
+                                  <div class="label"  >Username     </div> 
+                                  <div class="helper"  ></div> 
+
+                              </div><!-- textfield -->
+                          </div>
+
+
+                         
+
+                      </div>
+                      <div class="row">
+
+                        <div class="c50">
+                        
+                        
+                          <div class="textfield  textfield-desk textfield-password password-noview " id="investor_form___password">
+                        
+                            <input class='elem' type="password" autocomplete="new-password" value="" data-detail='{ "key":   [ {"dest":"textfield", "act":"validator", "validator": "passIsStrong"  }
+                                                                            ] }'>
+                        
+                            <div class="indicador"></div>
+                        
+                            <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"password"}] }'>
+                              <svg>
+                                <use xlink:href="../../../../../../public/css/svg.svg#eye"></use>
+                              </svg>
+                            </div>
+                        
+                            <div class="label">Password </div>
+                        
+                          </div><!-- textfield -->
+                        
+                        </div><!-- c25 -->
+                      </div>
+                  </div> <!-- card -->
+              </div>
+          </div>
+  </div>  <!-- page -->
+
+
+
+<div class="page page-appbar  filePage  dn "  
+     data-detail='{ "page":"filePage", "scroll": [ {"dest":"page-fullcont"  }] }'>
+  
+ <!-- <div class="card"></div>  card --> 
+
+    <div class="file file-regularFiles">
+
+            <div class="header primary" style="z-index:999;">
+
+                 <div class="icon icon-left" data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"goBack", "entity":"investor" } ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                </div> 
+
+                <div class="path">
+                      <label data-detail='{"click": [ {"dest":"ripple"} ] }' > Root</label>                                   
+                </div>
+
+                <div class="icon"  data-detail='{"click": [  
+                    {"dest":"ripple"}, 
+                    {"dest":"file", "act": "viewTrash" },
+                    {"dest":"file", "act": "getDeletedFile", "entity":"investor"} 
+
+                     ] }' >
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#delete-o"></use></svg>
+                </div>     
+
+                <div class="icon"  data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "view" } ] }' >
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#grid"></use></svg>
+                </div>      
+
+
+
+
+                <div class="icon fileBrowseButton" 
+                     data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"triggerFileUpload", "formId":"investor-fullcont"} ] }'>
+
+                    <form      style="display: none;"  method="post" name ='photo' class="fileUploadForm" 
+                                id='investors_form_file' 
+                                data-detail='{"submit": [ {"dest":"file", "act":"submittingFile", "formId":"investor-fullcont"} ] }'
+                                enctype="multipart/form-data" data-file_type="uploaded_files" >
+                      <input autocomplete="off" style="display: none;" class="fileUploadInput" type="file"  name="fileInputElement[]" data-detail='{"change": [ {"dest":"file", "act":"triggerSubmit", "entity":"investor"} ] }' multiple />
+                    </form>
+
+                     <svg><use xlink:href="../../../../../../public/css/svg.svg#upload-o"></use></svg>
+                     <label>Upload</label>
+                </div> 
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"openNewFolderDialog", "entity":"investor"} ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#folder-o"></use></svg>
+                   <label>New</label>
+                </div>  
+
+            </div><!-- header -->
+
+            <div class="header second">
+
+                 <div class="icon icon-left"   data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "checkingCancel" } ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                   <label>Cancel</label>
+                </div> 
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"deleteFile", "entity":"investor"}  ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#delete"></use></svg>
+                   <label>Delete</label>
+                </div>  
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"multiDownload", "entity":"investor"} ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#download-o"></use></svg>
+                   <label>Download</label>
+                </div> 
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"},  {"dest":"file", "act":"openRenameDialog", "entity":"investor"} ] }'>
+                  <svg><use xlink:href="../../../../../../public/css/svg.svg#edit"></use></svg>
+                  <label>Rename</label>
+               </div> 
+
+            </div><!-- header -->
+
+
+            <div class="body" id="a" data-detail='{"drop": [ {"dest":"file", "act":"dropEvent", "entity":"investor"} ] }'>
+            </div><!-- body -->
+  
+
+
+    </div> <!-- file -->
+  
+    <div class="file file-deletedFiles ">
+
+            <div class="header primary third">
+
+                 <div class="icon icon-left"   
+                      data-detail='{"click": [  {"dest":"ripple"},   {"dest":"file", "act": "viewTrash" } ] }'>
+
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                   <label>Back to files</label>
+                </div>     
+
+                <div class="icon"  data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "view" } ] }' >
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#grid"></use></svg>
+                </div> 
+
+            </div><!-- header -->
+
+            <div class="header second">
+
+                 <div class="icon icon-left"   data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "checkingCancel" } ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                   <label>Cancel</label>
+                </div> 
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"deleteFileDialog", "entity":"investor", "id":"confirmDelete"}  ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#delete"></use></svg>
+                   <label> Delete</label>
+                </div>  
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"restoreFile", "entity":"investor"}  ] }'>
+                  <svg><use xlink:href="../../../../../../public/css/svg.svg#upload-o"></use></svg>
+                  <label>Restore</label>
+               </div>  
+
+            </div><!-- header -->
+
+
+            <div class="body"></div> <!-- body -->
+
+    </div> <!-- trash -->
+
+
+
+</div>  <!-- page -->
+
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+  <div class="fab-s fab-to-readOnly" >
+    
+    <div  class="" title="Edit Entity"   
+         data-detail='{"click": [{"dest":"ripple"}, {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"prepareEdit" }] }'>
+
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#eye'></use></svg>
+        <label>View Only</label>
+    </div>
+
+  </div>
+
+
+  <div class="fab-s fab-to-edit"   >
+    
+    <div  class="" title="Edit"   
+         data-detail='{"click": [ 
+                  {"dest":"ripple"}, 
+                  {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"prepareEdit" } ] }'>
+
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#edit'></use></svg>
+        <label>Edit</label>
+    </div>
+
+  </div>
+
+  <div class="fab-s fab-to-add"   >
+    
+    <div  class=""  title="Save"   
+          data-detail='{"click": [ 
+                       {"dest":"ripple"}, 
+                       {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"addOne", "entity":"investor" } ] }'>
+                  
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#save'></use></svg>
+        <label>Save</label>
+    </div>
+
+  </div>
+
+
+  <div class="fab-s fab-to-update"  title="update" >
+    
+    <div  class="" title="Update Entity" 
+          data-detail='{"click": [  {"dest":"ripple"}, 
+                       {"dest":"investor", "elem":"fullcont", "id":"investor-fullcont", "act":"update", "entity":"investor" } ] }' >
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#update'></use></svg>
+        <label>Update</label>
+    </div>    
+
+    <div  class="black" title="Cancel Edition" class="secondary"
+          data-detail='{"click": [ 
+                       {"dest":"ripple"}, 
+                       {"dest":"investor", "elem":"fullcont",  "id":"investor-fullcont", "act":"cancelEdit" } ] }'   >
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#close'></use></svg>
+        <label>Cancel Edition</label>
+    </div>
+    
+  </div>
+  
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+
+
+
+</div> <!-- fullcont -->

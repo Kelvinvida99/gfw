@@ -1,0 +1,133 @@
+
+<div class="page page_main  dn" id="users-page"  > 
+
+
+    <div class="fab fab-blue"
+        data-detail='{"click": [  {"dest":"ripple" }, {"dest":"users", "elem":"fullcont", "id":"users-fullcont",  "act":"prepareAdd"  } ] }' >
+
+      <svg><use xlink:href='../../../../../../public/css/svg.svg#add'></use></svg>
+    </div>
+
+
+     <div class="menubar"></div> <!-- menubar  -->
+    
+
+    <div class="dt  " id="users-dt">
+
+      <div class="header   search-filled">
+          
+          <label class="title">Employees</label>
+          
+          <div>
+
+            <input type="text" class="Lk_dtSearch" placeholder="Name id username"
+                   data-lastValue=""
+                   data-detail   ='{ "key": [{"dest":"dt", "act":"typing" }, 
+                                             {"dest":"users", "elem":"dt", "act":"searching", "entity":"users" } ] }' >
+           
+            <div class="icon search" 
+                 data-detail='{"click": [{"dest":"ripple" }, {"dest":"dt", "act":"searching"}  ]}'>
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#search"></use></svg>
+            </div>
+
+            <div class="icon trailing"
+                 data-detail='{"click": [{"dest":"ripple" }, 
+                 {"dest":"dt", "act":"clear"}, 
+                 {"dest":"users", "elem":"dt", "act":"searching", "entity":"users" }      ] }' >
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+            </div>   
+
+          </div>
+
+
+
+
+          <div class="more"
+            data-detail='{"click": [{"dest":"ripple"}, 
+            {"dest":"users", "elem":"dt",  "act":"tableOptions", "id":"tableOptions", "entity":"users"} ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#more"></use></svg>
+          </div>  
+      
+      </div>
+
+      <div class="filterCont dn "  > </div>
+
+
+      <table > 
+          <thead>
+            <tr>
+                <th><input type="checkbox" data-detail='{
+                  "click": [ {"dest":"dt", "act":"checkboxAll"} ],
+                  "clickDouble": [  {"dest":"dt", "act":"checkboxAll"} ]  }' ></th>
+                
+                <th data-sortBy="__name"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"users", "elem":"dt", "act":"th", "entity": "users"}  ]}'>
+                                            <label for="">Name</label>
+                                            <span>Last Name</span>
+                                          </th>
+                
+                <th data-sortBy="username"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"users", "elem":"dt", "act":"th", "entity": "users"}  ]}'>
+                                            <label for="">Username</label>
+                                            <span>Phone</span>
+                                          </th>       
+                                          
+                <th data-sortBy="type"
+                data-detail = '{"click":[{"dest":"ripple" },
+                                      {"dest":"dt", "act":"th"},
+                                      {"dest":"users", "elem":"dt", "act":"th", "entity": "users"}  ]}'>
+                                        <label for="">Type User</label>
+                                        <span>Access</span>
+                                      </th>  
+
+                <th data-sortBy="phone"
+                data-detail = '{"click":[{"dest":"ripple" },
+                                      {"dest":"dt", "act":"th"},
+                                      {"dest":"users", "elem":"dt", "act":"th", "entity": "users"}  ]}'>
+                                      <label for="">Phone</label>
+                                      <span>Email</span>
+                                    </th> 
+                                    
+                <th data-sortBy="id"
+                data-detail = '{"click":[{"dest":"ripple" },
+                                      {"dest":"dt", "act":"th"},
+                                      {"dest":"users", "elem":"dt", "act":"th", "entity": "users"}  ]}'>
+                                        <label for="">Active</label>
+                                        <span>Last Login</span>
+                                      </th> 
+             </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+
+
+
+      <div class="footer footer-disabled footer-loadingX" data-limit="0" 
+          data-detail='{"click":[{"dest":"ripple"},  
+                                 {"dest":"users", "elem":"dt", "act":"loadMore", "entity":"users"}]}'>
+        <svg><use xlink:href="../../../../../../public/css/svg.svg#refresh"></use></svg>
+        <label>Load More</label> 
+      </div>
+
+
+
+    </div><!-- dt -->
+
+
+
+     <div class="button-link"  >
+         <label id='onboard-test' data-detail='{"click": [ 
+                           {"dest":"ripple" }, 
+                           {"dest":"staffLearning", "elem":"onboard",  "act":"show", "id":"users" } ] }'>How Users works?</label>        
+         <label> </label>   
+     </div>
+
+
+
+
+</div> <!--Page -->

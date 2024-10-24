@@ -1,0 +1,22 @@
+
+.ripple{
+
+	animation-name: ripple;
+	animation-duration: 0.6s;
+	animation-timing-function: easy-out;
+
+}
+
+
+
+@keyframes ripple {
+	from{
+		opacity: 16;
+		transform: scale(0);  
+	}
+	to{
+		opacity: 0;
+		transform: scale(2.5);  
+	}
+}
+

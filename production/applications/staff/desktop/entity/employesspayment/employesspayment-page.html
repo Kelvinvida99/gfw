@@ -1,0 +1,104 @@
+
+<div class="page page_main  dn" id="employesspayment-page"  > 
+
+
+    <div class="fab fab-blue" title="Add Employee Payment"
+        data-detail='{"click": [  {"dest":"ripple" }, {"dest":"employesspayment", "elem":"fullcont", "id":"employesspayment-fullcont",  "act":"prepareAdd"  } ] }' >
+
+      <svg><use xlink:href='../../../../../../public/css/svg.svg#add'></use></svg>
+    </div>
+
+
+     <div class="menubar"></div> <!-- menubar  -->
+    
+
+    <div class="dt" id="employesspayment-dt">
+
+      <div class="header">
+          
+          <label class="title">Employee Payment</label>
+          
+          <div class="search-filled">
+
+            <input type="text" placeholder="Search"
+                   data-lastValue=""
+                   data-detail   ='{ "key": [{"dest":"dt", "act":"typing" }, 
+                                             {"dest":"employesspayment", "elem":"dt", "act":"searching", "entity":"employesspayment" } ] }' >
+           
+            <div class="icon search" 
+                 data-detail='{"click": [{"dest":"ripple" }, {"dest":"dt", "act":"searching"}  ]}'>
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#search"></use></svg>
+            </div>
+
+            <div class="icon trailing"
+                 data-detail='{"click": [{"dest":"ripple" }, 
+                 {"dest":"dt", "act":"clear"}, 
+                 {"dest":"employesspayment", "elem":"dt", "act":"searching", "entity":"employesspayment" }      ] }' >
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+            </div>   
+
+          </div>
+
+
+
+
+          <div class="more"
+            data-detail='{"click": [{"dest":"ripple"}, 
+            {"dest":"employesspayment", "elem":"dt",  "act":"tableOptions", "id":"tableOptions", "entity":"employesspayment"} ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#more"></use></svg>
+          </div>  
+      
+      </div>
+
+      <div class="filterCont dn "  > </div>
+
+
+      <table > 
+          <thead>
+            <tr>
+                <th><input type="checkbox" data-detail='{
+                  "click": [ {"dest":"dt", "act":"checkboxAll"} ],
+                  "clickDouble": [  {"dest":"dt", "act":"checkboxAll"} ]  }' ></th>
+                
+                <th data-sortBy="employesspayment.employee"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"employesspayment", "elem":"dt", "act":"th", "entity": "employesspayment"}  ]}'>
+                                            <label for="">Employee</label>
+                                            <span>Code</span>
+                                          </th>
+                
+                <th data-sortBy="employesspayment.date"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"employesspayment", "elem":"dt", "act":"th", "entity": "employesspayment"}  ]}'>
+                                            <label for="">Account</label>
+                                            <span>Date</span>
+                                          </th>       
+                                          
+                <th data-sortBy="employesspayment.amount"
+                data-detail = '{"click":[{"dest":"ripple" },
+                                      {"dest":"dt", "act":"th"},
+                                      {"dest":"employesspayment", "elem":"dt", "act":"th", "entity": "employesspayment"}  ]}'>
+                                        <label for="">Amount</label>
+                                        <span>Reference N.</span>
+                                      </th>  
+             </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+
+
+
+      <div class="footer footer-disabled footer-loadingX" data-limit="0" 
+          data-detail='{"click":[{"dest":"ripple"},  
+                                 {"dest":"employesspayment", "elem":"dt", "act":"loadMore", "entity":"employesspayment"}]}'>
+        <svg><use xlink:href="../../../../../../public/css/svg.svg#refresh"></use></svg>
+        <label>Load More</label> 
+      </div>
+
+
+
+    </div><!-- dt -->
+</div> <!--Page -->

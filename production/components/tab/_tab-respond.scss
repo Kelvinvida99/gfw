@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+.tab{
+	
+	@include respond (table) {
+		//display: block;
+
+
+		&-2 div, &-2 span{ width: 50%; }
+		&-3 div, &-3 span{ width: 33.33%; }		
+		&-4 div, &-4 span{ width: 25%; }
+		&-5 div, &-5 span{ width: 20%; }
+
+	}
+
+
+
+}
+
+
+
+.tab-page{
+
+
+	&-2 { width: 200%; & .sub-page{ width: calc(100% / 2) }}
+	&-3 { width: 300%; & .sub-page{ width: calc(100% / 3) }}
+	&-4 { width: 400%; & .sub-page{ width: calc(100% / 4) }}
+
+}

@@ -1,0 +1,242 @@
+
+.dt { /*data table*/
+	
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 0px);
+	max-width: 1300px;
+	margin-left: 50%;
+
+	padding-right: 2px;
+	padding-left: 2px;
+	padding-bottom: 32px;
+	//margin-top: 2px;
+	margin-bottom: 16px;
+	transform: translateX(-50%);
+	//border: 0.1px solid $c-divider;               //←←←←←←←←←←←←←←←←←←←←
+	
+
+	& > table {
+		width: 100%;
+		border-collapse: collapse;
+		background: $c-surface;
+		table-layout:fixed; 
+		//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+		& th:not(:first-child)  { //arrow on tr
+				position: relative;
+				text-align: left;
+
+				padding-left: 16px;
+				padding-right: 4px;
+
+				cursor: pointer;
+				overflow: hidden;
+				background: $c-surface;
+				border-top: 1px solid $c-divider;
+				@include font(subtitle2, $c-pd);
+				opacity: 0.36;
+				//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+				& label{ 
+					position: absolute;
+					display: block;
+					max-width: calc(100% - 16px);
+					top: 2px;
+					overflow:hidden;
+					white-space: nowrap; 
+					text-overflow: ellipsis;
+
+					@include font(subtitle2, $c-pd);
+					@include selectNo;
+					//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←← 
+				}
+
+				& span{ 
+					position: absolute;
+					display: block;
+					max-width: calc(100% - 16px);
+					top: 20px;
+					overflow:hidden;
+					white-space: nowrap; 
+					text-overflow: ellipsis;
+					@include font(caption, $c-pd);
+					@include selectNo;
+					//border: 0.5px solid blue;           //←←←←←←←←←←←←←←←←←←←← 
+				}
+
+
+
+
+				&::before{
+					position: absolute;
+					content: '';
+					top: 16px;
+					left: 0px;
+
+					width: 16px;
+					height: 16px;
+
+					background:   url(svg/down.svg) no-repeat;
+				    background-size: 100% 100%;
+				    background-position: center;
+					opacity: 0 ;
+					transform: scale(0) rotate(0deg);
+					@include transition(0.150s, stan)		
+				}	
+
+				//remove highlight on double click
+				&::selection { background-color: transparent; }
+				///border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+		}  
+		
+
+		& thead tr{
+			background-color: $c-surface;
+			//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←← 
+		}
+
+		& tr{
+			position: relative;
+			background-color: $c-w;
+			//display: inline-block;
+			height: 36px;
+			//border: 0.5px solid red !important;           //←←←←←←←←←←←←←←←←←←←← 
+			// pointer-events: initial;
+			// cursor: pointer;
+			
+			&:nth-child(odd){ //ligray backgroud alternated
+			 	//background-color:lighten($c-b, 96%);
+			}
+
+			&:not(:nth-child(1)):hover{//not select th
+				//background-color:lighten($c-b, 90%);
+			}
+			
+			&:not(:last-child){//no line on the last row
+				border-bottom: 1px solid $c-divider;
+			}
+
+
+
+
+		}	
+
+		& td {
+			position: relative;
+			text-align: left; 
+			padding-left: 4px;
+			padding-right: 4px;
+
+			overflow:hidden;
+			white-space: nowrap; 
+			text-overflow: ellipsis;
+			text-wrap:none;	
+			border:none;
+
+			&:not(:first-child)  { @include interaction-white;}
+			border: 0.1px solid lighten($c-divider, 95);           //←←←←←←←←←←←←←←←←←←←←  
+	
+			& label{ 
+				position: absolute;
+
+				display: block;
+				max-width: calc(100% - 16px);
+				//left:8px;
+				top: 2px;
+
+				overflow:hidden;
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+
+				@include font(subtitle2, $c-b);
+				@include selectNo;
+
+				 //border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←← 
+
+			}
+
+			& span{ 
+				position: absolute;
+
+				display: block;
+				max-width: calc(100% - 16px);
+				top: 20px;
+				//left:8px;
+				overflow:hidden;
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+
+				@include font(caption, $c-b);
+				@include selectNo;
+				// border: 0.5px solid blue;           //←←←←←←←←←←←←←←←←←←←← 
+
+			}
+
+
+			& .id{ 
+				position: absolute;
+
+				display: block;
+				//width: 100%;
+				top: 10px;
+				left: -2px;
+				overflow:hidden;
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+				text-align: center;
+				transform: rotate(90deg);
+
+				@include font(overlinelLower, $c-b);
+				@include selectNo;
+				opacity: 0.54;
+				display: none;
+				// border: 0.5px solid blue;           //←←←←←←←←←←←←←←←←←←←← 
+			}
+		}
+
+		& th:not(:first-child) , & td:not(:first-child) {
+			//pointer-events: none; //red this is a tes for swipe
+			//border: 0.2px solid black;               //←←←←←←←←←←←←←←←←←←←← 
+
+		}
+
+		& th{
+			 @include transition(.150s, emph);
+			 &:active  {transform:scale(0.98); }
+		}
+
+		& td {
+			 @include font(body2, $c-b);
+			 @include transition(.150s, emph);
+			 &:active  {transform:scale(0.98); }
+		}
+
+		& .checked{ 
+			background-color: $c-pl;
+			& td {  @include interaction-primary-light; }			
+		}
+
+		& .highlightTr{ 
+			background-color: $c-pl2;
+			background-color: $cs-pink;
+			& td {  @include interaction-cs-pink; }
+
+		}
+
+	}
+
+
+}/*dt*/
+
+
+
+table{
+	& tr {
+		& td{
+			padding: 4px;
+			@include font(body2, $c-b);
+		}
+	}
+}

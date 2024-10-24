@@ -1,0 +1,178 @@
+.appbar{
+
+	& .primary, & .second{
+     	@include transition(.150s, emph)
+	}
+
+	& .primary{
+		
+		top:0px;
+		opacity: 1;
+		background-color: $c-surface;
+		//border-bottom: 1px solid $c-divider;
+
+		& > h1 { color: $c-b;  }
+		& > div { 
+			& > svg{ fill: $c-b;  }
+			//@include interaction($c-surface);//click/interactions
+			@include interaction-surface;
+		}
+	}
+
+	& .second{
+		top: 56px;
+		opacity: 0;
+		background-color: $c-s;
+
+		& > h1 { color: $c-w; }
+		& > div { 
+			& svg{
+				transform: rotate(90deg);
+				fill: $c-w;
+				opacity: 1;
+				@include transition(0.250s, stan);
+			}	
+
+			//@include interaction-dark(flat); //click/hover/focus/
+		}		
+	}
+
+	& .main{  background-color: $c-error; }
+
+}
+
+//we use this for handle the  fullCont-switchx on the fullcont appbar , 
+.appbar{
+
+	& .primary, & .second{
+
+		& > .fullCont-switch {
+				min-width: 72px;
+		}
+
+		& > .select {
+
+				&::before{
+					transform: scaleX(1);
+				}	
+
+			& svg{
+				fill: $c-w;
+				opacity: 1;
+			}	
+
+			& label{
+				opacity: 1;
+				@include font(caption, $c-b);
+				//font-weight: 700;
+			}
+
+		}
+
+		& > .error {
+			//background-color: $c-p;
+			//@include interaction($c-p);
+				&::before{
+					transform: scaleX(1);
+					background-color:$c-error-b !important;
+					border-radius: 50%;
+					top: 0px;
+					width: 16px;
+					height: 16px;
+				}	
+			
+			& svg{
+				fill: $c-error-b;
+			}	
+
+			& label{
+				//@include font(caption, $c-error-b);
+			}
+
+		}
+		
+
+
+
+	}
+}
+
+
+.appbar-black{
+	background-color: $c-b; 
+
+	& .primary{
+		background-color: $c-b; 
+		& > h1{
+			opacity: 1;
+			@include font(h6, $c-w);
+		}
+		& > div{
+			@include interaction-black;
+			& svg{
+				fill: $c-w;
+				opacity: 1;
+			}	
+		}
+	}
+ }
+
+.appbar-blue{
+	
+	background-color: $cpd; 
+	& .primary{
+		background-color: $cpd; 
+		
+		& > h1{
+			opacity: 1;
+			@include font(h6, $c-w);
+		}
+		
+		& > div{
+			
+				@include interaction-color;
+				& label { color: $c-w; }
+
+				& svg{
+					fill: $c-w;
+					opacity: 1;
+				}	
+
+				&::before{ background-color:$c-w; }
+		}
+
+		& .select{
+			//border: 3px solid yellow;            //←←←←←←←←←←←←←←←←←←←←	
+				  color: $c-w !important;
+					& svg    { opacity: 1;  }	
+					& label  { opacity: 1;   color: $c-w ; }
+					&::before{ background-color:$c-w; }	
+		}
+	
+
+	}/*primary*/
+
+
+
+ }
+
+
+.appbar-fullcont{
+	position: absolute;
+	left: 0px !important;
+	width: calc(100% - 0px) !important;
+	//border: 3px solid yellow;            //←←←←←←←←←←←←←←←←←←←←	
+
+
+}
+
+
+
+
+
+@keyframes fadeSlow {
+  from{opacity: 0;}
+  to {opacity: 1;}
+}
+
+

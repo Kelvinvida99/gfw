@@ -1,0 +1,9 @@
+@mixin fab-dark {
+	.fab{
+		& svg{
+			fill: $c-b;
+			
+		}
+
+	}
+}

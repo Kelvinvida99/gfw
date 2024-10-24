@@ -1,0 +1,67 @@
+
+/*
+   0px  -  600px  - phone
+ 448px  -  600px  - phone
+ 600px  -  900px  - table  portatil
+ 900px  -  1200px - table land-scape
+1200px  -  1800px - minitor
+1800px  -  0000px - big-monitor
+
+min-width 900 from  900 and biger
+max-width 900 until 900
+
+ORDER: base, typography, general layout + grid, page layout
+1em =16px -> em is better for media query	
+
+*/
+
+
+@mixin respond ($break){
+
+	@if $break == mini {
+		@media (max-width: 28.75em){ @content }; //448px
+	}	
+
+	@if $break == phone {
+		@media (max-width: 37.5em){ @content }; //600px
+	}	
+
+	@if $break == table {
+		@media (max-width: 56.25em){ @content }; //900px
+	}	
+
+	@if $break == table-land {
+		@media (max-width: 75em){ @content };   //1200px
+	}	
+
+	@if $break == desktop {
+		@media (max-width: 112.5em){ @content }; //1800px
+	}	
+
+	@if $break == desktop-big {
+		@media (min-width: 112.5em){ @content }; //1800px
+	}	
+
+}
+
+
+/*
+
+*/
+
+//@include respond (desktop-big) {}/**/
+
+//@include respond (desktop) {  }/*desktop*/
+
+//@include respond (table-land) { }/*table-land*/
+
+//@include respond (table) {}/*table*/
+
+//@include respond (phone) {}/*phone*/
+
+//@include respond (mini) {}/*mini*/
+
+
+
+
+

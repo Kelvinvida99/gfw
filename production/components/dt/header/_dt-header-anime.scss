@@ -1,0 +1,105 @@
+
+.dt { //transitions
+	& > .header{
+		& > .title{
+			@include transition(0.250s, stan)				
+		}
+
+		& > div:nth-child(2){
+			@include transition(0.250s, stan)	
+			& .trailing{
+				@include transition(0.250s, stan)	
+				
+			}
+		}
+	}
+}
+
+
+.dt { // Search input focused
+	& .header{
+		& input:focus{
+			& ~ .search{
+				& svg{
+					opacity: 1;
+					fill: $c-p;
+				}
+			}
+		}
+	}
+}
+
+
+.dt { // Search input filled
+	& > .header{
+		& > .search-filled{
+			& .trailing{
+				top: 0px !important;
+				opacity: 1 !important;
+				transform: scale(1) rotate(0deg) !important;	
+
+			}
+		}
+	}
+}
+
+
+
+
+
+
+.dt {
+	& > .searching{
+
+		& > .title{
+			@include respond(table) {
+				transform:scaleX(0); 
+				transform-origin: left;		
+			}		
+		}
+
+		& > div:nth-child(2){
+			& input {
+				//background-color:lighten($c-b, 96%);
+			}
+
+				@include respond(table) {
+				width: calc(100% - 96px); 
+			}		
+		}
+
+		& + .sub-header{
+			display: inline-block;
+		}
+	}
+}
+
+
+//when the value of the search is change automatic, 
+//we notify the user with this
+.dt { // Search input filled
+	& > .header{
+		& > .search-highlight{
+			//border: 1px solid red !important;
+			background-color: $cs-green;
+
+			& .search{
+				& svg{
+					opacity: 1 !important;;
+					fill: $c-w !important;
+				}
+			}
+
+			& .trailing{
+				& svg{
+					opacity: 1 !important;
+					fill: $c-w !important;
+				}
+			}
+
+			& input{
+				color: $c-w !important;
+				}
+			}
+	}
+}

@@ -1,0 +1,63 @@
+
+
+
+
+
+.tvnav{
+	display: inline-block;
+	position: fixed;
+	width: 92px;
+	height: calc(100vh - 0px);
+	left: 0px;
+	top: 0px;
+	padding-top: 64px;
+
+	background-color:  $d-e1;
+	z-index: 1;
+	border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+	& > div {
+		position: relative;
+		float: left;
+		height: 92px;
+		width: 100%;
+		cursor: pointer;
+		opacity: 0.54;
+
+		@include centerFlexColum;
+		-webkit-backface-visibility: hidden;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		& label{
+
+			margin: 0px;
+			z-index: 2;
+			@include selectNo;
+			@include back-visivility();
+			@include font(caption, $c-w);
+
+			//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		& svg{
+			margin-top: 8px;
+			height: 48px;
+			width: 48px;
+			fill: white;
+			z-index: 2;
+
+			@include selectNo;
+			@include back-visivility();
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+
+	
+
+	}
+
+
+
+}
+
+

@@ -1,0 +1,107 @@
+
+
+@mixin backgroundBasic {
+			background-size: 100% auto   !important;
+			background-position: center;
+			background-repeat: no-repeat !important;	
+}
+
+
+
+
+.cont-folder{
+		& .img{
+			background: url(./svg/file/folder.svg)!important;
+			@include backgroundBasic;
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/folder.svg) !important;
+				@include backgroundBasic;
+			}
+		}
+}/*cont-checked*/
+
+.cont-folder-empty{
+		& .img{
+			background: url(./svg/file/folder-empty.svg)!important;
+			@include backgroundBasic;
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/folder-empty.svg) !important;
+				@include backgroundBasic;
+			}
+		}
+}/*cont-checked*/
+
+
+	
+.cont-doc{
+		& .img{
+			background: url(./svg/file/doc.svg) !important;
+			@include backgroundBasic;	
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/doc.svg) !important;
+				@include backgroundBasic;						
+			}
+		}
+}/*cont-checked*/	
+
+
+.cont-exel{
+		& .img{
+			background: url(./svg/file/exel.svg) !important;
+			@include backgroundBasic;	
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/exel.svg) !important;
+				@include backgroundBasic;						
+			}
+		}
+}/*cont-checked*/	
+
+
+.cont-img{
+		& .img{
+			background: url(./svg/file/img.svg) !important;
+			@include backgroundBasic;	
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/img.svg) !important;
+				@include backgroundBasic;						
+			}
+		}
+}/*cont-checked*/	
+
+
+.cont-unknow{
+		& .img{
+			background: url(./svg/file/unknow.svg) !important;
+			@include backgroundBasic;	
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/unknow.svg) !important;
+				@include backgroundBasic;						
+			}
+		}
+}/*cont-checked*/	
+
+
+.cont-pdf{
+		& .img{
+			background: url(./svg/file/pdf.svg) !important;
+			@include backgroundBasic;	
+		}
+		& .des{
+			& .img{
+				background: url(./svg/file/pdf.svg) !important;
+				@include backgroundBasic;						
+			}
+		}
+}/*cont-checked*/	

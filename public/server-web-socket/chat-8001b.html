@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html></html>
+<body>chat-8001 bbbbbbbbbbb</body>
+
+<script>
+  
+  const ws =  new WebSocket("ws://localhost:8001")
+  //const ws =  new WebSocket("wss://echo.websocket.org")
+  const user =  {act: "join", data: {id:8001, name:"David", status: 'active'} }
+
+  ws.onopen = function(ev){
+
+    ws.send( JSON.stringify( user ) )
+  }
+
+  ws.onmessage = function(event){ 
+  		console.log( 'SERVER', event.data ) 
+  } 
+
+  ws.onclose = function(){ console.log( 'WEBSOCKET CLOSET' ) }
+
+
+</script>
+
+

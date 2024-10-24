@@ -1,0 +1,54 @@
+@mixin drawer-dark {
+
+	.drawer{
+		background-color: $d-surface;
+		
+
+		& > .title{ color: $c-w; }
+		& > .des  { color: $c-w; }
+
+		& > .elem{
+
+			@include interaction-dark-surface;
+
+			& label{
+				color: $c-w;		
+			}
+
+			& svg{
+				fill: $c-w;
+			}
+		}
+	}
+
+
+}
+
+
+.drawer-dark {
+
+		background-color: $c-pd2;
+		
+
+		& > .title{ color: $c-w; }
+		& > .des  { color: $c-w; }
+
+		& > .avatarD{
+			background-color: $d-surface;
+		}
+		
+		& > .elem{
+
+			//@include interaction-dark-surface;
+			@include interaction-color-ramdon($c-pd2);
+
+			& label{
+				color: $c-w;		
+			}
+
+			& svg{
+				fill: $c-w;
+			}
+		}
+
+}

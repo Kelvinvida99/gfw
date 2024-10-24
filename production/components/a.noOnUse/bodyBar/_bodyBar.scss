@@ -1,0 +1,40 @@
+.bodyBar {
+	position: absolute;
+	display: inline-block;
+	width: 56px;
+	height: calc(100% - 55px);
+	top: 56px;
+	padding: 4px;
+	right: -2px;
+	z-index: 10;
+	background-color: $c-w;
+	border-left: 1px solid $c-divider;
+	//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+
+
+		& > .Lc_bodyBar{
+			position: relative;
+			height: 42px;
+			width: 42px;
+			margin-top: 8px;
+			margin-top: 8px;
+
+			border-radius: 50%;
+			//@include interaction($c-w);//click/interactions
+			@include centerFlex;
+
+			& svg{
+				height: 24px;
+				width: 24px;
+				display: block;
+				opacity: 0.54;
+				fill: $c-b;
+				
+				@include selectNo;
+				//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+			}
+
+		}
+
+
+}

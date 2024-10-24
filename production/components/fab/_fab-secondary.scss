@@ -1,0 +1,84 @@
+
+
+.fab-s{
+	position: absolute;
+	display: inline-block;
+	min-width: 48px;
+	min-height: 48px;
+	bottom: 0px;//56+56+(56/2)
+	right: 12px; //256-(56/2)
+
+	// background: transparent;
+
+
+	//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+	& > div {
+		position: relative;
+		display: block;
+		min-width: 48px;
+		min-height: 48px;		
+		//border-radius: 32px;
+		margin-bottom: 16px;
+		cursor: pointer;
+		background: $c-p;
+
+	    @include transition(0.250s, stan);
+		@include centerFlex;
+		@include interaction-color;
+
+		//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+		& svg{
+			height: 24px;
+			width:  24px;
+			margin-right:  12px;
+			margin-left:   12px;
+			fill: $c-w;		
+			@include selectNo;
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+		& label{
+
+			position: relative;
+			display: inline-block;
+			margin-right: 20px;
+			font-weight: 300;
+
+			@include selectNo;
+			@include font(button, $c-w);
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+
+		}
+
+	}
+
+	& > .black {
+		background: $c-b;
+		border: 1px solid $c-divider;
+		@include interaction-color-ramdon($c-b);
+		& svg  {  fill: $c-w; }		
+		& label{ @include font(button, $c-w); }		
+	}	
+
+	& > .green {
+		background: $c-s;
+		border: 1px solid $c-divider;
+		@include interaction-color-ramdon($c-s);
+		& svg  {  fill: $c-w; }		
+		& label{ @include font(button, $c-w); }		
+	}	
+
+	& > .white {
+		background: $c-w;
+		border: 1px solid $c-divider;
+		@include interaction-color-ramdon($c-w);
+		& svg  {  fill: $c-b; }		
+		& label{ @include font(button, $c-b); }		
+	}	
+
+
+
+
+}

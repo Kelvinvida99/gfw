@@ -1,0 +1,43 @@
+@mixin button-dark{
+	.button{
+		background-color: $c-p;	
+		//@include interaction-dark($c-pl);	
+	}
+
+	.button-flat{ //with color
+		background-color: transparent;
+		//@include interaction-dark(flat);
+
+		& label{
+			color: $c-pl;
+		}
+
+		& svg{
+			fill: $c-pl;
+		}
+
+	}
+
+
+
+	.button-plain{ //gray
+
+		@include interaction-dark-12;
+		background-color: transparent;
+
+		& label{
+			color: $c-w;
+		}
+		
+		& svg{
+			fill: $c-w;
+		}
+
+	}
+	
+
+
+
+
+
+}

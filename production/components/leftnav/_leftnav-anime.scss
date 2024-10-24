@@ -1,0 +1,44 @@
+
+
+
+
+
+
+.leftnav{
+	& .cont_expad{
+		@include transition(0.850s, stan)
+		min-height: 36px;
+		height: auto;
+		//border: 0.1px solid $c-divider;               //←←←←←←←←←←←←←←←←←←←←
+
+		& > div {
+				& > .arrow{
+						transform: rotate(90deg);
+				}
+		}
+	}
+}
+
+
+
+
+.leftnav{
+	& .select{
+		//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+		background: $c-pl;	
+		@include interaction-color-ramdon($c-pl);
+
+		& > svg  { 
+			fill: $c-p !important; 
+			//stroke: red;
+			//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		}		
+		& > label{ color: $c-p  !important; }
+		& > .arrow{ 
+			background-image:  url('./svg/right.svg') !important; 
+			opacity: 1 !important; 
+		}
+
+	}
+}

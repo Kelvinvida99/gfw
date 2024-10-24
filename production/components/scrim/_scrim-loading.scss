@@ -1,0 +1,84 @@
+
+#scrim_loading{
+	
+	position: fixed;
+
+	height: 100vh;
+	width: 100vw;
+
+	right: 0px;
+	bottom:-100vh;
+
+	z-index: 2000;
+    opacity: 0.99;
+    
+	background-color: transparent; ///************************************
+
+	//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+	& > .cont{
+
+		position: relative;
+		display: inline-block;
+		margin-top: 36px;
+		width: calc(100% - 36px);
+		max-width: 300px;
+		height: 300px;	
+		top: 10vh;
+		@include align-center;
+
+		//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+		&  div{
+
+			position: absolute;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+
+			background-image:    url('./svg/illustrations/loading.svg');
+			background-position: center;
+			background-repeat:   no-repeat;
+			border: 0.5px solid transparent;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+
+	}
+
+
+} 
+
+
+
+.scrim-loading-show{
+	animation: scrim-loading-show  0.300s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+	
+	& div div{
+		@include loading;
+	}
+
+
+
+}
+
+@keyframes scrim-loading-show{
+
+	from{ top: 100vh;      }
+	to  { top: 0vh;        }
+}
+
+.scrim-loading-hide{
+	animation: scrim-loading--hide  0.250s;
+	animation-fill-mode: both;
+	@include animationT(acce);
+}
+
+
+@keyframes  scrim-loading-hide{
+
+	from{ top: 0vh;   }
+	to  { top: 100vh;  }
+}
+

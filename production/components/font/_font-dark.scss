@@ -1,0 +1,50 @@
+
+@mixin font-dark{
+
+	.font-h6			{ color: $c-w;  opacity: 0.87; }
+	.font-subtitle1		{ color: $c-w;  opacity: 0.87; }
+	.font-subtitle2		{ color: $c-w;  opacity: 0.87; }
+	.font-body1			{ color: $c-w;  opacity: 0.87; }
+	.font-body2			{ color: $c-w;  opacity: 0.87; }
+	.font-button		{ color: $c-w;  opacity: 0.87; }
+	.font-caption		{ color: $c-w;  opacity: 0.87; }
+	.font-overline		{ color: $c-w;  opacity: 0.87; }
+
+
+	.font-red{
+		color: $d-error;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////shhould delete this
+@mixin d-f14m-lg {
+	color: $d-f-lg;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+}
+
+@mixin d-f20b-flg {
+	color: $d-f-lg;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	opacity: 0.87;
+}
+

@@ -1,0 +1,273 @@
+
+
+
+<div class="fullcont " id="myuser-fullcont" data-detail="" data-entity="myuser">
+
+      <div class="appbar appbar-blue appbar-fullcont">
+
+        <div class="primary"> 
+
+            <div class="fullcont-close"  id="myuser-fullcont-close"
+                                    data-detail='{"click": [ 
+                                        {"dest":"ripple" }, 
+                                        {"dest":"myuser", "elem":"fullcont", "id":"myuser-fullcont", "act":"hide" } ] }' >
+                <svg><use xlink:href="../../../public/css/svg.svg#close"></use></svg>
+            </div>
+
+            <h1>My Profile</h1>
+
+            <div class="select "    data-detail='{"click": [ 
+                                        {"dest":"ripple" }, 
+                                        {"dest":"fullcont", "id":"myuser-fullcont", "act":"pageMov", "pagetoshow":"entity" } ] }' >
+                    <label>Main</label>
+            </div> 
+
+
+        </div> <!-- primary -->
+
+    </div> <!-- appbar -->
+
+
+            
+  <div class="page page-appbar page-appbar-desktop entity " data-detail='{ "page":"entity", "scroll": [ {"dest":"page-fullcont"  }] }'>
+
+
+
+   <div class="card-cont">    
+
+          <div class="row">
+              <div class="c50 cg100t">
+                  <div class="card">
+
+                        <div  class="avatar avatar-large "  data-detail='{"click": [ {"dest":"file", "act": "viewAvatar", "entity":"myuser", "file":"avatar", "fileExt":"cont-img"} ] }' >
+
+
+
+
+                                <div style="position: relative; border-style: solid;  " 
+                                
+                                           class="c25 fileBrowseButton"     data-detail='{"click": [ {"dest":"ripple"}, 
+                                                      {"dest":"file", "act":"triggerAvatarUpload", "formId":"myuser-fullcont"} ] }'
+                                
+                                ><label></label>
+                              
+                                    <form      style="display: none;"  method="post" name ='photo' class="fileUploadForm" 
+                                    id='myuser_form_file' 
+                                    data-detail='{"submit": [ {"dest":"file", "act":"avatarUpload", "formId":"myuser-fullcont"} ] }'
+                                    enctype="multipart/form-data" data-file_type="uploaded_files" >
+                                          <input autocomplete="off" style="display: none;" class="fileUploadInput" type="file"  name="fileInputElement[]" 
+                                          data-detail='{"change": [ {"dest":"file", "act":"triggerAvatarSubmit", "entity":"users"} ] }' multiple />
+                                    </form>
+                              
+                              
+                              
+                              </div>
+                        </div>
+                                     
+
+                  </div><!-- card -->
+              </div><!-- c25 -->
+          </div><!-- row -->
+          
+   </div><!-- card-cont -->
+
+
+  
+
+
+      <div class="card-cont">
+         <div class="row">
+
+              <div class="c50 ">
+                    <div class="card card-click"
+                         data-detail='{"click": [{"dest":"ripple"}, {"dest":"myuser", "elem":"fullcont",  "id":"myuser-fullcont", "act":"prepareEdit" }] }'> 
+                    
+                                  <div class="row">  
+                                        <div class="c100 ">  
+
+                                              <div class="textfield " id="myuser_form___name" >
+
+                                                <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                                                         data-detail='{ "key":   [ {"dest":"textfield", "act":"typing"  }] }'  >
+
+                                                <div class="indicador"></div>
+
+                                                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                                  <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                                                </div>
+
+                                                <div class="label"  >name     </div> 
+                                                <div class="helper" >Required*</div>
+
+                                              </div><!-- textfield -->   
+
+                                              <div class="textfield disable-mode-edit" id="myuser_form_username" >
+
+                                                    <input autocomplete="off"  class= 'elem' type="text"   autocomplete="new-password"
+                                                             data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  } ] }' >
+
+                                                    <div class="indicador"></div>
+
+                                                    <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                                                      <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                                                    </div>
+
+                                                    <div class="label"  >Username</div> 
+
+                                              </div><!-- textfield -->   
+
+
+
+                                        </div> <!-- c50 -->
+                                        <div class="c50 ">  
+
+
+  
+
+
+                                        </div> <!-- c50 -->
+                                  </div> <!-- row -->     
+                    </div> <!-- card --> 
+              </div><!-- c50 -->
+
+              <div class="c50 ">
+                    <div class="card card-click"
+                          data-detail='{"click": [{"dest":"ripple"}, {"dest":"myuser", "elem":"fullcont",  "id":"myuser-fullcont", "act":"prepareEdit" }] }' > 
+                    
+                                  <div class="row">  
+                                        <div class="c100">  
+
+
+                                              <div class="textfield  textfield-password password-noview " id="myuser_form_oldPassword" >
+
+                                                    <input autocomplete="off"  class= 'elem' type="password"    autocomplete="new-password"
+                                                             data-detail='{ "key":   [ {"dest":"textfield", "act":"", "validator": "passIsStrong"  } ] }' >
+
+                                                    <div class="indicador"></div>
+
+                                                    <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"password"}] }' >
+                                                      <svg><use xlink:href="../../../public/css/svg.svg#eye"></use></svg>
+                                                    </div>
+
+                                                    <div class="label"  >Current Password     </div> 
+                                                    <div class="helper" >Required*</div>
+
+                                              </div><!-- textfield -->      
+                                                         
+                                              <div class="textfield  textfield-password password-noview " id="myuser_form_password" >
+
+                                                    <input autocomplete="off"  class= 'elem' type="password"    autocomplete="new-password"
+                                                             data-detail='{ "key":   [ {"dest":"textfield", "act":"validator", "validator": "passIsStrong"  }
+                                                                            ] }' >
+
+                                                    <div class="indicador"></div>
+
+                                                    <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"password"}] }' >
+                                                      <svg><use xlink:href="../../../public/css/svg.svg#eye"></use></svg>
+                                                    </div>
+
+                                                    <div class="label"  >New Password     </div> 
+                                                    <div class="helper" >Required*</div>
+
+                                              </div><!-- textfield -->  
+
+
+
+
+
+                                        </div> <!-- c50 -->
+                                        <div class="c50 ">  
+
+  
+
+                                        </div> <!-- c50 -->
+                                  </div> <!-- row -->     
+                    </div> <!-- card -->    
+              </div><!-- c50 -->
+
+
+        </div><!-- row -->      
+    </div><!-- card-cont -->  
+
+
+
+
+  </div>  <!-- page -->
+
+
+  <div class="page page-appbar inf dn" data-detail='{ "page":"inf", "scroll": [ {"dest":"page-fullcont"  }] }'>
+
+  </div>  <!-- page -->
+
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+
+    <div class="fab-s fab-to-readOnly" >
+      
+      <div  class="secondary" title="Edit Entity"   
+           data-detail='{"click": [{"dest":"ripple"}, {"dest":"myuser", "elem":"fullcont",  "id":"myuser-fullcont", "act":"prepareEdit" }] }'>
+
+          <svg><use xlink:href='../../../public/css/svg.svg#eye'></use></svg>
+          <label>View Only</label>
+      </div>
+
+    </div>
+
+
+    <div class="fab-s fab-to-edit"   >
+      
+      <div  class="primary" title="Edit"   
+           data-detail='{"click": [ 
+                    {"dest":"ripple"}, 
+                    {"dest":"myuser", "elem":"fullcont",  "id":"myuser-fullcont", "act":"prepareEdit" } ] }'>
+
+          <svg><use xlink:href='../../../public/css/svg.svg#edit'></use></svg>
+          <label>Edit</label>
+      </div>
+
+    </div>
+
+    <div class="fab-s fab-to-add"   >
+      
+      <div  class="primary"  title="Save"   
+            data-detail='{"click": [ 
+                         {"dest":"ripple"}, 
+                         {"dest":"myuser", "elem":"fullcont",  "id":"myuser-fullcont", "act":"addOne", "entity":"myuser" } ] }'>
+                    
+          <svg><use xlink:href='../../../public/css/svg.svg#save'></use></svg>
+          <label>Save</label>
+      </div>
+
+    </div>
+
+
+    <div class="fab-s fab-to-update"  title="update" >
+      
+      <div  class="primary" title="Update Entity" 
+            data-detail='{"click": [  {"dest":"ripple"}, 
+                         {"dest":"myuser", "elem":"fullcont", "id":"myuser-fullcont", "act":"update", "entity":"myuser" } ] }' >
+          <svg><use xlink:href='../../../public/css/svg.svg#update'></use></svg>
+          <label>Update</label>
+      </div>    
+
+      <div  class="secondary" title="Cancel Edition" class="secondary"
+            data-detail='{"click": [ 
+                         {"dest":"ripple"}, 
+                         {"dest":"myuser", "elem":"fullcont",  "id":"myuser-fullcont", "act":"cancelEdit" } ] }'   >
+          <svg><use xlink:href='../../../public/css/svg.svg#close'></use></svg>
+          <label>Cancel Edition</label>
+      </div>
+      
+    </div>
+    
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+ </div> <!-- fullcont -->
+
+

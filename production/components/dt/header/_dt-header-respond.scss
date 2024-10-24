@@ -1,0 +1,62 @@
+.dt {
+	& > .header{
+				& >.title{
+					@include respond(table) {
+
+						padding-left: 16px;
+					}
+					
+					
+				}
+		
+		& > div:nth-child(2){
+
+			@include respond(table) {
+				//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+				float: right;
+				width: 42px;
+				margin-right: 92px;
+
+				overflow-x: hidden;
+				
+
+
+				& > input{
+					background-color: transparent;
+				}
+
+				& > .search{
+				pointer-events: auto;
+				user-select: auto;
+
+				//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+				//@include interaction-plain;
+				}
+
+			}
+			
+			& > input:focus{
+				background-color:$c-w;
+			}
+
+			& > input:hover{
+				//background-color:lighten($c-b, 96%);
+			}
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

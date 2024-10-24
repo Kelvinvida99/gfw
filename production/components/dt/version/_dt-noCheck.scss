@@ -1,0 +1,70 @@
+
+
+.dt-noCheck{
+
+	//border: 1px solid purple !important;               //←←←←←←←←←←←←←←←←←←←← 
+
+	& > table {
+		border-collapse: collapse;
+		//width: 100%;
+
+
+		table-layout:fixed;
+
+		& th:nth-child(1), & td:nth-child(1) {
+			position: relative;
+			width: 0px;
+			max-width: auto;
+			pointer-events: auto;
+			& input { display: none;}
+
+			@include font(subtitle2, $c-b);
+		}
+
+		// & tr {
+		// 	height: 28px !important;
+		// }
+
+		// & th, & td { 
+		// 	text-align: left; 
+		// 	padding-left: 8px;
+		// 	height: 28px !important;
+
+		// 	@include font(subtitle2, $c-b);
+
+		// 	& label{
+		// 		top: 6px;
+		// 	}
+
+		// 	& .id{ display: none;}
+
+		// 	//border: 1px solid purple !important;               //←←←←←←←←←←←←←←←←←←←← 
+		// }
+
+
+
+
+	// & .tdWithAvatar {  
+	// 	& label{  margin-left: 8px; max-width: calc(100% - 8px);}
+	// 	& span {  margin-left: 8px; max-width: calc(100% - 8px);}
+
+	// 	& .avatarOnTD{
+	// 		display: none;
+	// 	} 
+	// }
+
+
+	// & .tdWithIcon{
+	// 	& svg{
+    //         top: 2px;
+    //         left: 8px;
+    //         width: 16px;
+    //        // border: 1px solid purple !important;               //←←←←←←←←←←←←←←←←←←←← 
+    //     }
+
+	// }
+
+
+	}
+	//border: 1px solid purple !important;               //←←←←←←←←←←←←←←←←←←←← 
+}

@@ -1,0 +1,22 @@
+
+
+
+
+	//to avoid that the fullcont hide the user information
+
+.appbar-main{
+	
+	& > .primary{
+		padding-right: calc(50% - 24px);	
+		//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←	
+	}
+	
+	@include respond (desktop) {
+	
+		& > .primary{
+			padding-right: calc(0% + 16px);
+			//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←		
+		}		
+	}		
+
+}

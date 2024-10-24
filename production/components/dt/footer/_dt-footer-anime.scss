@@ -1,0 +1,22 @@
+
+
+
+
+.dt {
+	& > .footer-loading{
+
+		& label{
+			@include font(button, $c-p);
+		}
+
+		& svg{
+			opacity: 1;
+			fill: $c-p;
+			@include rotation;
+
+		}
+
+	}
+}
+
+

@@ -1,0 +1,66 @@
+
+@mixin bar-dark {
+
+	.bar{
+		& .title{
+			@include font(subtitle1, $c-w);
+			opacity: 0.54;
+			//border: 1px solid yellow;/**********************/
+		}/*label*/
+
+		& .barBody{
+
+			& .unit{
+				border-left:    0.5px solid $d-divider;	
+				border-right:   0.5px solid $d-divider;	
+				border-bottom:  0.5px solid $d-divider;	
+			}
+
+
+			& .legend{
+
+				@include font(caption, $c-w);
+				opacity: 0.54;
+
+
+
+			//border: 0.1px solid blue;/************************/
+			}/*legend*/	
+
+
+			& .line {
+				border: 0.5px solid $d-divider;
+				& label{
+					@include font(caption, $c-w);
+				    background-color: $d-e6 ;
+					//border: 0.1px solid blue;/************************/
+				}/*label*/
+			}/*line*/
+
+		}/*barBody*/
+
+		& .barHeader{
+			//border: 0.1px solid blue;/************************/
+			
+			& .cont{
+				& label{
+					@include font(caption, $c-w);
+					opacity: 0.64;
+					letter-spacing: 2px;
+					//border: 0.1px solid blue;/************************/
+				}/*label*/
+
+			}/*cont*/
+		}/*barHeader*/
+
+
+
+	}/*bar*/
+
+
+
+}/*bar-dark*/
+
+
+
+

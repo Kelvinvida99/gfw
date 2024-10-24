@@ -1,0 +1,40 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-01-11 12:25:pm amdry@,  Column 'email' in where clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, sale
+2024-01-17 12:11:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-17 12:53:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-17 16:11:pm amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-17 18:01:pm amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-17 19:17:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:10:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:13:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:14:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:15:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:18:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:19:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:22:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:23:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:27:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:31:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-18 15:37:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-19 10:49:am amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-19 22:33:pm ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-20 09:50:am amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-20 10:07:am ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-20 11:03:am ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-20 12:12:pm miguel@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-22 23:33:pm marco@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-23 17:01:pm miguel@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-24 17:38:pm miguel@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 09:40:am ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 09:43:am ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 09:43:am ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 10:10:am ypena@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 10:42:am miguel@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 16:08:pm amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 16:19:pm marco@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 19:09:pm amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 21:19:pm miguel@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 23:15:pm amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-25 23:19:pm amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-01-26 11:07:am amdry@,  Unknown column 'purchase.code' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase

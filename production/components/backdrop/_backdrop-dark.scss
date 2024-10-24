@@ -1,0 +1,34 @@
+@mixin backdrop-dark{
+	.backdrop {
+
+		background-color: $d-e12;
+
+		& .option:first-child{
+			@include centerFlex;
+			& svg { fill: $c-w; }
+		}
+
+
+		& .option{
+			@include interaction-dark-12;
+
+			& label{
+				@include font(h6, $c-w);
+				opacity: 0.87;
+						
+			}
+
+			& .circle{
+				opacity: 0.87;
+
+				& svg {
+					fill: $d-e12;
+				}
+			}
+
+	}/*option*/
+
+
+
+	}/*backdrop*/
+}/*backdrop-dark*/

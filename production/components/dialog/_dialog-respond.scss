@@ -1,0 +1,9 @@
+.dialog{
+
+	@include respond (phone){
+		width: calc(100% - 16px);
+	}
+
+
+
+}

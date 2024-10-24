@@ -1,0 +1,90 @@
+
+//Version for computer
+//textfield-anime.scss, is link to this too
+.textfield-desk{
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	overflow: visible;
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+
+	& > .elem{
+		height: 32px;
+		margin-bottom: 0.5px;
+		padding-left: 4px !important;
+		padding-bottom: 2px;
+		border-bottom: 0px;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+		& + .indicador{
+			bottom: 0px  !important;
+			height: 2px;
+			transform: scaleX(0);
+		}
+
+	}
+
+	& > .label {
+		display: none;
+		top: 1px !important;
+		left: 4px !important;
+		opacity: 0.54;
+		
+		@include font(overlinelLower, $c-b);
+		font-size: 10px !important;
+		letter-spacing: 0.5px !important;
+		font-weight: 500 !important;
+
+
+		// border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	.elem:focus{				
+		& ~ .label {
+			//@include font(overlinelLower, $c-b);
+			text-transform: none !important;
+		}
+	}
+
+
+	& > .helper {
+		//border: 0.2px solid red;  
+		//margin-top: 24px;
+		bottom: -11px !important;
+		left: 0px !important;
+		width: 100% !important;
+
+		@include font(overlinelLower, $c-b);
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+
+	}
+
+	& > .counter {
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+		@include font(overlinelLower, $c-b);
+	}
+
+	& > .trailing{
+		top: 2px !important;
+		width: 20px !important;
+		right: 4px !important;
+		opacity: 0.36;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+
+	& input[type="time"]{
+		padding-bottom: 4px;
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+
+	& input[type="date"]{
+		padding-bottom: 3px;
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+		
+	
+
+}

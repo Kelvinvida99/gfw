@@ -1,0 +1,134 @@
+
+
+.checkbox{
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 0px);
+		min-height: 28px;	
+	padding: 4px;
+	//padding-right: 16px;
+	padding-bottom: 8px;
+	//border: 1px solid blue !important;               //←←←←←←←←←←←←←←←←←←←←	
+
+	& > .title{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		opacity: 0.76;
+		@include font(overlinelLower, $c-b);
+		text-transform: uppercase !important;
+		font-size: 10px !important;
+		letter-spacing: 0.5px !important;
+		font-weight: 500 !important;
+
+		//border: 1px solid red;               //←←←←←←←←←←←←←←←←←←←←	
+	}
+
+	& label{
+		position: relative;
+		display: inline-block;
+		margin-top: 6px;
+		margin-left: 12px;
+		max-width: calc(100% - 36px);
+		float: left;
+
+		@include font(body2, $c-b);
+		@include selectNo;
+		font-weight: 500;
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;     //... at the end of input
+
+			
+		//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+	}
+		
+	& > .restriction {
+		position: absolute;
+		display: inline-block;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 0%;
+		//max-height: 24px;
+		background-color: $c-error;
+		opacity: 0.0;
+		// border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+
+	& input{
+		position: relative;
+		display: inline-block;
+		//float: left;
+		left: 0px;
+		top: 6px;
+		width: 18px;
+		height: 18px;
+		float: left;
+
+		border: 2px solid $c-b;
+		border-radius: 2px;
+		opacity: 0.54;
+		//margin-bottom: 8px;
+		
+		outline: none;
+		-webkit-appearance: none ;	
+        appearance: none ;	
+        cursor: pointer;
+
+        flex-shrink: 0;
+        background-size: 0% 0%;
+		background-position: center;	
+			        
+        transition: (0.150s, emph);
+
+
+		&::before{
+			position: absolute;
+			content: '';
+			top: -9.5px;
+			left: -9px;
+		width: 18px;
+		height: 18px;
+			border-radius: 50%;
+
+		   background-color: $c-p;
+		   opacity: 0;
+		   transform: scale(0);
+		   transition: (0.150s, emph);
+		   //border: 4px solid red;               //←←←←←←←←←←←←←←←←←←←←	
+
+		}
+
+		&:hover{
+			&::before{
+			   opacity: 0.12;
+			   transform: scale(1);
+			}
+		}
+
+		&:checked{
+			opacity: 1;
+			background:  $c-p url(svg/check.svg) no-repeat;
+		    background-size: 100% 100%;
+		    background-position: center;
+			border: 2px solid $c-p ;
+			border-radius: 2px;
+
+			&::before{
+				display: none;
+			}					
+		}/**/
+	}/*input*/
+
+
+
+
+}
+
+
+// input[type="radio"]:checked {
+//   box-shadow: 0 0 0 3px orange;
+// }

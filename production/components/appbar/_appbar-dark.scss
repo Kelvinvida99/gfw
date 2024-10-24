@@ -1,0 +1,45 @@
+@mixin appbar-dark{
+
+	& .primary{
+		
+		background-color: $d-e12 ;
+		
+	
+		border-bottom: none;
+		& > h1{ color:$c-w; opacity: 0.87;}	
+		& > div { 
+			
+			& > svg{
+				fill:$c-w;
+				opacity: 0.87;
+
+			}
+			& > label{
+				color:$c-w;
+				opacity: 0.87;
+			}
+
+			@include interaction-dark-12;
+		}
+		& .select{
+			color:$c-pl;
+
+			& > label{
+				@include font(caption, $c-pl);
+				opacity: 0.99;
+				font-weight: 500;
+			}		
+
+			&::before{
+				background-color:$c-pl;
+			}	
+		}
+
+
+	}
+
+}
+
+
+
+

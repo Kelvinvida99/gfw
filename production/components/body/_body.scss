@@ -1,0 +1,27 @@
+body{
+	position: relative;
+	display: inline-block;
+	//----------hide for pc
+	height: calc(100vh - 48px );
+	top: 48px;
+
+	//----------show for mobile
+	// height: calc(100vh - 0px );
+	// top: 0px;
+
+	width: calc(100% - 0px ); 
+	//margin-left: 72px;
+
+	overflow: hidden;
+	background-color: $c-surface;
+	z-index: 1;
+	opacity: 1;
+
+	// border: 0.1px solid $c-error;               //←←←←←←←←←←←←←←←←←←←←
+
+
+	//border:  0.5px solid purple;               //←←←←←←←←←←←←←←←←←←←←
+
+}
+
+

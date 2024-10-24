@@ -1,0 +1,116 @@
+.tvcard-icon {
+	//border: 1px solid red;
+	padding:16px;
+
+
+      & .title {  
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;     //... at the end of input
+				
+        @include font(48, $c-b); 
+        @include selectNo;
+
+        //border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+      }
+
+      & .des   { 
+        position: relative;
+        display: block;
+        padding-left: 4px;
+        padding-right: 4px;
+
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;     //... at the end of input
+				
+        @include font(subtitle1, $c-b); 
+        @include selectNo;
+        text-align: center;
+
+      // border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+
+	& .icon{
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+
+		@include centerFlex;
+		@include  align-center;
+		@include selectNo;
+		//border: .5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+		& svg {
+			height: 24px;
+			width: 24px;
+			fill: $c-w;
+			//border: .5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+	}
+
+
+	& > .trailing{
+		position: absolute;
+		height: 32px;
+		width: 32px;
+
+		left: 8px;
+		top: 12px;
+		cursor: pointer;
+		border: 1px solid $c-divider;
+		opacity: 0.16;
+
+		@include selectNo();
+		@include centerFlex;
+
+
+			& svg{
+				height: 24px;
+				width: 24px;
+				display: block;
+				fill: $c-b;
+				//opacity: 0.32;
+				@include selectNo;
+				//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+			}
+
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+}
+
+.tvcard-icon-green {
+	& .icon { background-color: $cs-green;  }
+}
+
+.tvcard-icon-blue {
+	& .icon { background-color: $cs-blue;  }
+}
+
+.tvcard-icon-purple {
+	& .icon { background-color: $cs-purple;  }
+}
+
+.tvcard-icon-red {
+	& .icon { background-color: $cs-red;  }
+}
+
+
+/*
+
+		&-green  {background-color: $cs-green;  }
+		&-blue   {background-color: $cs-blue;   }
+		&-purple {background-color: $cs-purple; }
+		&-red    {background-color: $cs-red;    }
+
+*/

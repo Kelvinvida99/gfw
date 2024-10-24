@@ -1,0 +1,7 @@
+.bottomnav{
+
+	@include respond (phone) { //don't exist on pc
+		display: inline-block;
+	} 
+
+}

@@ -1,0 +1,43 @@
+.dt {
+	& > table {
+		& tr{
+			& .more{//no line on the last row
+				width: 48px;
+				height: 48px;
+				//@include interaction($c-w);
+				//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+					& svg{
+						position: absolute;
+						height: 24px;
+						width: 24px;
+						left: 12px;
+						top: 12px;
+
+						fill: $c-b;
+						opacity: 0.54;
+						@include selectNo;
+						//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+					}	
+				&::before{
+					content: '';		
+				}	
+				&:hover{
+					background-color:lighten($c-b, 90%);
+				}
+			}
+		}	
+	}
+}
+
+.dt { 
+	& > table {
+		& tr{
+			& .more{//hide more on table
+				@include respond(table) {
+					display: none;
+				}
+			}
+		}	
+	}
+}/*dt*/

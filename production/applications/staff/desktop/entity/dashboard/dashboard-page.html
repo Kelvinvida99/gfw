@@ -1,0 +1,136 @@
+<div class="page page_main  dn" id="dashboard-page">
+
+
+  <div class="menubar">
+
+
+  </div> <!-- menubar  -->
+
+
+  <div class="page-right-title">
+    <div class="title">Dashboard Center</div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="c33">
+
+      <div class="textfield textfield-filled" id="dashboard_form_date_from">
+
+        <input autocomplete="off" class='elem' type="date" data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }],
+            "key": [ {"dest":"textfield", "act":"typing"  }, {"dest":"textfield", "act":"validator", "validator": "date"  }], 
+            "change": [{"dest":"textfield", "act":"validator", "validator": "date"  },
+                        {"dest":"dashboard", "elem":"page", "act":"searchbydate"}] }'>
+
+        <div class="indicador"></div>
+
+        <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+          <svg>
+            <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+          </svg>
+        </div>
+
+
+        <div class="label">Date From</div>
+
+      </div><!-- textfield -->
+
+
+
+
+
+
+
+    </div>
+
+    <div class="c33">
+      <div class="textfield textfield-filled" id="dashboard_form_date_to">
+
+        <input autocomplete="off" class='elem' type="date" data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+          "key": [ {"dest":"textfield", "act":"typing"  }, {"dest":"textfield", "act":"validator", "validator": "date"  }], 
+          "change": [{"dest":"textfield", "act":"validator", "validator": "date"  },
+                     {"dest":"dashboard", "elem":"page", "act":"searchbydate"}] }'>
+
+        <div class="indicador"></div>
+
+        <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+          <svg>
+            <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+          </svg>
+        </div>
+
+
+        <div class="label">Date To</div>
+
+      </div><!-- textfield -->
+    </div>
+
+    <div class="c33">
+      <div class="textfield textfield-multiselect textfield-filled "  id="dashboard_period" >
+        <select class= 'elem' name="cars" id="cars" data-detail='{
+         "change": 
+         [
+              {"dest":"dashboard",  "elem":"page", "act":"searchbybutton"}
+         ]}'   >
+         <option value=""   selected                        >Select       </option>
+         <option value="1" data-detail='{"period":"day"}'   >Last 24 Hours</option>
+         <option value="2" data-detail='{"period":"day"}'   >Last 48 Hours</option>
+         <option value="7"  data-detail='{"period":"day"}'  >Last 7 Days  </option>
+         <option value="15" data-detail='{"period":"day"}'  >Last 15 Days </option>
+         <option value="30" data-detail='{"period":"day"}'  >Last 30 Days </option>
+         <option value="90" data-detail='{"period":"day"}'  >Last 90 Days </option>
+         <option value="6"  data-detail='{"period":"month"}'>Last 6 Month </option>
+        </select> 
+        <div class="indicador"></div>
+             <div class="trailing">
+             <svg><use xlink:href="../../../../../../public/css/svg.svg#downs"></use></svg>
+             </div>
+        <div class="label">Period</div> 
+      </div> <!-- textfield -->
+ 
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="chart-title chart-title-top chart-title">Best selling items</div>
+  <div class="card-chart">
+    <canvas class="chartjs" id="chartBar" data-detail='{}'>
+    </canvas>
+  </div>
+
+
+  <!-- <div class="chart-title chart-title-top chart-title">Best selling items Pie</div>
+  <div class="card-chart">
+    <canvas class="chartjs" id="chartPie" width="600" height="300" data-detail='{}'>
+    </canvas>
+  </div> -->
+
+
+
+
+
+
+
+
+</div> <!-- page -------------------------------------------------------->
+
+
+
+<div class="page page_main page_right dn" id="dashboard-page-right">
+
+
+
+
+
+</div> <!--Page Right-->

@@ -1,0 +1,115 @@
+@mixin selector-dark{
+
+
+	.checkbox{
+			& input{
+				border: 2px solid $c-w;
+				&::before{
+				   background-color: $c-pl;
+				   opacity: 0;
+				}
+
+				&:hover{
+					&::before{
+					   opacity: 0.16;
+					}
+				}
+
+				&:checked{
+					background:  $c-pl url(svg/check-dark.svg) no-repeat;
+					border: 2px solid $c-pl ;
+				}
+			}	
+			& label{
+				color:$c-w;
+			}
+	}
+
+
+
+	.radio{
+		& > div{
+				& input{
+
+					border: 2px solid $c-w;
+					opacity: 0.54;
+					&::before{
+					   background-color: $c-pl;
+					   opacity: 0;
+					}
+					&:hover{
+						&::before{
+						   opacity: 0.16;
+						   transform: scale(1);
+						}
+					}
+					&:checked{
+						opacity: 1;
+						border: 2px solid $c-pl ;
+						
+						&::before{
+						   opacity: 1;
+						   transform: scale(1);
+
+						}
+					}
+				}
+
+			& label{
+				color:$c-w;
+			}
+		}
+	}
+
+	.switch{
+
+				& input{
+					background-color: darken($c-w, 76%);
+
+					&::before{ //circle
+					   background-color: $c-w;
+					   transition: (0.250s, emph);
+					}
+
+					&::after{ //gb
+					   opacity: 0;
+					   background-color: $c-pl;
+					}
+
+					&:hover::after{
+					   opacity: 0.16;
+					   background-color: $c-pl;
+					}
+
+					&:active::after{
+					   opacity: 0.16;
+					   background-color: $c-pl;
+					}
+
+					&:checked{
+						background-color: lighten($c-pl, 08%);
+
+						&::before{
+							right: 0px; 
+							background-color: $c-pl;
+						}					
+					}
+				}
+
+
+			& label{
+				color: $c-w;
+			}
+
+	}
+
+
+
+}
+
+
+
+
+
+
+

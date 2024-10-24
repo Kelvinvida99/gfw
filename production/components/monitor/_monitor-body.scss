@@ -1,0 +1,116 @@
+  .monitor{
+    & .page{
+       border-left:   1px solid $c-divider;
+       border-right:  1px solid $c-divider;
+       border-bottom: 1px solid $c-divider;
+       overflow-y: hidden; 
+    }
+
+    & .line{
+       position: relative;
+       display: inline-block;
+       width:100%;   
+       height: 48px; 
+
+       padding-left:16px;
+       margin-bottom: 4px;
+       background: $c-w;
+       @include interaction-white();
+
+       @include flex-justify;
+      
+       //border: 0.5px solid red;/**************************************/
+
+
+      & > label {
+          position: relative;
+          float: left;
+          margin-right: auto; //need it
+          margin-left: 32px;
+
+          @include font(body1, $c-b); //font
+          @include selectNo;      
+          opacity: 1;
+      }
+
+       .line-avatar{
+          position: relative;
+          display: inline-block;
+          float: left;
+          height: 36px;
+          min-width: 36px;
+          padding: 4px;
+
+          // position: absolute;
+          // display: inline-block;
+          // width: 48px;
+          // height: 48px;
+          border-radius: 50%;
+          
+          cursor:pointer;
+          background-image:  url('./img/pic/person.svg');
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: $c-pd;
+
+           &:hover{@include bs-2;}
+
+
+           //@include transition(.150s, emph);
+           &:active  {transform:scale(0.95);
+        }
+
+
+
+        & .status{
+            position: absolute;
+            display: inline-block;
+            bottom: 0px;
+            right:-8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            opacity: 1;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 71%;
+
+            border: 2px solid $c-w;               //←←←←←←←←←←←←←←←←←←←←
+            background: $cs-lg;
+
+        }
+        
+        //border: 2px solid $c-w;               //←←←←←←←←←←←←←←←←←←←←
+
+      }
+
+    }/*bar*/
+}/*monitor*/
+
+
+
+
+.line-avatar-up{
+   //background-color:red;
+  // border: 2px solid $c-error !important;               //←←←←←←←←←←←←←←←←←←←←
+   & .line-avatar{
+      & .status{
+         background: $cs-green !important;
+      }
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+

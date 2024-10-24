@@ -1,0 +1,396 @@
+
+
+
+<div class="fullcont " id="users-fullcont" data-detail="">
+
+    <div class="appbar appbar-fullcont" >
+
+        <div class="primary"> 
+
+            <div class="fullcont-close" 
+                id="users-fullcont-close"
+                                    data-detail='{"click": [ 
+                                        {"dest":"ripple" }, 
+                                        {"dest":"users", "elem":"fullcont", "id":"users-fullcont", "act":"hide" } ] }' >
+                <svg><use xlink:href="../../../public/css/svg.svg#close"></use></svg>
+            </div>
+
+            <h1>User</h1>
+
+            <div class="select "    data-detail='{"click": [ 
+                                        {"dest":"ripple" }, 
+                                        {"dest":"fullcont", "id":"users-fullcont", "act":"pageMov", "pagetoshow":"entity" } ] }' >
+                    <label>Entity</label>
+            </div> 
+
+
+        </div> <!-- primary -->
+
+    </div> <!-- appbar -->
+
+
+            
+  <div class="page page-appbar entity " data-detail='{ "page":"entity", "scroll": [ {"dest":"page-fullcont"  }] }'>
+
+
+      <form method="post" action="php/files/avatarUpload.php" name ='photo' 
+            class="upload_form upload_form_nurses" id='upload_form_nurses' 
+            enctype="multipart/form-data" data-file_type="uploaded_files" >
+          <input  type="text"  name="currentPath" value="" />   
+          <input  class="fileupload" type="file"  name="fileInputElement[]" multiple />
+          <div><input type="submit" value="Send file"></div>
+      </form>
+
+
+     <label class="font-card-title">Entity Title</label>
+     <div class="card card-click "
+          data-detail='{"click": [  {"dest":"ripple" },
+                                    {"dest":"users", "elem":"fullcont",  "id":"users-fullcont", "act":"prepareEdit" } ] }' >
+
+
+
+     <div class="row">
+      <div class="c50 cg100t">
+
+          <div class="textfield " id="users_form_name" >
+
+            <input  class= 'elem' type="text"   value="" 
+                     data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+            <div class="indicador"></div>
+
+            <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+              <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+            </div>
+
+            <div class="label"  >Name     </div> 
+            <div class="helper" >Required*</div>
+            <div class="counter">10/10    </div> 
+
+          </div><!-- textfield -->          
+
+          <div class="textfield " id="users_form_last_name" >
+
+            <input  class= 'elem' type="text"   value="" 
+                     data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+            <div class="indicador"></div>
+
+            <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+              <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+            </div>
+
+            <div class="label"  >Last     </div> 
+            <div class="helper" >Required*</div>
+            <div class="counter">10/10    </div> 
+
+          </div><!-- textfield -->     
+
+      </div><!-- c50 -->
+      <div class="c50">
+
+          <div class="textfield " id="users_form_password" >
+
+            <input  class= 'elem' type="text"   value="" 
+                     data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+            <div class="indicador"></div>
+
+            <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+              <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+            </div>
+
+            <div class="label"  >Last     </div> 
+            <div class="helper" >Required*</div>
+            <div class="counter">10/10    </div> 
+
+          </div><!-- textfield -->     
+
+
+      </div><!-- c50 -->
+    </div><!-- row -->
+
+
+
+
+     <div class="row">
+      <div class="c50 cg100t">
+
+
+
+
+      </div><!-- c50 -->
+      <div class="c50">
+
+
+
+      </div><!-- c50 -->
+    </div><!-- row -->
+         
+
+
+     </div><!-- card -->
+
+
+<!-- card 2-->
+<!-- card 2-->
+<!-- card 2-->
+<!-- card 2-->
+
+     <div class="card">
+ 
+          <div class="row">
+          <div class="c50 cg100t">
+
+             <div class="textfield textfield-filled" id="" >
+              <input  class= 'elem' type="text"   value='' 
+                  data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                  "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                           {"dest":"textfield", "act":"validator", "validator": "phone"  }] }'  >
+
+              <div class="indicador"></div>
+
+            <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+              <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+            </div>
+
+              <div class="label">phone 1 </div> 
+              <div class="helper" >Required*</div>
+              <div class="counter">10/10</div> 
+            </div><!-- textfield -->           
+
+          </div><!-- c50 -->
+          <div class="c50"> 
+
+
+            <div class="textfield textfield-filled" id="" >
+              <input  class= 'elem' type="text"   value='' 
+                  data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                  "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                           {"dest":"textfield", "act":"validator", "validator": "phone"  }] }'  >
+
+              <div class="indicador"></div>
+
+            <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+              <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+            </div>
+
+              <div class="label">phone 2</div> 
+              <div class="helper" >Required*</div>
+              <div class="counter">10/10</div> 
+            </div><!-- textfield -->  
+
+
+          </div><!-- c50 -->
+        </div><!-- row -->
+
+          <div class="row">
+          <div class="c50 cg100t">
+
+        <div class="textfield textfield-filled" id="____________" >
+          <input  class= 'elem' type="text"   value='' 
+              data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                              "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                       {"dest":"textfield", "act":"validator", "validator": "email"  }] }'  >
+
+          <div class="indicador"></div>
+
+        <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+          <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+        </div>
+
+          <div class="label">Email </div> 
+          <div class="helper" >Required*</div>
+          <div class="counter">10/10</div> 
+        </div><!-- textfield --> 
+        
+
+          </div><!-- c50 -->
+        </div><!-- row -->
+
+     </div><!-- card -->
+
+
+
+<!-- card 3-->
+<!-- card 3-->
+<!-- card 3-->
+<!-- card 3-->
+
+     <div class="card">
+ 
+          <div class="row">
+          <div class="c50 cg100t">
+
+                <div class="textfield textfield-filled  textfield-autocomplete" id="_______">
+
+                  <input  class= 'elem' type="text"   value="empy1" 
+                         data-detail='{"key":   [ {"dest":"textfield", "act":"typing"  }] }' >
+
+                  <div class="indicador"></div>
+
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+
+                  <div class="label">Address 1</div> 
+                  <div class="helper" >Required*</div>
+                  <div class="counter">10/10</div> 
+                  <div class="selector"></div>
+                </div><!-- textfield -->  
+
+                <div class="textfield textfield-filled  textfield-autocomplete" id="_______">
+
+                  <input  class= 'elem' type="text"   value="empy1" 
+                         data-detail='{"key":   [ {"dest":"textfield", "act":"typing"  }] }' >
+
+                  <div class="indicador"></div>
+
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+
+                  <div class="label">Address 2</div> 
+                  <div class="helper" >Required*</div>
+                  <div class="counter">10/10</div> 
+                  <div class="selector"></div>
+                </div><!-- textfield -->  
+
+          </div><!-- c50 -->
+          <div class="c50"> 
+
+                <div class="textfield textfield-filled  textfield-autocomplete" id="_______">
+
+                  <input  class= 'elem' type="text"   value="empy1" 
+                         data-detail='{"key":   [ {"dest":"textfield", "act":"typing"  }] }' >
+
+                  <div class="indicador"></div>
+
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+
+                  <div class="label">City 1</div> 
+                  <div class="helper" >Required*</div>
+                  <div class="counter">10/10</div> 
+                  <div class="selector"></div>
+                </div><!-- textfield -->  
+
+                <div class="textfield textfield-filled  textfield-autocomplete" id="_______">
+
+                  <input  class= 'elem' type="text"   value="empy1" 
+                         data-detail='{"key":   [ {"dest":"textfield", "act":"typing"  }] }' >
+
+                  <div class="indicador"></div>
+
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+
+                  <div class="label">State</div> 
+                  <div class="helper" >Required*</div>
+                  <div class="counter">10/10</div> 
+                  <div class="selector"></div>
+                </div><!-- textfield -->  
+
+
+                <div class="textfield " id="_______">
+
+                <input  class= 'elem' type="number"  
+                         data-detail='{"click": [ {"dest":"fullcont", "act":"edit"  }], 
+                                       "key":   [ {"dest":"textfield", "act":"typing"  }] }' >
+
+                <div class="indicador"></div>
+
+                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                  <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+
+                <div class="label">Zip code</div> 
+                <div class="helper" >Required*</div>
+                <div class="counter">10/10</div> 
+              </div><!-- textfield -->
+
+
+          </div><!-- c50 -->
+        </div><!-- row -->
+
+     </div><!-- card -->
+
+  </div>  <!-- page -->
+
+
+
+
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+
+    <div class="fab-s fab-to-readOnly" >
+      
+      <div  class="secondary" title="Edit Entity"   
+           data-detail='{"click": [{"dest":"ripple"}, {"dest":"users", "elem":"fullcont",  "id":"users-fullcont", "act":"prepareEdit" }] }'>
+
+          <svg><use xlink:href='../../../public/css/svg.svg#eye'></use></svg>
+          <label>View Only</label>
+      </div>
+
+    </div>
+
+
+    <div class="fab-s fab-to-edit"   >
+      
+      <div  class="primary" title="Edit"   
+           data-detail='{"click": [ 
+                    {"dest":"ripple"}, 
+                    {"dest":"users", "elem":"fullcont",  "id":"users-fullcont", "act":"prepareEdit" } ] }'>
+
+          <svg><use xlink:href='../../../public/css/svg.svg#edit'></use></svg>
+          <label>Edit</label>
+      </div>
+
+    </div>
+
+    <div class="fab-s fab-to-add"   >
+      
+      <div  class="primary"  title="Save"   
+            data-detail='{"click": [ 
+                         {"dest":"ripple"}, 
+                         {"dest":"users", "elem":"fullcont",  "id":"users-fullcont", "act":"addOne", "entity":"users" } ] }'>
+                    
+          <svg><use xlink:href='../../../public/css/svg.svg#save'></use></svg>
+          <label>Save</label>
+      </div>
+
+    </div>
+
+
+    <div class="fab-s fab-to-update"  title="update" >
+      
+      <div  class="primary" title="Update Entity" 
+            data-detail='{"click": [  {"dest":"ripple"}, 
+                         {"dest":"users", "elem":"fullcont", "id":"users-fullcont", "act":"update", "entity":"users" } ] }' >
+          <svg><use xlink:href='../../../public/css/svg.svg#update'></use></svg>
+          <label>Update</label>
+      </div>    
+
+      <div  class="secondary" title="Cancel Edition" class="secondary"
+            data-detail='{"click": [ 
+                         {"dest":"ripple"}, 
+                         {"dest":"users", "elem":"fullcont",  "id":"users-fullcont", "act":"cancelEdit" } ] }'   >
+          <svg><use xlink:href='../../../public/css/svg.svg#close'></use></svg>
+          <label>Cancel Edition</label>
+      </div>
+      
+    </div>
+    
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+ </div> <!-- fullcont -->
+
+

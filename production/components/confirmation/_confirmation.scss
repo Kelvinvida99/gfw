@@ -1,0 +1,109 @@
+.confirmation{
+	position: fixed;
+	display: inline-block;
+	
+	width:  calc(100% - 32px);
+	height: calc(100% - 32px);
+
+	max-width: 500px;
+
+	overflow: hidden;	
+  // padding-left: 8px;
+  // padding-right: 8px;
+
+	margin-top: 16px;
+
+	bottom: -110vh;
+
+	background-color: $c-surface;
+	overflow-y: scroll;
+
+	@include bs-1;
+	@include align-center;
+	
+	z-index: 210;	
+	//border: 5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+ 
+
+
+	& .illus{
+		position: relative;
+		display: block;
+		width: calc(100% - 0px);
+		max-height: 400px;
+		margin-top: 16px;
+		margin: auto;
+
+		@include align-center;
+
+		//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+	}
+
+      & .title {  
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+        @include font(h5, $c-b); 
+        text-align: center;
+        //border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+      }
+
+      & .des   { 
+        position: relative;
+        display: block;
+
+        padding-left: 4px;
+        padding-right: 4px;
+
+        @include font(body2, $c-b); 
+        text-align: center;
+
+       //border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+      & .details   { 
+      		margin-top: 16px;
+      		margin-bottom: 0px;
+            //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+	      & .code {  
+	        display: block;
+	        text-align: center;
+	        @include font(caption, $c-b); 
+
+	      }
+
+	      & .num  { 
+	        display: block;
+	        text-align: center;
+	        @include font(48, $c-p); 
+	     }
+
+	      & .helper {  
+	        display: block;
+	        text-align: center;
+	        letter-spacing: 5.5px;
+	        max-height: 144px;
+	        text-overflow: ellipsis;
+	        overflow: hidden;
+	        @include font(caption, $c-error); 
+	       // border: 0.4px solid blue;            //←←←←←←←←←←←←←←←←←←←←
+
+	      }
+
+     }
+
+	
+}
+
+///to Delete
+
+	// & > *{
+	// 	opacity: 0;
+	// 	transform: scaleY(0);
+	// 	transform-origin: top;
+	// 	@include transition(0.350s, stan);
+	// }

@@ -1,0 +1,80 @@
+
+.dt { /*data table*/
+	& > table {
+
+		& .td-white {
+			& svg{
+				fill: $c-b;
+				opacity: 0.54;
+			}				
+		}/*tdWithAvatar*/
+
+		& .td-blue {
+			background: lighten($cg-blue, 20%);
+			background: $cg-blue;
+			@include interaction-color-ramdon($cg-blue);
+			& label{ @include font(subtitle2, $c-w); }
+			& span { @include font(caption, $c-w);   }
+		}/*tdWithAvatar*/
+
+		& .td-purple {
+			background: $cg-purple;
+			@include interaction-color-ramdon($cg-purple);			
+			& label{ @include font(subtitle2, $c-w); }
+			& span { @include font(caption, $c-w);   } 
+		}/*tdWithAvatar*/
+
+		& .td-green {
+			background: $cg-green;
+			@include interaction-color-ramdon($cg-green);			
+			& label{ @include font(subtitle2, $c-w); }
+			& span { @include font(caption, $c-w);   } 
+		}/*tdWithAvatar*/
+
+
+
+		& .td-yellow {
+			background: $cg-yellow;
+			@include interaction-color-ramdon($cg-yellow);
+			& svg{
+				fill: $c-w;
+				opacity: 0.99;
+			}	
+		}
+
+		& .td-orange {
+			background: $cg-orange;
+			@include interaction-color-ramdon($cg-orange);
+			& label{ @include font(subtitle2, $c-w); }
+			& span { @include font(caption, $c-w);   } }/*tdWithAvatar*/
+
+
+
+		& .td-red {
+			background: $cg-red;
+			@include interaction-color-ramdon($cg-red);
+			& label{ @include font(subtitle2, $c-w); }
+			& span { @include font(caption, $c-w);   } }/*tdWithAvatar*/
+
+
+
+		& .td-lg {
+			background: $cg-gray;
+			@include interaction-color-ramdon($cg-gray);
+			& label{ @include font(subtitle2, $c-b); }
+			& span { @include font(caption, $c-b);   } }/*tdWithAvatar*/			
+
+		& .td-black {
+			background: $cs-black;
+			@include interaction-color-ramdon($cs-black);
+			& label{ @include font(subtitle2, $c-w); }
+			& span { @include font(caption, $c-w);   } }/*tdWithAvatar*/			
+
+
+
+	}/*table*/
+
+
+}/*dt*/
+
+

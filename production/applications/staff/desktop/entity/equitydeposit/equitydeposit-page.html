@@ -1,0 +1,106 @@
+
+<div class="page page_main  dn" id="equitydeposit-page"  > 
+
+
+    <div class="fab fab-blue" title="Add Equity Deposit"
+        data-detail='{"click": [  {"dest":"ripple" }, {"dest":"equitydeposit", "elem":"fullcont", "id":"equitydeposit-fullcont",  "act":"prepareAdd"  } ] }' >
+
+      <svg><use xlink:href='../../../../../../public/css/svg.svg#add'></use></svg>
+    </div>
+
+
+     <div class="menubar"></div> <!-- menubar  -->
+    
+
+    <div class="dt" id="equitydeposit-dt">
+
+      <div class="header">
+          
+          <label class="title">Equity Deposit</label>
+          
+          <div>
+
+            <input type="text" placeholder="Search"
+                   data-lastValue=""
+                   data-detail   ='{ "key": [{"dest":"dt", "act":"typing" }, 
+                                             {"dest":"equitydeposit", "elem":"dt", "act":"searching", "entity":"equitydeposit" } ] }' >
+           
+            <div class="icon search" 
+                 data-detail='{"click": [{"dest":"ripple" }, {"dest":"dt", "act":"searching"}  ]}'>
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#search"></use></svg>
+            </div>
+
+            <div class="icon trailing"
+                 data-detail='{"click": [{"dest":"ripple" }, 
+                 {"dest":"dt", "act":"clear"}, 
+                 {"dest":"equitydeposit", "elem":"dt", "act":"searching", "entity":"equitydeposit" }      ] }' >
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+            </div>   
+
+          </div>
+
+
+
+
+          <div class="more"
+            data-detail='{"click": [{"dest":"ripple"}, 
+            {"dest":"equitydeposit", "elem":"dt",  "act":"tableOptions", "id":"tableOptions", "entity":"equitydeposit"} ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#more"></use></svg>
+          </div>  
+      
+      </div>
+
+      <div class="filterCont dn"  >
+
+      </div>
+
+
+      <table > 
+          <thead>
+            <tr>
+                <th><input type="checkbox" data-detail='{
+                  "click": [ {"dest":"dt", "act":"checkboxAll"} ],
+                  "clickDouble": [  {"dest":"dt", "act":"checkboxAll"} ]  }' ></th>
+                
+                <th data-sortBy="equitydeposit.code"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"equitydeposit", "elem":"dt", "act":"th", "entity": "equitydeposit"}  ]}'>
+                                            <label for="">User</label>
+                                            <span>Code</span>
+                                          </th>
+                
+                <th data-sortBy="equitydeposit.date"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"equitydeposit", "elem":"dt", "act":"th", "entity": "equitydeposit"}  ]}'>
+                                            <label for="">Account</label>
+                                            <span>Date</span>
+                                          </th>       
+                                          
+                <th data-sortBy="equitydeposit.amount"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                      {"dest":"dt", "act":"th"},
+                                      {"dest":"equitydeposit", "elem":"dt", "act":"th", "entity": "equitydeposit"}  ]}'>
+                                        <label for="">Amount</label>
+                                        <span>Reference N.</span>
+                                      </th>  
+             </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+
+
+
+      <div class="footer footer-disabled footer-loadingX" data-limit="0" 
+          data-detail='{"click":[{"dest":"ripple"},  
+                                 {"dest":"equitydeposit", "elem":"dt", "act":"loadMore", "entity":"equitydeposit"}]}'>
+        <svg><use xlink:href="../../../../../../public/css/svg.svg#refresh"></use></svg>
+        <label>Load More</label> 
+      </div>
+
+
+
+    </div><!-- dt -->
+</div> <!--Page -->

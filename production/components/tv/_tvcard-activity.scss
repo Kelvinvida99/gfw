@@ -1,0 +1,100 @@
+.tvcard-activity {
+
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			padding-bottom:4px;
+			padding-top:4px;
+			margin-bottom: 8px;
+			///border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+      & .title {  
+        position: relative;
+        display: block;
+        width: calc(100% - 120px);
+        top: 0px;
+        left: 62px;
+        margin-top: 4px;
+
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;     //... at the end of input
+				
+        @include font(title, $c-pd); 
+        @include selectNo;
+
+
+        //border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+      }
+
+      & .des   { 
+        position: relative;
+        display: block;
+        width: calc(100% - 56px);
+        left: 62px;
+        opacity: 0.86;
+
+        @include font(subtitle1, $c-pd); 
+        @include selectNo;
+
+     		 //border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+
+      & .num   { 
+        position: absolute;
+        display: inline-block;
+        top: 8px;
+        right: 0px;
+        opacity: 0.54;
+        @include font(body2, $c-pd); 
+        @include selectNo;
+        letter-spacing: 0px;
+    	  //border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+
+		& .avatarLine{
+			position: absolute;
+			display: inline-block;
+			height: 48px;
+			width: 48px;
+			left: 0px;
+			top: 2px;
+
+			border-radius: 50%;
+			background:  url('./img/pic/person.svg'), #E6E6E6;
+
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border: 2px solid $c-surface;
+
+		}
+
+
+		& .status{
+			position: absolute;
+			display: inline-block;
+			bottom: -4px;
+			right: -10px;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			opacity: 1;
+
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 71%;
+			@include selectNo;
+
+			border: 2px solid $c-surface;               //←←←←←←←←←←←←←←←←←←←←
+
+		}
+
+
+
+}

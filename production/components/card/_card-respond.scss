@@ -1,0 +1,14 @@
+.card {
+
+
+	@include respond(table) {
+		margin-top: 4px;
+		margin-bottom: 4px;
+		width: calc(100% - 8px);
+
+	}
+
+}
+
+
+

@@ -1,0 +1,49 @@
+
+.tab{
+	& .select{
+		& label{
+			color:$c-w;
+			opacity: 0.99;
+		}
+		& svg{
+			fill:$c-w;
+			opacity: 0.99;
+		}
+		//border-bottom: 2px solid $c-w;
+
+	}
+}
+
+//@include transition(0.250s, stan)
+
+.sub-page{ //NO WORKING
+	transition: all 0.300s;
+	transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);	
+	//border: 1px solid red;
+}
+
+.tab-anime{
+	@include transition(0.250s, emph)
+}
+
+.tab-plain{
+	background-color: transparent;
+	
+	& div{	
+		//@include interaction(plain);
+
+		& label{
+			//@include font(button, $c-b);
+		}
+
+		& svg{
+		}
+
+	}
+
+	& .indicator{
+		//background-color: $c-p;
+	}
+
+
+}

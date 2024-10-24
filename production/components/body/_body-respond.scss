@@ -1,0 +1,60 @@
+body{
+
+	//THIS WAS COMMENT FOR  EVV, IS ONLY PHONE ################OJOOOOOOOOOOOOOOOOO
+
+	@include respond (desktop) {
+		width: calc(100vw - 136px);
+		margin-left: 136px;
+		// border:  5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+	}
+
+	@include respond (desktop-big) {
+		width: calc(100vw - 136px);
+		//height: calc(100vh - 0px );
+		margin-left: 136px;
+		// border:  5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+	}
+
+
+	@include respond (table) {
+		width: calc(100vw - 136px);
+		height: calc(100vh - 0px );
+		margin-left: 136px;
+	}
+
+	@include respond (phone) {
+		width: calc(100vw - 0px);
+		margin-left: 0px;
+	}
+
+
+}
+ 
+
+// .body-sideSheet{
+
+// 	@include respond (table-land) {
+// 		width: calc(100vw - 328px); //sideSheet 256 / leftNav 72
+// 		margin-left: 72px;
+// 	}
+
+// 	@include respond (table) {
+// 		width: calc(100vw - 72px);
+// 		margin-left: 72px;
+// 	}
+
+// 	@include respond (phone) {
+// 		width: calc(100vw - 0px);
+// 		margin-left: 0px;
+// 	}
+
+	
+// }
+
+// .body-bodyBar{
+// 	@include respond (table) {
+// 		padding-right: 0px;
+// 	}
+
+// }
+

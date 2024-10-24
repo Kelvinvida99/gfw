@@ -1,0 +1,30 @@
+
+.loading-show{
+	animation: loading-show  0.250s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+
+}
+
+@keyframes loading-show{
+
+	from{ top: 100vh;  }
+	to  { top: 0vh;    }
+}
+
+
+.loading-hide{
+	animation: scrim-hide  0.250s;
+	animation-fill-mode: both;
+	//border: 5px solid red;
+	@include animationT(acce);
+}
+
+
+@keyframes loading-hide{
+
+	from{ top: 0vh;   }
+	to  { top: 100vh; }
+}
+
+

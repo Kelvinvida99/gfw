@@ -1,0 +1,499 @@
+
+
+
+.file{
+
+	& .body{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			padding: 8px;
+			background: $c-w;
+				@include bs-1;
+
+			
+		& .cont{
+			position: relative;
+			display: inline-block;
+			float: left;
+			margin: 4px;
+			height: 160px;
+			width: 150px;
+			border-radius: 4px;
+
+			overflow: hidden;
+			cursor: pointer;
+			background-color: $c-surface;
+			@include interaction-surface;	
+			@include transition(.150s, emph)
+			border: 0.1px solid $c-divider;
+			//border: 0.5px solid red; /*---------------------------------------------*/
+
+			& > .img{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+				//border:  1px solid blue; /*---------------------------------------------*/		
+			}
+
+			& .des{
+				position: absolute;
+				width: 100%;
+				bottom: 0px !important;
+				height: 32px;
+				overflow: hidden;
+				background: $c-w;
+
+				cursor: pointer;   
+				user-select: none;	
+				display: flex;
+				align-items: center;
+
+				@include interaction-white;
+			    
+				//border: 0.5px solid green; /*---------------------------------------------*/      	   	     
+
+				 & >  .img { 
+				 	width: 28px;
+				 	height: 24px;
+				 	margin-left: 4px;
+				 	opacity: 1 !important;
+
+				 	//border: 0.5px solid green; /*---------------------------------------------*/   
+				 }
+				 
+				 & >  label { 
+				 	position: relative;
+				 	display: inline-block;
+				 	width: calc(100% - 4px);
+				 	margin-left: 4px;
+			    	//font-weight: 500;
+			        pointer-events:none;   
+				    user-select: none;		    	
+			    	white-space: nowrap;
+					text-overflow: ellipsis;
+					text-wrap:none; 
+					overflow: hidden;
+
+				 	@include font(body2, $c-b);
+					opacity: 1 !important;
+
+
+				   //border: 0.5px solid blue; /*---------------------------------------------*/							
+				 }
+				 
+
+	         // border: 0.5px solid blue; /*---------------------------------------------*/	
+
+
+			}/*--des*/
+
+
+			& .check{
+				position: absolute;
+				width: 48px;
+				height: 48px;
+				top: 4px; 
+				right: 4px;	
+				padding: 4px;
+	      		width:  28px;
+			    height: 28px;
+			    border-radius: 50%;
+			    opacity: 0;	
+
+			    //border: 0.5px solid green; /*---------------------------------------------*/
+
+			    & svg{
+			    	position: absolute;
+			    	top: 0px;
+			    	left: 0px;
+			    	width:  24px;;
+			   	    height: 24px;;
+	  				fill: $c-w;
+
+					pointer-events:none;   
+					user-select: none;	
+					transition: all 0.250s;	
+					border-radius: 33.33;  
+					opacity: 0;
+					//border: 0.5px solid yellow; /*---------------------------------------------*/      	   	   
+			    }/*svg*/
+
+				    &:hover{
+				    	& svg {  opacity: 0.54;  }
+				    }/*hover*/
+
+			   }/*&--check*/	
+
+			   	&:hover{
+			    	& .check{ 
+			    		border: 2px solid $c-p;
+			    		opacity: 1;	  
+			    	}
+			    }/*hover*/
+
+			    &:active{
+			    	transform: scale(0.95);
+			    }/*hover*/
+
+		}/*cont*/
+
+
+		.cont-checked{
+			& .check{ 
+				border: 2px solid $c-p;
+				opacity: 1;	  
+				  & svg{
+				  	opacity: 1;	
+				  	fill: $c-p;
+				  }
+			}	 	
+			@include bs-8;
+		 }/*cont-checked*/
+
+
+		.cont-empty{
+			position: relative;
+			display: inline-block;
+			width: 120px;
+			height: 120px;
+			margin: 16px;
+			background: $c-surface-l;
+			border-radius: 50%;
+			@include align-center;
+			@include centerFlexColum;
+			
+
+			//border: 0.5px solid red; /*---------------------------------------------*/ 
+
+			    & > svg{
+			    	position: relative;
+			    	display: inline-block;
+			    	width:  36px;;
+			   	    height: 36px;;
+	  				fill: $c-b;
+	  				opacity: 0.54;
+
+					@include selectNo;	
+					@include leftFlex;
+
+					//border: 0.5px solid yellow; /*---------------------------------------------*/      	   	   
+			    }/*svg*/
+
+				 & >  label { 
+				 	position: relative;
+				 	display: inline-block;
+				 	width: 100%;
+				 	margin-left: 4px;
+			    	//font-weight: 500;
+			        pointer-events:none;   
+				    user-select: none;		    	
+			    	white-space: nowrap;
+					text-overflow: ellipsis;
+					text-wrap:none; 
+					overflow: hidden;
+					text-align: center;
+
+				 	@include font(overline, $c-b);
+					opacity: 1 !important;
+
+
+				  // border: 0.5px solid blue; /*---------------------------------------------*/							
+				 }
+
+				 &-upload{
+					 @include  interaction-color-ramdon($c-surface-l);
+					  & > svg{ 
+
+					  	fill: $c-p; 
+					  	opacity: 1;
+
+					  }
+				 }
+
+
+		 }/*cont-checked*/
+
+
+
+
+
+	}/*body*/	
+
+
+
+
+}/*files*/
+
+
+
+/*HTML
+
+
+<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+
+	<div class="fullcont fullcont__show form"  >
+		
+		  <!---HEAD-->
+		  <!---HEAD-->
+		  <!---HEAD-->
+		  <!---HEAD-->
+		<div class="appbar appbar__secondary"> <!---appbar__cont-principal-->
+			<div class="appbar__cont-principal"> 
+				<div class="appbar__icon fl  fullcont--hide" >
+				  <svg><use xlink:href="css/svg.svg#back"></use></svg>
+				</div>
+				<h6 class="appbar__title">Nurses Form</h6>
+				<div class="appbar__icon " >
+				  <svg><use xlink:href="css/svg.svg#save"></use></svg>
+				</div>
+			</div> <!---appbar__cont-principal-->
+
+			<div class="appbar__cont-file dn" >  <!---appbar__cont-file-->
+				<div class="appbar__icon fl  file_select_cancel" >
+				  <svg><use xlink:href="css/svg.svg#close"></use></svg>
+				</div>
+				<h6 class="appbar__title file_title"></h6>
+				<div class="appbar__icon " >
+				  <svg><use xlink:href="css/svg.svg#down"></use></svg>
+				</div>
+				<div class="appbar__icon  remove_file">
+				  <svg><use xlink:href="css/svg.svg#delete"></use></svg>
+				</div>
+			</div> <!---appbar__cont-file-->
+
+
+
+		</div> <!---appbar__secondary-->
+
+		  <!---BODY-->
+		  <!---BODY-->
+		  <!---BODY-->
+		  <!---BODY-->
+  
+  		<div class="fullcont__body"    >
+		<label  class="t t--card">Nurse Files</label>
+
+
+
+		    <div class="card file_in_list_view" > 
+
+		    	<div class="card--file_header" >
+
+		    		<div class="card--file_header__cont fl"   >
+		    			<svg><use xlink:href="css/svg.svg#back"></use></svg>
+		    		</div>
+
+		    		<div class="path" title="original long path"> 
+		    			<label><span>Drive 1 ></span> <span>Folder 2 ></span> <span>Folder 3></span> <span>Folder 5></span>   <span>Folder 6></span> </label>
+		    		</div>
+
+		    		<div class="card--file_header__cont change_file_view card--file_header__cont--2" >
+
+		    			<svg><use xlink:href="css/svg.svg#list"></use></svg>
+		    		</div>	
+
+		    		<div class="card--file_header__cont card--file_header__cont--2">
+		    			<svg><use xlink:href="css/svg.svg#folder"></use></svg>
+		    			<label>Create folder</label>
+		    		</div>
+
+		    		<div class="card--file_header__cont card--file_header__cont--2" >
+		    			<svg><use xlink:href="css/svg.svg#upload"></use></svg>
+		    			<label>Upload</label>		    		
+		    		</div>
+
+		    		<div class="card--file_header__cont card--file_header__cont--3" onclick="show__menu('file_options')">
+		    			<svg><use xlink:href="css/svg.svg#more"></use></svg>
+		    		</div>
+
+
+	    				    				    		
+		    	</div><!---card--file_header--> 
+
+	
+	
+				<div class="file_cont file_cont--folder" >
+
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#folder" style="fill:#FFC800;"></use></svg >
+						<label>Folder.jpg</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round" ></use></svg>
+					</div>
+
+				</div>   
+
+
+
+				<div class="file_cont " >
+
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc" style="fill:#DB4437;"></use></svg >
+						<label>doc345.jpg</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round" ></use></svg></div>
+
+				</div>   	
+
+
+				<div class="file_cont">
+
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc" style="fill:#DB4437;"></use></svg >
+						<label>doc345.jpg</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round" ></use></svg></div>
+
+				</div>   
+
+				<div class="file_cont">
+
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc" style="fill:#DB4437;"></use></svg >
+						<label>doc345.jpg</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round" ></use></svg></div>
+
+				</div> 
+
+
+			</div><!-- END CARD-->	<!-- END CARD-->	
+
+		<label  class="t t--card">Nurse Files</label>
+		    <div class="card " > 
+
+		    	<div class="card--file_header" >
+
+		    		<div class="card--file_header__cont fl">
+		    			<svg><use xlink:href="css/svg.svg#back"></use></svg>
+		    		</div>
+
+		    		<div class="path" title="original long path"> 
+		    			<label><span>Drive 1 ></span> <span>Folder 2 ></span> <span>Folder 3></span> <span>Folder 5></span>   <span>Folder 6></span> </label>
+		    		</div>
+
+		    		<div class="card--file_header__cont change_file_view" >
+		    			<svg><use xlink:href="css/svg.svg#list"></use></svg>
+		    		</div>	
+
+		    		<div class="card--file_header__cont">
+		    			<svg><use xlink:href="css/svg.svg#folder"></use></svg>
+		    			<label>Create folder</label>
+		    		</div>
+
+		    		<div class="card--file_header__cont">
+		    			<svg><use xlink:href="css/svg.svg#upload"></use></svg>
+		    			<label>Upload</label>		    		
+		    		</div>
+	    				    				    		
+		    	</div><!---card--file_header--> 
+
+	
+	
+				<div class="file_cont file_selected">
+					<div class="file_cont--img" style=" background: url(css/photo/david.jpg);" > </div>
+					  
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc"></use></svg>
+						<label>XXXXXXXX.doc</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round"></use></svg>
+					</div>
+
+				</div><!---file_cont-->  	
+
+				<div class="file_cont">
+					<div class="file_cont--img" > </div>
+					  
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc"></use></svg>
+						<label>doc345.doc</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round"></use></svg></div>
+
+				</div>   	
+
+				<div class="file_cont">
+					<div class="file_cont--img" > </div>
+					  
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc"></use></svg>
+						<label>doc345.doc</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round"></use></svg></div>
+
+				</div>   	
+
+				<div class="file_cont">
+					<div class="file_cont--img" > </div>
+					  
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc"></use></svg>
+						<label>doc345.doc</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round"></use></svg></div>
+
+				</div>   	
+
+				<div class="file_cont">
+					<div class="file_cont--img" > </div>
+					  
+					<div class="file_cont--des" >
+						<svg><use xlink:href="css/svg.svg#doc"></use></svg>
+						<label>doc345.doc</label>
+					</div> 
+
+					<div class="file_cont--check">
+						<svg><use xlink:href="css/svg.svg#check-round"></use></svg></div>
+
+				</div>   	
+
+
+
+			</div><!-- END CARD-->	<!-- END CARD-->	
+  
+
+
+		</div> <!---fullcont__body-->
+
+
+	</div>	
+
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+	<!--TEST FILES -->
+
+
+	
+
+*/

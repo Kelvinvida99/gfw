@@ -1,0 +1,117 @@
+     
+
+.map{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+     // background-color: $c-w;
+     // border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+      & .title {  
+        display: block;
+        @include font(subtitle2, $c-b); 
+        //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+      }
+
+      & .des   { 
+        display: block;
+        @include font(body2, $c-b); 
+
+        & span { 
+          opacity: 0.54; 
+          color:$c-error; 
+
+
+        }
+
+      }         
+
+      & .des-nogeo   { 
+         display: none;
+         @include font(body1, $c-error); 
+
+        & a {
+          padding-left: 16px;
+          padding-right: 16px;
+          cursor: pointer;
+          @include font(button, $c-p);
+          @include interaction-white;
+          //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+        }
+
+
+      }      
+
+      //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+      & .body {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        //border: 0.4px solid green;            //←←←←←←←←←←←←←←←←←←←←
+
+         & iframe {
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+         }
+         & .cor{
+          
+          position: absolute;
+          bottom: -20px;
+          right: 0px;
+          //@include font(caption, $c-b)
+
+          //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+         }
+
+      }
+
+      & .legend {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        //border: 0.4px solid green;            //←←←←←←←←←←←←←←←←←←←←
+
+         & div{
+          
+          position: relative;
+          display: inline;
+          min-height: 24px;
+          padding-left: 16px;
+          padding-right: 8px;
+
+          @include font(caption, $c-b);
+          
+          & span{
+            position: absolute;
+            display: inline-block;
+            left: 0px;
+            top: 0px;
+            width: 12px;
+            height: 12px;
+          }
+          //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+         }
+
+         & .blue  { & span{  background: $cs-blue;   } }
+         & .purple{ & span{  background: $cs-purple; } }
+         & .green { & span{  background: $cs-green;  } }
+         & .yellow{ & span{  background: $cs-yellow; } }
+         & .orange{ & span{  background: $cs-orange; } }
+         & .red   { & span{  background: $cs-red;    } }
+         & .lg    { & span{  background: $cs-lg;     } }
+
+      }/**/
+
+}/*location*/
+
+.map{
+  & .legend-blue{
+    & div{  }
+  }
+}
+

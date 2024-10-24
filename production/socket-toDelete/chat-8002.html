@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html></html>
+<body>chat-002 david</body>
+
+<script>
+  
+const ws2   =  new WebSocket("ws://localhost:8002")
+
+  const user =  {act: "join", data: {id:8002, name:"zuleika", status: 'active'} }
+
+ ws2.onopen = function(ev){
+
+	ws2.send( JSON.stringify( user ) )
+	// ws.onclose = function(){}
+	ws2.onclose = function(){ console.log( 'WEBSOCKET CLOSET' ) }
+
+
+}
+
+
+</script>
+
+

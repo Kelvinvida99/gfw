@@ -1,0 +1,47 @@
+
+
+
+//confirmation-dark remove if you find it
+@mixin confirmation-dark2 {
+
+	.confirmation{
+		background-color: $d-e12;
+
+	      & .title {  
+	        @include font(h5, $c-w); 
+	        opacity: 0.87;
+
+
+	      }
+
+	      & .des   { 
+	        @include font(body2, $c-w); 
+	         opacity: 0.54;
+
+	     }
+
+      & .details   { 
+
+	      & .code {  
+	        @include font(caption, $c-w); 
+	        opacity: 0.54;
+
+	      }
+
+	      & .num  { 
+	        display: block;
+	        text-align: center;
+	        @include font(48, $c-w); 
+	     }
+
+	      & .helper {  
+	        @include font(caption, $d-error); 
+
+	      }
+
+     }
+
+
+
+	}
+}

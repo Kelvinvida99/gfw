@@ -1,0 +1,12 @@
+.sideSheet{
+	
+	@include respond (table-land) {
+		width: 256px;
+	}
+
+	@include respond (table) {
+		display: none;
+	}	
+
+
+}

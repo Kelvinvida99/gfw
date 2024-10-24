@@ -1,0 +1,39 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-06-21 14:30:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-22 11:38:am LINDSAY@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-22 11:42:am LINDSAY@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-22 12:21:pm LINDSAY@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-22 12:22:pm LINDSAY@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 09:54:am miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 10:32:am miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 11:21:am rodin@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 11:23:am rodin@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 12:52:pm lindsay@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 12:52:pm lindsay@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 17:57:pm lindsay@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 22:09:pm lindsay@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 22:16:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 23:38:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 23:38:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 23:38:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 23:39:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 23:39:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 23:39:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 23:40:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 23:40:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-23 23:41:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-23 23:42:pm miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-24 00:05:am miguel@,  Unknown column 'id' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, inventory
+2024-06-24 00:06:am miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 09:03:am Rodin@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 16:02:pm Rodin@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 21:26:pm lindsay@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 22:50:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 23:12:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 23:14:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-24 23:15:pm miguel@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-25 08:04:am rodin@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-25 10:17:am Rodin@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-25 11:19:am rodin@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction
+2024-06-25 11:21:am ypena@,  Column 'id' in order clause is ambiguous, executeSelect.php@9, MySql->SELECT@1052, transaction

@@ -1,0 +1,100 @@
+
+
+@mixin nowrapxx {
+		overflow:hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+}
+
+@mixin textOverflow{
+		white-space: nowrap; 
+		text-overflow: ellipsis;
+		text-wrap:none;	
+		overflow: hidden;
+}
+
+
+
+@mixin font-init ($size, $width, $color, $space){
+	color: 			#{$color};
+	font-size:  	#{$size};
+	font-weight:  	#{$width};
+	letter-spacing: #{$space};
+	//@include noZtransform;
+}
+
+@mixin font($category, $color) {
+
+	@if $category == 60 {
+		@include font-init (60px, 500, $color, 0.5px);
+	}
+
+
+	@if $category == 48 {
+		@include font-init (48px, 500, $color, 0.15px);
+	}
+
+	@if $category == 34 {
+		@include font-init (34px, 500, $color, 1.50px);
+	}
+
+
+	@if $category == h5 {
+		@include font-init (27px, 500, $color, 0.15px);
+	}
+
+	@if $category == h6 {
+		@include font-init (20px, 500, $color, 0.15px);
+	}
+
+	@if $category == title {
+		margin-bottom: 4px;
+		@include font-init (16px, 500, $color, 1.50px);
+	}
+
+	@if $category == subtitle1 {
+		@include font-init (16px, normal, $color, 0.15px);
+	}
+
+	@if $category == subtitle2 {
+		@include font-init (14px, 500, $color, 0.1px);
+	}
+
+	@if $category == body1 {
+		@include font-init (16px, normal, $color, 0.5px);
+	}
+
+	@if $category == body2 {
+		@include font-init (14px, normal, $color, 0.25px);
+	}
+
+	@if $category == body3 {
+		@include font-init (12px, normal, $color, 0.25px);
+	}
+	
+	@if $category == button {
+		@include font-init (14px, 500, $color, 1.25px);
+		text-transform: uppercase;
+	}
+
+	@if $category == buttonLower {
+		@include font-init (14px, 500, $color, 1.25px);
+	}
+
+	@if $category == caption {
+		@include font-init (12px, normal, $color, 0.4px);
+	}
+
+	@if $category == overline {
+		@include font-init (10px, normal, $color, 1.5px);
+		text-transform: uppercase;
+	}
+
+	@if $category == overlinelLower {
+		@include font-init (10px, normal, $color, 1.5px);
+	}
+
+}
+
+

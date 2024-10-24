@@ -1,0 +1,321 @@
+
+.mode-view{
+
+	& > .fab-to-edit     { display: absolute; }
+	& > .fab-to-update   { display: none;     }
+	& > .fab-to-add      { display: none;     }
+	& .fab-to-readOnly   {transform: scale(0);    }
+
+	// & > .page .card-click{
+	// 	@include interaction-white;
+	// }
+
+	& > .page  .row{
+		pointer-events: none;
+		& > div{ 
+			pointer-events: none;
+			& > .card {
+				pointer-events: auto !important;
+
+				//border: 1px solid blue;
+			}	
+		}
+	}
+
+
+
+	
+	//border: 5px solid red ;               //←←←←←←←←←←←←←←←←←←←← 
+
+	& > .page .textfield{
+
+		//
+		@include selectNo;
+
+		& > .trailing { display: none;}		
+		& > .helper   { display: none;}
+		& > .counter  { display: none;}
+		& > .indicador{ display: none;}
+		& > .elem     { 
+			border-bottom: none; 
+			background: none;
+			// top: 12px;
+			// padding-top: 4px;
+			//padding-left: 0px;
+			//height: 24px;
+			font-family: roboto;
+			pointer-events: none;
+
+			@include font(subtitle2, $c-b);
+
+		
+			&::placeholder {
+			  opacity: 0;
+			}
+
+		//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+		}	
+
+		& > .label { 
+			//top: 2px;
+			//left: 0px;
+			//opacity: 0.87;
+			@include font(caption, $c-b);
+			pointer-events: none;
+			//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+		}
+
+		// height: 36px;
+		// margin-top: 2px;
+		//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+	}/*textfield*/
+
+
+
+
+	& > .page  .radio{
+		
+		padding: 0px;
+		min-height: 20px;
+		@include selectNo;
+
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+
+		& > div{ 
+			margin-top: 0px;
+			padding: 0px !important;
+			min-height: 8px;
+			//padding-right: 8px;
+			//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+		& > label{  
+			margin-left: 8px;  
+			top: 2px;
+			margin-right: 8px;
+			//display: none;
+		}
+
+			& > input{
+
+				//left: 0px;
+				top: 0px;
+				width: 18px;
+				height: 18px;	
+
+				border-radius: 0px;
+				border: 2px solid $c-b;
+				opacity: 1;	
+
+				&::before{
+					top: 2px;
+					left: 2px;
+
+					border-radius: 0%;	
+					width: 8px;
+					height: 8px;
+				}
+				
+				&:checked{
+					background: $c-b url(svg/check.svg) no-repeat;
+
+					// &::before{
+					// 	display: none;
+					// }					
+				}
+
+
+			}/**/
+		}
+		margin-top: 2px;
+		//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+	}/*radio*/
+
+
+	& .page  .checkbox{
+		@include selectNo;
+		// min-height: 20px;
+		// padding: 0px;
+		
+		& > .title{
+			//left: -4px;
+			//border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+		}
+
+		& > input{
+			// left: 0px;
+			// top: 4px;
+			// width: 18px;
+			// height: 18px;	
+
+			// border-radius: 0px;
+			border: 2px solid $c-b;
+			opacity: 1;
+			
+			////@include selectNo;
+
+
+
+			&:checked{
+				background: $c-b url(svg/check.svg) no-repeat;
+
+
+				&::before{
+					display: none;
+				}					
+			}
+
+			&::before{
+			   opacity:0;
+			   transform: scale(0);
+			}
+			
+
+		}
+		& > label{
+			// top: 0px !important;
+			// margin-left: 4px;
+
+		}
+		//margin-top: 2px;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}/*checkbox*/
+
+	& .page  .checkbox-mini label{
+		//margin-top: 6px;
+	}
+
+
+	& .page .signature-line{
+			//border: 2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+		    &  label {
+		    	display: none;
+		    } 
+		    &  span {
+		    	visibility: visible;
+		    } 
+
+		    &::after{
+		    	position: absolute;
+		    	display: inline-block;
+		    	content: '';
+		    	top: 0px;
+		    	left: 0px;
+
+		    	width: 100%;
+		    	height: 100%;
+		        background-color: transparent;
+		        background-image: url("./svg/view.svg");
+		        background-repeat: no-repeat;
+		        background-size: auto;
+		        background-position: center;
+		        //border: 0.2px solid green;               //←←←←←←←←←←←←←←←←←←←← 
+		    }
+	}/*checkbox*/
+
+
+	& .page .multitable{
+		border: 0.2px solid divider;               //←←←←←←←←←←←←←←←←←←←← 
+
+		@include interaction-surface();
+
+		& > .cont{
+			@include selectNo;
+		}
+
+		& > .cont > .line{
+
+			@include interaction-white;
+			//padding-left: 0px;
+			//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+
+			& > .removeLine { display: none; }
+
+			& .checkbox-mini label{
+				margin-top: 2px;
+				//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+			& .checkbox-mini input{
+				margin-top: 1px;
+				//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+			&  .textfield   { 
+				top: 1px;
+				height: 20px  !important;;
+
+				&  .elem   { 
+					height: 20px !important;
+					top: 0px;
+				}
+
+				& > .chip-cont{
+					top: -16px;
+
+					& > .chip{ 
+						height: 16px;
+						background: transparent;
+
+						&  > label{
+							left: 2px;
+							top: -4px;
+							font-size: 12px !important;
+						    font-weight: 400 !important;
+						    letter-spacing: 0.5px !important;					
+						   // border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+						}
+
+						& > span{ display: none; }/*remove*/			
+					}/*time-task*/
+
+				}
+
+
+
+
+			}/*Textfield*/
+
+		}
+
+		& > .btn { @include selectNo; }
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}/*checkbox*/
+
+
+
+
+
+
+	& .page .textfield-autocomplete{
+
+		& > .chip-cont{
+		//	top: -16px;
+
+			& > .chip{ 
+				//height: 16px;
+				background: transparent;
+
+				&  > label{
+					//left: -8px;
+					//top: 4px;
+					//font-size: 14px !important;
+				    font-weight: 500 !important;
+				    //letter-spacing: 0.5px !important;					
+				    //border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+				}
+
+				& > span{ display: none; }/*remove*/			
+			}/*time-task*/
+
+		}
+
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}/*checkbox*/
+
+}
+
+
+
+

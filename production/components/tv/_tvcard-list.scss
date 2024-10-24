@@ -1,0 +1,148 @@
+.tvcard-list {
+
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			//margin-top: 8px;
+			min-height: 42px;
+
+			//border: 0.3px solid yellow;               //←←←←←←←←←←←←←←←←←←←←
+
+      & .title {  
+        position: relative;
+        display: block;
+        width: calc(100% - 150px);
+        top: 0px;
+        left: 40px;
+
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;     //... at the end of input
+				
+        @include font(subtitle2, $c-w);
+        opacity: 0.54; 
+        @include selectNo;
+
+
+       //border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+      }
+
+      & .des   { 
+        position: relative;
+        display: block;
+        width: calc(100% - 150px);
+        left: 40px;
+        opacity: 0.86;
+
+        @include font(subtitle1, $c-w); 
+        @include selectNo;
+
+     		//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+
+      & .num   { 
+        position: absolute;
+        display: inline-block;
+        top: 0px;
+        right: 16px;
+        opacity: 0.54;
+        @include font(h5, $c-w); 
+        @include selectNo;
+    	  //border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+     }
+
+
+	& .icon{
+			position: absolute;
+			display: inline-block;
+			height: 36px;
+			width: 36px;
+			left: 0px;
+			top: 2px;
+			border-radius: 8px;
+
+			background-color: rgba($cg-blue, 0.7); 
+			border-color: $cg-blue;
+			border-width: 2px;
+	  	border: solid;
+
+		@include centerFlex;
+		@include selectNo;
+		//border: .5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+		& svg {
+			height: 24px;
+			width: 24px;
+			fill: $c-w;
+			//border: .5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+	}
+
+
+	& > .trailing{
+		position: absolute;
+		height: 32px;
+		width: 32px;
+
+		left: 8px;
+		top: 12px;
+		cursor: pointer;
+		border: 1px solid $c-divider;
+		opacity: 0.16;
+
+		@include selectNo();
+		@include centerFlex;
+
+
+			& svg{
+				height: 24px;
+				width: 24px;
+				display: block;
+				fill: $c-b;
+				//opacity: 0.32;
+				@include selectNo;
+				//border: 0.5px solid yellow;           //←←←←←←←←←←←←←←←←←←←←  
+			}
+
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+}
+
+.tvcard-list-green {
+	& .icon { background-color: $cs-green;  }
+	//& .num  {  color: $cs-green;  }
+}
+
+.tvcard-list-blue {
+	& .icon { background-color: $cs-blue;  }
+	//& .num  {  color: $cs-blue;  }
+
+}
+
+.tvcard-list-purple { & .icon { background-color: rgba($cg-purple, 0.7);    border-color: $cg-purple;  } }
+.tvcard-list-red    { & .icon { background-color: rgba($cg-red, 0.7);       border-color: $cg-red;     } }
+.tvcard-list-blue   { & .icon { background-color: rgba($cg-blue, 0.7);      border-color: $cg-blue;    } }
+.tvcard-list-green  { & .icon { background-color: rgba($cg-green, 0.7);     border-color: $cg-green;   } }
+.tvcard-list-orange { & .icon { background-color: rgba($cg-orange, 0.7);     border-color: $cg-orange;   } }
+
+.tvcard-list-cpa  { & .icon { background-color: $cpa;   } }
+.tvcard-list-cpb  { & .icon { background-color: $cpb;   } }
+.tvcard-list-cpc  { & .icon { background-color: $cpc;   } }
+.tvcard-list-cpd  { & .icon { background-color: $cpd;   } }
+.tvcard-list-cpe  { & .icon { background-color: $cpe;   } }
+
+
+
+/*
+
+		&-green  {background-color: $cs-green;  }
+		&-blue   {background-color: $cs-blue;   }
+		&-purple {background-color: $cs-purple; }
+		&-red    {background-color: $cs-red;    }
+
+*/

@@ -1,0 +1,27 @@
+.fullcont{
+	position: fixed;
+	display: block;
+	
+	height: 100vh;
+	width: calc(50% - 76px);
+	right: 0px;
+	bottom:-100vh;
+	
+	overflow: hidden;	
+
+	background-color: $c-surface;
+	//@include bs-8;
+	@include back-visivility;
+	//@include align-center;
+	
+	z-index: 40;	
+	
+	&-2{  z-index: 60;	 }
+
+	border-left: 1px solid lighten($c-divider, 0);  
+	border-right: 1px solid lighten($c-divider, 0);  
+
+	//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+}
+

@@ -1,0 +1,57 @@
+.sideSheet{
+
+	position: fixed;
+	display: inline-block;
+	height: calc(100% - 56px);
+	top: 56px;
+	right: calc(-1 *(100% - 56px ); //orange remove 56
+		//right: -100px;
+	width: 340px;
+	z-index: 10;
+	border-left: 1px solid $c-divider;
+
+	background-color: $c-w;
+	//border: 1px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+	& > .title{
+		display: block;
+		margin: 8px;
+
+		@include font(h6, $c-b);
+		@include selectNo;
+	}
+	& > .des{
+		display: block;
+		margin: 8px;
+		margin-left: 16px;
+		opacity: 0.87;
+
+		@include font(body2, $c-b);
+		@include selectNo;
+	}
+
+	& > .clear{
+		position: absolute;
+		height: 48px;
+		width: 48px;
+		top: 0px;
+		right: 8px;
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		@include interaction($c-w);//click/interactions
+		@include centerFlex;
+
+		& svg{
+			height: 24px;
+			width: 24px;
+			opacity: 0.54;
+			fill: $c_b;
+			
+			@include selectNo;
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+	}
+
+
+}

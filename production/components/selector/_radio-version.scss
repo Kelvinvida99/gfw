@@ -1,0 +1,58 @@
+.radio-error{
+	& > div{
+			& input{
+				border: 2px solid $c-error;
+				&::before{  background-color: $c-error; }
+				&:checked{ border: 2px solid $c-error ; }
+			}
+		& label{ @include font(body2, $c-error); }
+	}
+}
+
+.radio-line{
+	& > div{
+		position: relative;
+		display: inline-block;
+		float: left;
+		min-height: 28px;	
+		//margin-top: 8px;	
+		padding-right: 16px;
+		padding-left: 0px;
+		//border: 1px solid blue;
+
+		@include leftFlex;
+
+	}
+}
+
+
+.radio-line-desk{
+	height: 36px;
+	//border: 1px solid blue;
+	& > .title {
+		top: -2px !important;
+		opacity: 0.76;
+		@include font(overlinelLower, $c-b);
+		text-transform: uppercase !important;
+		font-size: 10px !important;
+		letter-spacing: 0.5px !important;
+		font-weight: 500 !important;
+
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+	& > div{
+		position: relative;
+		display: inline-block;
+		float: left;
+		min-height: 20px;	
+		top:-4px;
+		padding-right: 16px;
+		padding-left: 0px;
+		
+
+		@include leftFlex;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+	}
+}

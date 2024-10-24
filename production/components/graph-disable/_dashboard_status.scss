@@ -1,0 +1,108 @@
+.dashboar_status{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		min-height: 54px;
+		float: left;
+
+		//padding: 4px;
+		background-color: $c-w;
+		margin-right: 4px;
+		margin: 6px;
+
+		//border: 1px solid green;/*------------------------------------------- --*/
+
+		& .circle{
+			position: absolute;
+			display: inline-block;
+			top: 0px;
+			left: 0px;
+			width:  42px;
+			height: 42px;	
+			margin: 4px;
+
+		    border-radius: 50%;
+
+		    @include centerFlex;
+
+		    //border: 0.5px solid red; /*---------------------------------------------*/
+
+			& svg{
+				width: 24px;
+				height: 24px;
+				padding: 0px;
+				margin-right: 8px;
+				margin-left: 8px;
+				fill: $c-w;
+				opacity: 1;
+		    	//border: 0.5px solid red; /*---------------------------------------------*/
+			}/*& svg*/
+
+			&--blue{
+				background: $cs-blue;
+			    //box-shadow:  0px 2px 4px 0px $cs-blue; 
+			}
+
+			&--purple{
+				background: $cs-purple;
+			    //box-shadow:  0px 2px 8px 0px $cs-purple; 
+			}
+
+			&--green{
+				background: $cs-green;
+			    //box-shadow:  0px 2px 8px 0px $cs-green; 
+			}
+
+			&--yellow{
+				background: $cs-yellow;
+			   // box-shadow:  0px 2px 8px 0px $cs-yellow; 
+			}
+
+
+
+		}/*circle*/
+
+		& .title{
+   			position: relative;
+   			margin-top: 4px;
+   			margin-left: 58px;
+   			margin-right: 16px;
+   			@include font(caption, $c-g);
+   			letter-spacing: 1px;
+	    	//border: 0.5px solid red; /*---------------------------------------------*/
+
+		}
+
+		& .des{
+   			position: relative;
+   			margin-left: 58px;
+   			margin-right: 16px;
+   			margin-top: 6px;
+   			@include font(subtitle1, $c-g);
+   			
+   			& span{
+   				font-weight: 500;
+   				color: $c-b;
+   				opacity: 1;
+   				//border: 0.5px solid red; /*---------------------------------------------*/
+   			}
+
+	    	//border: 0.5px solid red; /*---------------------------------------------*/
+
+		}
+
+
+
+		& .active{
+			background-color: rgba(255, 0, 0, 0.3);
+			& svg{
+				opacity: 1;
+				fill: $cs-green;
+			}/*& svg*/			
+		}
+
+
+
+	}
+
+

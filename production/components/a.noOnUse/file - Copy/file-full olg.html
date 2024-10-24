@@ -1,0 +1,36 @@
+
+<div class="file-full file-full-showx"  id="file_full">  
+  
+<div class="appbar appbar-black">
+    <div class="primary"> 
+
+        <div class="hideFileFullView"  data-detail='{"click": [ {"dest":"ripple" }, {"dest":"file", "act":"hideFull" }  ] }' >
+            <svg><use xlink:href="../../../public/css/svg.svg#back"></use></svg>
+        </div>
+
+        <h1>File name</h1>
+
+
+        <div data-detail='{"click": [ {"dest":"ripple" },  {"dest":"file", "act": "downloadFileFromView"}] }' title='Download'>
+              <svg><use xlink:href="../../../public/css/svg.svg#download-o"></use></svg></div> 
+
+        <div data-detail='{"click": [ {"dest":"ripple" }, {"dest":"file", "act": "deleteFileFromView"}] }' title='Delete' >
+              <svg><use xlink:href="../../../public/css/svg.svg#delete-o"></use></svg> </div>              
+
+    </div> <!-- primary -->
+</div> <!-- appbar -->
+
+
+<div class="body" id="">
+
+  <iframe   data-centered="0"  style="user-select: none; max-width: 99%; max-height: 94%;"  data-detail='{"load": [ {"dest":"file", "act": "resizeFileView" }] }'  ></iframe>
+
+  <svg class="arrow " data-detail='{"click": [ {"dest":"ripple"},{"dest":"file", "act": "changeSrc", "direction": "-1" }] }' data-direction="-1"> 
+      <use xlink:href="../../../public/css/svg.svg#left"></use></svg>
+  <svg class="arrow arrow-right" data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act": "changeSrc", "direction": "1" }] }' data-direction="1"  >
+      <use xlink:href="../../../public/css/svg.svg#right"></use></svg>
+
+</div>
+
+
+</div><!--file_screen-->    

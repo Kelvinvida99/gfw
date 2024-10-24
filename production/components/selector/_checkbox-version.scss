@@ -1,0 +1,127 @@
+
+
+.checkbox-caution{
+
+	& input{ 
+		border: 2px solid $c-caution; 
+
+		&::before{
+		   background-color: $c-caution;
+		}
+		&:checked{
+			background:  $c-caution url(svg/check.svg) no-repeat;
+			border: 2px solid $c-caution ;	
+		}
+	}
+}
+
+
+.checkbox-caution{
+
+	& input{ 
+		border: 2px solid $c-caution; 
+
+		&::before{
+		   background-color: $c-caution;
+		}
+		&:checked{
+			background:  $c-caution url(svg/check.svg) no-repeat;
+			border: 2px solid $c-caution ;	
+		}
+	}
+}
+
+
+
+
+
+.checkbox-error{
+
+	& label{ @include font(body2, $c-error); }
+	& input{ 
+		border: 2px solid $c-error; 
+
+		&::before{
+		   background-color: $c-error;
+		}
+		&:checked{
+			background:  $c-error url(svg/check.svg) no-repeat;
+			border: 2px solid $c-error ;	
+		}
+	}
+}
+
+
+
+.checkbox-desk{
+
+	height: 36px;
+	& .title{ 
+		top: -2px !important;
+		opacity: 0.76;
+		@include font(overlinelLower, $c-b);
+		text-transform: uppercase !important;
+		font-size: 10px !important;
+		letter-spacing: 0.5px !important;
+		font-weight: 500 !important;
+
+	}
+	& input{ 
+		top: -8px;
+	}
+
+	& label{ 
+		top: -12px;
+			margin-left: 8px;
+	}
+
+	//border: 2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+}
+
+
+
+.checkbox-mini{
+	min-height: 24px;
+	margin-top: 4px;
+	padding: 0px;
+
+	//border:1px solid red;
+
+	& .title{
+		@include font(overlinelLower, $c-b);
+	}
+	
+	& label{
+		margin-left: 6px;
+		margin-top: 6px;
+		@include font(caption, $c-b);
+
+		//border:1px solid red;
+	}
+
+	& input{
+		position: relative;
+		display: inline-block;
+		//float: left;
+		left: 0px;
+		top: 4px;
+		margin-top: 2px;
+		width: 18px;
+		height: 18px;
+
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0px;
+			left: 0px;
+
+			width: 16px;
+			height: 16px;
+			border-radius: 0px;
+		}
+
+
+
+	}/*input*/
+}/**/
+

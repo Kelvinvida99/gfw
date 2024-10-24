@@ -1,0 +1,17 @@
+.drawer{
+	@include respond (phone) {
+		width: calc(100% - 56px);
+		left: calc(-1 *(100% - 56px));
+		//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+	}/*table*/
+
+	
+
+}
+
+// .drawer-show{
+// 	left:0px;
+// 	@include bs-16;
+
+// }

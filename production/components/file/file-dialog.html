@@ -1,0 +1,34 @@
+<div class="dialog " id="file-dialog">
+  
+    <label class="title">Rename File</label>
+    <label class="des">Current name is </label>
+
+
+
+    <div class="textfield textfield-filled " id="file-dialog-input">
+
+      <input  class= 'elem' type="text"   value="" 
+             data-detail='{"key":   [ {"dest":"textfield", "act":"typing"  },{"dest":"file", "act":"renameFile"  }] }' >
+
+        <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+          <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+        </div>
+
+        <div class="label">File Name</div> 
+    </div> 
+
+
+
+      <div class="button primary" data-detail="{
+                                          &quot;click&quot;: [ {&quot;dest&quot;:&quot;ripple&quot; }, {&quot;dest&quot;:&quot;dialog&quot;, &quot;act&quot;:&quot;hide&quot;},
+                                       {&quot;dest&quot;:&quot;file&quot;, &quot;act&quot;:&quot;renameFile&quot;} ]}">
+         <label>Save</label>        
+      </div>
+
+  
+      <div class="button secondary  button-plain" data-detail="{
+                                       &quot;click&quot;: [ {&quot;dest&quot;:&quot;ripple&quot; }, {&quot;dest&quot;:&quot;file&quot;, &quot;act&quot;:&quot;hideRenameDialog&quot;} ]}">
+           <label>Cancel</label>        
+      </div>
+
+</div>

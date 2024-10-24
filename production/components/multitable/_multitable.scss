@@ -1,0 +1,168 @@
+.multitable{
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 8px) ;
+	max-width: 1200px;
+
+	//margin-top: 8px;
+	min-height: 24px;
+	//padding: 8px;
+
+	//background: $c-surface2;
+	//border: 1px solid $c-divider;
+	left: 50%;
+	transform:translateX(-50%);
+		
+	//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+	
+
+
+	& > .cont, & > .cont-bottom,{
+
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			min-height: 24px;	
+			//@include selectNo;
+			//border: 1px solid $c-divider;
+			//border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+		& > .line{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			min-height: 24px;		
+			margin-top: 0px;
+			//padding: 2px;
+			padding-left: 24px;
+
+			background: $c-w;
+
+			//border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+			& > .removeLine{
+				position: absolute;
+				display: inline-block;
+				width: 20px;
+				height: 100%;
+				top: 0px;
+				left: 0px;
+				padding: 4px;
+				
+				@include interaction-white;
+				//border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+				
+				&::before{
+					position: absolute;
+					content: '';
+					top: 4px;
+					left: 0px;
+					width: 18px;
+					height: 18px;
+
+					background:  url(svg/delete.svg) no-repeat;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;					
+					opacity: 0.48;
+					//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+				}
+	
+
+				//border: 0.3px solid green;               //←←←←←←←←←←←←←←←←←←←←
+			}/*remove*/
+
+			& > .restriction {
+				position: absolute;
+				display: inline-block;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 0%;
+				//max-height: 24px;
+				background-color: $c-error;
+				opacity: 0.0;
+				// border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+
+
+		}/*line*/	
+
+	}
+
+	& > .btn, & .mt_btn {
+		position: relative;
+		display: iniline;
+		
+		width: 100%;
+		max-width: 150px;
+		
+		padding: 4px;
+		height: 24px;
+		text-align: center;
+		cursor: pointer;
+		user-select: auto;
+		pointer-events: auto;
+
+		@include interaction-color;
+		background-color: $c-p;
+		@include align-center;
+
+		& label{
+			@include font(caption, $c-w);
+			@include selectNo;
+		}
+
+		//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+	}
+
+	& > .cont-bottom{
+		//border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+		background-color: transparent;
+
+		& > .line{
+			background: transparent;
+		}	
+
+	}
+
+	& > .inputCont{
+		display: block;
+		margin-top: 24px;
+
+		border: 0.3px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+	} 
+
+
+}
+
+
+
+
+
+.multitable-deleteLine{
+		
+		@include flipOutX;
+
+		background-color: lighten($c-error, 36%) !important;	
+
+		& td{
+			& label{ color: $c-w !important ; }
+			& span { color: $c-w !important ; }
+
+		}
+
+		& > .remove{
+			background-color: lighten($c-error, 36%) !important;	
+			&::before{	background-color: lighten($c-error, 36%) !important; }
+		}
+}
+
+.mt-purchase-restriction{
+		
+	background-color: rgba(176,0,30,.07) !important;
+}

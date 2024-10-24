@@ -1,0 +1,72 @@
+
+.dt { /*data table*/
+	& > table{
+
+		//checkbox
+		& th:nth-child(1){ background: $c-surface;}
+		& th:nth-child(1), & td:nth-child(1) {
+			position: relative;
+			width: 48px;
+			max-width: 48px;
+
+			//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+		
+			& input{
+				position: absolute;
+				left: 15px;
+				top: 8px;
+				width: 18px;
+				height: 18px;
+
+				border: 2px solid $c-b;
+				border-radius: 2px;
+				opacity: 0.54;
+				
+				outline: none;
+				-webkit-appearance: none ;	
+		        appearance: none ;	
+		        cursor: pointer;
+
+		        @include transition(.100s, acce);
+
+				&::before{
+					position: absolute;
+					content: '';
+					top: -14px;
+					left: -14px;
+
+					width: 42px;
+					height: 42px;
+					border-radius: 50%;
+
+				   background-color: $c-p;
+				   opacity: 0;
+				   transform: scale(0);
+				   transition: all .100s;
+				   z-index: 2;
+				}
+
+				&:hover{
+					&::before{
+					   opacity: 0.08;
+					   transform: scale(1);
+					}
+				}
+
+				&:checked{
+					opacity: 1;
+					background:  $c-p url(svg/check.svg) no-repeat;
+				    background-size: 100% 100%;
+				    background-position: center;
+					border: 2px solid $c-p ;
+					border-radius: 2px;
+				}
+			}
+		}		
+
+	}
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+
+}/*dt*/
+

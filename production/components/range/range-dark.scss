@@ -1,0 +1,30 @@
+
+@mixin range-dark{
+	.range{
+
+		& .bar{
+			background-color: $d-divider;
+			& ol {
+				& li{
+					background-color: $d-divider;
+				}
+			}
+		}/*bar*/
+
+		& .bar-active{
+			background-color: $c-p;
+		}/*bar*/
+
+
+		& [class^="circle"]{
+			& label {
+				@include font(caption, $c-w);
+				//border: 0.4px solid green;            //←←←←←←←←←←←←←←←←←←←←
+			}
+
+
+		}
+
+
+	}
+}

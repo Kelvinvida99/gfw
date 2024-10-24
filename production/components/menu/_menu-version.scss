@@ -1,0 +1,11 @@
+.menu{
+
+	& > .disabled {
+
+	 	&:active  {transform:scale(1); }
+		& label{ opacity: 0.36}
+		& svg  { opacity: 0.18}
+
+	}/**/
+
+}

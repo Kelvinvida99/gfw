@@ -1,0 +1,112 @@
+#autocompleteSelector{
+	
+		position: fixed;
+		display: inline-block;
+		min-width: 112px;
+		min-height: 32px;
+		max-width: 800px;
+		max-height: 40vh;
+
+		border-radius: 4px;
+
+		background-color: $c-w;
+		transform: scaleY(0);
+		opacity: 0;
+		transform-origin: top;
+		//overflow: hidden;
+		overflow-y: scroll;
+
+		@include bs-8;
+		z-index: 210;
+
+	   // border: 0.5px solid blue;/***************************/
+		
+		& > label{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 36px;
+			padding: 8px;
+			padding-left: 8px;
+			@include font(body2, $c-b);
+			@include interaction-white;		
+			
+
+			z-index: 2000 !important; //same as dialog	
+			//border: 0.2px solid green;
+			
+			& > div {
+				position: absolute;
+				display: inline-block;
+				width: 28px;
+				height: 28px;				
+				top: 4px;
+				left: 4px;
+				border-radius: 50%;
+				//border: 0.2px solid green;
+				@include selectNo;
+
+				background-image:  url('./img/pic/person.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&:hover{ 
+			display: inline-block !important;
+		}
+
+		& > .selected {
+			background: $c-pl;
+			//border: 1px solid red;/***************************/
+		}
+
+}/*selector*/
+
+.autocompleteSelector-withAvatar{
+	//border: 1px solid red;/***************************/
+		& > label{
+			padding-left: 38px !important;
+		}	
+}
+
+.autocompleteSelector-show{
+	animation: menu-show  0.150s;
+	animation-fill-mode: both;
+	@include animationT(stan);
+}
+
+
+@keyframes autocompleteSelector-show{
+
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+
+.autocompleteSelector-hide{
+	animation: menu-hide  0.200s;
+	animation-fill-mode: both;
+	@include animationT(dece);
+}
+
+
+@keyframes autocompleteSelector-hide{
+
+	from {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+	to {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+}
+

@@ -1,0 +1,175 @@
+.multitable-error{
+
+	border: 2px solid $c-error !important;
+	
+}
+
+
+.multitable-restriction{
+
+	//border: 2px solid blue;
+
+	& > .line,{
+		// border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+		& > .restriction {
+			height: 100% !important;
+			opacity: 0.06 !important;;
+		}
+	}
+
+	& ~ .btn, & ~ .mt_btn {
+		opacity: 0.54;
+		cursor: pointer;
+		user-select: none;
+		pointer-events: none;
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+}
+
+//for mt width(45%;55%)
+.multitable-grid-purchase{
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    & > .multitable-flex-purchase{
+	    display: flex;
+	    flex-direction: row;
+	}
+}
+
+//for margin right-left into the mt
+.mx-1{
+	margin: 0px calc((100% / 12) / 1);
+}
+
+.mx-2{
+	margin: 0px calc((100% / 12) / 2);
+}
+
+.mx-3{
+	margin: 0px calc((100% / 12) / 3);
+}
+
+.mx-4{
+	margin: 0px calc((100% / 12) / 4);
+}
+
+.mx-5{
+	margin: 0px calc((100% / 12) / 5);
+}
+
+.mx-6{
+	margin: 0px calc((100% / 12) / 6);
+}
+
+.mx-7{
+	margin: 0px calc((100% / 12) / 7);
+}
+
+.mx-8{
+	margin: 0px calc((100% / 12) / 8);
+}
+
+.mx-9{
+	margin: 0px calc((100% / 12) / 9);
+}
+
+.mx-10{
+	margin: 0px calc((100% / 12) / 10);
+}
+
+.mx-11{
+	margin: 0px calc((100% / 12) / 11);
+}
+
+.mx-12{
+	margin: 0px calc((100% / 12) / 12);
+}
+
+
+
+
+//for mt title
+.mx-title-1{
+	
+	width: calc((100% * 12) / 1);
+	margin: 0px 1px
+
+}
+
+.mx-title-2{
+	
+	width:  calc((100% * 12) / 2);
+	margin: 0px 2px
+
+}
+
+.mx-title-3{
+	
+	width:  calc((100% * 12) / 3);
+	margin: 0px 3px
+
+}
+
+.mx-title-4{
+	
+	width:  calc((100% * 12) / 4);
+	margin: 0px 4px
+
+}
+
+.mx-title-5{
+	
+	width:  calc((100% * 12) / 5);
+	margin: 0px 5px
+}
+
+.mx-title-6{
+	
+	width:  calc((100% * 12) / 6);
+	margin: 0px 6px
+
+}
+
+.mx-title-7{
+	
+	width:  calc((100% * 12) / 7);
+	margin: 0px 7px
+
+}
+
+.mx-title-8{
+	
+	width:  calc((100% * 12) / 8);
+	margin: 0px 8px
+
+}
+
+.mx-title-9{
+	
+	width:  calc((100% * 12) / 9);
+	margin: 0px 9px
+
+}
+
+.mx-title-10{
+	
+	width:  calc((100% * 12) / 10);
+	margin: 0px 10px
+
+}
+
+.mx-title-11{
+	
+	width:  calc((100% * 12) / 11);
+	margin: 0px 11px
+
+}
+
+.mx-title-12{
+	
+	width:  calc((100% * 12) / 12);
+	margin: 0px 12px
+
+}

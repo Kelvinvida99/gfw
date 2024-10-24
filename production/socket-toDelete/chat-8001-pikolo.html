@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html></html>
+<body><h1>PIKOLO</h1></body>
+
+<script>
+  
+  const ws =  new WebSocket("ws://localhost:8001")
+  //const ws =  new WebSocket("wss://echo.websocket.org")
+  const user =  {
+    id: '2',
+    name: 'pikolo',
+    company:'promise',
+    device:'desktop',
+    right: 'user',
+    time: new Date(),
+    
+    device: {
+      navegatorType: 'browser',
+      navegatorName: 'Chromex',
+      navegatorVersion: '86.0',
+      deviceType: 'phone',
+      deviceOs: 'android',
+      deviceVersion: '10.0'
+    }
+    
+
+    // timeZone: 'America/New_York'
+  }
+
+
+  ws.onopen = function(ev){
+
+    console.log('WS opened>')
+
+    ws.send( JSON.stringify(  { act: "join", data: user } ) )
+  }
+
+  ws.onmessage = function(ev){ 
+
+
+    console.log( 'ev.data', ev )
+
+  	const message = JSON.parse(ev.data)
+
+		switch (message.act){
+	    	 case 'updateUser':  updateUser(message);        break;
+		}
+
+
+  }/*onmessage*/ 
+
+  ws.onclose = function(){ console.log( 'WEBSOCKET CLOSET' ) }
+
+
+function updateUser(message){ console.log(message)
+
+}
+
+
+</script>
+
+
+
+

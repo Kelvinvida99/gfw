@@ -1,0 +1,129 @@
+
+
+
+
+.login-show{
+	animation: confirmation-show  0.250s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+	///border: 1px solid red;
+
+
+}
+
+
+@keyframes login-show{
+
+	from{ bottom: -100vh; }
+	to  { bottom: calc(0vh + 16px); }
+}
+
+.login-hide{
+	animation: confirmation-hide  0.100s;
+	animation-fill-mode: both;
+	@include animationT(acce);
+}
+
+
+@keyframes login-hide{
+
+	from{ bottom: calc(0vh + 16px); }
+	to  { bottom: -100vh;  }
+
+}
+
+
+
+
+//was used to rogate the key
+.login-loading{
+
+      & .cont  { 
+           & .illus-key  {   }
+     }/*cont*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .fullCont-show{
+
+// 	animation: fullCont-show  0.250s;
+
+// 	animation-fill-mode: both;
+// 	animation-delay: .150s;
+// 	animation-direction: alternate;
+
+
+// 	@include bs-6;	
+// 	@include animationT(stand);
+// 	@include transition(0.250s, stan);
+
+
+// }
+
+
+// @keyframes fullCont-show{
+
+
+// 	from{ top: 100vh; }
+// 	to  { top: 0vh;   }
+
+// }
+
+
+// .fullCont-hide{
+// 	animation: fullCont-hide  3.250s;
+
+// 	animation-fill-mode: both;
+// 	animation-direction: alternate;
+
+
+// 	@include bs-2;	
+// 	@include animationT(stand);
+// 	@include transition(0.250s, stan);
+// }
+
+
+// @keyframes fullCont-hide{
+
+// 	to {
+// 		top: 0vh;
+// 	}
+
+// 	to{
+// 		top: 100vh;
+// 	}	
+
+// }
+

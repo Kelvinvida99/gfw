@@ -1,0 +1,55 @@
+
+
+
+.fab-app{
+	left: auto;
+	top: auto;
+	bottom: 64px !important;
+	right:  12px !important;
+
+	//border: 4px solid red;
+}
+
+
+
+.fab-blue{
+	background: $cpc;
+	@include interaction-color-ramdon(#0072FF)
+	//border: 4px solid red;
+}
+
+
+.fab-green{
+	background: $c-s;
+	@include interaction-black;
+	@include interaction-color-s;
+	border: 4px solid red;
+}
+
+
+
+.fab-desktop{
+	background: $c-b;
+
+	//border: 4px solid red;
+}
+
+.fab-to-edit > .primary{
+	background: #000;
+	@include interaction-black;
+
+}
+
+.fab-to-add > .primary{
+	background: #0072FF;
+	@include interaction-color-ramdon(#0072FF)
+}
+
+
+.fab-to-update > .primary{
+	background: #0072FF;
+	@include interaction-color-ramdon(#0072FF)
+
+}
+
+

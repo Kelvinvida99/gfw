@@ -1,0 +1,157 @@
+.file{
+	
+	.header{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		@include transition(.150s, emph);
+		background: $c-w;
+		// padding-left: 4px;
+		// padding-right: 4px;
+
+		//border: 0.1px solid red; /*---------------------------------------------*/
+
+		& .path	{
+			position: relative;
+			float: left;
+			min-height: 24px;
+			width: calc(100% - 344px);
+			min-width: 100px;
+			margin-top: 8px;
+
+			//border: 0.1px solid $c-divider; /*---------------------------------------------*/
+
+	  			& label{
+	  				position: relative;
+	  				float: left;
+	  				height: 32px;
+	  				display: inline-block;
+	  				padding-bottom: 16px;
+	  				//margin-top: 4px;
+	  				padding-top: 8px;
+	  				padding-right: 24px;
+	  				padding-left: 8px;
+	  				overflow: hidden;
+	  				max-width: 130px;
+					user-select: none;
+
+
+	  				@include font(caption, $c-p);
+	  				@include textOverflow;
+	  				@include interaction-surface;  
+					@include transition(.150s, emph);
+					font-weight: 500;
+
+					&:active  {transform:scale(0.90); }
+
+	  				//border: 0.1px solid red; /*---------------------------------------------*/				
+
+
+						&::before{
+							position: absolute;
+							content: '';
+							top: 2px;
+							right: 0px;
+
+							width: 24px;
+							height: 24px;
+
+							background:   url(svg/right.svg) no-repeat;
+						    background-size: 100% 100%;
+						    background-position: center;
+						    opacity: 0.54;
+							
+							//border: 0.1px solid red; /*---------------------------------------------*/
+						}	
+
+	  				//border: 0.1px solid red; /*---------------------------------------------*/
+
+	  			}/*& span*/
+
+		}/*path*/
+
+
+		& .icon{
+
+			position: relative;
+			display: inline-block;
+			float: right;
+			height: 48px;
+			min-width: 48px;
+			display: flex;
+  			align-items: center;
+  			justify-content:center;
+
+  			padding: 4px;
+  			cursor: pointer;
+  			overflow: hidden;
+
+			@include interaction-surface;
+			@include transition(.150s, emph);
+	 		&:active  {transform:scale(0.90); }
+
+			//border: 0.5px solid red; /*---------------------------------------------*/
+
+		 	& svg{
+				width: 24px;
+				height: 24px;
+				margin: 4px;
+
+				pointer-events:none;   
+				user-select: none;
+				//fill:$c-surface;
+				//stroke:black;
+				//opacity: 0.54;
+
+				//border: 1px solid red; /*---------------------------------------------*/		
+			}/*svg*/
+
+			& label	{
+				margin: 2px;
+				margin-right: 8px;
+				@include font(caption, $c-b);
+				@include selectNo;
+				pointer-events:none;   
+				user-select: none;
+				//border: 1px solid red; /*---------------------------------------------*/	
+			}/*label*/
+
+		}/*__icon*/
+
+		.icon-left{
+			float: left;
+		}
+
+
+	}/*header*/
+
+	& .second{
+		background-color: $c-s;
+		display: none;
+
+		& .icon{
+			@include interaction-color-s;
+			& svg{ fill: $c-w;}
+			& label{ @include font(caption, $c-w);}
+		}
+		//border: 1px solid green; /*---------------------------------------------*/	
+	}
+
+	& .third{
+		background-color: $c-b;
+
+		& .icon{
+			@include interaction-black;
+			& svg{ fill: $c-w;}
+			& label{ @include font(caption, $c-w);}
+		}
+		//border: 1px solid green; /*---------------------------------------------*/	
+	}
+
+
+}/*file*/
+
+/*
+	file-regularFiles
+	file-deletedFiles
+*/

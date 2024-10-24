@@ -1,0 +1,78 @@
+.scrim{
+	position: fixed;
+
+	height: 100vh;
+	width: 100vw;
+
+	right: 0px;
+	bottom:-100vh;
+
+	opacity: 0.36;
+	background-color: $c-pdScrim;
+
+	z-index: 30;
+}
+
+#scrim_drawer{
+	z-index: 99;
+	//opacity: 0.54;
+} 
+
+#scrim_fullcont{
+	z-index: 39; //fullcont > 40
+} 
+
+
+.scrim_fullcont_mobile{
+	z-index: 44; //fullcont > 40
+
+	 opacity: 0.16;
+	//border: 5px solid red;
+} 
+
+//#scrim_confirmation
+#scrim_backdrop {
+	z-index: 30;
+	//background-color: transparent;
+}
+#scrim_signature{
+	z-index: 209;
+}
+#scrim_board{
+	z-index: 209;
+}
+
+#scrim_file, 
+#scrim_file_newFolder,
+#scrim_file_rename
+{ z-index: 70; }
+
+#scrim_menu, 
+#scrim_dialog {
+
+	z-index: 200;
+	opacity: 0.0 !important;
+	//border: 5px solid red;
+	//background-color: transparent;
+}
+
+
+#scrim_autocomplete {
+
+	z-index: 200;
+	background-color: transparent;
+}
+
+
+
+#scrim_login{
+	z-index: 209; //loing > 210
+	
+	//opacity: 0.99 !important;
+	//border: 1px solid red;
+} 
+
+
+
+
+

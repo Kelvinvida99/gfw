@@ -1,0 +1,62 @@
+.dt {
+
+	&  > .footer{
+
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 42px;
+		//border: 0.1px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+
+	@include interaction-surface;//click/interactions
+	@include centerFlex;
+	@include transition(0.250s, stan)
+    &:active  {transform:scale(0.90); }
+
+	& label{
+		@include font(button, $c-p);
+		@include selectNo;
+		@include transition(0.250s, stan)
+	
+		//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+	}
+
+	& svg{
+		height: 24px;
+		width: 24px;
+		margin-right: 4px;
+		fill: $c-g;
+		opacity: 0;
+		
+		@include selectNo;
+		@include transition(0.250s, stan)
+		//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+	}
+
+
+	}/*footer*/
+
+
+	
+}
+
+
+
+.dt {
+
+	&  > .footer-disabled{
+
+	    &:active  {transform:scale(1); }
+
+		& label{ 
+			@include font(button, $c-b);
+			opacity: 0.54 }
+		& svg  { display: none; }
+
+	}/*footer*/
+
+
+	
+}
+

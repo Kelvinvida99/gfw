@@ -1,0 +1,97 @@
+.leftnav-tv{
+	display: inline-block;
+	position: fixed;
+	width: 72px;
+	height: calc(100vh - 0px);
+	left: 0px;
+	top: 0px;
+	padding-top: 96px;
+
+	//background-color: $c-w;
+
+	z-index: 1;
+	//border-right: 0.2px solid $c-error;               //←←←←←←←←←←←←←←←←←←←←
+
+	& > div {
+		position: relative;
+		float: left;
+		height: 60px;
+		width: 100%;
+		cursor: pointer;
+		//background-color: $c-w;
+		//margin-bottom: 16px;
+
+		@include centerFlexColum;
+		//@include transition(.150s, stan);
+		-webkit-backface-visibility: hidden;
+
+		&:active  {transform:scale(0.90); }
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←←
+		
+		& svg{
+			margin-top: 8px;
+			height: 32px;
+			width: 32px;
+			fill: $c-w;
+			//stroke: $c-g;
+			//stroke-width: 20;
+
+			z-index: 2;
+			opacity: 0.5;
+
+
+			@include selectNo;
+			@include back-visivility();
+			//@include transition(.150s, emph);
+			//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+		& label{
+			margin: 0px;
+			margin-top: 4px;
+			margin-bottom: 4px;
+			z-index: 2;
+
+			@include selectNo;
+			@include back-visivility();
+			@include font(caption, $c-w);
+			text-align: center;
+			height: 16px;
+			opacity: 0.5;
+			//border: 0.5px solid red;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+
+		&:hover{ 
+			//background-color: lighten($c-pd, 10%)
+		}	
+
+	}/*div*/
+
+
+
+
+
+}
+
+
+.leftnav-tv{
+	& .select{
+			//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+		& svg {
+			fill: $c-w;
+			opacity: 0.99;
+		}		
+
+		& label{
+			color: $c-w;
+			opacity: 0.99;
+		}
+
+		&:hover{
+			// & label{ @include font(caption, $c-p); }
+			// & svg  { color: $c-p;                  }
+		}	
+	}
+}

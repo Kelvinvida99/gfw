@@ -1,0 +1,44 @@
+.button{
+	position: relative;
+	display: inline-block;
+
+	float: right;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	min-height: 48px;
+	min-width: 64px;
+	max-width: 328px;
+	background-color: $c-p;
+	// border-radius: 4px;
+
+	@include bs-2;
+	@include interaction-color;//click/interactions
+	@include centerFlex;
+	z-index: 1;
+	//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+	& label{
+		@include font(button, $c-w);
+		@include selectNo;
+	
+		//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+	}
+
+	& svg{
+		height: 24px;
+		width: 24px;
+		margin-right: 4px;
+		fill: $c-w;
+		
+		@include selectNo;
+		//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+	}
+
+	&:hover{ @include bs-4; }	
+
+	 @include transition(.150s, emph);
+	 &:active  { transform:scale(0.95); }
+}

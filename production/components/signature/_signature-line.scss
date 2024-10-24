@@ -1,0 +1,77 @@
+
+.signature-line{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+
+    border: 1px solid $c-divider;            //←←←←←←←←←←←←←←←←←←←← 
+		
+
+    & canvas{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+
+        width: calc(100% - 8px);
+        max-width: 500px;
+        height: 165px;  
+        //margin-top: 4px;
+
+        @include align-center;
+        border: 1px solid $c-divider;            //←←←←←←←←←←←←←←←←←←←← 
+        //border: 3px solid yellow;              //←←←←←←←←←←←←←←←←←←←← 
+      }
+
+
+	   &  label {
+	    position: absolute;
+	    display: inline-block;
+        width: calc(100% - 8px);
+       // max-width: 500px;
+       height: 167px;  
+
+	    top: 0px;
+	    left: 0px;
+	    padding-top: 12px;
+	    cursor:pointer;
+	   // background: $c-surface;
+
+    	background-color:rgba(0,0,0 , 0.08);
+		background-image: url("./svg/touch.svg");
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center;
+		      
+	    text-align: center;
+	    z-index: 500;
+
+	    user-select: none;
+	    @include align-center;
+	    //@include interaction-white;
+	    @include font(subtitle2, $c-g);
+	   // border: 0.1px solid red;            //←←←←←←←←←←←←←←←←←←←← 
+
+    }   
+
+	   &  span {
+	    position: absolute;
+	    display: inline-block;
+	    top: 8px;
+	    left: 0px;
+	    visibility: hidden;
+
+	    text-align: center;
+	    z-index: 500;
+
+	    user-select: none;
+	    @include align-center;
+	    //@include interaction-white;
+	    @include font(subtitle2, $c-g);
+	    //border: 0.1px solid red;            //←←←←←←←←←←←←←←←←←←←← 
+
+    }       
+
+
+
+}

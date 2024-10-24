@@ -1,0 +1,26 @@
+@mixin dt-simple-dark{
+	.dt-simple{
+
+		& > table {
+
+			& th, & td { 
+				color: $c-w;
+			}
+
+			&  tr {
+
+				& td:not(:nth-child(1)){
+					//color:red;
+				}
+
+
+				& td{
+				}
+
+			}
+
+
+		}
+	}
+
+}

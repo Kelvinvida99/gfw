@@ -1,0 +1,84 @@
+
+.dt { /*data table*/
+	& > table{
+
+		& th:not(:first-child) { //show arrow
+			//border: 1px solid red;
+			&:hover{
+				&::before{
+					opacity: 0.36;	
+					transform: scale(1) rotate(0deg);
+				}
+			}
+			border-top: 2px solid transparent;
+		}
+
+		& th{
+			border-bottom: 4px solid transparent; 
+			@include interaction-surface;
+			&:hover{ border-bottom: 4px solid $c-divider; }
+		}
+
+		& tr .selected{ //TH header selected
+			opacity: 1 ;
+			//background-color: lighten($c-p, 48%);
+			border-bottom: 4px solid $c-p;
+
+			&::before{
+				opacity: 0.87 ;  
+				transform: scale(1) rotate(0deg) ;
+			}
+
+			&:hover{
+				&::before{
+				opacity: 0.87 ;  
+				transform: scale(1) rotate(0deg) ;
+				}
+			}			
+		}
+
+		& tr .reverse{ //TH header reverse
+			opacity: 1 ;
+			border-bottom: 4px solid $c-p;
+			&::before{
+				opacity: 0.87 ;   
+				transform: scale(1) rotate(180deg);
+
+			}
+
+			&:hover{
+				&::before{
+				opacity: 0.87 ;  
+				transform: scale(1) rotate(180deg) ;
+				}
+			}
+			
+		}
+	}
+}
+
+.tr-notice{
+	//@include pulse-center;
+	& td{
+		background: lighten($cs-green, 8%);
+		& label{ color: $c-w !important ; }
+		& span { color: $c-w !important ; }
+
+		border-bottom: 1px solid $c-w;
+	}
+
+}
+
+.tr-deleteRow{
+		
+		@include flipOutX;
+
+		background-color: lighten($c-error, 36%) !important;	
+
+		& td{
+			& label{ color: $c-w !important ; }
+			& span { color: $c-w !important ; }
+
+		}
+
+}

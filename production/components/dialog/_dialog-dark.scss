@@ -1,0 +1,16 @@
+
+@mixin dialog-dark {
+
+	.dialog{
+		background-color: $d-e24;
+
+		& .title{
+			color: $c-w;
+		}
+
+		& .des{
+			color: $c-w;
+		}
+	}
+
+}

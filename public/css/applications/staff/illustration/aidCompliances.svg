@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 553.1 766.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        opacity: .33;
+      }
+
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-4 {
+        fill: #bbbdbf;
+        opacity: .41;
+      }
+
+      .cls-5 {
+        fill: #e6605f;
+      }
+
+      .cls-6 {
+        fill: #03dac6;
+      }
+
+      .cls-7 {
+        opacity: .23;
+      }
+
+      .cls-8 {
+        fill: #5193f4;
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-10 {
+        fill: #f6f6f6;
+      }
+
+      .cls-10, .cls-11, .cls-12, .cls-13 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-10, .cls-13 {
+        stroke: #bbbdbf;
+        stroke-width: 8.02px;
+      }
+
+      .cls-14 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-11 {
+        stroke: #4c7bc2;
+      }
+
+      .cls-11, .cls-12 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 2.32px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-15 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-16 {
+        fill: url(#linear-gradient-2);
+        opacity: .43;
+      }
+
+      .cls-17 {
+        fill: #f7f7f7;
+      }
+
+      .cls-12 {
+        stroke: #4379c9;
+      }
+
+      .cls-18 {
+        opacity: .62;
+      }
+
+      .cls-19 {
+        fill: #5c88c9;
+      }
+
+      .cls-20 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-21 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-22 {
+        fill: #e59421;
+      }
+
+      .cls-13 {
+        fill: #c7c7c7;
+      }
+
+      .cls-23 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-24 {
+        fill: #f7c658;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="105.36" cy="235.83" fx="98.77" fy="223.36" r="55.57" gradientUnits="userSpaceOnUse">
+      <stop offset=".05" stop-color="#fff52e"/>
+      <stop offset=".19" stop-color="#fff530" stop-opacity=".99"/>
+      <stop offset=".31" stop-color="#fff539" stop-opacity=".95"/>
+      <stop offset=".43" stop-color="#fff648" stop-opacity=".88"/>
+      <stop offset=".54" stop-color="#fff75c" stop-opacity=".78"/>
+      <stop offset=".65" stop-color="#fff877" stop-opacity=".65"/>
+      <stop offset=".75" stop-color="#fffa97" stop-opacity=".49"/>
+      <stop offset=".86" stop-color="#fffbbe" stop-opacity=".31"/>
+      <stop offset=".96" stop-color="#fffde9" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="105.18" cy="237.86" fx="105.18" fy="237.86" r="24.93" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-3" cx="105.18" cy="237.86" fx="94.89" fy="229.68" r="13.15" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".4" stop-color="#fff" stop-opacity=".99"/>
+      <stop offset=".54" stop-color="#fff" stop-opacity=".97"/>
+      <stop offset=".65" stop-color="#fff" stop-opacity=".92"/>
+      <stop offset=".73" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity=".77"/>
+      <stop offset=".86" stop-color="#fff" stop-opacity=".66"/>
+      <stop offset=".92" stop-color="#fff" stop-opacity=".53"/>
+      <stop offset=".97" stop-color="#fff" stop-opacity=".39"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="419.37" y1="707.39" x2="427.8" y2="304.92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#fefefe" stop-opacity=".01"/>
+      <stop offset=".14" stop-color="#fafafb" stop-opacity=".27"/>
+      <stop offset=".27" stop-color="#f6f7f8" stop-opacity=".49"/>
+      <stop offset=".39" stop-color="#f2f4f6" stop-opacity=".68"/>
+      <stop offset=".51" stop-color="#f0f2f4" stop-opacity=".82"/>
+      <stop offset=".63" stop-color="#eef1f3" stop-opacity=".92"/>
+      <stop offset=".73" stop-color="#edf0f2" stop-opacity=".98"/>
+      <stop offset=".82" stop-color="#edf0f2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="51.55" y1="736.92" x2="59.98" y2="334.76" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="153.13" y1="780.98" x2="157.76" y2="559.66" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="464.35" y1="668.02" x2="477.79" y2="26.19" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="280.84" y1="757.75" x2="287.09" y2="459.3" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="-945.42" y1="44.61" x2="-666.23" y2="44.61" gradientTransform="translate(-590.57 0) rotate(-180) scale(.88 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#c9c9c9"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="-998.85" y1="58" x2="-719.66" y2="58" xlink:href="#linear-gradient-6"/>
+  </defs>
+  <g id="Bg-light">
+    <g class="cls-18">
+      <g>
+        <circle class="cls-2" cx="105.36" cy="235.83" r="55.57"/>
+        <circle class="cls-14" cx="105.18" cy="237.86" r="24.93"/>
+        <circle class="cls-15" cx="105.18" cy="237.86" r="13.15"/>
+      </g>
+    </g>
+    <polygon class="cls-21" points="463.8 718.25 385.97 718.25 383.6 282.78 461.43 282.78 463.8 718.25"/>
+    <polygon class="cls-16" points="95.98 747.78 18.15 747.78 15.79 312.64 93.62 312.64 95.98 747.78"/>
+    <path class="cls-20" d="M156.31,787.39h0c-21.34,0-38.7-17.19-38.91-38.53l-1.6-162.52c-.21-21.64,17.27-39.3,38.91-39.3h0c21.34,0,38.7,17.19,38.91,38.53l1.6,162.52c.21,21.64-17.27,39.3-38.91,39.3Z"/>
+    <polygon class="cls-23" points="512.46 142.01 514.82 667.25 427.28 667.25 424.91 142.01 462.72 142.01 462.72 26.12 474.64 26.12 474.64 142.01 512.46 142.01"/>
+    <polygon class="cls-9" points="322.46 550.67 324.65 756.97 243.57 756.97 241.38 550.67 276.4 550.67 276.4 459.3 287.44 459.3 287.44 550.67 322.46 550.67"/>
+    <path class="cls-1" d="M188.37,41.74c-46.41,12.21-108.13,21.55-166.04,7.7-7.55-1.8-25.19-6.02-24.7-9.33,.75-5.05,43.19-3.44,117.78-4.43,82.5-1.1,128.4-4.38,128.69-1.87,.13,1.11-8.7,3.36-49.7,8.4"/>
+    <path class="cls-3" d="M235.54,55.13c-46.41,12.21-108.13,21.55-166.04,7.7-7.55-1.8-25.19-6.02-24.7-9.33,.75-5.05,43.19-3.44,117.78-4.43,82.5-1.1,128.4-4.38,128.69-1.87,.13,1.11-8.7,3.36-49.7,8.4"/>
+    <polygon class="cls-17" points="0 723.53 172.36 723.53 222.93 747.78 369.76 747.78 400.22 723.53 553.1 723.53 553.1 766.7 0 766.7 0 723.53"/>
+  </g>
+  <g id="Plants">
+    <path class="cls-8" d="M375.55,222.03c-4.69-7.93-24.06-42.7-12.03-82.5,9.28-30.72,38.24-67.66,72-64.66,17.48,1.55,36.92,13.86,42.61,32.04,6.47,20.69-7.61,40.26-18.68,55.63-24.72,34.35-59.54,51.17-83.9,59.49Z"/>
+    <path class="cls-12" d="M381.21,206.42c2.19-12.22,6.23-27.52,13.92-44.05,13.6-29.22,32.3-48.63,44.97-59.75"/>
+    <path class="cls-19" d="M369.8,227c1.69-7.84,10.13-42.76,42.65-62.03,4.07-2.41,37.07-21.33,66.03-7.84,9.14,4.25,22.98,14.11,21.68,23.94-.23,1.75-1.55,8.12-19.82,16.13-22.75,9.98-31.12,4.67-50.44,10.37-31.66,9.35-46.18,34.54-55.75,28.63-3.17-1.96-4.06-6.25-4.35-9.19Z"/>
+    <path class="cls-11" d="M378.5,230.65c33.67-80.05,73.43-34.07,110.14-51.1"/>
+    <rect class="cls-13" x="273.54" y="273.66" width="147.96" height="22.54"/>
+  </g>
+  <g id="Main">
+    <rect class="cls-10" x="150.07" y="181.03" width="252.97" height="329.52" rx="12.26" ry="12.26" transform="translate(-69.24 622.34) rotate(-90)"/>
+    <polygon class="cls-5" points="399.31 497.29 374.33 473.11 349.35 497.29 349.35 422.4 399.31 422.4 399.31 497.29"/>
+    <circle class="cls-24" cx="374.78" cy="412.63" r="39.32"/>
+    <polygon class="cls-22" points="374.78 389.72 382.22 404.8 398.87 407.22 386.82 418.96 389.67 435.53 374.78 427.71 359.9 435.53 362.74 418.96 350.7 407.22 367.34 404.8 374.78 389.72"/>
+    <g class="cls-7">
+      <rect class="cls-4" x="136.03" y="248.44" width="287.77" height="54.33"/>
+      <rect class="cls-4" x="136.03" y="316.22" width="287.77" height="31.84"/>
+      <rect class="cls-4" x="136.03" y="379.31" width="287.77" height="18.74"/>
+      <rect class="cls-4" x="137.14" y="440.53" width="287.77" height="9.37"/>
+    </g>
+    <path class="cls-6" d="M250.73,269.4h-93.82c-7.4,0-13.4,6-13.4,13.4v93.82c0,7.4,6,13.4,13.4,13.4h93.82c7.37,0,13.4-6.03,13.4-13.4v-93.82c0-7.37-6.03-13.4-13.4-13.4Zm-13.4,67.01h-26.81v26.81h-13.4v-26.81h-26.81v-13.4h26.81v-26.81h13.4v26.81h26.81v13.4Z"/>
+  </g>
+</svg>

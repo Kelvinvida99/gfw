@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html></html>
+<body><h1>CRILIN 8001</h1></body>
+
+<script>
+  
+  const ws =  new WebSocket("ws://localhost:8001")
+  //const ws =  new WebSocket("wss://echo.websocket.org")
+  const user =  {
+    id: '1',
+    name: 'crilin',
+    company:'promise',
+    right: 'user',
+    time:  new Date(),    
+    //time:  new Date('2021-07-06T00:02:09.415Z'),    
+
+
+    device: {
+      navegatorType: 'browser',
+      navegatorName: 'Chromex',
+      navegatorVersion: '86.0',
+      deviceType: 'phone',
+      deviceOs: 'android',
+      deviceVersion: '10.0'
+    }
+
+
+  }
+
+console.log('',  new Date(user.time.toString()) )
+
+  ws.onopen = function(ev){
+
+    console.log('WS opened>')
+
+    ws.send( JSON.stringify(  { act: "join", data: user } ) )
+  }
+
+  ws.onmessage = function(ev){  console.log( 'ev.data', ev.data)
+
+    const message = JSON.parse(ev.data)
+
+    switch (message.act){
+         case 'updateUser':  updateUser(message);        break;
+         case 'command':     location.reload();        break;
+
+    }
+
+
+  }/*onmessage*/ 
+
+  ws.onclose = function(){ console.log( 'WEBSOCKET CLOSET' ) }
+
+
+function updateUser(message){ console.log(message)
+
+}
+
+getTimeDiff(user.time)
+
+function getTimeDiff(date1, date2){ //console.log('getTimeDifffffffffffffffffffffffffffffff',date1, date2)
+  
+  var start
+  var end   
+  var inFuture
+
+  if (date2 === undefined){
+
+    if( new Date() > date1 ){
+       start = new Date(date1)
+       end   = new Date()
+
+    }else{
+       end   = new Date(date1)
+       start = new Date()
+    } 
+
+  } else {
+
+    if( date1 > date2 ){
+       start = new Date(date1)
+       end   = new Date(date2)
+    }else{
+       end   = new Date(date1)
+       start = new Date(date2)
+    } 
+
+  }/*else*/
+
+  // get total seconds between the times
+  var delta = Math.abs( end - start) / 1000;
+
+  // calculate (and subtract) whole days
+  var days = Math.floor(delta / 86400);
+  delta -= days * 86400;
+
+  // calculate (and subtract) whole hours
+  var hour = Math.floor(delta / 3600) % 24;
+  delta -= hour * 3600;
+
+  // calculate (and subtract) whole minutes
+  var min = Math.floor(delta / 60) % 60;
+  delta -= min * 60;
+
+  // what's left is seg
+  var seg = delta % 60;
+
+
+  //is the time comparation in the past?
+  delta < 0 ? inFuture = false : inFuture = true
+  
+  console.log( {days: days, hour: hour, min:  min,  seg:  seg,  inFuture: inFuture} )
+
+
+
+
+
+
+
+
+}/*getTimeDiff*/
+
+</script>
+
+
+
+

@@ -1,0 +1,24 @@
+@mixin sideSheet-dark{
+
+	.sideSheet{
+		border-left: 1px solid $d-divider;
+		background-color: $d-surface;
+
+	& > .title{
+			color: $c-w;
+			opacity: 0.54;
+	}
+	& > .des{
+			color: $c-w;
+			opacity: 0.54;
+	}
+	& > .clear{
+		@include interaction($d-p);
+		& svg {
+			fill: $c-w;
+		}
+	}
+
+	}
+
+}

@@ -1,0 +1,62 @@
+
+
+
+/*************************LIST VIEW*/
+
+.file-list-view{
+ 	//
+ 	& .body{
+
+		& .cont{
+				height: 48px;
+				margin-left: 8px;
+				float: left;
+				background-color: $c-surface !important;
+				@include transition(.150s, emph)
+
+				
+			& > .img{ display: none; }
+
+			& .des {
+				top:0px;
+			    height: 48px;;
+			  	margin-left: 32px;
+			  	width: calc(100% - 32px);
+			  	overflow:hidden;
+			  	
+			  	& label{ 
+			  		width: calc(100% - 24px); 
+			  		//border: 0.5px solid red; /*---------------------------------------------*/
+			  	}
+			}
+			& .check{
+				top: 8px;	
+				left: 2px; 
+			}/*&--check*/
+
+			//border: 0.5px solid red; /*---------------------------------------------*/	
+		
+		}/*file_cont*/
+
+ 	}/*body*/
+
+}/*file_selected*/
+
+
+
+
+
+
+/*************************FILE SELECTING*/
+.file-selecting{
+
+	& .body .cont .check{
+		 border: 2px solid $c-p;
+		 opacity: 1;	
+	}/*file_cont*/	
+
+	& .primary  { display: none;}	
+	& .second   { display: inline-block;}	
+
+}/*file-selecting*/
+

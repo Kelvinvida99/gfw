@@ -1,0 +1,42 @@
+.card_tv {
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 16px);
+	max-width: 900px;
+	padding: 8px;
+
+	margin:auto;
+	margin-top: 8px;
+	//margin-bottom: 16px;
+	
+	background-color: $c-w;
+
+	@include clearfix;	
+	@include bs-1;
+
+
+	//z-index: 50;	
+
+	left: 50%;
+	transform:translateX(-50%);
+	@include transition(0.300s, stan)
+	
+	//pointer-events: none;
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}
+
+
+
+
+.card_tv {
+	@include respond(table) {
+		margin-top: 4px;
+		margin-bottom: 4px;
+		width: calc(100% - 8px);
+	}
+}
+
+
+

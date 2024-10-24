@@ -1,0 +1,945 @@
+
+
+
+<div class="fullcont fullcont-desktop mode-viewxx" id="company-fullcont"  data-entity="company">
+
+  <div class="appbar appbar-blue appbar-fullcont" >
+
+      <div class="primary"> 
+
+          <div class="fullcont-close" 
+              id="company-fullcont-close"
+                                  data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"company", "elem":"fullcont", "id":"company-fullcont", "act":"hide" } ] }' >
+              <svg><use xlink:href="../../../../../../public/css/svg.svg#close"></use></svg>
+          </div>
+
+          <h1>Company</h1>
+
+          <div class="select "    data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"fullcont", "id":"company-fullcont", "act":"pageMov", "pagetoshow":"entity" } ] }' >
+                  <label>Entity</label>
+          </div> 
+
+          <div class="statementsTab"    data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"fullcont", "id":"company-fullcont", "act":"pageMov", "pagetoshow":"statements" } ] }' >
+                  <label>Statements</label>
+          </div> 
+
+          <div  class="fileTab"   data-detail='{"click": [ 
+                                      {"dest":"ripple" }, 
+                                      {"dest":"fullcont", "id":"company-fullcont", "act":"pageMov", "pagetoshow":"filePage" } ] }' >
+                  <label>Files</label>
+          </div> 
+
+
+
+      </div> <!-- primary -->
+
+  </div> <!-- appbar -->
+
+
+          
+<div class="page page-appbar entity " data-detail='{ "page":"entity", "scroll": [ {"dest":"page-fullcont"  }] }'>
+
+
+  
+  <div class="row">
+    <div class="c50">
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+  
+        <div class="row">
+          <div class="c50">
+            <div class="textfield textfield-desk " id="company_form_company_name">
+                  
+              <input autocomplete="off" class='elem' type="text" value=""
+                data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }'>
+            
+              <div class="indicador"></div>
+            
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+            
+              <div class="label">Company Name </div>
+            
+            </div><!-- textfield -->
+          </div>
+
+          <div class="c50">
+            <div class="textfield textfield-desk" id="company_form_phone">
+              <input autocomplete="off" class='elem' type="text" value=''
+                data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                                                        "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                                                                {"dest":"textfield", "act":"validator", "validator": "phone"  }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+          
+              <div class="label">Phone</div>
+            </div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="row">
+  
+          <div class="c50">
+            <div class="textfield textfield-desk" id="company_form_contact">
+              <input autocomplete="off" class='elem' type="text" value='' data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                                      "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                                              {"dest":"textfield", "act":"validator", "validator": "phone"  }] }'>
+
+              <div class="indicador"></div>
+
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+
+              <div class="label">Contact</div>
+            </div>
+          </div>
+  
+          <div class="c50">
+            <div class="textfield textfield-desk" id="company_form_phone2">
+              <input autocomplete="off" class='elem' type="text" value='' data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                                      "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                                              {"dest":"textfield", "act":"validator", "validator": "phone"  }] }'>
+
+              <div class="indicador"></div>
+
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+
+              <div class="label">Other Phone</div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="row">
+          
+          <div class="c50">
+            <div class="textfield textfield-desk" id="company_form_email">
+              <input autocomplete="off" class='elem' type="text" value='' data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                                    "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                                             {"dest":"textfield", "act":"validator", "validator": "email"  }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+          
+              <div class="label">Email </div>
+          
+            </div><!-- textfield -->
+          </div>
+
+          <div class="c50">
+            <div class="textfield textfield-desk" id="company_form_fax">
+              <input autocomplete="off" class='elem' type="text" value='' data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                                    "key": [ {"dest":"textfield", "act":"typing"  }, 
+                                                             {"dest":"textfield", "act":"validator", "validator": "phone"  }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+          
+              <div class="label">Fax</div>
+          
+          
+            </div><!-- textfield -->
+          </div>
+
+        </div>
+      </div> <!-- card -->
+    </div>
+
+    <div class="c50">
+      <div class="card card-min-height">
+    
+        <div class="avatar avatar-large fileBrowseButton hideOnAdd"
+          data-detail='{"click": [ {"dest":"ripple"}, 
+                                                   {"dest":"file", "act":"triggerEntityAvatarUpload", "formId":"company-fullcont"} ] }'>
+    
+          <form style="display: none;" method="post" name='photo' class="fileUploadForm" id='company_form_file'
+            data-detail='{"submit": [ {"dest":"file", "act":"entityAvatarUpload", "formId":"company-fullcont"} ] }'
+            enctype="multipart/form-data" data-file_type="uploaded_files">
+            <input autocomplete="off" style="display: none;" class="avatarUploadInput" type="file" name="fileInputElement[]"
+              data-detail='{"change": [ {"dest":"file", "act":"triggerEntityAvatarSubmit", "entity":"company"} ] }'
+              multiple />
+          </form>
+        </div><!-- avatar -->
+    
+    
+      </div><!-- card -->
+    
+    </div>
+  
+  </div>
+
+  <div class="row">
+    <div class="c50">
+      <label class="font-card-title">Billing Address</label>
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+  
+        <div class="row">
+          <div class="c100">
+            <div class="textfield textfield-desk" id="company_form_bill_to_address">
+        
+              <input autocomplete="off" class='elem' type="text" value=""
+                data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }'>
+        
+              <div class="indicador"></div>
+        
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+        
+              <div class="label">Street</div>
+        
+        
+            </div><!-- textfield -->
+        
+          </div>
+        </div>
+  
+
+        <div class="row">
+
+          <div class="c50">
+         
+            <div class="textfield textfield-desk " id="company_form_bill_to_apt" >
+
+              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                       data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+              <div class="indicador"></div>
+
+              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+              </div>
+
+              <div class="label"  >Apt</div> 
+
+
+            </div><!-- textfield -->
+          </div>
+  
+          <div class="c50">
+         
+            <div class="textfield textfield-desk " id="company_form_bill_to_city" >
+
+              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                       data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+              <div class="indicador"></div>
+
+              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+              </div>
+
+              <div class="label"  >City</div> 
+
+
+            </div><!-- textfield -->
+          </div>
+  
+          
+  
+        </div>
+  
+        <div class="row">
+
+          <div class="c50">
+            <div class="textfield  textfield-filled textfield-multiselect textfield-desk" id="company_form_bill_to_state">
+          
+              <select class='elem' name="cars" id="cars" data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }] }'>
+              </select>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing">
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#downs"></use>
+                </svg>
+              </div>
+          
+              <div class="label">State</div>
+              <div class="counter"></div>
+            </div> <!-- textfield -->
+          </div>
+  
+          <div class="c50">
+          
+            <div class="textfield textfield-desk" id="company_form_bill_to_zip">
+          
+              <input autocomplete="off" class='elem' type="number"
+                data-detail='{ "key":   [ {"dest":"textfield", "act":"typing"  }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+          
+              <div class="label">Zip</div>
+          
+            </div><!-- textfield -->
+          
+          </div>
+
+        </div>
+      </div> <!-- card -->
+    </div>
+
+    <div class="c50">
+      <label class="font-card-title">Shipping Address</label>
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+  
+        <div class="row">
+          <div class="c100">
+            <div class="textfield textfield-desk" id="company_form_ship_to_address">
+        
+              <input autocomplete="off" class='elem' type="text" value=""
+                data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }'>
+        
+              <div class="indicador"></div>
+        
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+        
+              <div class="label">Street</div>
+        
+        
+            </div><!-- textfield -->
+        
+          </div>
+        </div>
+  
+
+        <div class="row">
+
+          <div class="c50">
+         
+            <div class="textfield textfield-desk " id="company_form_ship_to_apt" >
+
+              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                       data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+              <div class="indicador"></div>
+
+              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+              </div>
+
+              <div class="label"  >Apt</div> 
+
+
+            </div><!-- textfield -->
+          </div>
+  
+          <div class="c50">
+         
+            <div class="textfield textfield-desk " id="company_form_ship_to_city" >
+
+              <input autocomplete="off"  class= 'elem' type="text"   value="" 
+                       data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+              <div class="indicador"></div>
+
+              <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+              </div>
+
+              <div class="label"  >City</div> 
+
+
+            </div><!-- textfield -->
+          </div>
+  
+          
+  
+        </div>
+  
+        <div class="row">
+
+          <div class="c50">
+            <div class="textfield  textfield-filled textfield-multiselect textfield-desk" id="company_form_ship_to_state">
+          
+              <select class='elem' name="cars" id="cars" data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }] }'>
+              </select>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing">
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#downs"></use>
+                </svg>
+              </div>
+          
+              <div class="label">State</div>
+              <div class="counter"></div>
+            </div> <!-- textfield -->
+          </div>
+  
+          <div class="c50">
+          
+            <div class="textfield textfield-desk" id="company_form_ship_to_zip">
+          
+              <input autocomplete="off" class='elem' type="number"
+                data-detail='{ "key":   [ {"dest":"textfield", "act":"typing"  }] }'>
+          
+              <div class="indicador"></div>
+          
+              <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                <svg>
+                  <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                </svg>
+              </div>
+          
+              <div class="label">Zip</div>
+          
+            </div><!-- textfield -->
+          
+          </div>
+
+        </div>
+      </div> <!-- card -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="c50">
+      <label class="font-card-title">Items Expire On</label>
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+
+            <div class="row">
+              <div class="c50">
+                <div class="textfield textfield-desk" id="company_form_default_shelf_life" >
+                  <input autocomplete="off"  class= 'elem' type="number"  
+                          data-detail='{ "key":   [ {"dest":"textfield", "act":"typing"  }]  }' >
+      
+      
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+      
+                  <div class="label">Default Days</div> 
+                  <div class="helper" ></div>
+                </div><!-- textfield -->
+              </div>  
+            </div>
+
+            <div class="row">
+              <div class="c50">
+                <div class="textfield textfield-desk" id="company_form_alert_shelf_life" >
+                  <input autocomplete="off"  class= 'elem' type="number"  
+                          data-detail='{ "key":   [ {"dest":"textfield", "act":"typing"  }]  }' >
+      
+      
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+      
+                  <div class="label">Alert On</div> 
+                  <div class="helper" ></div>
+                </div><!-- textfield -->
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="c50">
+      <div class="row">
+        <div class="c50">
+          <label class="font-card-title">Purchase</label>
+        </div>
+
+        <div class="c50">
+          <label class="font-card-title">Allow sale from</label>
+        </div>
+      </div>
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+
+            <div class="row">
+              <div class="c50">
+                <div class="textfield textfield-desk" id="company_form_grace_period" >
+                  <input autocomplete="off"  class= 'elem' type="number"  
+                          data-detail='{ "key":   [ {"dest":"textfield", "act":"typing"  }]  }' >
+      
+      
+                  <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                    <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                  </div>
+      
+                  <div class="label">Grace Period</div> 
+                  <div class="helper" ></div>
+                </div><!-- textfield -->
+              </div>  
+
+              <div class="c50">
+                <div class="checkbox checkbox-desk" id="company_form_allow_to_sell_from_ordered">
+                  <span class="title"></span>
+                  <input autocomplete="off" type="checkbox">
+                  <label>Ordered Purchase</label>
+                </div><!-- checkbox -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="c50">
+                
+              </div>  
+
+              <div class="c50">
+                <div class="checkbox checkbox-desk" id="company_form_allow_to_sell_from_shipped">
+                  <span class="title"></span>
+                  <input autocomplete="off" type="checkbox">
+                  <label>Shipped Purchase </label>
+                </div><!-- checkbox -->
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+ 
+  <div class="row">
+    <div class="c50">
+      <label class="font-card-title">SERVICE TWILIO</label>
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+
+            <div class="row">
+              <div class="c50">
+                <div class="checkbox checkbox-desk" id="company_form__send_sms_service">
+                  <span class="title"></span>
+                  <input autocomplete="off" type="checkbox">
+                  <label >ENABLE MESSAGE SEND SERVICE</label>
+                </div><!-- checkbox -->
+              </div>
+
+              <div class="c100">
+                <div class="textfield textfield-desk" id="company_form_twilio_service_uid">
+            
+                  <input autocomplete="off" class='elem' type="text" value=""
+                    data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }'>
+            
+                  <div class="indicador"></div>
+            
+                  <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                    <svg>
+                      <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                    </svg>
+                  </div>
+                  <div class="label">UID</div>
+                </div>
+              </div>
+              <div class="c100">
+                <div class="textfield textfield-desk" id="company_form_twilio_service_token">
+            
+                  <input autocomplete="off" class='elem' type="text" value=""
+                    data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }'>
+            
+                  <div class="indicador"></div>
+            
+                  <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                    <svg>
+                      <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                    </svg>
+                  </div>
+                  <div class="label">TOKEN</div>
+                </div>
+              </div>
+              <div class="c100">
+                <div class="textfield textfield-desk" id="company_form_twilio_service_number">
+            
+                  <input autocomplete="off" class='elem' type="text" value=""
+                    data-detail='{ "key":   [ {"dest":"textfield","act":"typing"  }] }'>
+            
+                  <div class="indicador"></div>
+            
+                  <div class="trailing" data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }'>
+                    <svg>
+                      <use xlink:href="../../../../../../public/css/svg.svg#cancel"></use>
+                    </svg>
+                  </div>
+                  <div class="label">PHONE NUMBER</div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+</div>  <!-- page -->
+
+<div class="page page-appbar statements " data-detail='{ "page":"entity", "scroll": [ {"dest":"page-fullcont"  }] }'>
+
+  <div class="row">
+  
+    <div class="c100">
+      <div class="card card-click" data-detail='{"click": [  {"dest":"ripple" },
+            {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+
+        <div class="row">
+          <div class="c100">
+            <div class="textfield  textfield-desk textfield-textarea" id="company_form_purchase_statement" >
+                <textarea  autocomplete="off" class= 'elem' type="time"  
+                data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                "key": [ {"dest":"textfield", "act":"typing"   }] }' style="height: 56px;"></textarea>
+        
+                <div class="indicador"></div>
+
+                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+
+                <div class="label">Purchase Statement</div> 
+                <div class="helper" ></div>
+                <div class="counter"></div> 
+            </div><!-- textfield --> 
+          </div>
+        </div>
+
+
+        
+        <div class="row">
+          <div class="c100">
+            <div class="textfield  textfield-desk textfield-textarea" id="company_form_purchase_footer" >
+                <textarea  autocomplete="off" class= 'elem' type="time"  
+                data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                "key": [ {"dest":"textfield", "act":"typing"   }] }' style="height: 56px;"></textarea>
+        
+                <div class="indicador"></div>
+
+                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+
+                <div class="label">Purchase footer</div> 
+                <div class="helper" ></div>
+                <div class="counter"></div> 
+            </div><!-- textfield --> 
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="c100">
+            <div class="textfield  textfield-desk textfield-textarea" id="company_form_sale_statement" >
+                <textarea  autocomplete="off" class= 'elem' type="time"  
+                data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                "key": [ {"dest":"textfield", "act":"typing"   }] }' style="height: 56px;"></textarea>
+        
+                <div class="indicador"></div>
+
+                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+
+                <div class="label">Sale Statement</div> 
+                <div class="helper" ></div>
+                <div class="counter"></div> 
+            </div><!-- textfield --> 
+          </div>
+        </div>
+
+
+        
+        <div class="row">
+          <div class="c100">
+            <div class="textfield  textfield-desk textfield-textarea" id="company_form_sale_footer" >
+                <textarea  autocomplete="off" class= 'elem' type="time"  
+                data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                "key": [ {"dest":"textfield", "act":"typing"   }] }' style="height: 56px;"></textarea>
+        
+                <div class="indicador"></div>
+
+                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+
+                <div class="label">Sale footer</div> 
+                <div class="helper" ></div>
+                <div class="counter"></div> 
+            </div><!-- textfield --> 
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="c100">
+            <div class="textfield  textfield-desk textfield-textarea" id="company_form_good_bye_msg" >
+                <textarea  autocomplete="off" class= 'elem' type="time"  
+                data-detail='{"click": [ {"dest":"textfield", "act":"focused"  }], 
+                                "key": [ {"dest":"textfield", "act":"typing"   }] }' style="height: 56px;"></textarea>
+        
+                <div class="indicador"></div>
+
+                <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+                <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+
+                <div class="label">Good Bye Msg</div> 
+                <div class="helper" ></div>
+                <div class="counter"></div> 
+            </div><!-- textfield --> 
+          </div>
+        </div>
+        
+        
+        
+
+  
+        
+      </div> <!-- card -->
+    </div>
+  </div>
+
+</div>  <!-- page -->
+
+<div class="page page-appbar  filePage  dn "  
+     data-detail='{ "page":"filePage", "scroll": [ {"dest":"page-fullcont"  }] }'>
+  
+ <!-- <div class="card"></div>  card --> 
+
+    <div class="file file-regularFiles">
+
+            <div class="header primary">
+
+                 <div class="icon icon-left"  title="Go back"
+                    data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"goBack", "entity":"company" } ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                </div> 
+
+                <div class="path">
+                      <label data-detail='{"click": [ {"dest":"ripple"} ] }' > Root</label>                                   
+                </div>
+
+                <div class="icon"  title="Recycling bin"
+                    data-detail='{"click": [  
+                    {"dest":"ripple"}, 
+                    {"dest":"file", "act": "viewTrash" },
+                    {"dest":"file", "act": "getDeletedFile", "entity":"company"} 
+
+                     ] }' >
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#delete-o"></use></svg>
+                </div>     
+
+                <div class="icon"  title='Change View' 
+                   data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "view" } ] }' >
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#grid"></use></svg>
+                </div>      
+
+
+
+
+                <div class="icon fileBrowseButton"  title='Upload file'
+                     data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"triggerFileUpload", "formId":"company-fullcont"} ] }'>
+
+                    <form      style="display: none;"  method="post" name ='photo' class="fileUploadForm" 
+                                id='company_form_file' 
+                                data-detail='{"submit": [ {"dest":"file", "act":"submittingFile", "formId":"company-fullcont"} ] }'
+                                enctype="multipart/form-data" data-file_type="uploaded_files" >
+                      <input autocomplete="off" style="display: none;" class="fileUploadInput" type="file"  name="fileInputElement[]" data-detail='{"change": [ {"dest":"file", "act":"triggerSubmit", "entity":"company"} ] }' multiple />
+                    </form>
+
+                     <svg><use xlink:href="../../../../../../public/css/svg.svg#upload-o"></use></svg>
+                </div> 
+
+                <div class="icon " title="New folder"
+                    data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"openNewFolderDialog", "entity":"company"} ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#folder-o"></use></svg>
+                </div>  
+
+            </div><!-- header -->
+
+            <div class="header second">
+
+                 <div class="icon icon-left"   data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "checkingCancel" } ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                   <label>Cancel</label>
+                </div> 
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"deleteFile", "entity":"company"}  ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#delete"></use></svg>
+                   <label>Delete</label>
+                </div>  
+
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"multiDownload", "entity":"company"} ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#download-o"></use></svg>
+                   <label>Download</label>
+                </div> 
+                <div class="icon " data-detail='{"click": [ {"dest":"ripple"},  {"dest":"file", "act":"openRenameDialog", "entity":"company"} ] }'>
+                  <svg><use xlink:href="../../../../../../public/css/svg.svg#edit"></use></svg>
+                  <label>Rename</label>
+               </div> 
+
+            </div><!-- header -->
+
+
+            <div class="body"></div> <!-- body -->
+  
+
+
+    </div> <!-- file -->
+  
+    <div class="file file-deletedFiles ">
+
+            <div class="header primary third">
+
+                 <div class="icon icon-left"   
+                      data-detail='{"click": [  {"dest":"ripple"},   {"dest":"file", "act": "viewTrash" } ] }'>
+
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                   <label>Back to files</label>
+                </div>     
+
+                <div class="icon"  data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "view" } ] }' >
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#grid"></use></svg>
+                </div> 
+
+            </div><!-- header -->
+
+            <div class="header second">
+
+                 <div class="icon icon-left"    title="Cancel"
+                 data-detail='{"click": [  {"dest":"ripple"}, {"dest":"file", "act": "checkingCancel" } ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#back"></use></svg>
+                   <label>Cancel</label>
+                </div> 
+
+                <div class="icon "  title="Delete"
+                data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"deleteFileDialog", "entity":"company", "id":"confirmDelete"}  ] }'>
+                   <svg><use xlink:href="../../../../../../public/css/svg.svg#delete"></use></svg>
+                   <label> Delete</label>
+                </div>  
+
+                <div class="icon "  title="Restore"
+                data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act":"restoreFile", "entity":"company"}  ] }'>
+                  <svg><use xlink:href="../../../../../../public/css/svg.svg#upload-o"></use></svg>
+                  <label>Restore</label>
+               </div>  
+
+            </div><!-- header -->
+
+
+            <div class="body"></div> <!-- body -->
+
+    </div> <!-- trash -->
+
+
+
+</div>  <!-- page -->
+
+
+
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+<!-- 
+  <div class="fab-s fab-to-readOnly" >
+    
+    <div  class="" title="Edit Entity"   
+         data-detail='{"click": [{"dest":"ripple"}, {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" }] }'>
+
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#eye'></use></svg>
+        <label>View Only</label>
+    </div>
+
+  </div> -->
+
+
+  <div class="fab-s fab-to-edit"   >
+    
+    <div  class="" title="Edit"   
+         data-detail='{"click": [ 
+                  {"dest":"ripple"}, 
+                  {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"prepareEdit" } ] }'>
+
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#edit'></use></svg>
+        <label>Edit</label>
+    </div>
+
+  </div>
+
+  <div class="fab-s fab-to-add"   >
+    
+    <div  class=""  title="Save"   
+          data-detail='{"click": [ 
+                       {"dest":"ripple"}, 
+                       {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"addOne", "entity":"company" } ] }'>
+                  
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#save'></use></svg>
+        <label>Save</label>
+    </div>
+
+  </div>
+
+
+  <div class="fab-s fab-to-update"  title="update" >
+    
+    <div  class="" title="Update Entity" 
+          data-detail='{"click": [  {"dest":"ripple"}, 
+                       {"dest":"company", "elem":"fullcont", "id":"company-fullcont", "act":"update", "entity":"company" } ] }' >
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#update'></use></svg>
+        <label>Update</label>
+    </div>    
+
+    <div  class="black" title="Cancel Edition" class="secondary"
+          data-detail='{"click": [ 
+                       {"dest":"ripple"}, 
+                       {"dest":"company", "elem":"fullcont",  "id":"company-fullcont", "act":"cancelEdit" } ] }'   >
+        <svg><use xlink:href='../../../../../../public/css/svg.svg#close'></use></svg>
+        <label>Cancel</label>
+    </div>
+    
+  </div>
+  
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+<!---------------------------------------------------fab -->
+
+</div> <!-- fullcont -->
+
+

@@ -1,0 +1,74 @@
+.tvcard {
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 8px);
+	//max-width: 900px;
+
+	aspect-ratio: 10 / 4;
+
+	padding: 16px;
+
+	margin:auto;
+	//margin-top: 8px;
+	//margin-bottom: 16px;
+	
+	background-color: $c-b;
+
+	@include clearfix;	
+	@include bs-1;
+
+
+
+
+	//z-index: 50;	
+
+	left: 50%;
+	transform:translateX(-50%);
+	@include transition(0.300s, stan);
+
+	cursor: pointer;
+	user-select: auto;
+	//@include interaction-white();
+	//pointer-events: none;
+
+	&:focus   { @include bs-4; }
+    &:active  { @include bs-4; }	
+
+
+   // border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}
+
+.tvcard-title{ //16px
+	position: relative;
+	display: block;
+	margin-left: 6px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	@include font(body2, $c-w);
+	opacity: 0.86;
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	
+}
+
+.tvcard-min-height{ 
+	min-height: 250px;
+
+}
+
+
+
+
+.tvcard_selected {
+	//border: 1px solid $c-p;
+
+	box-shadow: 0px 2px 4px -1px rgba(2, 95, 238, 0.2),
+    0px 4px 5px 0px rgba(2, 95, 238, 0.14),
+    0px 1px 10px 0px rgba(2, 95, 238, 0.12);  
+}
+
+
+	.tvcard:focus{
+		border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}

@@ -1,0 +1,39 @@
+@mixin tab-dark{
+
+	.tab{
+		background-color: $d-p;
+
+		& > div{
+			//@include interaction-dark(plain);
+			& label{
+				color: $c-w;
+			}
+
+			& svg{
+				fill: $c_w;
+			}
+		}
+
+		& .indicator{
+			background-color: $c-pl;
+		}
+	
+		& .select{
+			border-bottom: 2px solid $c-pl;
+		}
+
+
+
+	}
+
+
+	.tab-plain{
+		background-color: transparent;
+
+	}
+
+}
+
+
+
+

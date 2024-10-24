@@ -1,0 +1,60 @@
+
+.bottomnav{
+	position: fixed;
+	display: none;
+	// //THIS ONLY FOR EVV, IS ONLY PHONE ################
+	// display: inline-block;
+
+	bottom:0px;
+	left: 0px;
+	width: 100%;
+	height: 56px;
+	z-index: 10;
+
+	background-color: $c-surface;
+	border-top: 1px solid $c-divider;
+
+	//box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2);
+
+	//border: 0.5px solid green;               //←←←←←←←←←←←←←←←←←←←←
+
+	& > div{
+		position: relative;
+		float: left;
+		height: 100%;
+		min-width: 56px;
+		width: 20%;
+
+		@include interaction-surface;//click/interactions
+		@include centerFlexColum;
+		//border: 0.1px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		
+		& label{
+
+			height: 12px;
+			opacity: 0.54;
+			margin-bottom: 8px;
+			//transform:scale(0);
+			@include font(caption, $c-b);
+			@include selectNo;		
+			@include transition(0.250s, stan);
+
+			//border: 0.1px solid green;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		& svg{
+			
+			height: 24px;
+			width: 24px;
+			display: block;
+			opacity: 0.54;
+			fill: $c-b;
+			
+			@include selectNo;
+			//border: 0.1px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+	}
+
+
+}

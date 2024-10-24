@@ -1,0 +1,110 @@
+
+
+
+.tvcard-bar-small{
+	position: relative;
+	display: inline-block;
+	width:  100%;
+	height: 42px;
+	margin-top: 8px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	background-color:lighten($c-divider, 10%); 
+
+	padding-left: 76px;
+	//border: 0.5px solid $c-error;/************************/
+
+	& > .line{
+		position: relative;
+		display: inline-block;
+		top:0px;
+		left: 0px;
+		height: 42px;
+		width: 90%;
+		z-index: 1;
+
+	    border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		//@include bs-1;
+		background-color: rgba($cg-blue, 0.7); 
+		border-color: $cg-blue;
+		border-width: 2px;
+  		border: solid;
+  		@include transition(0.450s, stan)
+
+		//border-radius: 8px;
+		
+
+
+		//border: 1px solid red;/**********************/
+	}/*label*/
+
+	& > .num{
+			position: absolute;
+			display: inline-block;
+			top: 0px;
+			left: 0px;
+			width: 76px;
+			z-index: 3;
+			height: 42px;
+			padding-top: 6px;
+			//border-radius: 8px;
+			//background: $c-w;
+
+
+
+			@include font(h5, $c-w);	
+			opacity: 0.54;
+			//color:$c-f-lg;
+			text-align: center;	
+			//border: 1px solid red;/**********************/	
+	}
+
+}
+
+.tvcard-bar-tiny{
+
+	height: 28px;
+	margin-top: 8px;
+
+	//border: 0.5px solid $c-error;/************************/
+
+	& > .line{ height: 28px; }
+	& > .cont{ height: 28px; }/*label*/
+
+	& > .num{
+		height: 28px;
+		padding-top: 0px;
+		//border: 0.5px solid $c-error;/************************/
+	}
+
+
+	& > .title{
+			height: 28px;
+			padding-top: 0px;
+			//border: 0.5px solid $c-error;/************************/
+	}
+	
+}
+
+
+
+
+
+
+.tvcard-bar-small-blue  { & > .line{ background-color: rgba($cg-blue, 0.7);    border-color: $cg-blue;   } }
+.tvcard-bar-small-green { & > .line{ background-color: rgba($cg-green, 0.7);   border-color: $cg-green;  } }
+.tvcard-bar-small-purple{ & > .line{ background-color: rgba($cg-purple, 0.7);  border-color: $cg-purple; } }
+.tvcard-bar-small-red   { & > .line{ background-color: rgba($cg-red, 0.7);     border-color: $cg-red;    } }
+
+.tvcard-bar-small-cpa   { & > .line{ background-color: rgba($cpa, 0.7);     border-color: $cpa;    } }
+.tvcard-bar-small-cpb   { & > .line{ background-color: rgba($cpb, 0.7);     border-color: $cpb;    } }
+.tvcard-bar-small-cpc   { & > .line{ background-color: rgba($cpc, 0.7);     border-color: $cpc;    } }
+.tvcard-bar-small-cpd   { & > .line{ background-color: rgba($cpd, 0.7);     border-color: $cpd;    } }
+.tvcard-bar-small-cpe   { & > .line{ background-color: rgba($cpe, 0.7);     border-color: $cpe;    } }
+
+
+
+
+

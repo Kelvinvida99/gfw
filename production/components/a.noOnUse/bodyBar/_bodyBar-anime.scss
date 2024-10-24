@@ -1,0 +1,11 @@
+.bodyBar{
+
+	& > .select{
+			background-color: lighten($c-p, 48%);
+			& svg{
+				fill: $c-p;
+				opacity: 0.99;
+			}
+	}
+
+}

@@ -1,0 +1,42 @@
+
+<div class="file-full file-full-showx"  id="avatar_full">  
+  
+<div class="appbar appbar-black">
+    <div class="primary"> 
+
+        <div class="hideFullView"  data-detail='{"click": [ {"dest":"ripple" }, {"dest":"file", "act":"hideAvatarFull" }  ] }' >
+            <svg><use xlink:href="../../../public/css/svg.svg#back"></use></svg>
+        </div>
+
+        <h1>File name</h1>
+
+
+        <div data-detail='{"click": [ {"dest":"ripple" },  {"dest":"file", "act": "triggerAvatarUpload", "formId":"myuser-fullcont"}] }' 
+        class="fileBrowseButton"    title='Replace'>
+              <svg><use xlink:href="../../../public/css/svg.svg#edit"></use></svg></div> 
+
+        <div data-detail='{"click": [ {"dest":"ripple" }, {"dest":"file", "act": "deleteAvatarDialog", "id":"confirmAvatarDeleteFromView"}] }' title='Delete Avatar' >
+              <svg><use xlink:href="../../../public/css/svg.svg#delete"></use></svg> </div>              
+
+    </div> <!-- primary -->
+</div> <!-- appbar -->
+
+
+<div class="body" id="">
+
+  <iframe   data-centered="0"  style="user-select: none; max-width: 99%; max-height: 94%;"  data-detail='{"load": [ {"dest":"file", "act": "resizeAvatarView" }] }'  ></iframe>
+
+
+    <!-- 
+        <div class="arrow" 
+         data-detail='{"click": [ {"dest":"ripple"},{"dest":"file", "act": "changeSrc", "direction": "-1" }] }' data-direction="-1"> </div>
+    
+    <div class="arrow arrow-right"
+         data-detail='{"click": [ {"dest":"ripple"}, {"dest":"file", "act": "changeSrc", "direction": "1" }] }' data-direction="1"> </div>
+
+    -->
+
+</div>
+
+
+</div>

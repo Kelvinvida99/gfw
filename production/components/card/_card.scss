@@ -1,0 +1,69 @@
+.card {
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 16px);
+	max-width: 900px;
+	padding: 8px;
+
+	margin:auto;
+	//margin-top: 8px;
+	//margin-bottom: 16px;
+	
+	background-color: $c-w;
+
+	@include clearfix;	
+	@include bs-1;
+
+	left: 50%;
+	transform:translateX(-50%);
+	@include transition(0.300s, stan)
+	
+	//pointer-events: none;
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}
+
+.card-min-height{ 
+	min-height: 106px !important;
+	//border: 2px solid red;
+
+}
+
+
+
+//this is blank container that we use 
+//to get others elements in the same proportion than the cards
+.card-cont {
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 16px);
+	max-width: 900px;
+	left: 50%;
+	transform:translateX(-50%);	
+
+	@include clearfix;	
+
+
+	// border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+}
+
+// .card-collapsed{
+// 	transform: scaleY(0);
+// 	border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+// }
+
+
+.card-transparent{
+		background-color: transparent;
+		box-shadow: none;
+		//border: 1px solid $c-divider;
+}
+
+
+
+// .card-click{
+// 	pointer-events: auto !important;
+// 	@include interaction-white;
+// }

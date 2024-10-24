@@ -1,0 +1,28 @@
+
+.dt { 
+	& > table{ //checkbox	
+		& th:nth-child(1), & td:nth-child(1) {
+			& > div:hover{
+				background-color: lighten($c-p, 0%);
+			}			
+		}
+	}
+}/*dt*/
+
+
+
+.dt { 
+	& > table{
+
+		//checkbox
+		& th:nth-child(1), & td:nth-child(1) {
+			& > .checked{
+				& svg{
+					opacity: 1;
+					fill: $c-p;
+				}
+			}			
+		}
+	}
+
+}/*dt*/

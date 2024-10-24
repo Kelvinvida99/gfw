@@ -1,0 +1,1 @@
+SELECT  COUNT(*) AS rowsQty FROM accounts WHERE accounts.deleted = '0'  AND (accounts.code LIKE LOWER('%%') OR accounts.name LIKE LOWER('%%') ) ;

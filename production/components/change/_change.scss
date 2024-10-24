@@ -1,0 +1,119 @@
+change {
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 8px);
+	max-width: 900px;
+	padding: 4px;
+
+	margin:auto;
+	@include clearfix;	
+	left: 50%;
+	transform:translateX(-50%);
+	@include transition(0.300s, stan)
+	
+	//pointer-events: none;
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+	& cont {
+		position: relative;
+		display: inline-block;
+		margin-top: 4px;
+		width: calc(100% - 0px);
+		
+		//border: 0.2px solid red;             //←←←←←←←←←←←←←←←←←←←← 
+	
+		& > user {
+			position: relative;
+			display: inline-block;
+			width: calc(100% - 0px);
+			margin-bottom: 2px;
+			
+			//border: 0.2px solid blue;             //←←←←←←←←←←←←←←←←←←←← 
+			
+			& > photo {
+				position: relative;
+				display: inline-block;
+				float: left;
+				margin-left: 12px;
+				height: 24px;
+				width: 24px;
+				@include selectNo;
+
+				border-radius: 50%;
+				background-image:  url('./img/pic/person.svg');
+
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				z-index: 2;
+
+				//border: 0.2px solid blue;             //←←←←←←←←←←←←←←←←←←←← 
+
+			}
+			& > title{ 
+				position: relative;
+				display: inline-block;
+				top: 1px;
+				margin-left: 8px;
+				margin-top: 1px;
+
+				overflow:hidden;
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+
+				@include font(subtitle1, $c-pd);
+				@include selectNo;
+				//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←← 
+			}
+
+			& > time{ 
+				position: relative;
+				display: inline-block;
+				top: -1px;
+				margin-left: 8px;
+				margin-top: 1px;
+
+				overflow:hidden;
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+				opacity: 0.76;
+
+				@include font(body3, $c-pd);
+				//border: 0.5px solid blue;           //←←←←←←←←←←←←←←←←←←←← 
+			}
+	
+
+		}/*user*/
+
+
+		& > entry{ 
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			background: $c-gl;
+			padding-right: 8px;;
+			padding-left: 8px;
+			@include font(body3, $c-pd);	
+
+
+			& > .row > div{ 
+				overflow:hidden;
+				white-space: nowrap; 
+				text-overflow: ellipsis;
+				//border: 0.2px solid green;           //←←←←←←←←←←←←←←←←←←←← 
+			} 	
+
+			//min-height: 42px;
+			//border: 0.2px solid green;           //←←←←←←←←←←←←←←←←←←←← 
+			
+
+
+				
+		}/*input*/
+
+
+
+
+	}/*cont*/
+}

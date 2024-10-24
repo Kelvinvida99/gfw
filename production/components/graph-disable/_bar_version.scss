@@ -1,0 +1,39 @@
+
+  	.rectangle--selected{
+		& .value{
+			top: -38px !important;
+			visibility: visible  !important;
+			opacity: 1  !important;
+		}/*value*/			  		
+  	}/*selected*/
+
+
+
+//Use this class when you have many bar on unit
+  	.bar--miltiple{
+
+		& .barBody{
+			& .unit{
+				padding-left: 8px;
+				padding-right: 8px;
+
+				@include respond (phone) {
+					padding-left: 4px;
+					padding-right: 4px;
+				}/*phone*/
+				@include respond (mini) {
+					padding-left: 2px;
+					padding-right: 2px;
+				}/*phone*/
+
+				& .rectangle{
+					width: calc(100% - 0px);				
+					margin-left: 0px ;
+					margin-right: 0px;				
+				}/*rectangle*/	
+
+			}/*unit*/
+				
+		}/*barBody*/
+
+	}/*bar*/

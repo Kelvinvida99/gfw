@@ -1,0 +1,43 @@
+.page-right-title{
+
+	position: relative;
+	display: inline-block;
+
+	width: calc(100% - 16px);
+	max-width: 900px;
+	left: 50%;
+	transform:translateX(-50%);	
+
+	@include font(h6, $c-fb);
+
+	& .title{
+		position: relative;
+		display: inline-block;
+		//height: 48px;
+		width: calc(100% - 0px);
+		margin-top: 14px;
+		padding-bottom: 20px;
+
+		@include font(title, $c-pd); 
+		border-bottom: 1px solid $c-divider;
+
+		//border: 0.1px solid blue;            //←←←←←←←←←←←←←←←←←←←←	
+
+	}
+
+	& .des{
+		position: relative;
+		display: inline-block;
+		width: calc(100% - 0px);
+		margin-top: 18px;
+		margin-bottom: 12px;
+
+		opacity: 0.54;
+		@include font(subtitle2, $c-pd);
+
+		//border: 0.1px solid red;            //←←←←←←←←←←←←←←←←←←←←	
+	}
+	
+	//border: 0.1px solid red;            //←←←←←←←←←←←←←←←←←←←←	
+}
+

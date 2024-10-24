@@ -1,0 +1,51 @@
+
+
+
+.dt-error {
+
+	& > .header {
+		& > div:nth-child(2)  { display: none;}
+		& > .more, & > .filter{ display: none;} 
+
+	}
+
+
+
+	& > table > thead {
+		& > tr{
+ 				& > th{
+ 					//border: 2px solid red;
+					color:$c-error  !important;
+				}
+		}
+	}		
+
+	& > table > tbody > tr {
+			display: none;
+	}		
+
+	& > .footer {
+		display: none !important;
+	}
+
+
+	// & > table > tbody {
+	// 	&::after{
+	// 		position: absolute;
+	// 		content: '';
+	// 		top: 48px;
+	// 		height: 100px;
+	// 		width: 100%;
+	// 		background: white;
+	// 		border: 2px solid red;
+
+	// 	}
+	// }
+
+
+
+
+
+
+}
+

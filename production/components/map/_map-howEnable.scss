@@ -1,0 +1,22 @@
+     
+
+#confirmation-map{
+
+    & > .img{
+
+          position: relative;
+          display: inline-block;
+          height: 230px;
+          width: 100%;
+          margin-top: 16px;
+
+        background: url(gif/ios-desktop.gif) no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+
+        border: 1px solid $c-divider;
+
+    }/**/
+
+    //border: 5px solid red;
+}/*location*/

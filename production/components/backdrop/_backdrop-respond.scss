@@ -1,0 +1,15 @@
+.backdrop {
+
+
+	@include respond(table) {
+		width: calc(100% - 16px);
+	}
+
+	@include respond(mini) {
+		width: calc(100% - 8px);
+	}
+
+}
+
+
+

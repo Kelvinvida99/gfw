@@ -1,0 +1,63 @@
+     
+
+.map-nogeo{
+  
+  & .des       { display: none; }
+  & .des-nogeo { display: block;  }
+  & .body      { visibility: hidden; }
+
+  background:   url(svg/map/no-location.svg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border: 0.1px solid $c-divider;                //←←←←←←←←←←←←←←←←←←←← 
+
+}/*map*/
+
+.map-error{
+
+  padding: 8px;
+  & .des       { display: none;      }
+  & .des-nogeo {  display: block;    }
+  & .body      { visibility: hidden; }
+
+  background:   url(svg/map/no-location.svg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border: 0.1px solid $c-divider;                //←←←←←←←←←←←←←←←←←←←← 
+
+
+  border: 2px solid $c-error;
+
+}/*map*/
+
+
+
+.map-nointernet{
+  
+  & .des       { display: none;      }
+  & .des-nogeo {  display: block;    }
+  & .body      { visibility: hidden; }
+
+  background:   url(svg/map/no-internet.svg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border: 0.1px solid $c-divider;                //←←←←←←←←←←←←←←←←←←←← 
+  
+
+}/*map*/
+
+
+.map-nolocation{
+  
+  & .title    { display: none; }
+  & .des      { display: none; }
+  & .des-nogeo{ display: none; }
+  & .legend   { display: none; }
+  & .body     { visibility: hidden; }
+
+   background:   url(svg/map/no-location-toShow.svg) no-repeat;
+   background-size: 100% 100%;
+   background-position: center;
+   border: 0.1px solid $c-divider;                //←←←←←←←←←←←←←←←←←←←← 
+
+}/*map*/

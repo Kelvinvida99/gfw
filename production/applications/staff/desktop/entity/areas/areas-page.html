@@ -1,0 +1,206 @@
+
+<div class="page page_main  dn" id="areas-page"  > 
+
+
+    <div class="fab fab-blue"
+        data-detail='{"click": [  {"dest":"ripple" }, {"dest":"areas", "elem":"fullcont", "id":"areas-fullcont",  "act":"prepareAdd"  } ] }' >
+
+      <svg><use xlink:href='../../../../../../public/css/svg.svg#add'></use></svg>
+    </div>
+
+
+
+    <div class="dt" id="areas-dt">
+
+      <div class="menubar">
+
+        <div class="cont icon-blue"
+          data-detail='{"click": [ 
+                               {"dest":"ripple" }, 
+                               {"dest":"inventory", "elem":"page", "id":"inventory-page", "act":"show", "leftnav": "leftnav-inventory-page"  } ] }'>
+          <svg>
+            <use xlink:href="../../../../../../public/css/svg.svg#inventory"></use>
+          </svg>
+          <label>Inventory</label>
+        </div> <!-- cont  -->
+
+        <div class="cont icon-blue" data-detail='{"click": [ 
+                 {"dest":"ripple" }, 
+                 {"dest":"item", "elem":"page", "id":"item-page", "act":"show", "leftnav": "leftnav-inventory-page"  } ] }'>
+          <svg>
+            <use xlink:href="../../../../../../public/css/svg.svg#orange"></use>
+          </svg>
+          <label>Item </label>
+        </div> <!-- cont  -->
+
+
+
+        <div class="cont cont-active icon-blue"
+          data-detail='{"click": [ 
+                               {"dest":"ripple" }, 
+                               {"dest":"areas", "elem":"page", "id":"areas-page", "act":"show", "leftnav": "leftnav-inventory-page"  } ] }'>
+          <svg>
+            <use xlink:href="../../../../../../public/css/svg.svg#area"></use>
+          </svg>
+          <label>Areas </label>
+        </div> <!-- cont  -->
+
+
+        <div class="cont icon-blue"
+          data-detail='{"click": [ 
+                               {"dest":"ripple" }, 
+                               {"dest":"item_unit", "elem":"page", "id":"item_unit-page", "act":"show", "leftnav": "leftnav-inventory-page"  } ] }'>
+          <svg>
+            <use xlink:href="../../../../../../public/css/svg.svg#box"></use>
+          </svg>
+          <label>Unit</label>
+        </div> <!-- cont  -->
+
+      </div> <!-- menubar  -->
+
+
+      <div class="header search-filled">
+          
+          <label class="title">Areas</label>
+          
+          <div>
+
+            <input type="text"  placeholder="Name, Bay, Level or Space"
+                   data-lastValue=""
+                   data-detail   ='{ "key": [{"dest":"dt", "act":"typing" }, 
+                                             {"dest":"areas", "elem":"dt", "act":"searching", "entity":"areas" } ] }' >
+           
+            <div class="icon search" 
+                 data-detail='{"click": [{"dest":"ripple" }, {"dest":"dt", "act":"searching"}  ]}'>
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#search"></use></svg>
+            </div>
+
+            <div class="icon trailing"
+                 data-detail='{"click": [{"dest":"ripple" }, 
+                 {"dest":"dt", "act":"clear"}, 
+                 {"dest":"areas", "elem":"dt", "act":"searching", "entity":"areas" }      ] }' >
+                 <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+            </div>   
+
+          </div>
+
+           <div class="filter" title=''
+            data-detail='{
+           "click": [{"dest":"ripple" }, 
+                     {"dest":"dt", "act":"filterShowHide"},
+                     {"dest":"areas", "elem":"dt", "act":"filterShowHide", "entity":"areas" }   ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#filter"></use></svg>
+          </div> 
+
+
+          <div class="more"
+            data-detail='{"click": [{"dest":"ripple"}, 
+            {"dest":"areas", "elem":"dt",  "act":"tableOptions", "id":"tableOptions", "entity":"areas"} ] }'>
+            <svg><use xlink:href="../../../../../../public/css/svg.svg#more"></use></svg>
+          </div>  
+      
+      </div>
+
+      <div class="filterCont dn"  >
+
+        <div class="row">
+          <div class="c50 ">
+
+              <div class="textfield textfield-deskx" >
+                <input  class= 'elem' type="text"   placeholder="Name"  
+                        data-field="areas.name"
+                        data-lastValue=""
+                        data-detail='{
+                                       "key":  [ {"dest":"textfield", "act":"typing" },
+                                                 {"dest":"areas", "elem":"dt", "act":"filter",  "entity":"areas" }] }' >
+
+                <div class="indicador"></div>
+
+                <div class="trailing"  
+                data-detail='{"click": [{"dest":"textfield", "act":"clear"}, 
+                                        {"dest":"areas", "elem":"dt", "act":"filter", "entity":"areas" }] }' >
+                  <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+              </div><!-- textfield -->
+
+
+          </div>
+          <div class="c50">
+            
+              <div class="textfield textfield-deskx" >
+                <input  class= 'elem' type="text"   placeholder="Bay"  
+                         data-field="areas.bay"
+                         data-lastValue=""
+                         data-detail='{
+                                       "key":   [ {"dest":"textfield", "act":"typing" },
+                                                  {"dest":"areas", "elem":"dt", "act":"filter", "entity":"areas" }] }' >
+
+                <div class="indicador"></div>
+
+                <div class="trailing"
+                data-detail='{"click": [{"dest":"textfield", "act":"clear"}, 
+                                        {"dest":"areas", "elem":"dt", "act":"filter", "entity":"areas" }] }' >                
+                  <svg><use xlink:href="../../../../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+              </div><!-- textfield -->
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <table> 
+          <thead>
+            <tr>
+                <th><input type="checkbox" data-detail='{
+                  "click": [ {"dest":"dt", "act":"checkboxAll"} ],
+                  "clickDouble": [  {"dest":"dt", "act":"checkboxAll"} ]  }' ></th>
+
+                <th data-sortBy="name"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"areas", "elem":"dt", "act":"th", "entity": "areas"}  ]}'>Name</th>
+                
+                <th data-sortBy="bay"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"areas", "elem":"dt", "act":"th", "entity": "areas"}  ]}'>Bay</th>
+
+                <th data-sortBy="level"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"areas", "elem":"dt", "act":"th", "entity": "areas"}  ]}'>Level</th>      
+                                          
+                <th data-sortBy="space"
+                data-detail = '{"click":[{"dest":"ripple" },
+                                      {"dest":"dt", "act":"th"},
+                                      {"dest":"areas", "elem":"dt", "act":"th", "entity": "areas"}  ]}'>Space</th>                                            
+             </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+
+
+
+      <div class="footer footer-disabled footer-loadingX" data-limit="0" 
+          data-detail='{"click":[{"dest":"ripple"},  
+                                 {"dest":"areas", "elem":"dt", "act":"loadMore", "entity":"areas"}]}'>
+        <svg><use xlink:href="../../../../../../public/css/svg.svg#refresh"></use></svg>
+        <label>Load More</label> 
+      </div>
+
+
+
+    </div><!-- dt -->
+</div> 
+
+
+
+
+<div class="page page_main  dn" id="areas-page-right"  > 
+
+
+</div> <!--Page Right-->

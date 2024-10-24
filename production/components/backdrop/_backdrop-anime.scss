@@ -1,0 +1,35 @@
+
+
+.backdrop-show{
+	animation: backdrop-show  0.300s;
+	animation-fill-mode: both;
+	@include animationT(emph);
+}
+
+
+@keyframes backdrop-show{
+
+	from{
+		bottom: -100%;
+	}
+	to{
+		bottom: 0%;
+	}
+}
+
+
+.backdrop-hide{
+	animation: backdrop-hide 0.250s;
+	animation-fill-mode: both;
+	@include animationT(acce);
+}
+
+
+@keyframes backdrop-hide{
+	from{
+		bottom:  0%;
+	}
+	to{
+		bottom: -100%;
+	}
+}

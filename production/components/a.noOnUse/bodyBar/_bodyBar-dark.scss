@@ -1,0 +1,24 @@
+@mixin bodyBar-dark {
+	.bodyBar {
+		background-color:  $d-surface;
+			& > .Lc_bodyBar{
+				@include interaction($d-p)
+				& svg{
+					fill: $c-w;
+				}
+			}
+
+			& > .select{
+					background-color: transparent;
+					//border-right: 2px solid $c-p;
+
+					& svg{
+						fill: lighten($c-p, 32%);
+					}
+			}
+
+	}
+
+
+
+}

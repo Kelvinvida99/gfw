@@ -1,0 +1,223 @@
+
+<div class="page page_main  dn" id="services-page"  > 
+
+
+    <div class="fab"
+        data-detail='{"click": [  {"dest":"ripple" }, {"dest":"services", "elem":"fullcont", "id":"services-fullcont",  "act":"prepareAdd"  } ] }' >
+
+      <svg><use xlink:href='../../../public/css/svg.svg#add'></use></svg>
+    </div>
+
+
+
+    <div class="dt  dt-loadingx dt-simpleX dt-noCheckX  dt-filteringX  dt-errorX" id="services-dt">
+
+      <div class="header searchingx search-filled">
+          
+          <label class="title">Goku</label>
+          
+          <div>
+
+            <input type="text"  placeholder="Name ssn phone dob"
+                   data-lastValue=""
+                   data-detail   ='{ "key": [{"dest":"dt", "act":"typing" }, 
+                                             {"dest":"services", "elem":"dt", "act":"searching", "entity":"services" } ] }' >
+           
+            <div class="icon search" 
+                 data-detail='{"click": [{"dest":"ripple" }, {"dest":"dt", "act":"searching"}  ]}'>
+                 <svg><use xlink:href="../../../public/css/svg.svg#search"></use></svg>
+            </div>
+
+            <div class="icon trailing"
+                 data-detail='{"click": [{"dest":"ripple" }, 
+                 {"dest":"dt", "act":"clear"}, 
+                 {"dest":"services", "elem":"dt", "act":"searching", "entity":"services" }      ] }' >
+                 <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+            </div>   
+
+          </div>
+
+           <div class="filter" title=''
+            data-detail='{
+           "click": [{"dest":"ripple" }, 
+                     {"dest":"dt", "act":"filterShowHide"},
+                     {"dest":"services", "elem":"dt", "act":"filterShowHide", "entity":"services" }   ] }'>
+            <svg><use xlink:href="../../../public/css/svg.svg#filter"></use></svg>
+          </div> 
+
+
+          <div class="more"
+            data-detail='{"click": [{"dest":"ripple"}, 
+            {"dest":"services", "elem":"dt",  "act":"tableOptions", "id":"tableOptions", "entity":"services"} ] }'>
+            <svg><use xlink:href="../../../public/css/svg.svg#more"></use></svg>
+          </div>  
+      
+      </div>
+
+      <div class="filterCont dn "  >
+
+        <div class="row">
+          <div class="c50 ">
+
+              <div class="textfield textfield-deskx" >
+                <input  class= 'elem' type="text"   placeholder="id"  
+                        data-field="id"
+                        data-lastValue=""
+                        data-detail='{
+                                       "key":  [ {"dest":"textfield", "act":"typing" },
+                                                 {"dest":"services", "elem":"dt", "act":"filter",  "entity":"services" }] }' >
+
+                <div class="indicador"></div>
+
+                <div class="trailing"  
+                data-detail='{"click": [{"dest":"textfield", "act":"clear"}, 
+                                        {"dest":"services", "elem":"dt", "act":"filter", "entity":"services" }] }' >
+                  <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+              </div><!-- textfield -->
+
+
+          </div>
+          <div class="c50">
+            
+              <div class="textfield textfield-deskx" >
+                <input  class= 'elem' type="text"   placeholder="SSN"  
+                         data-field="__ssn"
+                         data-lastValue=""
+                         data-detail='{
+                                       "key":   [ {"dest":"textfield", "act":"typing" },
+                                                  {"dest":"services", "elem":"dt", "act":"filter", "entity":"services" }] }' >
+
+                <div class="indicador"></div>
+
+                <div class="trailing"
+                data-detail='{"click": [{"dest":"textfield", "act":"clear"}, 
+                                        {"dest":"services", "elem":"dt", "act":"filter", "entity":"services" }] }' >                
+                  <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+                </div>
+              </div><!-- textfield -->
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <table> 
+          <thead>
+            <tr>
+                <th><input type="checkbox" data-detail='{
+                  "click": [ {"dest":"dt", "act":"checkboxAll"} ],
+                  "clickDouble": [  {"dest":"dt", "act":"checkboxAll"} ]  }' ></th>
+                
+                <th data-sortBy="name"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"services", "elem":"dt", "act":"th", "entity": "services"}  ]}'>Names</th>
+                
+                <th data-sortBy="id"
+                    data-detail = '{"click":[{"dest":"ripple" },
+                                          {"dest":"dt", "act":"th"},
+                                          {"dest":"services", "elem":"dt", "act":"th", "entity": "services"}  ]}'>ssn/id</th>            
+             </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+
+
+
+      <div class="footer footer-disabled footer-loadingX" data-limit="0" 
+          data-detail='{"click":[{"dest":"ripple"},  
+                                 {"dest":"services", "elem":"dt", "act":"loadMore", "entity":"services"}]}'>
+        <svg><use xlink:href="../../../public/css/svg.svg#refresh"></use></svg>
+        <label>Load More</label> 
+      </div>
+
+
+
+    </div><!-- dt -->
+
+
+
+
+
+
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     {"dest":"services", "elem":"banner", "act":"show", "id":"hellow", "pageId": "services-page" }
+                                     ] }' >
+              <label>Banner Goku</label>        
+            </div>
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     {"dest":"services", "elem":"dialog", "act":"show", "id":"hellow"}
+                                     ] }' >
+              <label>Dialog Goku</label>        
+            </div>
+
+          <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     {"dest":"services", "elem":"backdrop", "id":"hellow", "act":"show"}
+                                     ] }' >
+              <label>Backdrop Goku</label>        
+            </div>
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     { "dest":"services", "elem":"menu", "id":"trMenu", "act":"show"}
+                                     ] }' >
+              <label>Menu Goku </label>        
+            </div>
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     {"dest":"services", "elem":"confirmation", "id":"hellow", "act":"show"}
+                                     ] }' >
+              <label>confirmation Goku </label>        
+            </div>
+
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     {"dest":"services", "elem":"confirmation", "id":"hellow", "act":"show"}
+                                     ] }' >
+              <label>confirmation Goku </label>        
+            </div>
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                     {"dest":"ripple" },
+                                     {"dest":"services", "elem":"snack",  "id":"hellow", "act":"show"}
+                                     ] }' >
+              <label>Snack  Default </label>        
+            </div>
+
+
+            <div class="button button-flat button-large"  
+                        data-detail='{"click": [ 
+                                    {"dest":"ripple" },
+                                    {"dest":"services", "elem":"fullcontStepper", "act":"prepareAdd", "id": "services-fullcont-withStepper"}
+                                     ] }' >
+              <label>fullcontStepper</label>        
+            </div>
+
+</div> 
+
+
+
+
+<div class="page page_main  dn" id="services-page-right"  > 
+
+  <label class="font-onboard-title">Goku - General</label>
+
+</div> <!--Page Right-->

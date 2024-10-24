@@ -1,0 +1,68 @@
+           User Info                                 Error Info                                                    Entity
+
+2024-02-02 01:27:am marco@,  Table 'beestock.otherexpense' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, otherexpense
+2024-02-03 02:22:am marco@,  Table 'beestock.sentpayment' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, sentpayment
+2024-02-04 21:51:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 21:51:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 21:51:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:01:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:03:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:03:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:04:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:04:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:05:pm ypena@,  Table 'beestock.item_unit' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, item_unit
+2024-02-04 22:08:pm amdry@,  Unknown column 'total' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-02-04 22:08:pm amdry@,  Unknown column 'provider' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-02-04 22:08:pm amdry@,  Unknown column 'provider' in 'order clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-02-04 23:04:pm ypena@,  Operand should contain 1 column(s), executeSelect.php@9, MySql->SELECT@1241, item
+2024-02-04 23:04:pm ypena@,  Operand should contain 1 column(s), executeSelect.php@9, MySql->SELECT@1241, item
+2024-02-04 23:04:pm ypena@,  Operand should contain 1 column(s), executeSelect.php@9, MySql->SELECT@1241, item
+2024-02-04 23:06:pm ypena@,  Operand should contain 1 column(s), executeSelect.php@9, MySql->SELECT@1241, item
+2024-02-04 23:06:pm ypena@,  Unknown column 'origin_coutry' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, item
+2024-02-04 23:07:pm ypena@,  Unknown column 'origin_coutry' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, item
+2024-02-04 23:07:pm ypena@,  Unknown column 'origin_coutry' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, item
+2024-02-04 23:07:pm ypena@,  Unknown column 'origin_coutry' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, item
+2024-02-04 23:08:pm ypena@,  Unknown column 'origin_coutry' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, item
+2024-02-09 09:50:am marco@,  Unknown column 'sale.ship_via' in 'field list', executeSelect.php@9, MySql->SELECT@1054, sale
+2024-02-16 20:50:pm marco@,  Unknown column 'receivepayment.date' in 'field list', executeSelect.php@9, MySql->SELECT@1054, receivepayment
+2024-02-16 20:50:pm marco@,  Unknown column 'receivepayment.date' in 'field list', executeSelect.php@9, MySql->SELECT@1054, receivepayment
+2024-02-25 22:59:pm ypena@,  Query was empty, executeSelect.php@9, MySql->SELECT@1065, purchase
+2024-02-25 23:01:pm ypena@,  Query was empty, executeSelect.php@9, MySql->SELECT@1065, purchase
+2024-02-25 23:02:pm ypena@,  Query was empty, executeSelect.php@9, MySql->SELECT@1065, purchase
+2024-02-25 23:41:pm ypena@,  Unknown column 'totalCogs' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-02-25 23:41:pm ypena@,  Invalid use of group function, executeSelect.php@9, MySql->SELECT@1111, purchase
+2024-02-25 23:49:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'purchase_vs_expenses.deleted = '0'  
+                    ) AS totalCogs ON t...' at line 71, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-26 23:20:pm ypena@,  Unknown column 'purchaseVSsoldItem.qty' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-02-26 23:22:pm ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+
+                    CONCAT( '[',
+                    GROUP_CONCAT(
+    ...' at line 66, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-27 00:47:am ypena@,  Unknown column 'purchase_vs_item.sold_ty' in 'field list', executeSelect.php@9, MySql->SELECT@1054, purchase
+2024-02-27 00:53:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 00:55:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 00:55:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 00:57:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 00:57:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 00:57:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 00:59:am ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SEPARATOR ',
+                        '),
+                    ']'
+         ...' at line 28, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-27 01:00:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 01:01:am ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM  purchase
+
+        LEFT JOIN purchase_vs_item ON purchase_vs_item.purc...' at line 45, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-27 01:03:am ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM  purchase
+
+        LEFT JOIN purchase_vs_item ON purchase_vs_item.purc...' at line 45, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-27 01:03:am ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM  purchase
+
+        LEFT JOIN purchase_vs_item ON purchase_vs_item.purc...' at line 45, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-27 01:06:am ypena@,  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), '$0.00')
+                        )) SEPARATOR ',
+                       ...' at line 27, executeSelect.php@9, MySql->SELECT@1064, purchase
+2024-02-27 01:07:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 01:07:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase
+2024-02-27 01:07:am ypena@,  Illegal mix of collations for operation 'json_object', executeSelect.php@12, MySql->SELECT@1271, purchase

@@ -1,0 +1,89 @@
+.stepper-nextOn{
+
+		& .btn-next{
+			background-color:$c-p;
+			@include interaction-color;
+
+			& label{ color: $c-w !important; opacity: 1;}
+			& svg  { fill:  $c-w !important; opacity: 1;}			
+		}
+}/*stepper*/
+
+.stepper-nextActive{
+
+		& .btn-next{
+
+			& label{ color: $c-p !important; opacity: 1;}
+			& svg  { fill:  $c-p !important; opacity: 1;}			
+		}
+}/*stepper*/
+
+
+
+
+
+.stepper-backOn{
+
+		& .btn-back{
+			background-color:$c-w;
+			@include interaction-white;
+
+			& label{ color: $c-p !important; opacity: 1; }
+			& svg  { fill: $c-p !important;  opacity: 1; }			
+		}
+
+
+}/*stepper*/
+
+.stepper-bothOn{
+
+		& .btn-back{
+			background-color:$c-w;
+			@include interaction-white;
+
+			& label{ color: $c-p !important; opacity: 1;}
+			& svg  { fill:  $c-p !important; opacity: 1;}	
+		}
+
+		& .btn-next{
+			background-color:$c-w;
+			@include interaction-white;
+
+			& label{ color: $c-p !important; opacity: 1;}
+			& svg  { fill:  $c-p !important; opacity: 1;}	
+		}
+					
+}
+
+.stepper-nextOnAlways{
+
+		& .btn-back{
+			background-color:$c-w;
+			@include interaction-white;
+
+			& label{ color: $c-p !important; opacity: 1; }
+			& svg  { fill: $c-p !important;  opacity: 1; }			
+		}
+
+		& .btn-next{
+			background-color:$c-p;
+			@include interaction-color;
+
+			& label{ color: $c-w !important; opacity: 1;}
+			& svg  { fill:  $c-w !important; opacity: 1;}			
+		}
+					
+}
+
+
+
+
+ .stepper-1{ & .counter span:nth-child(1){ background-color: $c-p; } }
+ .stepper-2{ & .counter span:nth-child(2){ background-color: $c-p; } }
+ .stepper-3{ & .counter span:nth-child(3){ background-color: $c-p; } }
+ .stepper-4{ & .counter span:nth-child(4){ background-color: $c-p; } }
+ .stepper-5{ & .counter span:nth-child(5){ background-color: $c-p; } }
+ .stepper-6{ & .counter span:nth-child(6){ background-color: $c-p; } }
+ .stepper-7{ & .counter span:nth-child(7){ background-color: $c-p; } }
+ .stepper-8{ & .counter span:nth-child(8){ background-color: $c-p; } }
+ .stepper-9{ & .counter span:nth-child(9){ background-color: $c-p; } }

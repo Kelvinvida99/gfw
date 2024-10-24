@@ -1,0 +1,41 @@
+.fab{
+	position: fixed;
+	display: inline-block;
+	
+	width: 48px;
+	height: 48px;
+	background: $c-surface-dark;
+	// opacity: 0.5;
+
+	top: 64px;//56+56+(56/2)
+	left: 46px; //256-(56/2)
+	// transform: rotate(-45deg);
+	z-index: 11;
+	//border: 2px solid $c-surface;
+	//border-radius: 50%;
+
+
+
+	@include interaction-color-ramdon($c-surface-dark);
+	@include centerFlex;
+	box-shadow: 0px;	
+
+	//border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+
+
+	& svg{
+		height: 24px;
+		width: 24px;
+		margin:12px;
+		fill: $c-w;		
+		@include selectNo;
+		//border: 0.5px solid green;           //←←←←←←←←←←←←←←←←←←←←  
+	}
+
+
+
+}
+
+
+
+

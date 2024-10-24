@@ -1,0 +1,134 @@
+.leftnav{
+	display: inline-block;
+	position: fixed;
+	width: 136px;
+	height: calc(100vh - 48px);
+	left: 0px;
+	top: 48px;
+	background: $c-surface;
+	z-index: 1;
+	padding-top: 76px;
+	padding-left: 4px;;
+	border-right: 1px solid lighten($c-divider, 0);  
+	             //←←←←←←←←←←←←←←←←←←←←
+	//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+
+
+	& > .cont {
+		position: relative;
+		display: block;
+		float: left;
+		height: 48px;
+		width:  calc(100% - 8px);
+		margin:0px;
+		cursor: pointer;
+		padding-left: 4px;
+		border-radius: 4px;
+		margin-left: 2px;
+		@include leftFlex;
+		@include interaction-surface;
+		//border: 2px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+		& svg{
+			height: 28px;
+			width: 28px;
+			//fill: $c-b;
+			z-index: 2;
+			opacity: 1;
+			//stroke-width: 8;
+			//color:red;
+			//fill: red;
+
+			@include selectNo;
+			@include back-visivility();
+			//@include transition(.150s, emph);P
+			//border: 0.8px solid red;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+		& label{
+			margin: 0px;
+			margin-left: 4px;
+			z-index: 2;
+			@include selectNo;
+			@include back-visivility();
+			@include font(body2, $c-b);
+			//font-weight: 500;
+			text-align: center;
+			height: 16px;
+			//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+	}/*cont*/
+
+	& > .contSmall {
+		height: 24px;
+		padding-left: 12px;
+
+		& svg{
+
+			@include selectNo;
+			@include back-visivility();
+			//@include transition(.150s, emph);P
+			//border: 0.8px solid blue;           //←←←←←←←←←←←←←←←←←←←←  
+		}
+
+		& label{
+			@include font(body3, $c-b);
+			//border: 0.5px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+	}/*cont*/
+
+	& > .title{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		padding-left: 8px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+
+		@include font(overlinelLower, $c-b);
+		@include selectNo;
+
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←←
+
+	}
+
+
+
+
+
+
+	
+
+
+
+
+
+
+}
+
+
+
+	// & > .logo{
+	// 	position: absolute;
+	// 	display: block;
+	// 	top: 8px;
+	
+	// 	width: 48px;
+	// 	height: 48px;
+
+	// 	background:   url(svg/illustrations/gosive-logo-gradiente.svg) no-repeat;
+	//     background-position: center;
+	// 	opacity: 1 ;
+	// 	cursor: pointer;
+
+	// 	@include align-center();
+	// 	@include carterNo();
+	// 	@include transition(0.050s, acce);
+
+	// 	&:hover  { width: 50px; height: 50px; }
+	// 	&:active { width: 48px; height: 48px; }
+
+	// 	//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+	// }

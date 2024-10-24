@@ -1,0 +1,18 @@
+@mixin snack-dark{
+	.snack {
+		background-color: $c-w;
+
+		& > label{
+			@include font(subtitle2, $c-b)
+		}
+
+		& div{
+			    @include interaction-white;
+				& label	{
+					color: $c-p;
+
+				}
+		}
+
+	}
+}

@@ -1,0 +1,111 @@
+@mixin font-init ($size, $width, $color, $space){
+	color: 			#{$color};
+	font-size:  	#{$size};
+	font-weight:  	#{$width};
+	letter-spacing: #{$space};
+	//@include noZtransform;
+}
+
+
+@mixin textOverflow{
+
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	text-wrap:none;	
+	overflow: hidden;
+}
+
+
+
+@mixin font($category, $color) {
+
+	@if $category == 34 {
+		@include font-init (34px, 500, $color, 0.15px);
+	}
+
+	@if $category == h6 {
+		@include font-init (20px, 500, $color, 0.15px);
+	}
+
+	@if $category == subtitle1 {
+		@include font-init (16px, normal, $color, 0.15px);
+	}
+
+	@if $category == subtitle2 {
+		@include font-init (14px, 500, $color, 0.1px);
+	}
+
+	@if $category == body1 {
+		@include font-init (16px, normal, $color, 0.5px);
+	}
+
+	@if $category == body2 {
+		@include font-init (14px, normal, $color, 0.25px);
+	}
+
+	@if $category == button {
+		@include font-init (14px, 500, $color, 1.25px);
+		text-transform: uppercase;
+	}
+
+	@if $category == caption {
+		@include font-init (12px, normal, $color, 0.4px);
+	}
+
+	@if $category == overline {
+		@include font-init (10px, normal, $color, 1.5px);
+		text-transform: uppercase;
+	}
+}
+
+
+
+//text-transform: uppercase;
+
+.font-34{
+	display: block;
+	@include font-init (34px, normal, $c-b, 0.15px);
+}
+
+.font-subtitle1{
+	display: block;
+	@include font(subtitle1, $c-b);
+	border: 5px solid red;
+
+}
+.font-subtitle2{
+	display: block;
+	@include font(subtitle2, $c-b)
+	border: 5px solid red;
+}
+
+
+
+.font-body1{
+	display: block;
+	@include font(body1, $c-b)
+	border: 5px solid red;
+}
+.font-body2{
+	display: block;
+	@include font(body2, $c-b)
+	border: 5px solid red;
+}
+
+.font-button{
+	display: block;
+	@include font(button, $c-b)
+	border: 5px solid red;
+}
+.font-caption{
+	display: block;
+	@include font(caption, $c-b)
+	border: 5px solid red;
+}
+.font-overline{
+	display: block;
+	@include font(overline, $c-b)
+	border: 5px solid red;
+}
+
+

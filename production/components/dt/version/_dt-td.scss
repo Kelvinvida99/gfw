@@ -1,0 +1,83 @@
+
+.dt { /*data table*/
+	
+	& > table {
+		& .tdWithAvatar {
+			& label{  margin-left: 34px; max-width: calc(100% - 34px);}
+			& span {  margin-left: 34px; max-width: calc(100% - 34px);}
+
+            & .avatarOnTD{
+                position: absolute;
+                top: 2px;
+                left: 4px; //forze para alinearlo :(
+                height: 30px;
+                width: 30px;
+
+                cursor:pointer;
+                margin-right: 0px !important;
+                border-radius: 50%;
+                background-image:  url('./img/pic/person.svg');
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: $c-pd;
+                //border: 2px solid $c-surface;
+                z-index: 2;
+                @include selectNo();
+
+			}
+
+		}/*tdWithAvatar*/
+
+		& .tdWithIcon{
+
+			& label{  margin-left: 24px; max-width: calc(100% - 24px);}
+			& span {  margin-left: 24px; max-width: calc(100% - 24px);}			
+			& svg{
+                position: absolute;
+                top: 2px;
+                left: 4px; //forze para alinearlo :(
+                height: 20px;
+                width: 20px;
+
+				fill: $c-w;
+				transform: rotate(0deg);
+				@include transition(0.500s, stan)
+				@include selectNo;
+				@include back-visivility;
+				@include selectNo();
+				
+
+				  //border: 0.5px solid red;           //←←←←←←←←←←←←←←←←←←←← 
+			}	
+			//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←			
+		}/**/
+
+		& .tdWithIconAnimated{	
+			& svg{
+				@include loading();
+			}				
+		}
+
+
+
+
+		& .td-red-icon {
+			& svg{
+				fill: $cs-red; 
+			} }/*tdWithAvatar*/
+
+		& .td-blue-icon {
+			& svg{
+				fill: $cs-blue; 
+			} }/*tdWithAvatar*/
+
+
+
+	}/*table*/
+
+
+}/*dt*/
+
+

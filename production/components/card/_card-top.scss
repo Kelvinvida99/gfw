@@ -1,0 +1,125 @@
+
+
+.card-top{
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 16px);
+	height: 22px;
+	margin-top: 8px;
+	max-width: 900px;
+
+	left: 50%;
+	transform:translateX(-50%);
+
+	z-index: 2;	
+
+	// border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+
+
+	& .des{
+		position: absolute;
+		display: inline-block;
+		top: 20px;
+		left: 0px;
+		//width: 100%;
+				padding-top: 4px;
+				padding-bottom: 4px;
+
+		padding-left: 8px;
+		padding-right: 8px;
+
+		min-height: 24px;
+		background: $c-gd;
+		border-radius: 4px;
+		transform: scale(0) rotate(0deg);
+		transform-origin: top left;
+		@include transition(0.150s, stan);
+		@include bs-1;
+
+		z-index: 50000;
+		transition-delay: 0ms;
+	
+
+		@include font(body2, $c-w);
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	
+		& span{
+			position: relative;
+			display: inline-block;
+			padding: 4px;
+			margin-left: 8px;
+			margin-right: 8px;
+
+			border-radius: 2px;
+			
+			//@include font(button, $c-w);
+			//@include interaction-color();
+			cursor: pointer;
+			background-color: $c-p;
+
+			&:active{
+				transform: scale(0.9);
+			}
+		
+
+			//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+		}
+
+	}
+
+	& .title{
+		position: relative;
+		display: inline-block;
+		padding-right: 8px;
+		top: 4px;
+		//width: 100%;
+		//@include font(subtitle1, $c-b);
+		@include font(subtitle2, $c-pd);
+		opacity: 0.54;
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+	}
+
+
+	
+	&:hover{
+		//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+		& .des{
+			
+			transform: scale(1) rotate(0deg);
+				transition-delay: 450ms !important;
+			//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+		}
+
+	}
+	//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+
+}
+
+.card-top-icon{
+	& .title{
+		cursor: pointer;
+	
+
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0px;
+			right: -16px;
+
+			width: 16px;
+			height: 16px;
+			opacity: 0.54;
+
+			background:   url(svg/question.svg) no-repeat;
+			background-size: 100% 100%;
+			background-position: center;	
+			//@include selectNo();
+
+
+			cursor: pointer;
+
+			//border: 0.2px solid blue;               //←←←←←←←←←←←←←←←←←←←← 
+		}		
+	}
+	
+}

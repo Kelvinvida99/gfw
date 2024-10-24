@@ -1,0 +1,39 @@
+@mixin bottomnav-dark{
+
+	.bottomnav{
+		background-color: $d-e12 ;
+		
+
+
+		& div{
+				//@include interaction($d-p)
+				@include interaction-dark-12;
+				& label{
+					color: $c-w;
+					opacity: 0.54;
+				}
+
+				& svg{
+					fill: $c-w;
+					opacity: 0.54;
+				}
+			}
+
+			& .select{
+				& label{
+					color: $c-pl;
+					opacity: 0.99;
+				}
+
+				& svg{
+					fill: $c-pl;
+					opacity: 0.99;
+				}
+
+
+			}
+
+		}
+
+	
+}

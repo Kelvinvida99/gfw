@@ -1,0 +1,183 @@
+
+.textfield-disabled{
+	@include selectNo(); 
+	opacity: 0.54;
+}
+
+
+
+.textfield-multiselect{
+	& > .trailing{
+		@include selectNo;
+	}
+	&:after{
+		position: absolute;
+		content: '';
+		top: 8px;
+		right: 2px;
+
+		width: 16px !important;;
+		height: 16px !important;;
+
+		background:   url(svg/expand.svg) no-repeat;
+		background-size: 100% 100%;
+		background-position: center;
+		opacity: 1 !important;
+		@include selectNo;
+
+		//border: 0.2px solid purple;               //←←←←←←←←←←←←←←←←←←←← 
+
+	}
+	
+}
+
+.textfield-date{
+
+	& > .elem{
+			
+		@include font(body2, $c-b);
+		font-weight: 500;
+		font-family: 'Roboto';
+		//border: 1px solid red;/***************************/
+
+		& ~ .label {
+			top: 8px;
+			@include font(caption, $c-b);
+		}
+
+		&:focus{			
+			& ~ .label {
+				opacity: 1;
+			}
+		}
+
+		padding-top: 10px;
+		padding-right: 12px;
+		//border: 1px solid green;/***************************/	
+
+	}
+}
+
+.textfield-time{
+
+	& > .elem{
+		& ~ .label {
+			top: 8px;
+			@include font(caption, $c-b);
+		}
+
+		//padding-left: 4px;
+		padding-top: 14px;
+		padding-right: 8px !important;
+
+		///border: 1px solid green;/***************************/	
+
+	}
+}
+
+.textfield-cash{
+
+	& > .elem{
+			
+		padding-left: 16px !important;
+		//border: 1px solid red;/***************************/	
+	}
+
+	&:after{
+		position: absolute;
+		content: '';
+		top: 14px;
+		left: 2px;
+
+		width: 16px ;
+		height: 16px ;
+
+		background:   url(svg/money.svg) no-repeat;
+		background-size: 100% 100%;
+		background-position: center;
+		opacity: 1 !important;
+		@include selectNo;
+
+		//border: 0.2px solid purple;               //←←←←←←←←←←←←←←←←←←←← 
+	}	
+}
+
+.textfield-textarea {
+	& .elem{
+		& ~ .label {
+			top: 8px;
+			@include font(caption, $c-b);
+		}
+		
+		padding-top: 23px;
+		resize: none; 
+		//border: 1px solid red;/***************************/
+	}
+}
+
+
+
+.textfield-password{
+
+	& > .label {
+			top: 8px  ;
+			@include font(caption, $c-b) ;
+			//border: 5px solid red;
+	}
+
+
+	& > .trailing{
+		top: 12px ;
+		transform: scale(1) rotate(0deg) !important;
+		opacity: 1 !important;
+		//border: 1px solid red;/***************************/
+
+		&:active{
+			& svg{
+				opacity: 0.87;
+			}
+		}
+
+		&:hover{
+			& svg{
+				opacity: 0.67;
+			}
+		}
+	}
+
+}
+
+
+.textfield-passwordBlur {
+	& input{
+	  filter: blur(2px) !important;			
+	}	
+}
+
+
+
+.textfield-label{
+	height: 36px;
+	margin-bottom: 0px !important;
+	//border: 1px solid red;/***************************/
+
+	& > .elem {
+		padding-left:  8px;
+		padding-top:   0px;
+		padding-right: 0px;
+		margin: 0px;
+
+	@include selectNo;
+		background-color: transparent;
+		//border: 1px solid red;/***************************/
+	}
+
+	& > .label {
+		top: 4px;
+		left: 8px;
+
+		@include font(overlinelLower, $c-b) ;
+	}
+
+
+}/**/

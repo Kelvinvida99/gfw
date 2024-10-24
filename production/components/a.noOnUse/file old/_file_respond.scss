@@ -1,0 +1,56 @@
+.file{
+	
+	.header{
+		@include respond (phone) { 
+
+			& .path	{
+					width: calc(100% - 48px - 48px - 48px - 48px);
+
+		  			& label{
+		  				padding-right: 8px;
+		  				padding-top: 16px;
+		  				height: 45px;
+
+						&::before{
+							display: none;
+						}	
+						//border: 1px solid green; /*---------------------------------------------*/
+
+		  			}/*& span*/
+		  			//border: 1px solid green; /*---------------------------------------------*/
+
+			}/*path*/
+
+			& .icon{
+
+				 	& svg{ }/*svg*/
+					& label	{ display: none; }/*label*/
+					
+					//border: 1px solid green; /*---------------------------------------------*/
+
+			}/*__icon*/
+
+			//border: 4px solid green; /*---------------------------------------------*/
+
+		 }/*desktop*/		
+	}/*header*/
+
+	& .body{	
+		@include respond (phone) { 
+			& .cont{
+				margin: 2px;
+				width: calc(50% - 4px);
+			}
+	   }
+	}
+
+
+}/*file*/
+
+
+
+
+
+
+
+

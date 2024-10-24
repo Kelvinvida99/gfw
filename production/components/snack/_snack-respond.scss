@@ -1,0 +1,15 @@
+.snack{
+	
+
+
+	@include respond (phone) {
+		left: 16px;
+		width: calc(100% - 32px);
+		
+	}
+
+
+
+
+
+}

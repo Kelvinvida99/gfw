@@ -1,0 +1,188 @@
+
+
+
+<div class="fullcont fullcont-show" id="services-fullcont-withStepper" data-entity="services">
+
+    <div class="appbar appbar-fullcont" >
+
+        <div class="primary"> 
+           
+            <div 
+              id="fullcont-services-fullcont-withStepper-close"
+              data-detail='{"click": [  {"dest":"ripple" }, 
+              {"dest":"services", "elem":"fullcontStepper", "id":"services-fullcont-withStepper", "act":"hide"  } ] }' 
+            >
+                <svg><use xlink:href="../../../public/css/svg.svg#close"></use></svg>
+              </div>
+
+            <h1>GOKU Stepper</h1>
+
+
+        </div> <!-- primary -->
+    </div> <!-- appbar -->
+
+    <div class="page page-appbar page-1 "
+        data-detail='{"scroll": [ {"dest":"page-fullcont"  }] }'
+
+    >   
+
+<div class="card">
+
+      <div class="textfield " id="services_form_stepper_name">
+
+        <input  class= 'elem' type="text"   value="" 
+                 data-detail='{"click": [], 
+                               "key":   [ {"dest":"textfield","act":"typing"  }] }' >
+
+        <div class="indicador"></div>
+
+        <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+          <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+        </div>
+
+        <div class="label">Namex</div> 
+        <div class="helper" >Required*</div>
+        <div class="counter">10/10</div> 
+      </div><!-- textfield -->
+
+       <div class="radio  radio-line" id="services_form_stepper_gender" 
+            
+            data-detail='{"click": [ {"dest":"fullcont", "act":"edit"  }] }'>
+          
+          <span class="title">Sexx</span>
+
+          <div>
+            <input type="radio"  name="gender" value="female" >
+            <label for="male">Female</label>
+          </div>
+          
+          <div>
+            <input type="radio"  name="gender" value="male">
+            <label for="male">Male</label>
+          </div>
+
+      </div>  <!-- radio -->
+
+     <div class="checkbox " id="services_form_stepper_getAlerts" 
+            data-detail='{"click": [ ] }'> 
+        <span class="title">Sex</span>
+         <input type="checkbox" data-detail='{"click": [] }'> 
+         <label>Checkbox</label>
+      </div> <!-- Checkbox -->
+
+     <div class="textfield  textfield-filled "  id="services_form_stepper_car">
+
+        <select class= 'elem' name="cars" id="cars"  >
+          <option value="">car model</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select> 
+
+        <div class="indicador"></div>
+        
+          <div class="trailing">
+            <svg><use xlink:href="../../../public/css/svg.svg#downs"></use></svg>
+          </div>
+
+        <div class="label">Car type</div> 
+        <div class="helper">Helper</div>
+        <div class="counter">10/10</div> 
+
+      </div> <!-- textfield -->
+
+
+        <div class="textfield textfield-filledx" id="services_form_stepper_email" >
+          <input  class= 'elem' type="text"   value='' 
+              data-detail='{"key": [ {"dest":"textfield", "act":"typing"  }, 
+                                     {"dest":"textfield", "act":"validator", "validator": "email"  }] }'  >
+
+          <div class="indicador"></div>
+
+        <div class="trailing"  data-detail='{"click": [{"dest":"textfield", "act":"clear"}] }' >
+          <svg><use xlink:href="../../../public/css/svg.svg#cancel"></use></svg>
+        </div>
+
+          <div class="label">Email </div> 
+          <div class="helper" >Required*</div>
+          <div class="counter">10/10</div> 
+        </div><!-- textfield --> 
+
+  
+
+</div> 
+
+
+
+     <div class="card"> 
+
+         <div class="signature-line signatureOnLine-errorXX signatureOnLine-viewX" 
+            id="services_form_stepper_signatureTest">
+            <canvas id="online"></canvas>
+            <label data-detail='{"click":[{"dest":"ripple"},
+                                          {"dest":"signature", "act": "edit", "id": "services_form_stepper_signatureTest"} ]}' >Empty</label>
+        </div> 
+        <div id='signatureCont'> </div>
+     </div> 
+
+    <div class="card">
+        <div class="map" id="services_form_stepper_map" data-coor=''>
+
+          <label class="title"     >Title of map</label>
+          <label class="des"       >Address <span>no preisece location</span></label>  
+          <label class="des-nogeo" >No Geo do this action <a>action</a></label>  
+          <div   class="body"      ></div>
+
+        </div><!--map-->       
+    </div>
+
+
+
+
+    </div>
+
+    <div class="page page-appbar page-2 dn"  data-detail='{"scroll": [ {"dest":"page-fullcont"  }] }'>
+      <h1>page 2</h1></div>
+    <div class="page page-appbar page-3 dn"  data-detail='{"scroll": [ {"dest":"page-fullcont"  }] }'></div>
+    <div class="page page-appbar page-4 dn"  data-detail='{"scroll": [ {"dest":"page-fullcont"  }] }'>
+      <h1>page 4</h1> </div>
+    <div class="page page-appbar page-5 dn"  data-detail='{"scroll": [ {"dest":"page-fullcont"  }] }'>
+      <h1>page 5</h1> 
+
+       <div class="button  button-large"
+          data-detail='{"click": [  {"dest":"ripple" }, 
+          {"dest":"services", "elem":"fullcontStepper", "act":"submit" } ] }' >
+
+          <svg><use xlink:href="../../../public/css/svg.svg#person"></use></svg>
+          <label>submit</label>        
+      </div>
+
+    </div>
+
+
+
+
+  <div class="stepper stepper-1 stepper-nextOn stepper-backOnx" data-index='1' data-pages='5' >
+
+    <div class="btn-back" 
+         data-detail='{"click": [  {"dest":"ripple" }, 
+         {"dest":"services", "elem":"fullcontStepper", "id":"services-fullcont-withStepper", "act":"move", "to":"back" } ] }' >
+      <svg><use xlink:href="../../../public/css/svg.svg#left"></use></svg>
+      <label>BACK</label>        
+    </div>
+
+    <div class="counter" >
+      <span></span> <span></span> <span></span> <span></span> <span></span>
+    </div>
+
+    <div class="btn-next"
+          data-detail='{"click": [  {"dest":"ripple" }, 
+          {"dest":"services", "elem":"fullcontStepper", "id":"services-fullcont-withStepper", "act":"move", "to":"next" } ] }'>
+      <label>NEXT</label>        
+      <svg><use xlink:href="../../../public/css/svg.svg#right"></use></svg>
+    </div>
+
+  </div><!--stepper-->
+
+
+ </div> <!-- fullcont -->

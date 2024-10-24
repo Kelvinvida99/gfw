@@ -1,0 +1,19 @@
+@mixin menu-dark{
+
+	.menu{
+
+		background-color: $d-e12;
+		& div {
+			
+			@include interaction-dark-12;
+			& label{
+				color: $c-w;
+			}
+
+			& svg{
+				fill: $c-w;
+			}			
+		}
+		//border: 0.2px solid red;               //←←←←←←←←←←←←←←←←←←←← 
+	}	
+}

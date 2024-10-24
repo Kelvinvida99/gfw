@@ -1,0 +1,35 @@
+@mixin dashboar_status-dark{
+	.dashboar_status{
+		background-color: $d-e6 ;
+		border: 1px solid $d-divider;
+
+		& .circle{
+			opacity: 0.72;
+		}
+
+		& .title{
+
+   			@include font(caption, $c-w);
+   			opacity: 0.54;
+   			letter-spacing: 1px;
+	    	//border: 0.5px solid red; /*---------------------------------------------*/
+
+		}
+
+		& .des{
+
+   			@include font(subtitle1, $c-w);
+   			opacity: 0.54;
+   			
+   			& span{
+   				color: $c-w;
+   				opacity: 1;
+   				//border: 0.5px solid red; /*---------------------------------------------*/
+   			}
+
+	    	//border: 0.5px solid red; /*---------------------------------------------*/
+
+		}
+
+	}
+}

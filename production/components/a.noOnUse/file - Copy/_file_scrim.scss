@@ -1,0 +1,202 @@
+
+
+.file-full{
+    position: fixed;
+    top:100vh; 
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    left: 0px;
+
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);  
+
+    z-index: 80;
+    background-color: rgba(0,0,0, 0.8); 
+
+
+   // border: 0.5px solid red; /*---------------------------------------------*/
+
+      &-show{
+        top: 0px;
+        opacity: 1;
+      }
+  
+
+    .body{
+
+        display: inline;
+        width: calc(100% - 0px);
+        height:calc(100vh - 56px);
+        min-height: 200px;       
+        float: left;
+        margin-top: 56px;
+
+        //background-color: $c-surface;  
+        user-select: none;
+
+        @include respond (table) { width: 100%;}/*table*/
+        //border: 0.5px solid red; /*---------------------------------------------*/
+
+          & span{
+            position: absolute;
+            width: calc(100% - 256px);
+            left: 256px;
+            right: 0px;
+            background-color: red;
+            
+            font-size: 16px;
+            font-weight: 400;	
+            color: white;
+            
+          }
+
+          & iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+          //border: 5px solid green; /*---------------------------------------------*/
+          }
+
+        & .arrow{
+            position: absolute;
+            top: 45%;
+
+            left: 16px;
+            height: 48px !important;
+            width: 48px;
+
+            border-radius: 50%;
+            padding: 8px;
+            cursor: pointer;
+
+            background-image:  url('./svg/left-white.svg');
+            background-color: $c-b; 
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;    
+
+            fill: $c-w !important;
+            
+            -webkit-backface-visibility: hidden;
+
+            @include bs-2;
+            @include respond (table) { left: 0px;}/*table*/
+            @include transition(.150s, emph);
+            //@include selectNo();
+
+            & use{ border: 1px solid red; }
+            
+            &:hover{
+              background-color: $c-p; 
+                @include bs-4;
+            }
+
+            &:active{
+                @include bs-2;
+                transform:scale(0.90); 
+            }
+
+            &-right{  
+                 right: 16px;
+                 left: auto;
+                 background-image:  url('./svg/right-white.svg');
+
+            }
+
+      }/*arrow*/
+
+
+    }/*b*/
+
+
+}
+
+
+
+/*HTML
+
+
+
+
+<!--file_screen-->
+<!--file_screen-->
+<!--file_screen-->
+<!--file_screen-->
+<!--file_screen-->
+
+<div class="file_screen file_screen__showx"  id="files_preview_div">  
+  <!---HEAD-->
+  <!---HEAD-->
+  <!---HEAD-->
+  <!---HEAD-->
+<div class="appbar appbar__secondary">
+  <div class="appbar__cont-principal" style="background-color: black;"> 
+    <div class="appbar__icon fl  fullcont--hide" >
+      <svg><use xlink:href="css/svg.svg#back"></use></svg>
+    </div>
+
+    <h6 class="appbar__title appbar__title--light">name_file.crc</h6>
+
+    <div class="appbar__icon  appbar__icon--2">
+      <svg><use xlink:href="css/svg.svg#delete"></use></svg>
+    </div>
+
+    <div class="appbar__icon appbar__icon--2" >
+      <svg><use xlink:href="css/svg.svg#download"></use></svg>
+    </div>
+
+    <div class="appbar__icon appbar__icon--2" >
+      <svg><use xlink:href="css/svg.svg#edit"></use></svg>
+    </div>
+
+    <div class="appbar__icon appbar__icon--3" onclick="show__menu('preview_options')">
+      <svg><use xlink:href="css/svg.svg#more"></use></svg>
+    </div>
+
+  </div><!---appbar__cont-principal-->
+</div> <!---appbar__secondary-->
+
+
+
+<div class="file_screen--a" id="files_preview_mini_cont">
+  <img class="file_screen--a_selected">
+  <img >
+
+
+</div>
+
+<div class="file_screen--b" >
+
+
+  <iframe class="loaded_file_elements img_change"  data-centered="0" id="files_preview_frame" ></iframe>
+
+  <!---arrows-->
+  <!---arrows-->
+  <!---arrows-->
+  <svg class="file_screen--b--arrow full_preview_move loaded_file_elements"   data-direction="-1">
+    <use xlink:href="css/svg.svg#left"></use></svg>
+  <svg class="file_screen--b--arrow file_screen--b--arrow_right full_preview_move loaded_file_elements" data-direction="1"  >
+    <use xlink:href="css/svg.svg#right"></use></svg>
+
+
+
+</div>
+
+
+</div><!--file_screen-->  
+
+<!--file_screen-->
+<!--file_screen-->
+<!--file_screen-->
+<!--file_screen-->
+<!--file_screen-->
+
+
+
+
+*/

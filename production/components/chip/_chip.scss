@@ -1,0 +1,58 @@
+
+
+.chip{ 
+
+	position: relative;
+	display: inline-block;
+	min-width: 100px;
+	height: 32px;
+	border-radius: 16px;
+	background: $c-w;
+	float: left;
+	margin: 4px;
+
+	border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+
+
+	& > label{
+		position: relative;
+		display: inline-block;
+		float: left;
+		left: 8px;
+		top: -8px;
+		width: calc(100% - 45px);
+		max-width: 150px;
+		@include font(caption, $c-b);
+		text-align: left;
+		@include textOverflow;
+
+		border: 0.4px solid red;            //←←←←←←←←←←←←←←←←←←←←
+	}
+
+	& > .span{
+		position: relative;
+		display: inline-block;
+		float: left;
+		width: 24px;
+		height: 24px;
+		//padding: 2px;
+		@include interaction-white;
+		
+		&::before{
+			position: absolute;
+			content: '';
+			top: 2px;
+			left: 2px;
+			width: 16px;
+			height: 16px;
+			background:  url(svg/delete.svg) no-repeat;
+			opacity: 0.36;
+			//border: 0.3px solid red;               //←←←←←←←←←←←←←←←←←←←←
+		}
+
+		
+
+	}/*remove*/
+		
+}/*time-task*/
+

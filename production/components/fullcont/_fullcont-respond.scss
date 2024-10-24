@@ -1,0 +1,19 @@
+.fullcont{
+	
+	@include respond (desktop) { 
+		right: 50%;
+        transform: translateX(50%);
+		max-width: 900px;
+   		width: calc(100% - 210px);
+
+	 }/*desktop*/
+
+	@include respond (table) { 
+		right: 0px;
+        transform: translateX(0%);
+		max-width: auto;
+   		width: 100%;
+	 }/*desktop*/
+
+}
+

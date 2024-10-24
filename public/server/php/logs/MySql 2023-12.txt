@@ -1,0 +1,7 @@
+           User Info                                 Error Info                                                    Entity
+
+2023-12-16 11:28:am ypena@,  Unknown column 'payrolls.id2' in 'field list', executeSelect.php@9, MySql->SELECT@1054, payrolls
+2023-12-18 09:28:am miguel@,  Table 'gokudb.providers' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, providers
+2023-12-18 09:31:am miguel@,  Table 'gokudb.providers' doesn't exist, executeSelect.php@9, MySql->SELECT@1146, providers
+2023-12-27 12:04:pm miguel@,  Unknown column 'supplier_id' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
+2023-12-27 12:11:pm ypena@,  Unknown column 'supplier_id' in 'where clause', executeSelect.php@9, MySql->SELECT@1054, purchase
